@@ -1,7 +1,8 @@
-package PdfToText;
+package pretreatement;
 
 
-import common.TextDocument;
+import document.SummaryHAS;
+import document.TextDocument;
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.pdfparser.PDFParser;
@@ -101,7 +102,7 @@ public class PdfToText {
     }
 
     public static void main(String [] args) throws IOException {
-        convert(new File("./files/10irp04_reco_diabete_type_2.pdf")).writeFile();
+        convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
     }
 
     /**

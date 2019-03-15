@@ -1,6 +1,11 @@
-package CommandLineTools;
+package main;
+
+import pretreatement.InitialFilter;
+import document.TextDocument;
 
 import java.io.*;
+
+import static pretreatement.PdfToText.convert;
 
 public class Main {
 
@@ -14,19 +19,11 @@ public class Main {
         System.out.println(hopela.split("z")[0]);
         //System.out.println(hopela.split("z")[1]);
 
-        File f = new File("./files/recos_txt/");
-        try{
-            for (String file:
-                 f.list()) {
-                System.out.println(file);
-                adjustFile(new File(pathReco + file), new File(pathRecoAdjusted+file));
-
-                if (args.length != 1) {
-                    System.err.println("Usage: java Planet <earth_weight>");
-                    System.exit(-1);
-                }
-            }
-        }catch (Exception e){
+        try {
+            TextDocument td = convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
+            td = InitialFilter.filter(td);
+            td.writeFile();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

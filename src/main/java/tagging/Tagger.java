@@ -1,4 +1,4 @@
-package POSTagging;
+package tagging;
 
 import java.io.File;
 

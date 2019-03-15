@@ -1,4 +1,4 @@
-package POSTagging;
+package tagging;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 

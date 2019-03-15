@@ -1,4 +1,4 @@
-package common;
+package document;
 
 import java.io.File;
 import java.io.FileNotFoundException;

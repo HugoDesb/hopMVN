@@ -1,212 +1,71 @@
-
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 4 
-Messages clés  
 L’objectif glycémique doit être individualisé en fonction du profil des patients et peut donc évoluer au cours du temps.  
 Pour la plupart des patients diabétiques de type 2, une cible d’HbA1c inférieure ou égale à 7 % est recommandée. Le traitement médicamenteux doit être instauré ou réévalué si l’HbA1c est supérieure à 7 %.   
 Le diabète est évolutif et le traitement doit être réévalué régulièrement dans toutes ses composantes : mesures hygiéno-diététiques, éducation thérapeutique et traitement médicamenteux.  
 La mise en place de mesures hygiéno-diététiques efficaces est un préalable nécessaire au traitement médicamenteux du contrôle glycémique.  
-La stratégie médicamenteuse repose sur l’écart par rapport à l’objectif d’HbA1c, l’efficacité attendue des traitements, leur tolérance, leur sécurité et leur coût.  
-La metformine est le médicament de première intention en monothérapie. 
 L’association metformine + sulfamide est la bithérapie à privilégier. 
-L’insuline est le traitement de choix lorsque les traitements oraux et non insuliniques ne permettent pas d’atteindre l’objectif glycémique.  
 L’instauration d’une insulinothérapie est l’objet d’une discussion avec le patient, et/ou son entourage, dans le cadre de l’éducation thérapeutique. Elle doit être accompagnée et idéalement précédée d’une autosurveillance glycémique et doit faire l’objet d’un apprentissage.  
 Les femmes en âge de procréer doivent être informées de l'intérêt d'un bon contrôle glycémique avant et durant la grossesse afin d'améliorer le pronostic obstétrical.   
 L’autosurveillance glycémique n’est recommandée que si les résultats sont susceptibles d’entraîner une modification des mesures hygiéno-diététiques et/ou du traitement médicamenteux. 
 La réalisation systématique de l’autosurveillance glycémique chez les patients sous antidiabétiques ne provoquant pas d’hypoglycémie n’est pas recommandée.  
 Le recours à un endocrinologue est recommandé en cas de difficulté pour fixer l‘objectif glycémique ou pour l’atteindre.  
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 5 
-Abréviations 
-En vue de faciliter la lecture du texte, les abréviations utilisées sont explicitées ci-dessous.   
-Tableau 1. Abréviations les plus courantes 
-Abréviation  Libellé  
-ADO Antidiabétique oral 
-ASG Autosurveillance glycémique 
-DFG Débit de filtration glomérulaire 
-HbA1c Hémoglobine glyquée A1c 
-IMC  Indice de masse corporelle 
-IRC Insuffisance rénale chronique 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 6 
-Préambule 
-Contexte d’élaboration  
 La HAS a inscrit à son programme de travail 2009 l’élaboration de recommandations de bonne pratique sur la stratégie médicamenteuse du contrôle glycémique du diabète de type 2 en intégrant un critère d’efficience sur saisine de la Direction de la sécurité sociale (DSS) et la Caisse nationale de l’assurance maladie des travailleurs salariés (Cnamts). La 
 Société francophone du diabète (SFD, ex-Alfediam) avait également saisi la HAS sur la surveillance et le traitement du diabète du sujet âgé de plus de 65 ans. La définition de nouvelles recommandations était devenue nécessaire du fait de l’apparition de nouvelles molécules (inhibiteurs de la dipeptidylpeptidase-4 et analogues du GLP-1), du retrait du marché de la rosiglitazone et du déremboursement de la pioglitazone, et de la publication des essais cliniques d’intensification du contrôle glycémique (ACCORD, ADVANCE, VADT). 
 Objectif de la recommandation 
 L’objectif de ce travail est d’améliorer la qualité de la prise en charge des patients adultes atteints d’un diabète de type 2 ; seul le contrôle glycémique est abordé dans cette recommandation.   
 Cette recommandation vise à définir :  des objectifs glycémiques cibles ;  une stratégie médicamenteuse du contrôle glycémique ;  la place de l’autosurveillance glycémique. 
-Définitions 
-Le diabète de type 2 est défini par : • une glycémie supérieure à 1,26 g/l (7,0 mmol/l) après un jeûne de 8 heures et vérifiée à deux reprises ; • ou la présence de symptômes de diabète (polyurie, polydipsie, amaigrissement) associée à une glycémie (sur plasma veineux) supérieure ou égale à 2 g/l (11,1 mmol/l) ; • ou une glycémie (sur plasma veineux) supérieure ou égale à 2 g/l (11,1 mmol/l) 2 heures après une charge orale de 75 g de glucose (critères proposés par l’Organisation mondiale de la santé).  
-Le diabète de type 2 provoque des complications microvasculaires (rétinopathie, néphropathie et neuropathie) et macrovasculaires (infarctus du myocarde, artérite et accident vasculaire cérébral). L’objectif du traitement du patient atteint d’un diabète de type 2 est de réduire la morbi-mortalité, par l’intermédiaire notamment d’un contrôle glycémique correct. 
-Avertissement 
 Cette recommandation n’aborde le thème du diabète de type 2 que dans le champ du contrôle glycémique (fixation d’objectifs glycémiques, stratégie médicamenteuse et place de l’autosurveillance glycémique). L’éducation thérapeutique est indispensable à la prise en charge des patients diabétiques de type 2. La mise en place de mesures hygiéno-diététiques efficaces est un préalable nécessaire au traitement médicamenteux du contrôle glycémique et leur application doit être poursuivie tout au long de la prise en charge. Le traitement des autres facteurs de risque cardio-vasculaire et des complications du diabète est par ailleurs essentiel à la prise en charge du patient diabétique. Ces trois aspects majeurs de la prise en charge des patients diabétiques de type 2 sont hors du champ de cette recommandation.  
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 7 
 L’analyse de la littérature a mis en évidence le manque d’études cliniques réalisées sur des critères de morbi-mortalité et le faible nombre d’études comparant les différentes stratégies médicamenteuses entre elles. En conséquence, les recommandations sont essentiellement fondées sur un avis d’experts. 
-Le schéma général de la stratégie médicamenteuse du contrôle glycémique ne peut envisager tous les cas particuliers. 
 Cette recommandation sera actualisée en fonction des données nouvelles de la littérature.  
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 8 
-Recommandations  1 Quels objectifs cibles ?  
 Cette section aborde les objectifs glycémiques optimaux pour prévenir les risques liés à l’hyperglycémie et aux effets indésirables des traitements chez les patients diabétiques de type 2 (cas général) et dans quatre sous-populations particulières : les sujets âgés, les personnes ayant des antécédents cardio-vasculaires, les insuffisants rénaux chroniques et les femmes enceintes ou envisageant de l’être.  
-L’objectif à court terme de diminution de l’hyperglycémie est l’amélioration des symptômes (soif, polyurie, asthénie, amaigrissement et flou visuel) et la prévention des complications aiguês (infectieuses et coma hyperosmolaire). L’objectif à plus long terme est la prévention des complications chroniques microvasculaires (rétinopathie, néphropathie et neuropathie), macrovasculaires (infarctus du myocarde, accidents vasculaires cérébraux et artériopathie oblitérante des membres inférieurs) et la diminution de la mortalité.  
 Le dosage de l’HbA1c doit être réalisé 4 fois par an selon le guide HAS affection de longue durée sur le diabète de type 2. 1.1 Patients diabétiques de type 2 (cas général) 
-Recommandation 1  
 AE L’objectif du contrôle glycémique doit être individualisé selon le profil du patient. Il convient : • d’expliquer le choix de l’objectif et de s’accorder avec le patient dans le cadre d’une éducation thérapeutique ; • d’encourager la personne à atteindre et maintenir son objectif individualisé ; • de mobiliser les moyens thérapeutiques recommandés pour atteindre la cible d’HbA1c, notamment les mesures hygiéno-diététiques ; • de réévaluer l’objectif et/ou les moyens :  si les effets secondaires (dont les hypoglycémies et la prise de poids) ou les efforts fournis altèrent sensiblement la qualité de vie,  si le profil clinique du patient se modifie ; • d’informer la personne ayant une HbA1c au-delà de l’objectif fixé qu’une diminution de l’HbA1c vers sa cible thérapeutique s’accompagne de bénéfices pour sa santé.  
 En cas de difficulté sur la définition de l’objectif glycémique, un avis spécialisé (endocrinologue, gériatre…) devrait être demandé.  
-Les données de la littérature ne permettent pas de définir une borne inférieure pour l’objectif d’HbA1c. Une fois l’objectif atteint, le traitement sera ajusté au cas par cas.  
-Recommandation 2a 
 B Pour la plupart des patients diabétiques de type 2 : • une cible d’HbA1c inférieure ou égale à 7 % est recommandée. Le traitement médicamenteux doit être instauré ou réévalué si l’HbA1c est supérieure à 7 %.  
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 9 
-Recommandation 2b 
 AE Pour les patients diabétiques de type 2 : • dont le diabète est nouvellement diagnostiqué, • ET dont l’espérance de vie est supérieure à 15 ans, • ET sans antécédent cardio-vasculaire, un objectif inférieur ou égal à 6,5 % est recommandé, sous réserve d’être atteint par la mise en œuvre ou le renforcement des mesures hygiéno-diététiques puis, en cas d’échec, par une monothérapie orale (cf. recommandation n° 16).  
-Recommandation 2c 
-AE Pour les patients diabétiques de type 2 :  • avec une comorbidité grave avérée et/ou une espérance de vie limitée (< 5 ans),  • OU avec des complications macrovasculaires évoluées,  • OU ayant une longue durée d’évolution du diabète (> 10 ans) et pour lesquels la cible de 7 % s’avère difficile à atteindre car l’intensification médicamenteuse provoque des hypoglycémies sévères, 
 Une cible d’HbA1c inférieure ou égale à 8 % est recommandée.  
-Pour les correspondances entre le taux d’HbA1c et la glycémie, se reporter au tableau en annexe 5 de l’argumentaire scientifique. 1.2 Patients âgés 
 Actuellement, il est usuel en médecine et en gériatrie de considérer une personne comme âgée à partir de 75 ans. Trois catégories de personnes âgées peuvent être individualisées en fonction de leur état de santé après 75 ans1 : • les personnes dites « vigoureuses » : en bon état de santé, indépendantes et bien intégrées socialement, c’est-à-dire autonomes d’un point de vue décisionnel et fonctionnel qui sont assimilables aux adultes plus jeunes ; • les personnes dites « fragiles » : à l’état de santé intermédiaire et à risque de basculer dans la catégorie des malades. Elles sont décrites comme une population vulnérable, avec des limitations fonctionnelles motrices et cognitives et une baisse des capacités d’adaptation ; • les personnes dites « malades » : dépendantes, en mauvais état de santé en raison d’une polypathologie chronique évoluée génératrice de handicaps et d’un isolement social.  
-Les préoccupations de prise en charge chez les personnes âgées sont en partie liées aux risques d’hypoglycémies sévères. Le risque d’hypoglycémie peut être majoré par les troubles cognitifs, une mauvaise alimentation et la clairance pharmacologique diminuée. De plus, le bénéfice d’un contrôle glycémique strict est pondéré par l’espérance de vie plus brève.  
-Recommandation 3a 
-AE Les personnes âgées dites « vigoureuses » et dont l’espérance de vie est jugée satisfaisante peuvent bénéficier des mêmes cibles que les sujets plus jeunes.  
-Recommandation 3b 
 AE Pour les personnes âgées dites « fragiles », une cible d’HbA1c inférieure ou égale à 8 % est recommandée.                                             1 http://www.has-sante.fr/portail/upload/docs/application/pdf/2009-06/chutes_repetees_personnes_agees_-_argumentaire.pdf 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 10 
-Recommandation 3c 
 AE Pour les personnes âgées dites « malades », la priorité est d’éviter les complications aiguës dues au diabète (déshydratation, coma hyperosmolaire) et les hypoglycémies ; des glycémies capillaires préprandiales comprises entre 1 et 2 g/l et/ou un taux d’HbA1c inférieur à 9 % sont recommandés. 1.3 Patients ayant un antécédent cardio-vasculaire connu 
-Les antécédents de complication macrovasculaire pouvant être considérée comme évoluée sont : • infarctus du myocarde (IDM) avec insuffisance cardiaque ; • atteinte coronarienne sévère (tronc commun ou atteinte tritronculaire ou atteinte de l’interventriculaire antérieur [IVA] proximal) ; • atteinte polyartérielle (au moins deux territoires artériels symptomatiques) ; • artériopathie oblitérante des membres inférieurs (AOMI) symptomatique ; • accident vasculaire cérébral récent (< 6 mois).  
-Recommandation 4a 
 AE Pour les patients avec un antécédent de complication macrovasculaire considérée comme non évoluée, un objectif inférieur ou égal à 7 % est recommandé.  
-Recommandation 4b 
 AE Pour les patients avec un antécédent de complication macrovasculaire considérée comme évoluée, un objectif inférieur ou égal à 8 % est recommandé. 1.4 Patients ayant une insuffisance rénale chronique  
-Selon le guide de parcours de soins « Maladie rénale chronique de l’adulte » de la HAS, « la maladie rénale chronique est définie indépendamment de sa cause par la présence pendant plus de 3 mois de marqueurs d’atteinte rénale ou d’une baisse du débit de filtration glomérulaire estimé (DFG estimé) au-dessous de 60 ml/min/1,73 m².  
-Le stade de maladie rénale chronique est défini à partir du DFG estimé et de la présence de marqueurs d’atteinte rénale. Le stade 3 d’insuffisance rénale modérée intègre deux niveaux de sévérité (stade 3A et 3B). »  
-Tableau 2. Classification des stades d’évolution de la maladie rénale chronique 
-Stades Définition DFG (ml/min/1,73 m²) 1 Maladie rénale chronique* avec DFG normal ou augmenté ≥ 90 2 Maladie rénale chronique* avec DFG légèrement diminué 
-Entre 60 et 89 
-Stade 3A : entre 45 et 59 3 Insuffisance rénale modérée 
-Stade 3B : entre 30 et 44 4 Insuffisance rénale sévère Entre 15 et 29 5 Insuffisance rénale terminale < 15  * avec marqueurs d’atteinte rénale : albuminurie, hématurie, leucocyturie ou anomalies morphologiques ou histologiques ou marqueurs de dysfonction tubulaire, persistant plus de 3 mois (deux ou trois examens consécutifs). 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 11 
-Recommandation 5a 
 AE Pour les patients avec une insuffisance rénale chronique modérée (stades 3A et 3B), une cible d’HbA1c inférieure ou égale à 7 % est recommandée.  
-Recommandation 5b 
 AE Pour les patients avec une insuffisance rénale chronique sévère ou terminale (stades 4 et 5), une cible d’HbA1c inférieure ou égale à 8 % est recommandée. 1.5 Patientes enceintes ou envisageant de l’être 
-Recommandation 6 
 AE Les femmes en âge de procréer doivent être informées de l'intérêt d'un bon contrôle glycémique avant et durant la grossesse afin d'améliorer le pronostic obstétrical.   
-Recommandation 7a 
 AE Une cible d’HbA1c si possible inférieure à 6,5 %, est recommandée avant d’envisager la grossesse.   
-Recommandation 7b 
 AE Durant la grossesse, l’équilibre glycémique doit être évalué par des glycémies capillaires pluriquotidiennes. Des glycémies inférieures à 0,95 g/l à jeun et 1,20 g/l en post-prandial à 2 heures et un taux d’HbA1c inférieur à 6,5 %, sous réserve d’être atteints sans hypoglycémie sévère, sont recommandés.    
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 12 2 Stratégie médicamenteuse du contrôle glycémique du diabète de type 2  
 En l’absence de données bibliographiques sur la comparaison directe des différentes stratégies thérapeutiques, les recommandations ne peuvent pas être élaborées selon un critère d’efficience2.  
 Le schéma général a été élaboré en tenant compte de quatre critères discutés et validés par le groupe de travail et documentés par l’analyse de la littérature : les données de morbi-mortalité3 quand elles existaient puis l’effet sur le taux d’HbA1c, et enfin, sans hiérarchie pré-établie, les critères de tolérance (action sur le poids et risque de survenue d’hypoglycémies), de sécurité (recul sur la sécurité des nouvelles molécules) et de coût (coût journalier du traitement pharmacologique4). Pour chaque étape de la stratégie, le recours aux molécules a été hiérarchisé. La hiérarchisation des traitements est issue de la discussion du groupe de travail, qui a été menée jusqu’à parvenir à l’accord soit à l’unanimité soit d’au moins 80 % des membres du groupe pour chaque recommandation, formalisé par un vote.  
 La stratégie recommandée en première intention pour chaque étape de traitement (metformine en monothérapie, metformine + sulfamide hypoglycémiant en bithérapie, trithérapie comprenant au moins metformine + sulfamide hypoglycémiant) est la stratégie la plus efficace, la moins coûteuse et celle pour laquelle le recul d’utilisation est le plus important. Elle est efficiente selon des évaluations étrangères et il est probable que des résultats similaires seraient obtenus en France (voir l’argumentaire pour une présentation plus détaillée).  
 L’éducation thérapeutique est indispensable à la prise en charge des patients diabétiques de type 2. La mise en place de mesures hygiéno-diététiques efficaces est un préalable nécessaire au traitement médicamenteux du contrôle glycémique et leur application doit être poursuivie tout au long de la prise en charge. 2.1 Patients présentant un diabète de type 2 (cas général) 
-Recommandation 8 
 AE Quelle que soit l’étape de la stratégie thérapeutique du contrôle glycémique, il est recommandé : • de prendre en compte l’environnement social, familial et culturel du patient (activité professionnelle, rythme des repas…) ; • de réévaluer l’application des mesures hygiéno-diététiques et de les renforcer si nécessaire.  
 Le rythme des consultations doit être fixé en fonction des caractéristiques du patient. 
 Une consultation tous les 3 mois est généralement suffisante.                                             2 Fonder une recommandation sur l’efficience consiste à privilégier parmi plusieurs stratégies celle(s) dont le rapport différentiel entre les coûts et les résultats de santé est le plus faible (voir l’argumentaire pour une présentation plus détaillée). 3 La médecine fondée sur les preuves suppose d’établir une recommandation sur des critères de morbi-mortalité (dits finaux). Un critère intermédiaire (dosage biologique par exemple) peut être admis de façon complémentaire, sous réserve qu’il soit prédictif de critères finaux. Pour cette recommandation, le taux d’HbA1c comme critère intermédiaire a été retenu afin de situer la place des nouvelles molécules dans la stratégie médicamenteuse en l’absence de données de morbi-mortalité pour ces molécules. Ce choix explique la faible gradation de la plupart des recommandations. 4 Le coût journalier du traitement pharmacologique ne reflète qu’incomplètement le coût de la prise en charge. 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 13  
-Recommandation 9 
 AE Si l’objectif glycémique n’est pas atteint malgré la mise en place des mesures hygiéno-diététiques, un traitement médicamenteux sera débuté.  
 Afin de favoriser leur tolérance, les traitements seront démarrés aux doses minimales recommandées qui seront augmentées progressivement jusqu’aux doses maximales tolérées ou jusqu’à l’atteinte de l’objectif. Ils devront être pris selon les règles pharmacologiques de prescription (horaire par rapport aux repas, nombre de prises, etc.).  
 Certaines recommandations prévoient plusieurs options thérapeutiques non hiérarchisées. Dans ce cas, et si le profil du patient le permet, le traitement le moins coûteux doit être privilégié.  
-La réévaluation du traitement est nécessaire après un intervalle de 3 à 6 mois -  plus rapidement en cas de signes cliniques liés à l’hyperglycémie ou d’intolérance au traitement (hypoglycémie, prise de poids ou autres effets secondaires) en portant une attention particulière à l’observance. 
 Un traitement ne doit pas être maintenu chez un patient non répondeur5 ; il sera  remplacé par un médicament d’une autre classe thérapeutique recommandée.  
-Recommandation 10 
 AE Dans tous les cas, il est recommandé d’informer le patient des avantages et inconvénients des traitements proposés et de tenir compte de leur acceptabilité.  
-Lors de l’introduction d’un médicament susceptible d’induire des hypoglycémies, il est important d’apprendre au patient à prévenir, identifier et prendre en charge une hypoglycémie.  
-Recommandation 11 
-AE En l’absence de signes cliniques (syndrome polyuro-polydipsique, amaigrissement), le traitement est débuté par une monothérapie. 
-En cas de symptômes ou de diabète très déséquilibré avec des glycémies répétées supérieures à 3 g/l ou un taux d’HbA1c supérieur à 10 %, une bithérapie voire une insulinothérapie peuvent être instaurées d’emblée. Dans cette situation, lors de la réévaluation du traitement, si le diabète est bien contrôlé, on pourra être amené à passer d’une bithérapie à une monothérapie voire à l’arrêt du traitement, ou d’une insulinothérapie à un traitement oral.  
-Recommandation 12 
 AE Il n’est pas recommandé d’associer deux médicaments de même mécanisme d’action. ► Monothérapie  
-Recommandation 13 
 B Il est recommandé de prescrire la metformine en première intention.                                              5 Le patient n’est pas répondeur à un traitement quand au bout de 6 mois à la dose maximale bien tolérée, et sous réserve d’une bonne observance, l’objectif n’est pas atteint ou le taux d’HbA1c n’a pas diminué d’au moins 0,5 point. 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 14 
-Recommandation 14 
 AE En cas d’intolérance ou de contre-indication à la metformine, il est recommandé de prescrire un sulfamide hypoglycémiant en surveillant la prise de poids et la survenue d’hypoglycémies.   
-Recommandation 15 
 AE En cas d’intolérance ou de contre-indication à la metformine et aux sulfamides hypoglycémiants, d’autres alternatives sont possibles : • répaglinide si la prise alimentaire est irrégulière, en raison de son administration à chaque repas (demi-vie courte) ;  • inhibiteurs des alphaglucosidases si la survenue d’hypoglycémies est une situation préoccupante. 
 Le profil de patients qui pourraient bénéficier des inhibiteurs de la DPP-4 est proche de ceux pouvant bénéficier des inhibiteurs des alphaglucosidases. Cependant il n’y a pas suffisamment de recul sur leurs effets à long terme. Par ailleurs, ces molécules ne sont pas remboursées en monothérapie. Pour ces raisons, les inhibiteurs de la DPP-4 ne peuvent être utilisés en monothérapie que lorsqu’aucun autre traitement oral ne peut être proposé, après avis d’un diabétologue ; le patient doit être informé de l’absence de remboursement.  
-Recommandation 16 
 AE Pour les patients dont l’objectif est un taux d’HbA1c inférieur ou égal à 6,5 % (cf. recommandation n°2b), la monothérapie doit reposer sur la metformine. En cas d’intolérance ou de contre-indication à la metformine, les inhibiteurs des alphaglucosidases peuvent être envisagés. Si l’objectif n’est pas atteint malgré cette monothérapie, l’objectif doit être redéfini avec un taux d’HbA1c inférieur ou égal à 7 %. ► Bithérapie • Si monothérapie par metformine   
-Recommandation 17  
-AE 
 Si l’objectif glycémique n’est pas atteint malgré une monothérapie par metformine, l’association metformine + sulfamide hypoglycémiant est recommandée en surveillant la prise de poids et la survenue d’hypoglycémies.   
-Recommandation 18a 
 AE En cas d’intolérance ou de contre-indication aux sulfamides hypoglycémiants, les schémas thérapeutiques suivants peuvent être proposés si l’écart à l’objectif est inférieur à 1 % d’HbA1c6 : • association metformine + répaglinide si irrégularité de la prise alimentaire ; • association metformine + inhibiteurs des alphaglucosidases si la survenue d’hypoglycémies est une situation préoccupante ; • association metformine + inhibiteurs de la DPP-4 si la survenue d’hypoglycémies ou la prise de poids sont préoccupantes.                                              6 Dans les études, l’efficacité moyenne sur la baisse du taux d’HbA1c a été évaluée à 0,8 % pour les inhibiteurs des alphaglucosidases et les inhibiteurs de la DPP-4, 1 % pour le répaglinide. Il s’agit d’une efficacité moyenne. 
-Chaque traitement peut être plus efficace ou moins efficace selon les patients.  
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 15 
-Recommandation 18b 
 AE En cas d’intolérance ou de contre-indication aux sulfamides hypoglycémiants et si l’écart à l’objectif est supérieur à 1 % d’HbA1c, les schémas thérapeutiques suivants peuvent être proposés : • association metformine + insuline ; • association metformine + analogues du GLP-1 si IMC ≥ 30 ou si la prise de poids sous insuline ou la survenue d’hypoglycémies sont une situation préoccupante.  
-Recommandation 18c 
 AE En cas d’intolérance ou de contre-indication aux sulfamides hypoglycémiants et en cas d’échec de la bithérapie orale, les schémas thérapeutiques suivants peuvent être proposés : • association metformine + insuline ; • association metformine + analogues du GLP-1 si IMC ≥ 30 ou si la prise de poids sous insuline ou la survenue d’hypoglycémies sont une situation préoccupante.  • Si monothérapie par sulfamide hypoglycémiant   
-Recommandation 19a 
 AE Si l’objectif glycémique n’est pas atteint malgré une monothérapie par sulfamide hypoglycémiant (metformine non tolérée ou contre-indiquée) et si l’écart à l’objectif est inférieur à 1 % d’HbA1c6, les schémas thérapeutiques suivants peuvent être proposés : • association sulfamide hypoglycémiant + inhibiteurs des alphaglucosidases, • association sulfamide hypoglycémiant + inhibiteurs de la DPP-4.   
-Recommandation 19b 
 AE Si l’objectif glycémique n’est pas atteint malgré une monothérapie par sulfamide hypoglycémiant (metformine non tolérée ou contre-indiquée) et si l’écart à l’objectif est supérieur à 1 % d’HbA1c, les schémas thérapeutiques suivants peuvent être proposés : • association sulfamide hypoglycémiant + insuline ; • association sulfamide hypoglycémiant + analogues du GLP-1 si IMC ≥ 30 ou si la prise de poids sous insuline est une situation préoccupante.  
-Recommandation 19c 
 AE Si l’objectif glycémique n’est pas atteint malgré une monothérapie par sulfamide hypoglycémiant (metformine non tolérée ou contre-indiquée) et en cas d’échec de la bithérapie orale, les schémas thérapeutiques suivants peuvent être proposés : • association sulfamide hypoglycémiant + insuline ; • association sulfamide hypoglycémiant + analogues du GLP-1 si IMC ≥ 30 ou si la prise de poids sous insuline est une situation préoccupante.  • Si monothérapie par autre antidiabétique   
-Recommandation 20 
 AE Si l’objectif glycémique n’est pas atteint malgré une monothérapie par répaglinide, inhibiteurs des alphaglucosidases ou inhibiteurs de la DPP-4 (metformine et sulfamide hypoglycémiant non tolérés ou contre-indiqués), il est recommandé 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 16 d’introduire l’insulinothérapie7. ► Trithérapie  
-Recommandation 21a  
-AE 
-Si l’objectif glycémique n’est pas atteint malgré une bithérapie par metformine + sulfamide hypoglycémiant et si l’écart à l’objectif est inférieur à 1 % d’HbA1c6, les schémas thérapeutiques suivants peuvent être proposés : • association metformine + sulfamide hypoglycémiant + inhibiteurs des alpha-glucosidases ; • association metformine + sulfamide hypoglycémiant + inhibiteurs de la DPP-48.   
-Recommandation 21b 
-AE Si l’objectif glycémique n’est pas atteint malgré une bithérapie par metformine + sulfamide hypoglycémiant et si l’écart à l’objectif est supérieur à 1 % d’HbA1c, les schémas thérapeutiques suivants peuvent être proposés : • association metformine + sulfamide hypoglycémiant + insuline ; • association metformine + sulfamide hypoglycémiant + analogues du GLP-1 si 
-IMC ≥ 30 ou si la prise de poids sous insuline est une situation préoccupante.  
-Recommandation 21c 
-AE Si l’objectif glycémique n’est pas atteint malgré une trithérapie orale incluant metformine + sulfamide hypoglycémiant, les schémas thérapeutiques suivants peuvent être proposés : • association metformine + sulfamide hypoglycémiant + insuline ; • association metformine + sulfamide hypoglycémiant + analogues du GLP-1 si 
-IMC ≥ 30 ou si la prise de poids sous insuline est une situation préoccupante.  ► Insulinothérapie 
-Recommandation 22 
 AE L’instauration d’une insulinothérapie est l’objet d’une discussion avec le patient (et/ou son entourage) dans le cadre de l’éducation thérapeutique. Elle doit être accompagnée et idéalement précédée d’une autosurveillance glycémique et faire l’objet d’un apprentissage. L’intérêt de maintenir les antidiabétiques non insuliniques doit être évalué en fonction des bénéfices attendus pour chacune des molécules : • la metformine sera poursuivie ; • la posologie du sulfamide hypoglycémiant ou du répaglinide sera adaptée si besoin en fonction du schéma insulinique ; • les inhibiteurs de la DPP-4 et les inhibiteurs des alphaglucosidases seront arrêtés ; • l’association insuline + analogues du GLP-1 relève d’un avis spécialisé9. 
-La quadrithérapie ne se justifie pas en général. 
 L’instauration d’une insulinothérapie nécessite la définition d’objectifs glycémiques clairs, la réalisation d’une autosurveillance glycémique, l’adaptation des doses                                             7 En l’absence de données sur l’association de ces monothérapies avec des analogues du GLP-1 et d’AMM, ces associations ne peuvent pas être envisagées. 8 Lors de la rédaction de la recommandation, seule la sitagliptine est autorisée et remboursable par l’Assurance maladie en trithérapie. 9 Lors de la rédaction de la recommandation, seul l’exénatide est autorisé en association avec l’insuline, et n’est pas remboursable par l’Assurance maladie dans cette indication. 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 17 d’insuline afin d’atteindre les objectifs glycémiques, la connaissance des moyens de prévenir et de corriger les hypoglycémies et la réalisation adéquate de l’injection d’insuline.   
-Le choix d’un schéma d’insulinothérapie dépend de plusieurs paramètres, tels que : • le choix du patient : le patient accepte-t-il le traitement ? Le nombre d’injections ? • les objectifs glycémiques et la capacité du patient à les atteindre ; • l’autonomie du patient : peut-il gérer son traitement ? En cas d’impossibilité, son entourage peut-il y suppléer ou le passage d’un(e) infirmier(ère) est-il obligatoire ?  • les profils glycémiques : y a-t-il une hyperglycémie à jeun isolée ou associée à une ou plusieurs hyperglycémies post-prandiales ?  • le mode de vie du patient : le type d’alimentation (horaires des repas et teneur glucidique) et l’activité physique sont-ils réguliers ou erratiques ?  
-De ce fait le choix d’un traitement insulinique repose sur une expertise des soignants à transmettre au patient ou à la personne qui prendra en charge ce traitement.  
-Recommandation 23 
-AE Le recours à un endocrinologue sera envisagé pour instaurer ou optimiser le schéma insulinique en cas de difficulté à atteindre les objectifs glycémiques fixés.  
-Recommandation 24 
 AE Lors de la mise en place de l’insulinothérapie, il est recommandé, en adjonction à une monothérapie ou à une bithérapie, de débuter : • de préférence par une insuline intermédiaire (NPH) au coucher ; • ou par une insuline analogue lente si le risque d’hypoglycémie nocturne est préoccupant.  
 L’instauration d’une insuline intermédiaire ou analogue lente pourra se faire avec les règles de pratiques suivantes : • prescription d’une dose initiale faible, de 6 à 10 UI par 24 heures ; • mise en place d’une autosurveillance glycémique pour la prévention des hypoglycémies et l’adaptation des doses d’insuline (au moins 2 mesures glycémiques capillaires par jour à l’initiation de l’insulinothérapie : au coucher pour prévenir les hypoglycémies et au réveil pour suivre l’objectif) ; • définition d’un objectif pour la glycémie à jeun au réveil selon l’objectif d’HbA1c du patient (cf. annexe 5 de l’argumentaire scientifique) ; • adaptation des doses d’insuline tous les 3 jours en fonction des glycémies au réveil et de l’objectif fixé ; la dose peut être augmentée ou réduite de 1 ou 2 UI ; • réévaluation du traitement (ADO et/ou insuline) en cas d’hypoglycémies fréquentes ou d’une hypoglycémie sévère ; • recours éventuel à un(e) infirmier(ère) pour réaliser l’insulinothérapie (adaptation des doses selon la prescription…).  
-Recommandation 25 
 AE Si l’objectif glycémique n’est pas atteint malgré la mise en place de l’insulinothérapie, celle-ci sera intensifiée. Les différents schémas possibles sont : • schéma basal-bolus : insuline ou analogue d’action lente et insuline ou analogue d’action rapide ou ultrarapide avant un ou plusieurs repas de la journée ; 
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 18 • schéma de 1 à 3 injections par jour d’insuline biphasique (mélange d’insuline à action rapide ou ultrarapide et d’insuline à action intermédiaire ou lente).  
-Recommandation 26 
-AE En cas de diabète très déséquilibré, avec des glycémies supérieures à 3 g/l répétées et/ou une HbA1c > 10 %, un schéma insulinique intensifié pourra être instauré d’emblée après avis d’un endocrinologue. 2.2 Patients de plus de 75 ans 
 Plusieurs caractéristiques doivent être prises en compte au cours de la prise en charge des personnes âgées : altération de la fonction rénale, polymédication, risque élevé d’hypoglycémie et conséquences plus délétères de l’hypoglycémie, risque de dénutrition.  
-Recommandation 27 
-AE Si la situation le permet (pour les personnes dont la fonction rénale n’est pas altérée et pour lesquelles la sécurité de la prise médicamenteuse est assurée) : la metformine et/ou un sulfamide hypoglycémiant peuvent être utilisés avec précaution.  
-Dans cette population, lorsque les sulfamides hypoglycémiants ne peuvent être utilisés, les inhibiteurs de la DPP-4 peuvent être une alternative aux sulfamides, en bithérapie avec la metformine.  
-Recommandation 28 
 AE Lorsque les antidiabétiques oraux (ADO) ne peuvent pas être utilisés, l’insulinothérapie est recommandée, avec recours éventuel à une tierce personne.  
-Cependant, pour les personnes âgées « fragiles » ou « malades », et si l’écart à l’objectif est faible (moins de 0,5 % en valeur absolue d’HbA1c), l’absence de traitement médicamenteux du contrôle glycémique peut être envisagée, avec une surveillance de la glycémie.  
-Recommandation 29 
 AE En cas de situation aiguë contre-indiquant temporairement les ADO (par exemple déshydratation avec insuffisance rénale fonctionnelle), ceux-ci doivent être interrompus, avec une surveillance accrue de la glycémie et un recours éventuel à l’insuline le temps de l’épisode.  
-Recommandation 30 
 AE En cas de situation à risque de déséquilibre du diabète (par exemple un épisode infectieux), une surveillance accrue de la glycémie et le recours éventuel à l’insuline sont recommandés.  
-Recommandation 31 
-AE L’utilisation des analogues du GLP-1 n’est actuellement pas recommandée chez les personnes âgées du fait d’une expérience clinique limitée.  
-Stratégie médicamenteuse du contrôle glycémique du diabète de type 2 
-HAS / Service des bonnes pratiques professionnelles / Service évaluation économique et santé publique / janvier 2013 19 2.3 Patients ayant un antécédent cardio-vasculaire connu 
-Recommandation 32 
-AE Le schéma général peut être suivi en portant une attention particulière au risque d’hypoglycémie. La metformine peut être maintenue ou introduite sous réserve du respect des contre-indications.  
-Recommandation 33 
-AE Une coordination entre médecin généraliste, cardiologue et endocrinologue est recommandée. 2.4 Patients ayant une insuffisance rénale chronique 
-Recommandation 34 
-AE Au stade de l’insuffisance rénale chronique modérée (clairance de la créatinine entre 30 et 60 ml/min/1,73m² ; stades 3A et 3B), les molécules à élimination rénale doivent être utilisées avec précaution car il existe un risque accru d’effets secondaires dont les hypoglycémies pour certaines classes thérapeutiques. Les traitements doivent être adaptés aux précautions d’emploi spécifiques à l’insuffisance rénale : la posologie sera adaptée, en particulier pour la metformine (cf. annexe 2), et une attention particulière sera portée aux interactions médicamenteuses.  
-Recommandation 35 
-AE Au stade de l’insuffisance rénale chronique sévère (clairance de la créatinine < 30 ml/min/1,73 m² ; stades 4 et 5), les seules classes thérapeutiques autorisées (AMM) sont l’insuline, le répaglinide, les inhibiteurs des alphaglucosidases jusqu’à 25 ml/min et les inhibiteurs de la DPP-4 à
+AE L’utilisation des analogues du GLP-1 n’est actuellement pas recommandée chez les personnes âgées du 

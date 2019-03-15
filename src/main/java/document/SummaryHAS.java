@@ -1,4 +1,4 @@
-package PdfToText;
+package document;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

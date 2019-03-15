@@ -1,4 +1,4 @@
-package POSTagging;
+package tagging;
 
 public class TaggerCreator {
 
