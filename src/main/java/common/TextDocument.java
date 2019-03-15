@@ -1,15 +1,10 @@
 package common;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -21,9 +16,9 @@ public class TextDocument {
     private List<String> lines;
 
 
-    public TextDocument(@NotNull File file) throws IOException {
+    public TextDocument(File file, List<String> lines) {
         this.file = file;
-        lines = Files.readAllLines(Paths.get(file.getPath()));
+        this.lines = lines;
     }
 
     /**
@@ -42,6 +37,15 @@ public class TextDocument {
         return lines;
     }
 
+
+    /**
+     *
+     * @param line
+     * @return
+     */
+    public boolean removeLine(String line){
+        return lines.remove(line);
+    }
 
     /**
      *
@@ -64,49 +68,31 @@ public class TextDocument {
         lines = list;
     }
 
-    /**
-     *
-     * @return
-     */
-    public TextDocument oneSentencePerLine(){
-        Iterator<String> it = lines.iterator();
-        List<String> sentences = new ArrayList<>();
-        String currentSentence = "";
-        String currentLine;
-        while(it.hasNext()){
-            currentLine = it.next();
-            // Si pas de phrase en cours
-            if(currentSentence == ""){
-                for (Character ch :currentLine.toCharArray()){
-                    currentSentence += ch;
-                    if(ch.equals(".")){
-                        sentences.add(currentSentence+"\n");
-                        currentSentence = "";
-                    }
-                }
-            }else{
-                //Si MAJUSCULE en début de ligne.
-                if(currentLine.matches("^[A-Z]")){
-                    //ON AJOUTE TOUTES LES PHRASES
-                    String [] splitted = currentLine.split("\\.+\\s");
 
-                    if(currentLine.matches("\\.+\\s+$") ||currentLine.matches("\\.+$") ){
-                        for (String s : splitted) {
-                            sentences.add(s);
-                        }
-                    }
+    public static class Builder{
 
-                    for (int i = 0; i<currentLine.split("\\.+\\s").length; i++ ){
-                        //sentences.add(s);
-                    }
-                }
-            }
+        private File file;
+        private List<String> lines;
+
+        public Builder() {
+            this.lines = new ArrayList<>();
         }
-        setLines(sentences);
-        return this;
+
+        public void setFile(File file){
+            this.file = file;
+        }
+
+        public void addLine(String line){
+            lines.add(line);
+        }
+
+        public TextDocument build(){
+            if(file == null){
+                throw new InvalidParameterException("No file was specified");
+            }
+            return new TextDocument(file, lines);
+        }
     }
-
-
 
 
 }

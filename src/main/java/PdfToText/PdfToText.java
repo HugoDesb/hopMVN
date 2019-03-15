@@ -1,10 +1,6 @@
 package PdfToText;
 
 
-import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.parser.PdfReaderContentParser;
-import com.itextpdf.text.pdf.parser.SimpleTextExtractionStrategy;
-import com.itextpdf.text.pdf.parser.TextExtractionStrategy;
 import common.TextDocument;
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessFile;
@@ -14,10 +10,9 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 /**
  * Static class for converting a pdf to a txt file
@@ -30,31 +25,7 @@ public class PdfToText {
      * @throws IOException
      */
     public static TextDocument convert(File file) throws IOException {
-        return new TextDocument(withPDFBox(file, getTargetTXTPath(file)));
-    }
-
-
-    public void extractsPdfLines(String PdfFile, String txtFile) throws IOException {
-        try {
-            StringBuffer buff = new StringBuffer();
-            String ExtractedText = null;
-            PdfReader reader = new PdfReader(PdfFile);
-            PdfReaderContentParser parser = new PdfReaderContentParser(reader);
-            PrintWriter out = new PrintWriter(new FileOutputStream(txtFile));
-            TextExtractionStrategy strategy;
-
-            for (int i = 1; i <= reader.getNumberOfPages(); i++) {
-                strategy = parser.processContent(i, new SimpleTextExtractionStrategy());
-                ExtractedText = strategy.getResultantText().toString();
-                out.println(ExtractedText);
-            }
-
-            String[] LinesArray;
-            LinesArray = buff.toString().split("\n");
-            reader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        return withPDFBox(file, getTargetTXTPath(file));
     }
 
     /**
@@ -64,25 +35,16 @@ public class PdfToText {
      * @return the txt file
      * @throws IOException
      */
-    private static File withPDFBox(File pdf, File txt) throws IOException {
-        String parsedText;
+    private static TextDocument withPDFBox(File pdf, File txt) throws IOException {
         PDFParser parser = new PDFParser(new RandomAccessFile(pdf, "r"));
         parser.parse();
         COSDocument cosDoc = parser.getDocument();
-        PDFTextStripper pdfStripper = new PDFTextStripper();
         PDDocument pdDoc = new PDDocument(cosDoc);
 
+        TextDocument.Builder builder = readContent(pdDoc);
+        builder.setFile(txt);
 
-        readSummary(pdDoc);
-
-        pdfStripper.setPageStart("Page Debut\n");
-        pdfStripper.setPageEnd("Page End\n");
-        parsedText = pdfStripper.getText(pdDoc);
-        System.out.println(parsedText);
-        PrintWriter pw = new PrintWriter(txt);
-        pw.print(parsedText);
-        pw.close();
-        return txt;
+        return builder.build();
     }
 
     private static SummaryHAS readSummary(PDDocument pdDoc) throws IOException {
@@ -94,8 +56,52 @@ public class PdfToText {
         return new SummaryHAS(text);
     }
 
+    private static TextDocument.Builder readContent(PDDocument doc) throws IOException {
+        //choose relevant pages
+        SummaryHAS summary = readSummary(doc);
+        PDDocument contentDocument = new PDDocument();
+        int [] boundaries = summary.getContentBoundaries();
+        for(int i = boundaries[0]; i<boundaries[1]; i++){
+            contentDocument.addPage(doc.getPage(i));
+        }
+
+        PDFTextStripper textStripper = new PDFTextStripper();
+        String contentText = textStripper.getText(contentDocument);
+
+        return exctractContent(contentText);
+
+    }
+
+    private static TextDocument.Builder exctractContent(String contentText) {
+        String [] textLines = contentText.split("\n");
+        ArrayList<String> contentLines = new ArrayList<>();
+
+        TextDocument.Builder builder = new TextDocument.Builder();
+
+        String toAdd = "";
+
+        for (String line : textLines) {
+            //ligne non vide
+            if(!line.equals("")){
+                // First character is a UPPERCASE
+                if(line.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
+                    // We can consider it's a new sentence
+                    //  add previous line
+                    builder.addLine(toAdd);
+                    //store new line
+                    toAdd = line;
+                // first character is NOT an UPPERCASE
+                } else {
+                    toAdd += line;
+                }
+            }
+        }
+
+        return builder;
+    }
+
     public static void main(String [] args) throws IOException {
-        convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
+        convert(new File("./files/10irp04_reco_diabete_type_2.pdf")).writeFile();
     }
 
     /**
