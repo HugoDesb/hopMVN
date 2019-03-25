@@ -1,8 +1,8 @@
 package tagging;
 
-import java.io.File;
+import document.TextDocument;
 
 public interface Tagger {
 
-    public File tag();
+    public TaggedSentence tag(TextDocument textDocument);
 }

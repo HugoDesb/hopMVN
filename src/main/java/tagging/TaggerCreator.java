@@ -6,7 +6,7 @@ public class TaggerCreator {
 
         switch(type){
             case RNNTAGGER:
-                return new RNNTagger();
+                //return new RNNTagger();
             //case TreeTagger:
         }
         return null;

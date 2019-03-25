@@ -13,7 +13,6 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 
 /**
  * Static class for converting a pdf to a txt file
@@ -75,34 +74,32 @@ public class PdfToText {
 
     private static TextDocument.Builder exctractContent(String contentText) {
         String [] textLines = contentText.split("\n");
-        ArrayList<String> contentLines = new ArrayList<>();
 
         TextDocument.Builder builder = new TextDocument.Builder();
 
         String toAdd = "";
 
         for (String line : textLines) {
-            //ligne non vide
-            if(!line.equals("")){
-                // First character is a UPPERCASE
-                if(line.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
-                    // We can consider it's a new sentence
-                    //  add previous line
-                    builder.addLine(toAdd);
-                    //store new line
-                    toAdd = line;
-                // first character is NOT an UPPERCASE
-                } else {
-                    toAdd += line;
+            String [] sentences = line.split("\\.\\s");
+            for (String sentence: sentences) {
+                //ligne non vide
+                if(!sentence.equals("")){
+                    // First character is a UPPERCASE
+                    if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
+                        // We can consider it's a new sentence
+                        //  add previous line
+                        builder.addLine(toAdd + ".");
+                        //store new line
+                        toAdd = sentence;
+                        // first character is NOT an UPPERCASE
+                    } else {
+                        toAdd += sentence;
+                    }
                 }
             }
         }
 
         return builder;
-    }
-
-    public static void main(String [] args) throws IOException {
-        convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
     }
 
     /**

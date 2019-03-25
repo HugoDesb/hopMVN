@@ -14,47 +14,21 @@ public class Main {
     public static final String pathRecoTagged = "./files/recos_txt_adjusted/";
 
     public static void main(String [] args){
-        //System.out.println("The only argument should be a PATH to the root folder containing the pdf files");
-        String hopela = "hopela. ";
-        System.out.println(hopela.split("z")[0]);
-        //System.out.println(hopela.split("z")[1]);
 
         try {
-            TextDocument td = convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
-            td = InitialFilter.filter(td);
-            td.writeFile();
+            TextDocument td1 = convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
+            td1 = InitialFilter.filter(td1);
+            td1.writeFile();
+
+            TextDocument td2 = convert(new File("./files/fiche_memo_hta__mel.pdf"));
+            td2 = InitialFilter.filter(td2);
+            td2.writeFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    /**
-     * Remove '?' at the beginning of a line && put lists back into one line (end-of-line == ';')
-     * @param in original recos_txt file
-     * @param out modified recos_txt file
-     */
-    public static void adjustFile(File in, File out){
-        try{
-            PrintWriter printWriter = new PrintWriter(out);
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(in));
-
-            String lineRead = bufferedReader.readLine();
-            boolean precedentHasTwoPoints = false;
-            while(lineRead != null){
-                if(precedentHasTwoPoints){
-
-                }
-            }
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
     public static void showHelp(){
-        System.out.println("The only argument should be a PATH to the root folder containing the pdf files");
-        String hopela = "hopela";
-        System.out.println(hopela.split("e")[0]);
-        System.out.println(hopela.split("e")[1]);
+        System.out.println("Show Help - Main");
     }
 }
