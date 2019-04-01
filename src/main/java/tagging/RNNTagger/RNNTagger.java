@@ -2,11 +2,10 @@ package tagging.RNNTagger;
 
 import config.Config;
 import document.TextDocument;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import tagging.TaggedSentence;
 import tagging.Tagger;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class RNNTagger implements Tagger {
 
@@ -18,7 +17,8 @@ public class RNNTagger implements Tagger {
     }
 
     @Override
-    public TaggedSentence tag(TextDocument textDocument) {
+    public ArrayList<TaggedSentence<RNNTag>> tag(TextDocument textDocument) {
+        ArrayList<TaggedSentence<RNNTag>> taggedFile = new ArrayList<>();
         for (String sentence : textDocument.getLines()) {
             Runtime rt = Runtime.getRuntime();
             Process pr = null;
@@ -40,13 +40,11 @@ public class RNNTagger implements Tagger {
                 int exitVal = pr.waitFor();
                 System.out.println("Process exitValue: " + exitVal);
 
-            } catch (IOException e) {
+            } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
             }
         }
-        throw new NotImplementedException();
+        return taggedFile;
     }
 
 

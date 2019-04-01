@@ -30,5 +30,7 @@ public class Main {
 
     public static void showHelp(){
         System.out.println("Show Help - Main");
+        System.out.println();
+        System.out.println("No help has been written yet, as no command line functionnality has been written");
     }
 }

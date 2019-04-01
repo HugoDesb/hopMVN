@@ -52,8 +52,14 @@ public class TextDocument {
      * @return
      * @throws FileNotFoundException
      */
-    public void writeFile() throws FileNotFoundException {
-        PrintWriter pw = new PrintWriter(file);
+    public void writeFile() {
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("NO OUTPUT FILE FOUND -- MAKE SURE THE FILE EXISTS");
+            e.printStackTrace();
+        }
         for (String line :
                 lines) {
             pw.println(line);

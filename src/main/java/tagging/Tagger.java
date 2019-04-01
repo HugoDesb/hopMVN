@@ -1,8 +1,11 @@
 package tagging;
 
 import document.TextDocument;
+import tagging.RNNTagger.TaggedSentence;
 
-public interface Tagger {
+import java.util.ArrayList;
 
-    public TaggedSentence tag(TextDocument textDocument);
+public interface Tagger<T> {
+
+    public ArrayList<TaggedSentence<T>> tag(TextDocument textDocument);
 }
