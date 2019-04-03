@@ -26,13 +26,13 @@ public class BiGram extends Gram{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BiGram biGram = (BiGram) o;
-        return super.equals(o) && second.getLemma().equals(biGram)
+        return super.equals(biGram) &&
                 Objects.equals(second.getLemma(), biGram.second.getLemma());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.getFirst(), second);
+        return Objects.hash(super.hashCode(), this.second);
     }
 
 

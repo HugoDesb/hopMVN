@@ -2,19 +2,19 @@ package tagging.RNNTagger;
 
 import java.util.ArrayList;
 
-public class TaggedSentence<T> {
+public class TaggedSentence {
 
-    private ArrayList<T> taggedTokens;
+    private ArrayList<RNNTag> taggedTokens;
 
     public TaggedSentence() {
         this.taggedTokens = new ArrayList<>();
     }
 
-    public void addTaggedToken(T token){
+    public void addTaggedToken(RNNTag token){
         taggedTokens.add(token);
     }
 
-    public ArrayList<T> getTokens(){
+    public ArrayList<RNNTag> getTokens(){
         return taggedTokens;
     }
 }

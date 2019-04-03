@@ -6,44 +6,55 @@ import tagging.Tagger;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RNNTagger implements Tagger {
 
-    private final String absolutePath;
+
     private final String tmpFolderRelativePath = "files/tmp/";
 
-    public RNNTagger(String absolutePath) {
-        this.absolutePath = Config.RNNTAGGER_ABSOLUTE_PATH;
-    }
-
     @Override
-    public ArrayList<TaggedSentence<RNNTag>> tag(TextDocument textDocument) {
-        ArrayList<TaggedSentence<RNNTag>> taggedFile = new ArrayList<>();
+    public ArrayList<TaggedSentence> tag(TextDocument textDocument) {
+        ArrayList<TaggedSentence> taggedFile = new ArrayList<>();
         for (String sentence : textDocument.getLines()) {
-            Runtime rt = Runtime.getRuntime();
+            System.out.println("LINE : " + sentence);
             Process pr = null;
+
+            TaggedSentence taggedSentence = new TaggedSentence();
             try {
-                pr = rt.exec("cd "+ absolutePath + " && echo "+sentence+" > test.txt && sh cmd/rnn-tagger-french.sh test.txt");
-                InputStream stdin = pr.getInputStream();
-                InputStreamReader isr = new InputStreamReader(stdin);
-                BufferedReader br = new BufferedReader(isr);
-
-                String line = null;
-                System.out.println("<OUTPUT>");
-
-                while (br.ready()){
-                    line = br.readLine();
-                    System.out.println(line);
-                }
-
-                System.out.println("</OUTPUT>");
+                pr = Runtime.getRuntime().exec("/bin/bash cd "+ Config.RNNTAGGER_ABSOLUTE_PATH+" " +
+                        "&& echo \""+sentence+"\" > tmp.txt " +
+                        "&& cmd/rnn-tagger-french.sh tmp.txt > tmp_tagged.txt " +
+                        "&& echo \"DONE\"");
                 int exitVal = pr.waitFor();
-                System.out.println("Process exitValue: " + exitVal);
+                System.out.println("Processus exited with value : "+ exitVal);
+
+                //READ OUTPUT
+
+                File out = new File(Config.RNNTAGGER_ABSOLUTE_PATH+"tmp_tagged.txt");
+                BufferedReader br = new BufferedReader(new FileReader(out));
+
+                String line;
+                System.out.println("<OUTPUT>");
+                while ( (line = br.readLine()) != null){
+                    if(line.equals("") || Objects.equals(line, "DONE")){
+                        break;
+                    }else{
+                        System.out.println(line);
+                        taggedSentence.addTaggedToken(new RNNTag(line));
+                    }
+
+                }
+                System.out.println("</OUTPUT>");
+
+                br.close();
 
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
+            taggedFile.add(taggedSentence);
         }
+
         return taggedFile;
     }
 

@@ -1,9 +1,13 @@
 package main;
 
-import pretreatement.InitialFilter;
 import document.TextDocument;
+import pretreatement.InitialFilter;
+import tagging.RNNTagger.RNNTagger;
+import tagging.RNNTagger.TaggedSentence;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 import static pretreatement.PdfToText.convert;
 
@@ -19,10 +23,15 @@ public class Main {
             TextDocument td1 = convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
             td1 = InitialFilter.filter(td1);
             td1.writeFile();
+            RNNTagger tagger = new RNNTagger();
+            ArrayList<TaggedSentence> list = tagger.tag(td1);
 
+
+            /*
             TextDocument td2 = convert(new File("./files/fiche_memo_hta__mel.pdf"));
             td2 = InitialFilter.filter(td2);
             td2.writeFile();
+            */
         } catch (IOException e) {
             e.printStackTrace();
         }
