@@ -2,30 +2,18 @@ package MWExtraction;
 
 import tagging.RNNTagger.RNNTag;
 
-import java.util.Objects;
+import java.util.ArrayList;
 
-public class Gram {
+public interface Gram {
 
-    private RNNTag first;
+    /**
+     * Returns whether the Gram is nested in the bigger N-gram
+     * @param g
+     * @return
+     */
+    boolean in(Gram g);
 
-    public Gram(RNNTag first) {
-        this.first = first;
-    }
+    ArrayList<RNNTag> getAllTokens();
 
-    public RNNTag getFirst() {
-        return first;
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Gram gram = (Gram) o;
-        return Objects.equals(first.getLemma(), gram.first.getLemma());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(first);
-    }
 }

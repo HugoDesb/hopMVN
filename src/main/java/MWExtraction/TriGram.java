@@ -2,6 +2,7 @@ package MWExtraction;
 
 import tagging.RNNTagger.RNNTag;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class TriGram extends BiGram{
@@ -11,6 +12,14 @@ public class TriGram extends BiGram{
     public TriGram(RNNTag first, RNNTag second, RNNTag third) {
         super(first, second);
         this.third = third;
+    }
+
+    public ArrayList<UniGram> getSubStrings(){
+        ArrayList<UniGram> ret = super.getSubStrings();
+        ret.add(new BiGram(getFirst(), getSecond()));
+        ret.add(new BiGram(getSecond(), getThird()));
+        ret.add(new UniGram(getThird()));
+        return ret;
     }
 
     @Override
@@ -29,5 +38,12 @@ public class TriGram extends BiGram{
 
     public RNNTag getThird() {
         return third;
+    }
+
+    @Override
+    public ArrayList<RNNTag> getAllTokens() {
+        ArrayList<RNNTag> ret = super.getAllTokens();
+        ret.add(third);
+        return ret;
     }
 }

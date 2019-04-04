@@ -2,15 +2,27 @@ package MWExtraction;
 
 import tagging.RNNTagger.RNNTag;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
-public class BiGram extends Gram{
+public class BiGram extends UniGram implements Gram{
 
     private RNNTag second;
 
     public BiGram(RNNTag first, RNNTag second) {
         super(first);
         this.second = second;
+    }
+
+    public ArrayList<UniGram> getSubStrings(){
+        ArrayList<UniGram> ret = new ArrayList<>();
+        ret.add(new UniGram(getFirst()));
+        ret.add(new UniGram(getSecond()));
+        return ret;
+    }
+
+    public boolean in(TriGram gram){
+        return 
     }
 
     @Override
@@ -38,5 +50,12 @@ public class BiGram extends Gram{
 
     public RNNTag getSecond() {
         return second;
+    }
+
+    @Override
+    public ArrayList<RNNTag> getAllTokens() {
+        ArrayList<RNNTag> ret = super.getAllTokens();
+        ret.add(second);
+        return ret;
     }
 }
