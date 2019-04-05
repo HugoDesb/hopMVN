@@ -27,6 +27,14 @@ public class UniGram implements Comparable, Gram{
         return Objects.equals(first.getLemma(), uniGram.first.getLemma());
     }
 
+    public boolean in(BiGram gram){
+        return (first.equals(gram.getFirst()) || first.equals(gram.getSecond()));
+    }
+
+    public boolean in(TriGram gram){
+        return (first.equals(gram.getFirst()) || first.equals(gram.getSecond()) || first.equals(gram.getThird()));
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(first);

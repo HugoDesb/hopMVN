@@ -22,7 +22,8 @@ public class BiGram extends UniGram implements Gram{
     }
 
     public boolean in(TriGram gram){
-        return 
+        return (getFirst().equals(gram.getFirst()) && getSecond().equals(gram.getSecond()))
+                || (getFirst().equals(gram.getSecond()) && getSecond().equals(gram.getThird()));
     }
 
     @Override
