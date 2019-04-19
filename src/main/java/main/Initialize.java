@@ -1,8 +1,8 @@
 package main;
 
 import document.TextDocument;
-import pretreatement.ExtractorHAS;
-import pretreatement.ExtractorPDF;
+import pretreatement.Extractor.ExtractorHAS;
+import pretreatement.Extractor.ExtractorPDF;
 
 import java.io.File;
 import java.util.ArrayList;

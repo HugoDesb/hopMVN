@@ -5,7 +5,7 @@ import tagging.RNNTagger.TaggedSentence;
 
 import java.util.ArrayList;
 
-public interface Tagger<T> {
+public interface Tagger {
 
-    public ArrayList<TaggedSentence<T>> tag(TextDocument textDocument);
+    public ArrayList<TaggedSentence> tag(TextDocument textDocument);
 }

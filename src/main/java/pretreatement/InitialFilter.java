@@ -14,7 +14,8 @@ public class InitialFilter{
             "|(.*\\s+pr[eo]scri.*)" +
             "|(.*\\s+grossesse.*)|(.*\\s+enceinte.*)" +
             "|(.*non-pharmacologique.*)" +
-            "|(.*\\s+ag[ée].*)";;
+            "|(.*\\s+ag[ée].*)" +
+            "|(.*\\slimit.*)";
     private static final String PATTERN_STRING_EXCLUSION = "";
 
 

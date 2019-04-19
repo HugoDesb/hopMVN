@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class representing a .txt document
@@ -13,10 +12,9 @@ import java.util.List;
 public class TextDocument {
 
     private File file;
-    private List<String> lines;
+    private ArrayList<String> lines;
 
-
-    public TextDocument(File file, List<String> lines) {
+    public TextDocument(File file, ArrayList<String> lines) {
         this.file = file;
         this.lines = lines;
     }
@@ -33,18 +31,16 @@ public class TextDocument {
      *
      * @return
      */
-    public List<String> getLines() {
+    public ArrayList<String> getLines() {
         return lines;
     }
 
-
     /**
-     *
-     * @param line
-     * @return
+     * SETTER for lines
+     * @param list
      */
-    public boolean removeLine(String line){
-        return lines.remove(line);
+    public void setLines(ArrayList<String> list){
+        lines = list;
     }
 
     /**
@@ -66,19 +62,10 @@ public class TextDocument {
         }
     }
 
-    /**
-     * SETTER for lines
-     * @param list
-     */
-    private void setLines(List<String> list){
-        lines = list;
-    }
-
-
     public static class Builder{
 
         private File file;
-        private List<String> lines;
+        private ArrayList<String> lines;
 
         public Builder() {
             this.lines = new ArrayList<>();

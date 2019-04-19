@@ -1,52 +1,34 @@
-package pretreatement;
-
+package pretreatement.Extractor;
 
 import document.SummaryHAS;
 import document.TextDocument;
-import org.apache.pdfbox.cos.COSDocument;
-import org.apache.pdfbox.io.RandomAccessFile;
-import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 
-/**
- * Static class for converting a pdf to a txt file
- */
-public class PdfToText {
+import static pretreatement.Extractor.PdfToText.withPDFBox;
 
-    /**
-     * public access to the converter
-     * @return A TextDocument instance
-     * @throws IOException
-     */
-    public static TextDocument convert(File file) throws IOException {
-        return withPDFBox(file, getTargetTXTPath(file));
+public class ExtractorHAS extends ExtractorPDF {
+
+    @Override
+    public TextDocument extract(File file) {
+        try {
+            return (TextDocument) withPDFBox(file, super.getTargetTXTPath(file));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     /**
-     * Write the pdf in a text file
-     * @param pdf
-     * @param txt
-     * @return the txt file
+     * Extract the Summary of an HAS reco file
+     * @param pdDoc
+     * @return
      * @throws IOException
      */
-    private static TextDocument withPDFBox(File pdf, File txt) throws IOException {
-        PDFParser parser = new PDFParser(new RandomAccessFile(pdf, "r"));
-        parser.parse();
-        COSDocument cosDoc = parser.getDocument();
-        PDDocument pdDoc = new PDDocument(cosDoc);
-
-        TextDocument.Builder builder = readContent(pdDoc);
-        builder.setFile(txt);
-
-        return builder.build();
-    }
-
     private static SummaryHAS readSummary(PDDocument pdDoc) throws IOException {
         PDPage page = pdDoc.getPage(2);
         PDDocument doc = new PDDocument();
@@ -56,7 +38,7 @@ public class PdfToText {
         return new SummaryHAS(text);
     }
 
-    private static TextDocument.Builder readContent(PDDocument doc) throws IOException {
+    protected TextDocument.Builder readContent(PDDocument doc) throws IOException {
         //choose relevant pages
         SummaryHAS summary = readSummary(doc);
         PDDocument contentDocument = new PDDocument();
@@ -68,11 +50,10 @@ public class PdfToText {
         PDFTextStripper textStripper = new PDFTextStripper();
         String contentText = textStripper.getText(contentDocument);
 
-        return exctractContent(contentText);
-
+        return extractContent(contentText);
     }
 
-    private static TextDocument.Builder exctractContent(String contentText) {
+    private static TextDocument.Builder extractContent(String contentText) {
         String [] textLines = contentText.split("\n");
 
         TextDocument.Builder builder = new TextDocument.Builder();
@@ -98,18 +79,7 @@ public class PdfToText {
                 }
             }
         }
-
         return builder;
-    }
-
-    /**
-     * Create a file
-     * @return
-     */
-    private static File getTargetTXTPath(File file){
-        String filename = file.getName().split("\\.")[0];
-        String p = Paths.get(file.getPath()).getParent().toString()+"/"+filename+".txt";
-        return new File(p);
     }
 
 }

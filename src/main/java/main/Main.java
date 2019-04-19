@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static pretreatement.PdfToText.convert;
+import static pretreatement.Extractor.PdfToText.convert;
 
 public class Main {
 
@@ -20,7 +20,7 @@ public class Main {
     public static void main(String [] args){
 
         try {
-            TextDocument td1 = convert(new File("./files/10irp04_reco_diabete_type_2.pdf"));
+            TextDocument td1 = convert(new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf"));
             td1 = InitialFilter.filter(td1);
             td1.writeFile();
             RNNTagger tagger = new RNNTagger();
