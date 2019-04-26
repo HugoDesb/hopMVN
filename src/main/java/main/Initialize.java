@@ -70,7 +70,7 @@ public class Initialize {
                     break;
                 default:
                     f = new File(path);
-                    textDocuments.add(extPDF.extract(f));
+                    //textDocuments.add(extPDF.extract(f));
                     break;
             }
         }

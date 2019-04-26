@@ -16,7 +16,7 @@ public class PdfToSentences {
     /**
      * Extract sentences from source file to default target txt file (same name, same folder, with .txt extension)
      * @param source path to the source file
-     * @param isExpertFile if the point is to extract highlighted text
+     * @param isExpertFile if the goal is to extract highlighted text
      * @return the TextDocument containing the sentences
      */
     public static TextDocument extract(String source, boolean isExpertFile) throws IOException {

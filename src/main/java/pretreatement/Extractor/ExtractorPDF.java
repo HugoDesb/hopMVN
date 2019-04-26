@@ -42,7 +42,7 @@ public class ExtractorPDF {
         try {
             parser = new PDFParser(new RandomAccessFile(file, "r"));
             parser.parse();
-            PDDocument contentDocument = new PDDocument();
+            PDDocument contentDocument = parser.getPDDocument();
 
             PDFTextStripper textStripper = new PDFTextStripper();
             String contentText = textStripper.getText(contentDocument);
@@ -72,26 +72,27 @@ public class ExtractorPDF {
                     continue;
                 }
                 for (PDAnnotation pdfAnnot : la) {
+                    if(pdfAnnot.getSubtype().equals("Highlight")) {
 
-                    PDFTextStripperByArea stripper = new PDFTextStripperByArea();
-                    stripper.setSortByPosition(true);
+                        PDFTextStripperByArea stripper = new PDFTextStripperByArea();
+                        stripper.setSortByPosition(true);
 
-                    PDRectangle rect = pdfAnnot.getRectangle();
-                    float x = rect.getLowerLeftX() - 1;
-                    float y = rect.getUpperRightY() - 1;
-                    float width = rect.getWidth() + 2;
-                    float height = rect.getHeight() + rect.getHeight() / 4;
-                    int rotation = page.getRotation();
-                    if (rotation == 0) {
-                        PDRectangle pageSize = page.getMediaBox();
-                        y = pageSize.getHeight() - y;
+                        PDRectangle rect = pdfAnnot.getRectangle();
+                        float x = rect.getLowerLeftX() - 1;
+                        float y = rect.getUpperRightY() - 1;
+                        float width = rect.getWidth() + 2;
+                        float height = rect.getHeight() + rect.getHeight() / 4;
+                        int rotation = page.getRotation();
+                        if (rotation == 0) {
+                            PDRectangle pageSize = page.getMediaBox();
+                            y = pageSize.getHeight() - y;
+                        }
+
+                        Rectangle2D.Float awtRect = new Rectangle2D.Float(x, y, width, height);
+                        stripper.addRegion(Integer.toString(0), awtRect);
+                        stripper.extractRegions(page);
+                        hop.add(stripper.getTextForRegion(Integer.toString(0)));
                     }
-
-                    Rectangle2D.Float awtRect = new Rectangle2D.Float(x, y, width, height);
-                    stripper.addRegion(Integer.toString(0), awtRect);
-                    stripper.extractRegions(page);
-
-                    hop.add(stripper.getTextForRegion(Integer.toString(0)));
                 }
             }
             pddDocument.close();

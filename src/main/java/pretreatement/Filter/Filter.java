@@ -15,7 +15,7 @@ public class Filter {
     public ArrayList<String> filter(ArrayList<String> lines) {
         ArrayList<String> ret = new ArrayList<>();
         for (String line : lines) {
-            if(line.matches(regexSelect) && !line.matches(regexDelete)){
+            if(line.toLowerCase().matches(regexSelect) && !line.toLowerCase().matches(regexDelete)){
                 ret.add(line);
             }
         }

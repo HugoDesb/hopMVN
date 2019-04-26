@@ -9,14 +9,14 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import java.io.File;
 import java.io.IOException;
 
+import static pretreatement.Extractor.PdfToText.getTargetTXTPath;
 import static pretreatement.Extractor.PdfToText.withPDFBox;
 
 public class ExtractorHAS extends ExtractorPDF {
 
-    @Override
     public TextDocument extract(File file) {
         try {
-            return (TextDocument) withPDFBox(file, super.getTargetTXTPath(file));
+            return (TextDocument) withPDFBox(file, getTargetTXTPath(file));
         } catch (IOException e) {
             e.printStackTrace();
             return null;

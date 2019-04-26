@@ -1,0 +1,182 @@
+package MWExtraction;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.security.InvalidParameterException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+public class MWE {
+
+    private ArrayList<ArrayList<NGram>> allMWE;
+
+
+    /**
+     * Gets all MWE of specified length
+     * @param length the desired MWE length
+     * @return an array of NGram (each NGram is a MWE of specified length)
+     */
+    public ArrayList<NGram> getNGramsOfLength(int length){
+        if(length < 1|| getMaxLength() < length){
+            throw new InvalidParameterException("length should be between 1 and " + getMaxLength());
+        }
+        return allMWE.get(length-1);
+    }
+
+
+    //TODO : DONE
+    private HashMap<NGram, Double> computeFrequencies(){
+        HashMap<NGram, Double> ret = new HashMap<>();
+        for (ArrayList<NGram> igramsOfSameLength: allMWE) {
+            int totalOfSameLength = igramsOfSameLength.size();
+            for (NGram currentNgram: igramsOfSameLength) {
+                if(ret.keySet().contains(currentNgram)){
+                    double value = ret.get(currentNgram);
+                    ret.replace(currentNgram, value, value+1);
+                }else{
+                    ret.put(currentNgram, 1.0);
+                }
+            }
+            for (NGram gram : igramsOfSameLength) {
+                double value = ret.get(gram);
+                ret.replace(gram, value, value/totalOfSameLength);
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * Compute the collocation value (aka c-value) for all ngrams.
+     * @return A Map with the ngram and its collocation value
+     */
+    public HashMap<NGram, Double> getCValueForAll(){
+        HashMap<NGram, Double> ret = new HashMap<>();
+        HashMap<NGram, Double> frequencies = computeFrequencies();
+
+        double collocationValue, w_A, sumFreq;
+
+        for (int i = getMaxLength(); i > 0; i--) {
+            for (NGram currentGram: frequencies.keySet()) {
+                w_A = Math.log(currentGram.length()+1)/Math.log(2);
+                //Check if currentGram is nested and get all bigger NGram in that case
+                HashSet<NGram> biggerNGramsContainingCurrentGram = getBiggerNGramsContaining(currentGram, frequencies.keySet());
+                // if YES
+                if(!biggerNGramsContainingCurrentGram.isEmpty()) {
+                    // Sum frequencies of bigger ngrams
+                    sumFreq = 0.0;
+                    for (NGram tmpGram: biggerNGramsContainingCurrentGram) {
+                        sumFreq += frequencies.get(tmpGram);
+                    }
+
+                    collocationValue = w_A * (frequencies.get(currentGram) - 1.0/biggerNGramsContainingCurrentGram.size() * sumFreq);
+                    ret.put(currentGram, collocationValue);
+                }else {
+                    collocationValue = w_A * frequencies.get(currentGram);
+                    ret.put(currentGram, collocationValue);
+                }
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * Finds and returns any ngrams that contains the given one
+     * @param currentGram the gram to search for.
+     * @param gramsSet the set of ngrams to search in.
+     * @return all ngrams that contains the given ngram
+     */
+    private HashSet<NGram> getBiggerNGramsContaining(NGram currentGram, Set<NGram> gramsSet) {
+        HashSet<NGram> ret = new HashSet<>();
+
+        for (NGram nGram : gramsSet) {
+            if(nGram.length() > currentGram.length() && currentGram.isIn(nGram)){
+                ret.add(nGram);
+            }
+        }
+
+        return ret;
+    }
+
+    /**
+     * Obtain the corresponding .arff File
+     * @param dataPerWord following the pattern "Word D1 D2 D3 D4 Lemma" (one must choose which ones to keep)
+     * @param minSize The minimum size of n-gram
+     * @param maxSize The maximum size of n-gram
+     * @return the .arff file
+     */
+    public File getFile(String dataPerWord, int minSize, int maxSize) {
+        File tmpFile = new File("tmp_arff.arff");
+        try {
+            FileWriter fw = new FileWriter(tmpFile);
+            writeArffFileHeader(fw, dataPerWord, minSize, maxSize);
+            writeArffFileData(fw, dataPerWord, minSize, maxSize);
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return tmpFile;
+    }
+
+    /**
+     * Write MWE header in given file writer
+     * @param fw the fileWriter
+     * @param dataPerWord following the pattern "Word D1 D2 D3 D4 Lemma" (one must choose which ones to keep)
+     * @param minSize The minimum size of n-gram
+     * @param maxSize The maximum size of n-gram
+     * @throws IOException if the file writer fails
+     */
+    private void writeArffFileHeader(FileWriter fw, String dataPerWord, int minSize, int maxSize) throws IOException {
+        fw.write("@relation MWE\n");
+
+        String [] data = dataPerWord.split("\\s");
+        for (int i = minSize; i <= maxSize; i++) {
+            for(String dataElement : data){
+                fw.write("@attribute "+ dataElement + "_"+(i-minSize)+" string\n");
+            }
+        }
+    }
+
+    /**
+     * Write MWE data in given file writer
+     * @param fw the fileWriter
+     * @param dataPerWord following the pattern "Word D1 D2 D3 D4 Lemma" (one must choose which ones to keep)
+     * @param minSize The minimum size of n-gram
+     * @param maxSize The maximum size of n-gram
+     * @throws IOException if the file writer fails
+     */
+    private void writeArffFileData(FileWriter fw, String dataPerWord, int minSize, int maxSize) throws IOException {
+        fw.write("@data\n");
+
+        String [] data = dataPerWord.split("\\s");
+        for(int i = minSize-1; i<maxSize; i++){
+            ArrayList<NGram> allForSpecificSize = allMWE.get(i);
+            for (NGram ngram : allForSpecificSize) {
+                for (int j = 0; j < ngram.length(); j++) {
+                    boolean lastword = false;
+                    if(j == ngram.length()-1){
+                        lastword = true;
+                    }
+                    for (int k = 0; k < data.length; k++) {
+                        String end = ",";
+                        if(lastword && k == data.length-1){
+                            end = "\n";
+                        }
+                        fw.write(ngram.get(j).getData(data[k])+end);
+                    }
+                }
+            }
+        }
+        fw.close();
+    }
+
+    /**
+     * Gets MWE max length
+     * @return the max length
+     */
+    public int getMaxLength(){
+        return allMWE.size();
+    }
+}

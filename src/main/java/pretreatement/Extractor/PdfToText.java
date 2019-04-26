@@ -106,7 +106,7 @@ public class PdfToText {
      * Create a file
      * @return
      */
-    private static File getTargetTXTPath(File file){
+    static File getTargetTXTPath(File file){
         String filename = file.getName().split("\\.")[0];
         String p = Paths.get(file.getPath()).getParent().toString()+"/"+filename+".txt";
         return new File(p);

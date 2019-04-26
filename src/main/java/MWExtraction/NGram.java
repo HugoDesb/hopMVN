@@ -1,15 +1,16 @@
 package MWExtraction;
 
+import tagging.RNNTagger.RNNTag;
+
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class NGram<T> {
+public class NGram {
 
     private int capacity;
     private int length;
-    private double CValue;
-    private ArrayList<T> grams;
+    private ArrayList<RNNTag> grams;
 
     /**
      * Create a NGram with specific length
@@ -28,7 +29,7 @@ public class NGram<T> {
      * Create a Ngram with specific length and grams
      * @param grams
      */
-    public NGram(ArrayList<T> grams) {
+    public NGram(ArrayList<RNNTag> grams) {
         if(1 <= grams.size()){
             throw new InvalidParameterException("grams must at least contain 1-gram");
         }
@@ -42,7 +43,7 @@ public class NGram<T> {
      * @param i
      * @return
      */
-    public T get(int i){
+    public RNNTag get(int i){
         if(i<0 || i>= length){
             throw new IndexOutOfBoundsException("min==0 and max==length-1=="+(length-1));
         }
@@ -55,7 +56,7 @@ public class NGram<T> {
      * @param longerGram
      * @return
      */
-    public boolean isIn(NGram<T> longerGram){
+    public boolean isIn(NGram longerGram){
         if(longerGram.length() <= length){
             throw new InvalidParameterException("The parameter NGram must shorter than "+(length-1));
         }
@@ -67,11 +68,11 @@ public class NGram<T> {
      * @param shorterNGram
      * @return
      */
-    public boolean contains(NGram<T> shorterNGram){
+    public boolean contains(NGram shorterNGram){
         if(shorterNGram.length() >= length){
             throw new InvalidParameterException("The parameter NGram must shorter than "+(length-1));
         }
-        NGram<T> temp;
+        NGram temp;
         boolean ret = false;
         for (int i= 0; i<=(length-shorterNGram.length); i++) {
             temp = new NGram(shorterNGram.length);
@@ -89,7 +90,7 @@ public class NGram<T> {
      * @param gram
      * @return
      */
-    public boolean addGram(T gram){
+    public boolean addGram(RNNTag gram){
         if(capacity == length){
             System.out.println("The NGram is already full");
             return false;
@@ -109,10 +110,9 @@ public class NGram<T> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NGram<T> nGram = (NGram<T>) o;
+        NGram nGram = (NGram) o;
         return capacity == nGram.capacity &&
                 length == nGram.length &&
-                Double.compare(nGram.CValue, CValue) == 0 &&
                 Objects.equals(grams, nGram.grams);
     }
 
@@ -122,23 +122,7 @@ public class NGram<T> {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(capacity, length, CValue, grams);
-    }
-
-    /**
-     * Getter for C-value
-     * @param CValue
-     */
-    public void setCValue(double CValue) {
-        this.CValue = CValue;
-    }
-
-    /**
-     * Getter ofr C-Value
-     * @return
-     */
-    public double getCValue() {
-        return CValue;
+        return Objects.hash(capacity, length, grams);
     }
 
     /**
@@ -148,4 +132,5 @@ public class NGram<T> {
     public int length(){
         return length;
     }
+
 }

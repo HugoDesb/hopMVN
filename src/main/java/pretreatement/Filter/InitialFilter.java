@@ -1,4 +1,4 @@
-package pretreatement;
+package pretreatement.Filter;
 
 import document.TextDocument;
 
@@ -15,7 +15,9 @@ public class InitialFilter{
             "|(.*\\s+grossesse.*)|(.*\\s+enceinte.*)" +
             "|(.*non-pharmacologique.*)" +
             "|(.*\\s+ag[ée].*)" +
-            "|(.*\\slimit.*)";
+            "|(.*\\s+limit.*)" +
+            "|(.*\\s+envisag[ée].*)" +
+            "|(.*\\s+pr[ée]v).*";
     private static final String PATTERN_STRING_EXCLUSION = "";
 
 

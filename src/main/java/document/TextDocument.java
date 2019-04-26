@@ -14,6 +14,11 @@ public class TextDocument {
     private File file;
     private ArrayList<String> lines;
 
+    /**
+     * Constructeur
+     * @param file
+     * @param lines
+     */
     public TextDocument(File file, ArrayList<String> lines) {
         this.file = file;
         this.lines = lines;

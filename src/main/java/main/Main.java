@@ -1,15 +1,12 @@
 package main;
 
 import document.TextDocument;
-import pretreatement.InitialFilter;
-import tagging.RNNTagger.RNNTagger;
-import tagging.RNNTagger.TaggedSentence;
+import info.debatty.java.stringsimilarity.Levenshtein;
+import pretreatement.Extractor.PdfToSentences;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-
-import static pretreatement.Extractor.PdfToText.convert;
 
 public class Main {
 
@@ -20,12 +17,45 @@ public class Main {
     public static void main(String [] args){
 
         try {
-            TextDocument td1 = convert(new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf"));
+            /*TextDocument td1 = convert(new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf"));
             td1 = InitialFilter.filter(td1);
             td1.writeFile();
             RNNTagger tagger = new RNNTagger();
-            ArrayList<TaggedSentence> list = tagger.tag(td1);
+            ArrayList<TaggedSentence> list = tagger.tag(td1);*/
 
+
+            File fileExpert = new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf");
+            TextDocument tdExpert = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel expertisé.pdf", true);
+            ArrayList<String> sentencesExpert = tdExpert.getLines();
+
+            File fileRegular = new File("./files/depression_adulte_recommandations_version_mel.pdf");
+            TextDocument tdSource = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel.pdf", false);
+            ArrayList<String> sentencesExtracted = tdSource.getLines();
+
+
+            Levenshtein l = new Levenshtein();
+            double distance = 0.0;
+            int countZero = 0;
+            for (String lineExpert : sentencesExpert) {
+                System.out.println("======================================================");
+                System.out.println("--> " + lineExpert);
+                for (String lineExtracted : sentencesExtracted) {
+                    distance = l.distance(lineExpert, lineExtracted);
+                    if(distance < 50){
+                        System.out.println(lineExtracted);
+                        System.out.println("Levhenstein Distance : "+distance);
+                        System.out.println("------------------------------------");
+                        if(distance == 0) countZero++;
+                    }
+                }
+            }
+            double precision = (double)countZero/sentencesExtracted.size();
+            double rappel = (double)countZero/sentencesExpert.size();
+            System.out.println("Total expert : "+ sentencesExpert.size());
+            System.out.println("Total extract : "+ sentencesExtracted.size());
+            System.out.println("Total right : "+ countZero);
+            System.out.println("Précision : "+precision);
+            System.out.println("Rappel : " + rappel);
 
             /*
             TextDocument td2 = convert(new File("./files/fiche_memo_hta__mel.pdf"));
