@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static java.util.Map.Entry.comparingByValue;
 
 public class MWE {
 
@@ -52,7 +52,7 @@ public class MWE {
      * Compute the collocation value (aka c-value) for all ngrams.
      * @return A Map with the ngram and its collocation value
      */
-    public HashMap<NGram, Double> getCValueForAll(){
+    public Map<NGram, Double> getCValueForAll(){
         HashMap<NGram, Double> ret = new HashMap<>();
         HashMap<NGram, Double> frequencies = computeFrequencies();
 
@@ -79,7 +79,13 @@ public class MWE {
                 }
             }
         }
-        return ret;
+
+        Map<NGram, Double> sorted = ret
+                .entrySet()
+                .stream()
+                .sorted(comparingByValue())
+                .collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
+        return sorted;
     }
 
     /**
