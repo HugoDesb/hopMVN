@@ -1,12 +1,17 @@
 package main;
 
+import MWExtraction.MWE;
+import MWExtraction.MWEExtractor;
+import MWExtraction.NGram;
 import document.TextDocument;
-import info.debatty.java.stringsimilarity.Levenshtein;
 import pretreatement.Extractor.PdfToSentences;
+import tagging.RNNTagger.RNNTagger;
+import tagging.RNNTagger.TaggedSentence;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Main {
 
@@ -17,11 +22,13 @@ public class Main {
     public static void main(String [] args){
 
         try {
-            /*TextDocument td1 = convert(new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf"));
+            /*
+            TextDocument td1 = convert(new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf"));
             td1 = InitialFilter.filter(td1);
             td1.writeFile();
             RNNTagger tagger = new RNNTagger();
-            ArrayList<TaggedSentence> list = tagger.tag(td1);*/
+            ArrayList<TaggedSentence> list = tagger.tag(td1);
+            */
 
 
             File fileExpert = new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf");
@@ -32,6 +39,19 @@ public class Main {
             TextDocument tdSource = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel.pdf", false);
             ArrayList<String> sentencesExtracted = tdSource.getLines();
 
+            RNNTagger tagger = new RNNTagger();
+            ArrayList<TaggedSentence> hop = tagger.tag(tdSource);
+            MWEExtractor mweExtractor = new MWEExtractor(4);
+            MWE mwe = mweExtractor.extractGrams(hop);
+
+            Map<NGram, Double> ngramCollocation = mwe.getCValueForAll();
+
+            for (NGram n: ngramCollocation.keySet()) {
+                System.out.println(n.toString() +"__"+ngramCollocation.get(n));
+            }
+
+
+            /*
 
             Levenshtein l = new Levenshtein();
             double distance = 0.0;
@@ -56,6 +76,8 @@ public class Main {
             System.out.println("Total right : "+ countZero);
             System.out.println("Précision : "+precision);
             System.out.println("Rappel : " + rappel);
+
+            */
 
             /*
             TextDocument td2 = convert(new File("./files/fiche_memo_hta__mel.pdf"));

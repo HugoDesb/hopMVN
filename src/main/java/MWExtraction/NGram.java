@@ -133,4 +133,12 @@ public class NGram {
         return length;
     }
 
+    @Override
+    public String toString() {
+        return "NGram{" +
+                "capacity=" + capacity +
+                ", length=" + length +
+                ", grams=" + grams +
+                '}';
+    }
 }

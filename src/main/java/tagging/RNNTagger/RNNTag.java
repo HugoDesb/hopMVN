@@ -107,4 +107,13 @@ public class RNNTag{
                 return "";
         }
     }
+
+    @Override
+    public String toString() {
+        return "RNNTag{" +
+                "word='" + word + '\'' +
+                ", tag='" + tag + '\'' +
+                ", lemma='" + lemma + '\'' +
+                '}';
+    }
 }

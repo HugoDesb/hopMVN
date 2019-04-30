@@ -12,7 +12,14 @@ import static java.util.Map.Entry.comparingByValue;
 public class MWE {
 
     private ArrayList<ArrayList<NGram>> allMWE;
+    private int maxLength;
 
+    public MWE(int maxLength) {
+        this.allMWE = new ArrayList<>();
+        for (int i = 0; i<maxLength ; i++){
+            allMWE.add(new ArrayList<NGram>());
+        }
+    }
 
     /**
      * Gets all MWE of specified length
@@ -26,13 +33,20 @@ public class MWE {
         return allMWE.get(length-1);
     }
 
+    public void addNGram(NGram gram){
+        System.out.println("Adds a gram");
+        allMWE.get(gram.length()-1).add(gram);
+    }
+
 
     //TODO : DONE
     private HashMap<NGram, Double> computeFrequencies(){
         HashMap<NGram, Double> ret = new HashMap<>();
+        //For each i in N (i-gram list)
         for (ArrayList<NGram> igramsOfSameLength: allMWE) {
             int totalOfSameLength = igramsOfSameLength.size();
             for (NGram currentNgram: igramsOfSameLength) {
+                //System.out.println("Current NGram : "+currentNgram.toString());
                 if(ret.keySet().contains(currentNgram)){
                     double value = ret.get(currentNgram);
                     ret.replace(currentNgram, value, value+1);
@@ -40,11 +54,13 @@ public class MWE {
                     ret.put(currentNgram, 1.0);
                 }
             }
+
             for (NGram gram : igramsOfSameLength) {
                 double value = ret.get(gram);
                 ret.replace(gram, value, value/totalOfSameLength);
             }
         }
+        System.out.println("Frequencies computed: "+ret.size());
         return ret;
     }
 
@@ -79,12 +95,13 @@ public class MWE {
                 }
             }
         }
+        System.out.println("C-value computed : "+ret.size());
 
         Map<NGram, Double> sorted = ret
                 .entrySet()
                 .stream()
                 .sorted(comparingByValue())
-                .collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
         return sorted;
     }
 

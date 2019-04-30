@@ -17,4 +17,11 @@ public class TaggedSentence {
     public ArrayList<RNNTag> getTokens(){
         return taggedTokens;
     }
+
+    @Override
+    public String toString() {
+        return "TaggedSentence{" +
+                "taggedTokens=" + taggedTokens +
+                '}';
+    }
 }
