@@ -102,4 +102,4 @@ buildNumber.properties
 
 
 # don't get RNNTagger
-tools/
+tools/RNNTagger/*

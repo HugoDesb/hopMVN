@@ -1,6 +1,7 @@
 package pretreatement.Extractor;
 
 import com.beust.jcommander.ParameterException;
+import document.Sentence;
 import document.TextDocument;
 import pretreatement.Filter.DefaultFilter;
 
@@ -38,7 +39,7 @@ public class PdfToSentences {
             throw new ParameterException("The source path isn't a file");
         }
         ArrayList<String> blocks = ExtractorPDF.extract(sourceFile, isExpertFile);
-        ArrayList<String> sentences = textToSentences(blocks);
+        ArrayList<Sentence> sentences = textToSentences(blocks);
         ret = new TextDocument(target.toFile(), sentences);
 
         if(!isExpertFile){
@@ -48,17 +49,19 @@ public class PdfToSentences {
     }
 
     /***
-     * Transform
-     * @param lines
-     * @return
+     * Transform text to sentences, then select it or not.
+     * @param lines detected lines from the pdf file
+     * @return all selected sentences
      */
-    private static ArrayList<String> textToSentences(ArrayList<String> lines) {
-        ArrayList<String> ret = new ArrayList<>();
+    private static ArrayList<Sentence> textToSentences(ArrayList<String> lines) {
+        ArrayList<Sentence> sentencesToReturn = new ArrayList<>();
         Iterator<String> it = lines.iterator();
         String block;
         StringBuilder toAdd = new StringBuilder();
         String [] textLines;
 
+
+        int i = 0;
         //pour chaque bloc de texte
         while(it.hasNext()){
             block = it.next();
@@ -76,18 +79,19 @@ public class PdfToSentences {
                         if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
                             // We can consider it's a new sentence
                             // add previous line
-                            ret.add(toAdd + ".");
-                            //store new line
+                            sentencesToReturn.add(new Sentence(toAdd+"."));
+                            //init new line
                             toAdd = new StringBuilder(sentence);
-                            // first character is NOT an UPPERCASE
                         } else {
+                            // first character is NOT an UPPERCASE
+                            // continue new line
                             toAdd.append(sentence);
                         }
                     }
                 }
             }
         }
-        return ret;
+        return sentencesToReturn;
     }
 
     /**

@@ -12,16 +12,17 @@ import java.util.ArrayList;
 public class TextDocument {
 
     private File file;
-    private ArrayList<String> lines;
+    private ArrayList<Sentence> sentences;
 
     /**
      * Constructeur
      * @param file
-     * @param lines
+     * @param sentences
      */
-    public TextDocument(File file, ArrayList<String> lines) {
+    public TextDocument(File file, ArrayList<Sentence> sentences) {
         this.file = file;
-        this.lines = lines;
+        this.sentences = sentences;
+
     }
 
     /**
@@ -33,19 +34,19 @@ public class TextDocument {
     }
 
     /**
-     *
+     * Get All sentences
      * @return
      */
-    public ArrayList<String> getLines() {
-        return lines;
+    public ArrayList<Sentence> getLines() {
+        return sentences;
     }
 
     /**
      * SETTER for lines
      * @param list
      */
-    public void setLines(ArrayList<String> list){
-        lines = list;
+    public void setLines(ArrayList<Sentence> list){
+        sentences = list;
     }
 
     /**
@@ -61,34 +62,33 @@ public class TextDocument {
             System.out.println("NO OUTPUT FILE FOUND -- MAKE SURE THE FILE EXISTS");
             e.printStackTrace();
         }
-        for (String line :
-                lines) {
-            pw.println(line);
+        for (Sentence sentence : sentences) {
+            pw.println(sentence.getText());
         }
     }
 
     public static class Builder{
 
         private File file;
-        private ArrayList<String> lines;
+        private ArrayList<Sentence> sentences;
 
         public Builder() {
-            this.lines = new ArrayList<>();
+            this.sentences = new ArrayList<>();
         }
 
         public void setFile(File file){
             this.file = file;
         }
 
-        public void addLine(String line){
-            lines.add(line);
+        public void addLine(Sentence sentence){
+            sentences.add(sentence);
         }
 
         public TextDocument build(){
             if(file == null){
                 throw new InvalidParameterException("No file was specified");
             }
-            return new TextDocument(file, lines);
+            return new TextDocument(file, sentences);
         }
     }
 

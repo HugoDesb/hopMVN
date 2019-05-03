@@ -1,6 +1,9 @@
 package pretreatement.Filter;
 
+import document.Sentence;
 import document.TextDocument;
+
+import java.util.ArrayList;
 
 public class InitialFilter{
 
@@ -21,20 +24,22 @@ public class InitialFilter{
     private static final String PATTERN_STRING_EXCLUSION = "";
 
 
-    public static TextDocument filter(TextDocument td){
+    public static void filter(TextDocument td){
         TextDocument.Builder newTD = new TextDocument.Builder();
         newTD.setFile(td.getFile());
 
+        ArrayList<Sentence> sentencesOUT = new ArrayList<>();
 
-        for (String line : td.getLines()) {
-            if(select(line)){
-                if(!unselect(line)){
-                    newTD.addLine(line);
+        for (Sentence sentence : td.getLines()) {
+            if(select(sentence.getText())){
+                if(!unselect(sentence.getText())){
+                    newTD.addLine(sentence);
                 }
 
             }
         }
-        return newTD.build();
+
+        td.setLines(sentencesOUT);
     }
 
     private static boolean unselect(String line) {

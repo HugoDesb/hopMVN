@@ -1,17 +1,10 @@
 package main;
 
-import MWExtraction.MWE;
-import MWExtraction.MWEExtractor;
-import MWExtraction.NGram;
 import document.TextDocument;
 import pretreatement.Extractor.PdfToSentences;
-import tagging.RNNTagger.RNNTagger;
-import tagging.RNNTagger.TaggedSentence;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Map;
 
 public class Main {
 
@@ -33,22 +26,11 @@ public class Main {
 
             File fileExpert = new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf");
             TextDocument tdExpert = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel expertisé.pdf", true);
-            ArrayList<String> sentencesExpert = tdExpert.getLines();
 
             File fileRegular = new File("./files/depression_adulte_recommandations_version_mel.pdf");
             TextDocument tdSource = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel.pdf", false);
-            ArrayList<String> sentencesExtracted = tdSource.getLines();
 
-            RNNTagger tagger = new RNNTagger();
-            ArrayList<TaggedSentence> hop = tagger.tag(tdSource);
-            MWEExtractor mweExtractor = new MWEExtractor(4);
-            MWE mwe = mweExtractor.extractGrams(hop);
-
-            Map<NGram, Double> ngramCollocation = mwe.getCValueForAll();
-
-            for (NGram n: ngramCollocation.keySet()) {
-                System.out.println(n.toString() +"__"+ngramCollocation.get(n));
-            }
+            ChainHandler.fullChainStandard(fileRegular);
 
 
             /*

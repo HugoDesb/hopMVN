@@ -88,7 +88,7 @@ public class PdfToText {
                     if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
                         // We can consider it's a new sentence
                         //  add previous line
-                        builder.addLine(toAdd + ".");
+                        //TODO (change to be a Sentence): builder.addLine(toAdd + ".");
                         //store new line
                         toAdd = sentence;
                         // first character is NOT an UPPERCASE

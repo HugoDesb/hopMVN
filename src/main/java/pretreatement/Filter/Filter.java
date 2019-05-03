@@ -1,5 +1,7 @@
 package pretreatement.Filter;
 
+import document.Sentence;
+
 import java.util.ArrayList;
 
 public class Filter {
@@ -12,10 +14,10 @@ public class Filter {
         this.regexDelete = regexDelete;
     }
 
-    public ArrayList<String> filter(ArrayList<String> lines) {
-        ArrayList<String> ret = new ArrayList<>();
-        for (String line : lines) {
-            if(line.toLowerCase().matches(regexSelect) && !line.toLowerCase().matches(regexDelete)){
+    public ArrayList<Sentence> filter(ArrayList<Sentence> lines) {
+        ArrayList<Sentence> ret = new ArrayList<>();
+        for (Sentence line : lines) {
+            if(line.getText().toLowerCase().matches(regexSelect) && !line.getText().toLowerCase().matches(regexDelete)){
                 ret.add(line);
             }
         }

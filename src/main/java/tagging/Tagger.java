@@ -1,11 +1,13 @@
 package tagging;
 
+import document.Sentence;
 import document.TextDocument;
-import tagging.RNNTagger.TaggedSentence;
+import tagging.RNNTagger.RNNTag;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface Tagger {
 
-    public ArrayList<TaggedSentence> tag(TextDocument textDocument);
+    List<RNNTag> tag (Sentence sentence);
+    void tag(TextDocument textDocument);
 }

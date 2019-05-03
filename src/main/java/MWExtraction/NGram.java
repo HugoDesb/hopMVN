@@ -5,11 +5,13 @@ import tagging.RNNTagger.RNNTag;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.UUID;
 
 public class NGram {
 
     private int capacity;
     private int length;
+    private UUID sentenceId;
     private ArrayList<RNNTag> grams;
 
     /**

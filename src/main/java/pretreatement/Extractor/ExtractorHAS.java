@@ -69,7 +69,7 @@ public class ExtractorHAS extends ExtractorPDF {
                     if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
                         // We can consider it's a new sentence
                         //  add previous line
-                        builder.addLine(toAdd + ".");
+                        // TODO : be a Sentence : builder.addLine(toAdd + ".");
                         //store new line
                         toAdd = sentence;
                         // first character is NOT an UPPERCASE
