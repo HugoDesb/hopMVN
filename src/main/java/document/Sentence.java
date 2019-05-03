@@ -1,9 +1,9 @@
 package document;
 
+import MWExtraction.NGram;
 import tagging.RNNTagger.RNNTag;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 public class Sentence {
@@ -13,29 +13,62 @@ public class Sentence {
 
     private String text;
 
-    private List<RNNTag> tokens;
+    private ArrayList<RNNTag> tokens;
+
+    private ArrayList<NGram> ngrams;
 
     public Sentence(String text) {
         this.id = UUID.randomUUID();
         this.text = text;
         tokens = new ArrayList<>();
+        ngrams = new ArrayList<>();
     }
 
-
-
-    public void setTokens(List<RNNTag> tokens) {
+    /**
+     * SETTER for tokens
+     * @param tokens tokens
+     */
+    public void setTokens(ArrayList<RNNTag> tokens) {
         this.tokens = tokens;
     }
 
+    /**
+     * SETTER for n-grams
+     * @param ngrams n-grams
+     */
+    public void setNgrams(ArrayList<NGram> ngrams) {
+        this.ngrams = ngrams;
+    }
+
+    /**
+     * GETTER for id
+     * @return id
+     */
     public UUID getId() {
         return id;
     }
 
+    /**
+     * GETTER for text
+     * @return text
+     */
     public String getText() {
         return text;
     }
 
-    public List<RNNTag> getTokens() {
+    /**
+     * GETTER for tokens
+     * @return tokens
+     */
+    public ArrayList<RNNTag> getTokens() {
         return tokens;
+    }
+
+    /**
+     * GETTER for ngrams
+     * @return ngrams
+     */
+    public ArrayList<NGram> getNgrams() {
+        return ngrams;
     }
 }

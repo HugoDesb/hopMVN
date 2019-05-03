@@ -9,25 +9,23 @@ import tagging.Tagger;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class RNNTagger implements Tagger {
 
     public void tag(TextDocument textDocument) {
-
         for (Sentence sentence : textDocument.getLines()) {
-            List<RNNTag> tokens = tag(sentence);
+            ArrayList<RNNTag> tokens = tag(sentence);
             sentence.setTokens(tokens);
         }
     }
 
-    public List<RNNTag> tag(Sentence sentence){
+    public ArrayList<RNNTag> tag(Sentence sentence){
         String line, launch;
         File in, out;
         FileWriter fw;
         BufferedReader br;
-        List<RNNTag> ret = new ArrayList<>();
+        ArrayList<RNNTag> ret = new ArrayList<>();
 
         try {
             // WRITE INPUT

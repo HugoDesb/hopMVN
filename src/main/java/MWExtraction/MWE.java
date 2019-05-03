@@ -22,20 +22,20 @@ public class MWE {
     }
 
     /**
-     * Gets all MWE of specified length
-     * @param length the desired MWE length
-     * @return an array of NGram (each NGram is a MWE of specified length)
+     * Gets all MWE of specified getN
+     * @param length the desired MWE getN
+     * @return an array of NGram (each NGram is a MWE of specified getN)
      */
     public ArrayList<NGram> getNGramsOfLength(int length){
         if(length < 1|| getMaxLength() < length){
-            throw new InvalidParameterException("length should be between 1 and " + getMaxLength());
+            throw new InvalidParameterException("getN should be between 1 and " + getMaxLength());
         }
         return allMWE.get(length-1);
     }
 
     public void addNGram(NGram gram){
         System.out.println("Adds a gram");
-        allMWE.get(gram.length()-1).add(gram);
+        allMWE.get(gram.getN()-1).add(gram);
     }
 
 
@@ -76,7 +76,7 @@ public class MWE {
 
         for (int i = getMaxLength(); i > 0; i--) {
             for (NGram currentGram: frequencies.keySet()) {
-                w_A = Math.log(currentGram.length()+1)/Math.log(2);
+                w_A = Math.log(currentGram.getN()+1)/Math.log(2);
                 //Check if currentGram is nested and get all bigger NGram in that case
                 HashSet<NGram> biggerNGramsContainingCurrentGram = getBiggerNGramsContaining(currentGram, frequencies.keySet());
                 // if YES
@@ -115,7 +115,7 @@ public class MWE {
         HashSet<NGram> ret = new HashSet<>();
 
         for (NGram nGram : gramsSet) {
-            if(nGram.length() > currentGram.length() && currentGram.isIn(nGram)){
+            if(nGram.getN() > currentGram.getN() && currentGram.isIn(nGram)){
                 ret.add(nGram);
             }
         }
@@ -177,9 +177,9 @@ public class MWE {
         for(int i = minSize-1; i<maxSize; i++){
             ArrayList<NGram> allForSpecificSize = allMWE.get(i);
             for (NGram ngram : allForSpecificSize) {
-                for (int j = 0; j < ngram.length(); j++) {
+                for (int j = 0; j < ngram.getN(); j++) {
                     boolean lastword = false;
-                    if(j == ngram.length()-1){
+                    if(j == ngram.getN()-1){
                         lastword = true;
                     }
                     for (int k = 0; k < data.length; k++) {
@@ -196,8 +196,8 @@ public class MWE {
     }
 
     /**
-     * Gets MWE max length
-     * @return the max length
+     * Gets MWE max getN
+     * @return the max getN
      */
     public int getMaxLength(){
         return allMWE.size();

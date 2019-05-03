@@ -9,6 +9,7 @@ import tagging.RNNTagger.RNNTagger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -33,8 +34,11 @@ public class ChainHandler {
 
             // Main 3 --- Extract Multi-words expressions
             //TODO : config file ?
-            MWEExtractor mweExtractor = new MWEExtractor(4);
+            MWEExtractor mweExtractor = new MWEExtractor(1, 4);
+            ArrayList<NGram> allNgrams = mweExtractor.generateNGramsForDocument(textDocument);
+            System.out.println(allNgrams.toString());
             MWE mwe = mweExtractor.extractGrams(textDocument.getLines());
+            System.out.println(mwe);
 
             // Main 4 --- Branch 1 --- Compute C-value for all MWE -- branch 1
             Map<NGram, Double> ngramCollocation = mwe.getCValueForAll();
@@ -43,7 +47,7 @@ public class ChainHandler {
             for (NGram n: ngramCollocation.keySet()) {
                 System.out.println(n.toString() +"__"+ngramCollocation.get(n));
             }
-
+            String hop = "";
         }catch (IOException e){
             e.printStackTrace();
         }
