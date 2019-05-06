@@ -16,7 +16,8 @@ public class DefaultFilter extends Filter{
             "|(.*\\s+limit.*)" +
             "|(.*\\s+envisag[ée].*)" +
             "|(.*\\s+pr[ée]v.*)" +
-            "|(.*\\s+[eé]vit.*)";
+            "|(.*\\s+[eé]vit.*)" +
+            "|(.*\\s+dia).*";
     private static final String PATTERN_STRING_EXCLUSION = "";
 
     public DefaultFilter() {

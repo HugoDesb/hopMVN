@@ -49,6 +49,14 @@ public class TextDocument {
         sentences = list;
     }
 
+    public String toString(){
+        String ret = "file path  : "+file.getPath()+"\nSentences\n";
+        for (Sentence s : sentences) {
+            ret = ret +"\n\t"+ s.toString();
+        }
+        return ret;
+    }
+
     /**
      *
      * @return

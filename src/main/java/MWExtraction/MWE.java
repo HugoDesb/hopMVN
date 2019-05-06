@@ -7,8 +7,6 @@ import java.security.InvalidParameterException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static java.util.Map.Entry.comparingByValue;
-
 public class MWE {
 
     private ArrayList<ArrayList<NGram>> allMWE;
@@ -34,7 +32,7 @@ public class MWE {
     }
 
     public void addNGram(NGram gram){
-        System.out.println("Adds a gram");
+        //System.out.println("Adds a gram");
         allMWE.get(gram.getN()-1).add(gram);
     }
 
@@ -76,20 +74,28 @@ public class MWE {
 
         for (int i = getMaxLength(); i > 0; i--) {
             for (NGram currentGram: frequencies.keySet()) {
-                w_A = Math.log(currentGram.getN()+1)/Math.log(2);
+
+                //System.out.println("###############################################################");
+                //System.out.println("N = "+currentGram.getN());
+                w_A = Math.log(currentGram.getN())/Math.log(2);
+                //System.out.println("log2(|a|) = "+w_A);
                 //Check if currentGram is nested and get all bigger NGram in that case
                 HashSet<NGram> biggerNGramsContainingCurrentGram = getBiggerNGramsContaining(currentGram, frequencies.keySet());
                 // if YES
                 if(!biggerNGramsContainingCurrentGram.isEmpty()) {
                     // Sum frequencies of bigger ngrams
+                    //System.out.println("NESTED = false");
                     sumFreq = 0.0;
                     for (NGram tmpGram: biggerNGramsContainingCurrentGram) {
                         sumFreq += frequencies.get(tmpGram);
                     }
 
-                    collocationValue = w_A * (frequencies.get(currentGram) - 1.0/biggerNGramsContainingCurrentGram.size() * sumFreq);
+                    //System.out.println("\tSum frequencies sum = "+sumFreq);
+
+                    collocationValue = w_A * (frequencies.get(currentGram) - sumFreq/biggerNGramsContainingCurrentGram.size());
                     ret.put(currentGram, collocationValue);
                 }else {
+                    //System.out.println("NESTED = true");
                     collocationValue = w_A * frequencies.get(currentGram);
                     ret.put(currentGram, collocationValue);
                 }
@@ -100,7 +106,7 @@ public class MWE {
         Map<NGram, Double> sorted = ret
                 .entrySet()
                 .stream()
-                .sorted(comparingByValue())
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
         return sorted;
     }

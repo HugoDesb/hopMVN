@@ -3,13 +3,13 @@ package main;
 import MWExtraction.MWE;
 import MWExtraction.MWEExtractor;
 import MWExtraction.NGram;
+import document.Sentence;
 import document.TextDocument;
 import pretreatement.Extractor.PdfToSentences;
 import tagging.RNNTagger.RNNTagger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -26,7 +26,13 @@ public class ChainHandler {
 
             // Main 1 --- PDF TO SENTENCES
             //TODO : extractor instance with config file or config Object (better) and whether it's an expert extraction
-            TextDocument textDocument = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel expertisé.pdf", true);
+            TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
+
+            System.out.println("#######################");
+            for (Sentence s : textDocument.getLines()) {
+                System.out.println(s.getText());
+            }
+            System.out.println("#######################");
 
             // Main 2 --- TAG THE SENTENCES
             RNNTagger tagger = new RNNTagger();
@@ -35,17 +41,33 @@ public class ChainHandler {
             // Main 3 --- Extract Multi-words expressions
             //TODO : config file ?
             MWEExtractor mweExtractor = new MWEExtractor(1, 4);
-            ArrayList<NGram> allNgrams = mweExtractor.generateNGramsForDocument(textDocument);
-            System.out.println(allNgrams.toString());
-            MWE mwe = mweExtractor.extractGrams(textDocument.getLines());
-            System.out.println(mwe);
+            MWE mwe = mweExtractor.generateGrams(textDocument);
+
+
+            for (NGram n :mwe.getNGramsOfLength(4)) {
+                System.out.println(n.toString());
+            }
+            for (NGram n :mwe.getNGramsOfLength(3)) {
+                System.out.println(n.toString());
+            }
+            for (NGram n :mwe.getNGramsOfLength(2)) {
+                System.out.println(n.toString());
+            }
+            for (NGram n :mwe.getNGramsOfLength(1)) {
+                System.out.println(n.toString());
+            }
 
             // Main 4 --- Branch 1 --- Compute C-value for all MWE -- branch 1
             Map<NGram, Double> ngramCollocation = mwe.getCValueForAll();
             //PRINT
             //TODO : the print here isn't meant to stay
+            int count = 0;
             for (NGram n: ngramCollocation.keySet()) {
-                System.out.println(n.toString() +"__"+ngramCollocation.get(n));
+                count ++;
+                System.out.println(count + "  ---------------------------------------------");
+                System.out.println(n.toString());
+                System.out.println(ngramCollocation.get(n));
+                if(count == 100) break;
             }
             String hop = "";
         }catch (IOException e){

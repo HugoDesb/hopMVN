@@ -48,7 +48,7 @@ public class PdfToSentences {
         return ret;
     }
 
-    /***
+    /**
      * Transform text to sentences, then select it or not.
      * @param lines detected lines from the pdf file
      * @return all selected sentences
@@ -65,6 +65,9 @@ public class PdfToSentences {
         //pour chaque bloc de texte
         while(it.hasNext()){
             block = it.next();
+            System.out.println("############");
+            System.out.println(block);
+            System.out.println("############");
             textLines = block.split("\n");
             //pour toutes les lignes du bloc
 
@@ -72,6 +75,7 @@ public class PdfToSentences {
                 String [] sentences = line.split("\\.\\s");
                 //pour toutes les "phrases"
                 for (String sentence: sentences) {
+                    System.out.println("Line : "+sentence);
                     //ligne non vide
                     if(!sentence.trim().equals("")){
                         // First character is a UPPERCASE
@@ -79,12 +83,14 @@ public class PdfToSentences {
                         if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
                             // We can consider it's a new sentence
                             // add previous line
+                            System.out.println("Sentence : "+toAdd+".");
                             sentencesToReturn.add(new Sentence(toAdd+"."));
                             //init new line
                             toAdd = new StringBuilder(sentence);
                         } else {
                             // first character is NOT an UPPERCASE
                             // continue new line
+
                             toAdd.append(sentence);
                         }
                     }
