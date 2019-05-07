@@ -3,7 +3,6 @@ package main;
 import MWExtraction.MWE;
 import MWExtraction.MWEExtractor;
 import MWExtraction.NGram;
-import document.Sentence;
 import document.TextDocument;
 import pretreatement.Extractor.PdfToSentences;
 import tagging.RNNTagger.RNNTagger;
@@ -27,12 +26,6 @@ public class ChainHandler {
             // Main 1 --- PDF TO SENTENCES
             //TODO : extractor instance with config file or config Object (better) and whether it's an expert extraction
             TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
-
-            System.out.println("#######################");
-            for (Sentence s : textDocument.getLines()) {
-                System.out.println(s.getText());
-            }
-            System.out.println("#######################");
 
             // Main 2 --- TAG THE SENTENCES
             RNNTagger tagger = new RNNTagger();
@@ -67,7 +60,7 @@ public class ChainHandler {
                 System.out.println(count + "  ---------------------------------------------");
                 System.out.println(n.toString());
                 System.out.println(ngramCollocation.get(n));
-                if(count == 100) break;
+                //if(count == 100) break;
             }
             String hop = "";
         }catch (IOException e){

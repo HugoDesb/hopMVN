@@ -44,18 +44,22 @@ public class MWE {
         for (ArrayList<NGram> igramsOfSameLength: allMWE) {
             int totalOfSameLength = igramsOfSameLength.size();
             for (NGram currentNgram: igramsOfSameLength) {
-                //System.out.println("Current NGram : "+currentNgram.toString());
+
                 if(ret.keySet().contains(currentNgram)){
-                    double value = ret.get(currentNgram);
-                    ret.replace(currentNgram, value, value+1);
+                    double newValue = ret.get(currentNgram)+1;
+                    ret.put(currentNgram, newValue);
                 }else{
                     ret.put(currentNgram, 1.0);
                 }
             }
 
-            for (NGram gram : igramsOfSameLength) {
+            for (NGram gram : ret.keySet()) {
                 double value = ret.get(gram);
-                ret.replace(gram, value, value/totalOfSameLength);
+                ret.put(gram, value/totalOfSameLength);
+                System.out.println("Current NGram : "+gram.toString());
+                System.out.println("Count : "+value);
+                System.out.println("Total : "+totalOfSameLength);
+                System.out.println("Freq = "+value/totalOfSameLength);
             }
         }
         System.out.println("Frequencies computed: "+ret.size());

@@ -9,24 +9,17 @@ public class RNNTag{
     private String tag;
     private String lemma;
 
-    public boolean lemmaEquals(Object o){
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        RNNTag rnnTag = (RNNTag) o;
-        return Objects.equals(lemma, rnnTag.lemma);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RNNTag rnnTag = (RNNTag) o;
-        return Objects.equals(lemma, rnnTag.lemma);
+        return lemma.equals(rnnTag.lemma);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(word, tag, lemma);
+        return Objects.hash(lemma);
     }
 
     /**
@@ -110,10 +103,9 @@ public class RNNTag{
 
     @Override
     public String toString() {
-        return "RNNTag{" +
-                "word='" + word + '\'' +
-                ", tag='" + tag + '\'' +
-                ", lemma='" + lemma + '\'' +
-                '}';
+        return "{" + word  +
+                "  " + tag  +
+                "  " + lemma +
+                "}";
     }
 }

@@ -96,6 +96,7 @@ public class PdfToSentences {
                     }
                 }
             }
+            sentencesToReturn.add(new Sentence(toAdd+"."));
         }
         return sentencesToReturn;
     }

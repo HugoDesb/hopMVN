@@ -2,7 +2,7 @@ package pretreatement.Filter;
 
 public class DefaultFilter extends Filter{
 
-    private static final String PATTERN_STRING_DECLENCHEUR = "(.*\\s+mise\\s+en\\s+place.*)" +
+    private static String PATTERN_STRING_DECLENCHEUR = "(.*\\s+mise\\s+en\\s+place.*)" +
             "|(.*\\s+auto[a-z]*.*)" +
             "|(.*\\s+recommand.*)" +
             "|(.*\\s+privil[ée]gi.*)" +
@@ -16,8 +16,7 @@ public class DefaultFilter extends Filter{
             "|(.*\\s+limit.*)" +
             "|(.*\\s+envisag[ée].*)" +
             "|(.*\\s+pr[ée]v.*)" +
-            "|(.*\\s+[eé]vit.*)" +
-            "|(.*\\s+dia).*";
+            "|(.*\\s+[eé]vit.*)";
     private static final String PATTERN_STRING_EXCLUSION = "";
 
     public DefaultFilter() {

@@ -102,9 +102,13 @@ public class NGram {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NGram nGram = (NGram) o;
-        return capacity == nGram.capacity &&
-                N == nGram.N &&
-                Objects.equals(grams, nGram.grams);
+        boolean ngramsEquals = true;
+        System.out.println(this.toString());
+        for (int i = 0; i<N; i++) {
+            if(grams.get(i).getLemma().equals(nGram.get(i).getLemma()));
+        }
+
+        return N == nGram.N && ngramsEquals;
     }
 
     /**
@@ -131,7 +135,8 @@ public class NGram {
      */
     public RNNTag get(int i){
         if(i<0 || i>= N){
-            throw new IndexOutOfBoundsException("min==0 and max==getN-1=="+(N -1));
+            //System.out.println(this.toString());
+            throw new IndexOutOfBoundsException("0<= i < "+N+" but i="+i);
         }
 
         return grams.get(i);
@@ -148,8 +153,7 @@ public class NGram {
     @Override
     public String toString() {
         return "NGram{" +
-                "capacity=" + capacity +
-                ", getN=" + N +
+                ", N=" + N +
                 ", grams=" + grams +
                 '}';
     }
