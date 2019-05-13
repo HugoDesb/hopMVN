@@ -19,6 +19,7 @@ public class Main {
         ArrayList<TaggedSentence> list = tagger.tag(td1);
         */
 
+        File fileDiabete = new File("./files/10irp04_reco_diabete_type_2.pdf");
 
         File fileExpert = new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf");
         //TextDocument tdExpert = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel expertisé.pdf", true);
@@ -28,7 +29,7 @@ public class Main {
 
         File fileWiki = new File("./files/testWiki.pdf");
 
-        ChainHandler.fullChainStandard(fileWiki);
+        ChainHandler.fullChainStandard(fileDiabete);
         //ChainHandler.fullChainStandard(fileRegular);
 
 

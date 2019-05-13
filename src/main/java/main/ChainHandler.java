@@ -27,6 +27,8 @@ public class ChainHandler {
             //TODO : extractor instance with config file or config Object (better) and whether it's an expert extraction
             TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
 
+            textDocument.writeFile();
+
             // Main 2 --- TAG THE SENTENCES
             RNNTagger tagger = new RNNTagger();
             tagger.tag(textDocument);
