@@ -1,15 +1,11 @@
 package main;
 
-import MWExtraction.MWE;
-import MWExtraction.MWEExtractor;
-import MWExtraction.NGram;
 import document.TextDocument;
 import pretreatement.Extractor.PdfToSentences;
 import tagging.RNNTagger.RNNTagger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 /**
  * Class to have here the whole chain processes
@@ -35,6 +31,7 @@ public class ChainHandler {
 
             // Main 3 --- Extract Multi-words expressions
             //TODO : config file ?
+            /*
             MWEExtractor mweExtractor = new MWEExtractor(1, 4);
             MWE mwe = mweExtractor.generateGrams(textDocument);
 
@@ -65,6 +62,7 @@ public class ChainHandler {
                 //if(count == 100) break;
             }
             String hop = "";
+            */
         }catch (IOException e){
             e.printStackTrace();
         }

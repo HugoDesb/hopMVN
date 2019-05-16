@@ -72,26 +72,29 @@ public class PdfToSentences {
             //pour toutes les lignes du bloc
 
             for(String line : textLines){
-                String [] sentences = line.split("\\.\\s");
-                //pour toutes les "phrases"
-                for (String sentence: sentences) {
-                    System.out.println("Line : "+sentence);
-                    //ligne non vide
-                    if(!sentence.trim().equals("")){
-                        // First character is a UPPERCASE
-                        //TODO : [OPT] add empty or meaningless characters first ? (dots, spaces, ...)
-                        if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
-                            // We can consider it's a new sentence
-                            // add previous line
-                            System.out.println("Sentence : "+toAdd+".");
-                            sentencesToReturn.add(new Sentence(toAdd+"."));
-                            //init new line
-                            toAdd = new StringBuilder(sentence);
-                        } else {
-                            // first character is NOT an UPPERCASE
-                            // continue new line
-
-                            toAdd.append(sentence);
+                if(line.trim().matches("AE\\s.*")){
+                    line = line.substring(3).trim();
+                }else if(!line.trim().matches(".*\\.\\.\\.\\..*")){
+                    String [] sentences = line.split("\\.\\s");
+                    //pour toutes les "phrases"
+                    for (String sentence: sentences) {
+                        System.out.println("Line : "+sentence);
+                        //ligne non vide
+                        if(!sentence.trim().equals("")){
+                            // First character is a UPPERCASE
+                            //TODO : [OPT] add empty or meaningless characters first ? (dots, spaces, ...)
+                            if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
+                                // We can consider it's a new sentence
+                                // add previous line
+                                System.out.println("Sentence : "+toAdd+".");
+                                sentencesToReturn.add(new Sentence(toAdd.toString().trim()+"."));
+                                //init new line
+                                toAdd = new StringBuilder(sentence);
+                            } else {
+                                // first character is NOT an UPPERCASE
+                                // continue new line
+                                toAdd.append(sentence);
+                            }
                         }
                     }
                 }
