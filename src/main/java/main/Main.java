@@ -29,7 +29,7 @@ public class Main {
 
         File fileWiki = new File("./files/testWiki.pdf");
 
-        ChainHandler.fullChainStandard(fileDiabete);
+        ChainHandler.fullChainStandard(fileRegular);
         //ChainHandler.fullChainStandard(fileRegular);
 
 
