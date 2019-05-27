@@ -1,5 +1,6 @@
 package ihm;
 
+import config.Config;
 import document.Sentence;
 import main.ChainHandler;
 import stemmer.Stemmer;
@@ -220,7 +221,7 @@ public class TermsComparatorPanel extends JPanel {
         public void actionPerformed(ActionEvent actionEvent) {
             String terms = txt_termsDisplay.getText();
             if(!terms.isEmpty()){
-                File termsFile = new File("./files/conf/patterns");
+                File termsFile = new File(Config.TERMES_DECLENCHEURS_PATH);
                 try {
                     FileWriter fw = new FileWriter(termsFile, true);
                     fw.write(terms);
