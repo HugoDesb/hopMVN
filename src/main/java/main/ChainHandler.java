@@ -1,11 +1,13 @@
 package main;
 
+import document.Sentence;
 import document.TextDocument;
 import pretreatement.Extractor.PdfToSentences;
 import tagging.RNNTagger.RNNTagger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Class to have here the whole chain processes
@@ -69,6 +71,22 @@ public class ChainHandler {
 
 
 
+    }
+
+    /**
+     *
+     * @param pdfFile
+     */
+    public static ArrayList<Sentence> until_selectedSentences(File pdfFile, boolean isExpertFile){
+        TextDocument textDocument = null;
+        try {
+            textDocument = PdfToSentences.extract(pdfFile.getPath(), isExpertFile);
+            textDocument.writeFile();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return textDocument.getLines();
     }
 
 }

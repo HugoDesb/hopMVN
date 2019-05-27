@@ -20,6 +20,6 @@ public class DefaultFilter extends Filter{
     private static final String PATTERN_STRING_EXCLUSION = "";
 
     public DefaultFilter() {
-        super(PATTERN_STRING_DECLENCHEUR, PATTERN_STRING_EXCLUSION);
+        super();
     }
 }

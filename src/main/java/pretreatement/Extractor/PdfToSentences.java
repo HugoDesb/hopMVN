@@ -3,7 +3,7 @@ package pretreatement.Extractor;
 import com.beust.jcommander.ParameterException;
 import document.Sentence;
 import document.TextDocument;
-import pretreatement.Filter.DefaultFilter;
+import pretreatement.Filter.Filter;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,7 +43,7 @@ public class PdfToSentences {
         ret = new TextDocument(target.toFile(), sentences);
 
         if(!isExpertFile){
-            ret.setLines((new DefaultFilter()).filter(ret.getLines()));
+            ret.setLines((new Filter()).filter(ret.getLines()));
         }
         return ret;
     }
