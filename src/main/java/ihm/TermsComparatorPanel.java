@@ -17,6 +17,11 @@ import java.util.ArrayList;
 
 public class TermsComparatorPanel extends JPanel {
 
+    //NORTH
+    private JLabel title;
+
+    //CENTER
+    private JPanel jp_center;
     private JLabel lbl_upload;
 
     private JButton btn_upLoadRegular;
@@ -27,12 +32,16 @@ public class TermsComparatorPanel extends JPanel {
 
     private JButton btn_compare;
 
-    private JScrollPane scr_left;
+    //SOUTH
+    private JPanel jp_south;
+    private JScrollPane scr_sentencesArea;
     private JTextArea sentencesArea;
+    private JPanel jp_btn_addTerm;
     private JButton btn_addTerm;
 
-    private JScrollPane scr_right;
+    private JScrollPane scr_terms;
     private JTextArea txt_termsDisplay;
+    private JPanel jp_btn_saveTerms;
     private JButton btn_saveTerms;
 
 
@@ -42,19 +51,18 @@ public class TermsComparatorPanel extends JPanel {
     private File expertFile;
 
     public TermsComparatorPanel() {
-        GridBagLayout gbl = new GridBagLayout();
-        setLayout( gbl);
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.ipadx = this.getWidth()/2;
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.insets = new Insets(2, 2, 2, 2);
+        setLayout(new BorderLayout());
 
+        //NORTH
+        title = new JLabel("Veuillez choisir 2 fichiers puis comparez les.");
+        add(title, BorderLayout.NORTH);
 
-        // Main Label
+        //CENTER
+        jp_center = new JPanel(new GridLayout(3,3));
+
+        //Main Label
         lbl_upload = new JLabel("Files (regular and expert): ");
-        add(lbl_upload);
+        jp_center.add(lbl_upload);
 
         // Listener for upload buttons
         UploadListener uploadListener = new UploadListener();
@@ -62,70 +70,69 @@ public class TermsComparatorPanel extends JPanel {
         //Button for regular file
         btn_upLoadRegular = new JButton("Upload Regular File");
         btn_upLoadRegular.addActionListener(uploadListener);
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        add(btn_upLoadRegular, gbc);
+        jp_center.add(btn_upLoadRegular);
         lbl_uploadRegularValidation = new JLabel("no file");
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        add(lbl_uploadRegularValidation, gbc);
+        jp_center.add(lbl_uploadRegularValidation);
+        jp_center.add(new JPanel());
 
         // Button for expert file
         btn_upLoadExpert = new JButton("Upload Expert File");
         btn_upLoadExpert.addActionListener(uploadListener);
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        add(btn_upLoadExpert, gbc);
+        jp_center.add(btn_upLoadExpert);
         lbl_uploadExpertValidation = new JLabel("no file");
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        add(lbl_uploadExpertValidation, gbc);
+        jp_center.add(lbl_uploadExpertValidation);
+        jp_center.add(new JPanel());
+        jp_center.add(new JPanel());
 
         // Button for comparing
         btn_compare = new JButton("Compare");
         btn_compare.addActionListener(new CompareListener());
-        gbc.gridx = 1;
-        gbc.gridy = 3;
-        add(btn_compare, gbc);
+        jp_center.add(btn_compare);
 
+        add(jp_center, BorderLayout.CENTER);
 
-        // first half : sentences
+        // SOUTH
+        //panel
+        jp_south = new JPanel();
+        jp_south.setLayout(new BoxLayout(jp_south, BoxLayout.PAGE_AXIS));
+        jp_south.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+
+        // sentences area
         sentencesArea = new JTextArea();
         sentencesArea.setEditable(true);
-        scr_left = new JScrollPane(sentencesArea);
+        sentencesArea.setRows(40);
+        sentencesArea.setWrapStyleWord(true);
+        sentencesArea.setLineWrap(true);
+        scr_sentencesArea = new JScrollPane(sentencesArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-        gbc.ipady = 300;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 0;
-        gbc.gridy = 4;
-        add(scr_left, gbc);
+        jp_south.add(scr_sentencesArea);
 
+        // button in jpanel
+        jp_btn_addTerm = new JPanel();
+        jp_btn_addTerm.setLayout(new BoxLayout(jp_btn_addTerm, BoxLayout.LINE_AXIS));
+        jp_btn_addTerm.add(Box.createHorizontalGlue());
         btn_addTerm = new JButton("Add Selected Term");
         btn_addTerm.addActionListener(new AddTermListener());
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.ipady = 0;
-        gbc.gridx = 0;
-        gbc.gridy = 5;
-        add(btn_addTerm, gbc);
+        jp_btn_addTerm.add(btn_addTerm);
+        jp_south.add(jp_btn_addTerm);
 
 
-        //second half
+        // terms area
         txt_termsDisplay = new JTextArea();
         txt_termsDisplay.setEditable(false);
-        scr_right = new JScrollPane(txt_termsDisplay);
-        gbc.ipady = 300;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 1;
-        gbc.gridy = 4;
-        add(txt_termsDisplay, gbc);
+        scr_terms = new JScrollPane(txt_termsDisplay);
+        jp_south.add(scr_terms);
 
+        jp_btn_saveTerms = new JPanel();
+        jp_btn_saveTerms.setLayout(new BoxLayout(jp_btn_saveTerms, BoxLayout.LINE_AXIS));
+        jp_btn_saveTerms.add(Box.createHorizontalGlue());
         btn_saveTerms = new JButton("Save");
         btn_saveTerms.addActionListener(new SaveTermsListener());
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.ipady = 0;
-        gbc.gridx = 1;
-        gbc.gridy = 5;
-        add(btn_saveTerms, gbc);
+        jp_btn_saveTerms.add(btn_saveTerms);
+        jp_south.add(jp_btn_saveTerms);
+
+        add(jp_south, BorderLayout.SOUTH);
+
 
         fc_regular = new JFileChooser();
     }
@@ -170,6 +177,8 @@ public class TermsComparatorPanel extends JPanel {
             if(regularFile == null || expertFile == null){
                 // TODO : gérer l'erreur ?
             }else{
+                sentencesArea.setText("");
+
                 //Get regular sentences
                 ArrayList<Sentence> regularSentences = ChainHandler.until_selectedSentences(regularFile, false);
                 //Get expert sentences
