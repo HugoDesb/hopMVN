@@ -1,8 +1,8 @@
 package pretreatement.Extractor;
 
 
-import document.SummaryHAS;
-import document.TextDocument;
+import common.document.SummaryHAS;
+import common.document.TextDocument;
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.pdfparser.PDFParser;

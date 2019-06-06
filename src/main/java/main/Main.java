@@ -1,6 +1,6 @@
 package main;
 
-import ihm.MainFrame;
+import common.ihm.MainFrame;
 
 public class Main {
 

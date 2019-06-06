@@ -1,7 +1,7 @@
 package tagging;
 
-import document.Sentence;
-import document.TextDocument;
+import common.document.Sentence;
+import common.document.TextDocument;
 import tagging.RNNTagger.RNNTag;
 
 import java.util.List;

@@ -1,8 +1,7 @@
 package pretreatement.Extractor;
 
-import com.beust.jcommander.ParameterException;
-import document.Sentence;
-import document.TextDocument;
+import common.document.Sentence;
+import common.document.TextDocument;
 import pretreatement.Filter.Filter;
 
 import java.io.File;
@@ -36,7 +35,7 @@ public class PdfToSentences {
         Path sourcePath = Paths.get(source);
         File sourceFile = sourcePath.toFile();
         if(!sourceFile.isFile()){
-            throw new ParameterException("The source path isn't a file");
+            throw new IllegalArgumentException("The source path isn't a file");
         }
         ArrayList<String> blocks = ExtractorPDF.extract(sourceFile, isExpertFile);
         ArrayList<Sentence> sentences = textToSentences(blocks);
@@ -65,9 +64,9 @@ public class PdfToSentences {
         //pour chaque bloc de texte
         while(it.hasNext()){
             block = it.next();
-            System.out.println("############");
-            System.out.println(block);
-            System.out.println("############");
+            //System.out.println("############");
+            //System.out.println(block);
+            //System.out.println("############");
             textLines = block.split("\n");
             //pour toutes les lignes du bloc
 
@@ -78,7 +77,7 @@ public class PdfToSentences {
                     String [] sentences = line.split("\\.\\s");
                     //pour toutes les "phrases"
                     for (String sentence: sentences) {
-                        System.out.println("Line : "+sentence);
+                        //System.out.println("Line : "+sentence);
                         //ligne non vide
                         if(!sentence.trim().equals("")){
                             // First character is a UPPERCASE
@@ -86,7 +85,7 @@ public class PdfToSentences {
                             if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
                                 // We can consider it's a new sentence
                                 // add previous line
-                                System.out.println("Sentence : "+toAdd+".");
+                                //System.out.println("Sentence : "+toAdd+".");
                                 sentencesToReturn.add(new Sentence(toAdd.toString().trim()+"."));
                                 //init new line
                                 toAdd = new StringBuilder(sentence);
@@ -112,7 +111,7 @@ public class PdfToSentences {
     private static Path getDefaultTargetFile(String source){
         Path sourcePath = Paths.get(source);
         if(!sourcePath.toFile().isFile()){
-            throw new ParameterException("The source path isn't a file");
+            throw new IllegalArgumentException("The source path isn't a file");
         }
         String filenameWithoutExtension = sourcePath.getFileName().toString().split("\\.")[0];
         return Paths.get(sourcePath.getParent()+"/"+filenameWithoutExtension+".txt");

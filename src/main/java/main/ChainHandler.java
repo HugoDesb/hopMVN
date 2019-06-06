@@ -1,7 +1,7 @@
 package main;
 
-import document.Sentence;
-import document.TextDocument;
+import common.document.Sentence;
+import common.document.TextDocument;
 import pretreatement.Extractor.PdfToSentences;
 import tagging.RNNTagger.RNNTagger;
 
@@ -22,7 +22,7 @@ public class ChainHandler {
         try{
 
             // Main 1 --- PDF TO SENTENCES
-            //TODO : extractor instance with config file or config Object (better) and whether it's an expert extraction
+            //TODO : extractor instance with common.config file or common.config Object (better) and whether it's an expert extraction
             TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
 
             textDocument.writeFile();
@@ -32,7 +32,7 @@ public class ChainHandler {
             tagger.tag(textDocument);
 
             // Main 3 --- Extract Multi-words expressions
-            //TODO : config file ?
+            //TODO : common.config file ?
             /*
             MWEExtractor mweExtractor = new MWEExtractor(1, 4);
             MWE mwe = mweExtractor.generateGrams(textDocument);
@@ -73,20 +73,31 @@ public class ChainHandler {
 
     }
 
+    public static void mweExtractionModule(){
+
+    }
+
+
     /**
-     *
-     * @param pdfFile
+     * Apply the pretreatment module for the specified pdf file
+     * @param pdfFile the pdf file
+     * @param isExpertFile if the given file has to be treated as highlighted (by an expert)
+     * @param writeInTemporaryFile write in a text file the selected sentences
+     * @return The list of sentences
      */
-    public static ArrayList<Sentence> until_selectedSentences(File pdfFile, boolean isExpertFile){
+    public static ArrayList<Sentence> pretreatmentModule(File pdfFile, boolean isExpertFile, boolean writeInTemporaryFile){
         TextDocument textDocument = null;
         try {
             textDocument = PdfToSentences.extract(pdfFile.getPath(), isExpertFile);
-            textDocument.writeFile();
-
+            if(writeInTemporaryFile){
+                textDocument.writeFile();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
         return textDocument.getLines();
     }
+
+    public static
 
 }

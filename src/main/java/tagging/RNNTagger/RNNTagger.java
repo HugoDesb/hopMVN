@@ -1,8 +1,8 @@
 package tagging.RNNTagger;
 
-import config.Config;
-import document.Sentence;
-import document.TextDocument;
+import common.config.Config;
+import common.document.Sentence;
+import common.document.TextDocument;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
 import tagging.Tagger;

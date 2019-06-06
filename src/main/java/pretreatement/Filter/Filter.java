@@ -1,7 +1,7 @@
 package pretreatement.Filter;
 
-import config.Config;
-import document.Sentence;
+import common.config.Config;
+import common.document.Sentence;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -19,7 +19,8 @@ public class Filter {
             String line = br.readLine();
             String regexSelect = "";
             while(line != null){
-                regexSelect += "(.*\\s"+line+".*)|";
+                line.replaceAll(" ", "\\s");
+                regexSelect += "(.*\\s+"+line+".*)|";
                 line = br.readLine();
             }
             this.regexSelect = regexSelect.substring(0,regexSelect.length());

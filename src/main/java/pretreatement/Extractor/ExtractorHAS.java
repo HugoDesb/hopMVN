@@ -1,7 +1,7 @@
 package pretreatement.Extractor;
 
-import document.SummaryHAS;
-import document.TextDocument;
+import common.document.SummaryHAS;
+import common.document.TextDocument;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.text.PDFTextStripper;

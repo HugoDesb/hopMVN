@@ -10,7 +10,7 @@ En l’absence d’études, les recommandations sont fondées sur un accord entr
 L’absence de gradation ne signifie pas que les recommandations ne sont pas pertinentes et utiles.
 Elle doit, en revanche, inciter à engager des études complémentaires.
 Haute Autorité de Santé.
-Ce document a été validé par le Collège de la Haute Autorité de Santé en janvier 2013© Haute Autorité de Santé – 2013.
+Ce common.document a été validé par le Collège de la Haute Autorité de Santé en janvier 2013© Haute Autorité de Santé – 2013.
 L’objectif glycémique doit être individualisé en fonction du profil des patients et peut donc évoluer au cours du temps.
 Pour la plupart des patients diabétiques de type 2, une cible d’HbA1c inférieure ou égale à 7 % est recommandée.
 Le traitement médicamenteux doit être instauré ou réévalué si l’HbA1c est supérieure à 7 %.

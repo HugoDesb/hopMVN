@@ -1,7 +1,7 @@
 package pretreatement.Filter;
 
-import document.Sentence;
-import document.TextDocument;
+import common.document.Sentence;
+import common.document.TextDocument;
 
 import java.util.ArrayList;
 

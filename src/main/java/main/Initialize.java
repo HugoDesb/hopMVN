@@ -1,6 +1,6 @@
 package main;
 
-import document.TextDocument;
+import common.document.TextDocument;
 import pretreatement.Extractor.ExtractorHAS;
 import pretreatement.Extractor.ExtractorPDF;
 
