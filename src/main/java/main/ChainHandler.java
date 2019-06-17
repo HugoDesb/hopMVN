@@ -98,6 +98,4 @@ public class ChainHandler {
         return textDocument.getLines();
     }
 
-    public static
-
 }

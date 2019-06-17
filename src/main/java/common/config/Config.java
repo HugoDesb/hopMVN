@@ -25,9 +25,13 @@ public class Config {
 
     }
 
+    public static void main (String [] args){
+        System.out.println(Config.getInstance().getProp("pretreatment.rnntagger_path"));
+    }
+
     public String getProp(String propertyName){
         if(properties == null){
-            readProperties(new File("common.config.properties"));
+            readProperties(new File("default.properties"));
         }
         return properties.getProperty(propertyName);
     }
@@ -35,7 +39,8 @@ public class Config {
     public void readProperties(File configFile){
         try {
             properties = new Properties();
-            String propFileName = "common.config.properties";
+
+            String propFileName = "default.properties";
 
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 

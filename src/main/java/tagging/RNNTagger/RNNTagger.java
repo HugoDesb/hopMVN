@@ -29,19 +29,19 @@ public class RNNTagger implements Tagger {
 
         try {
             // WRITE INPUT
-            in = new File(Config.RNNTAGGER_ABSOLUTE_PATH+"tmp.txt");
+            in = new File(Config.getInstance().getProp("pretreatment.rnntagger_path")+"tmp.txt");
             fw = new FileWriter(in);
             fw.write(sentence.getText());
             fw.close();
 
             // RUN COMMAND TO TAG
-            launch = "/bin/sh ./files/scripts/tag.sh "+Config.RNNTAGGER_ABSOLUTE_PATH;
+            launch = "/bin/sh ./files/scripts/tag.sh "+Config.getInstance().getProp("pretreatment.rnntagger_path");
             CommandLine cmdLine = CommandLine.parse(launch);
             DefaultExecutor executor = new DefaultExecutor();
             executor.execute(cmdLine);
 
             //READ OUTPUT
-            out = new File(Config.RNNTAGGER_ABSOLUTE_PATH+"tmp_tagged.txt");
+            out = new File(Config.getInstance().getProp("pretreatment.rnntagger_path")+"tmp_tagged.txt");
             br = new BufferedReader(new FileReader(out));
 
             while ( (line = br.readLine()) != null){

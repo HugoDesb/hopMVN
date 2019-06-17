@@ -180,9 +180,9 @@ public class TermsComparatorPanel extends JPanel {
                 sentencesArea.setText("");
 
                 //Get regular sentences
-                ArrayList<Sentence> regularSentences = ChainHandler.until_selectedSentences(regularFile, false);
+                ArrayList<Sentence> regularSentences = ChainHandler.pretreatmentModule(regularFile, false, true);
                 //Get expert sentences
-                ArrayList<Sentence> expertSentences = ChainHandler.until_selectedSentences(expertFile, true);
+                ArrayList<Sentence> expertSentences = ChainHandler.pretreatmentModule(expertFile, true, true);
                 File f = new File("./files/resultat_mon_algo_expert.txt");
                 try {
                     FileWriter writer = new FileWriter(f);
@@ -254,7 +254,7 @@ public class TermsComparatorPanel extends JPanel {
         public void actionPerformed(ActionEvent actionEvent) {
             String terms = txt_termsDisplay.getText();
             if(!terms.isEmpty()){
-                File termsFile = new File(Config.TERMES_DECLENCHEURS_PATH);
+                File termsFile = new File(Config.getInstance().getProp("pretreatment.termes_declencheurs_path"));
                 try {
                     FileWriter fw = new FileWriter(termsFile, true);
                     fw.write(terms);

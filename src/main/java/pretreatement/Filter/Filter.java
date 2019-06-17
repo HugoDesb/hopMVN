@@ -12,7 +12,7 @@ public class Filter {
     public String regexDelete;
 
     public Filter(){
-        File f = new File(Config.TERMES_DECLENCHEURS_PATH);
+        File f = new File(Config.getInstance().getProp("pretreatment.termes_declencheurs_path"));
         try {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);

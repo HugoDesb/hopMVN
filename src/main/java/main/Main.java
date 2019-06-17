@@ -1,6 +1,6 @@
 package main;
 
-import common.ihm.MainFrame;
+import java.io.File;
 
 public class Main {
 
@@ -19,9 +19,9 @@ public class Main {
         ArrayList<TaggedSentence> list = tagger.tag(td1);
         */
 
-        MainFrame mf = new MainFrame();
+        //MainFrame mf = new MainFrame();
 
-        /*
+
         File fileDiabete = new File("./files/10irp04_reco_diabete_type_2.pdf");
 
         File fileExpert = new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf");
@@ -32,7 +32,7 @@ public class Main {
 
         File fileWiki = new File("./files/testWiki.pdf");
 
-        ChainHandler.fullChainStandard(fileRegular);
+        ChainHandler.fullChainStandard(fileDiabete);
         //ChainHandler.fullChainStandard(fileRegular);
 
 

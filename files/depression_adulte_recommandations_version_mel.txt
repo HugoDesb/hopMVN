@@ -6,7 +6,7 @@ Cette recommandation de bonne pratique a été élaborée selon la méthode rés
 Élaboration de recommandations de bonne pratique – Méthode Recommandations pour la pratique cli-nique.
 Les objectifs de cette recommandation, la population et les professionnels concernés par sa mise en œuvre sont brièvement présentés en dernière page (fiche descriptive) et détaillés dans l’argumentaire scientifique.
 Ce dernier ainsi que la synthèse de la recommandation sont téléchargeables sur www.has-sante.fr.
-Ce common.document a été adopté par le Collège de la Haute Autorité de Santé en Octobre 2017 © Haute Autorité de Santé – Octobre 2017.
+Ce document a été adopté par le Collège de la Haute Autorité de Santé en Octobre 2017 © Haute Autorité de Santé – Octobre 2017.
 Haute Autorité de Santé.
 Grade des recommandations.
 En l’absence d’études, les recommandations sont fondées sur un accord entre experts du groupe de travail, après consultation du groupe de lecture.
@@ -23,7 +23,7 @@ La demande initiale de recommandations émanait des Caisses nationales d’assur
 Objectifs de la recommandation.
 Les objectifs d’amélioration de la pratique sont :  mieux identifier les patients atteints d’un épisode dépressif caractérisé isolé1 ;  prévenir le risque suicidaire et obtenir un impact positif sur les souffrances psychiques des patients ayant un épisode dépressif caractérisé ;  améliorer la qualité de vie et le handicap des patients atteints d’un épisode dépressif caractérisé au travers de stratégies de prise en charge qui précisent la place des différents moyens thérapeutiques.
 Cette recommandation est principalement destinée aux médecins généralistes, médecins gériatres, médecins du travail et autres professionnels de santé de premiers recours.
-Bien que ce common.document ne détaille pas leurs pratiques spécifiques, cette recommandation peut également être utile à tous professionnels de santé et travailleurs sociaux (assistantes sociales, etc.) concernés par le thème, notamment dans la mesure où ils participent à la mise en œuvre des traitements non médicamenteux, à l’éducation thérapeutique du patient et au maintien de ses activités sociales et professionnelles1 Cfparagraphe 1.2 Diagnostic différentiel.
+Bien que ce document ne détaille pas leurs pratiques spécifiques, cette recommandation peut également être utile à tous professionnels de santé et travailleurs sociaux (assistantes sociales, etc.) concernés par le thème, notamment dans la mesure où ils participent à la mise en œuvre des traitements non médicamenteux, à l’éducation thérapeutique du patient et au maintien de ses activités sociales et professionnelles1 Cfparagraphe 1.2 Diagnostic différentiel.
 Les symptômes d’un épisode dépressif caractérisé doivent :  être présents durant une période minimum de 2 semaines, et chacun d’entre eux à un degré de sévérité certain, presque tous les jours ;  avoir représenté un changement par rapport au fonctionnement antérieur (professionnel, social, familial) ;  induire une détresse significative.
 L’état de deuil est une réaction d’adaptation à une perte significative qui ne doit pas être considéré comme un état pathologique.
 Devant tout trouble cognitif chez une personne âgée, il est recommandé de se poser la question d’un état dépressif sous-jacent responsable de la symptomatologie.
@@ -99,6 +99,7 @@ Il n’existe pas de preuve permettant de privilégier une psychothérapie plut�
 Une relation de soutien doit être proposée, si besoin, à leurs aidants.
 Il doit être guidé par l’expérience antérieure du patient avec un antidépresseur, les comorbidités et par les effets indésirables de l’antidépresseur.
 Dans le cas d’une polymédication, si un ISRS est l’option de traitement retenue, celui-ci doit être à un faible risque d’interaction médicamenteuse.
+Une vigilance est nécessaire lorsque que l’on traite les patients très âgés (> 75 ans).
 Il est recommandé :  d’instaurer le traitement antidépresseur à dose faible et d’augmenter la dose lentement jusqu’à la dose minimale efficace ;  de réaliser une évaluation de l’efficacité de l’antidépresseur 6 à 12 semaines après obtention de la dose minimale efficace.
 Un sujet âgé traité par antidépresseur doit être surveillé étroitement concernant les effets indésirables médicamenteux.
 Une surveillance de la natrémie est recommandée une semaine après le début d’un traitement par.
@@ -127,4 +128,4 @@ Agitation ou ralentissement psychomoteur presque tous les jours (constaté par l
 Bien que ces symptômes puissent être compréhensibles ou jugés appropriés en regard de la perte, la présence d’un épisode dépressif caractérisé, en plus de la réponse normale à une perte importante, doit être considérée attentivement.
 Pour qu’un épisode soit considéré comme récurrent, il doit y avoir un intervalle d’au moins 2 mois consécutifs entre des épisodes distincts, au cours duquel les critères d’un épisode dépressif caractérisé ne.
 Agitation ou ralentissement psychomoteur presque tous les jours (constaté par les autres, non limité à un sentiment subjectif de fébrilité ou de ralentissement)6.
-Bien que ces symptômes puissent être compréhensibles ou jugés appropriés en regard de la perte, la présence d’un épiso
+Bien que ces symptômes puissent 
