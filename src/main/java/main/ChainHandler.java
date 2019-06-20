@@ -1,13 +1,18 @@
 package main;
 
-import common.document.Sentence;
+import MWExtraction.Main.Principal;
 import common.document.TextDocument;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 import pretreatement.Extractor.PdfToSentences;
-import tagging.RNNTagger.RNNTagger;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Class to have here the whole chain processes
@@ -19,20 +24,18 @@ public class ChainHandler {
             throw new IllegalArgumentException("The file given doesn't exists");
         }
 
-        try{
+        // Main 1 --- PDF TO SENTENCES
+        //TODO : extractor instance with common.config file or common.config Object (better) and whether it's an expert extraction
+        //TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
 
-            // Main 1 --- PDF TO SENTENCES
-            //TODO : extractor instance with common.config file or common.config Object (better) and whether it's an expert extraction
-            TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
+        //textDocument.writeFile();
 
-            textDocument.writeFile();
+        // Main 2 --- TAG THE SENTENCES
+        //RNNTagger tagger = new RNNTagger();
+        //tagger.tag(textDocument);
 
-            // Main 2 --- TAG THE SENTENCES
-            RNNTagger tagger = new RNNTagger();
-            tagger.tag(textDocument);
-
-            // Main 3 --- Extract Multi-words expressions
-            //TODO : common.config file ?
+        // Main 3 --- Extract Multi-words expressions
+        //TODO : common.config file ?
             /*
             MWEExtractor mweExtractor = new MWEExtractor(1, 4);
             MWE mwe = mweExtractor.generateGrams(textDocument);
@@ -65,37 +68,66 @@ public class ChainHandler {
             }
             String hop = "";
             */
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-
 
 
     }
 
-    public static void mweExtractionModule(){
+    public static void treatAllDeclaredFiles(File xmlConfFile) {
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = null;
+        Document doc;
+        try {
+            dBuilder = dbFactory.newDocumentBuilder();
+            doc = dBuilder.parse(xmlConfFile);
+            doc.getDocumentElement().normalize();
+            Node base = doc.getElementsByTagName("task").item(0);
 
+            String config_file = base.getAttributes().getNamedItem("config_file").getNodeName();
+
+            NodeList nList = doc.getElementsByTagName("file");
+            for (int i = 0; i<nList.getLength(); i++) {
+
+                String file_path = nList.item(i).getAttributes().getNamedItem("absolutePath").getNodeValue();
+                String name = nList.item(i).getAttributes().getNamedItem("name").getNodeValue();
+                String topic = nList.item(i).getAttributes().getNamedItem("topic").getNodeValue();
+                String language = nList.item(i).getAttributes().getNamedItem("language").getNodeValue();
+                String type = nList.item(i).getAttributes().getNamedItem("type").getNodeValue();
+                boolean isExpertFile = Boolean.parseBoolean(nList.item(i).getAttributes().getNamedItem("isExpertFile").getNodeValue());
+
+                TextDocument td = pretreatmentModule(config_file, file_path,name, type, isExpertFile, true);
+                multiWordExtractor(config_file, td, language);
+
+            }
+
+
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
     /**
      * Apply the pretreatment module for the specified pdf file
-     * @param pdfFile the pdf file
+     * @param file_path the path to the pdf file
      * @param isExpertFile if the given file has to be treated as highlighted (by an expert)
      * @param writeInTemporaryFile write in a text file the selected sentences
      * @return The list of sentences
      */
-    public static ArrayList<Sentence> pretreatmentModule(File pdfFile, boolean isExpertFile, boolean writeInTemporaryFile){
+    public static TextDocument pretreatmentModule(String config_file, String file_path, String name, String type, boolean isExpertFile, boolean writeInTemporaryFile){
         TextDocument textDocument = null;
         try {
-            textDocument = PdfToSentences.extract(pdfFile.getPath(), isExpertFile);
+            textDocument = PdfToSentences.extract(config_file, file_path, name, type, isExpertFile);
             if(writeInTemporaryFile){
                 textDocument.writeFile();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return textDocument.getLines();
+        return textDocument;
+    }
+
+    public static void multiWordExtractor(String config_file, TextDocument textDocument, String language){
+        Principal.main(config_file, textDocument.getFile(), language);
     }
 
 }

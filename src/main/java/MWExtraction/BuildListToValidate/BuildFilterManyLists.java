@@ -33,12 +33,13 @@ public class BuildFilterManyLists {
         }
         
         
-        source_stop_word = source_stop_word + File.separator + "Stop-words-" + language + ".txt";
+        source_stop_word = source_stop_word + "Stop-words-" + language + ".txt";
         
         
 		load_variables(source_OUTPUT);
         //load_terms_ontologos();
         load_stop_word(source_stop_word);
+        System.out.println("Stop words loaded");
         //load_stop_word(source_stop_word_en);
         compute_terme_gramme(list_candidat_terms_validated,length_pattern);
         
@@ -95,12 +96,12 @@ public class BuildFilterManyLists {
         n_gramme = new ArrayList<>();
 
 
-        String measure = source_OUTPUT.split("/")[2].substring(8);
-        source_t1gramme = source_OUTPUT + File.separator + "t1gram["+measure+"].csv";
-    	source_t2gramme = source_OUTPUT + File.separator + "t2gram["+measure+"].csv";
-        source_t3gramme = source_OUTPUT + File.separator + "t3gram["+measure+"].csv";
-        source_t4gramme = source_OUTPUT + File.separator + "t4gram["+measure+"].csv";
-        source_n_gramme = source_OUTPUT + File.separator + "ALL_gram["+measure+"].csv";
+        System.out.println(source_OUTPUT);
+        source_t1gramme = source_OUTPUT + File.separator + "t1gram.csv";
+    	source_t2gramme = source_OUTPUT + File.separator + "t2gram.csv";
+        source_t3gramme = source_OUTPUT + File.separator + "t3gram.csv";
+        source_t4gramme = source_OUTPUT + File.separator + "t4gram.csv";
+        source_n_gramme = source_OUTPUT + File.separator + "ALL_gram.csv";
         
         nb_terms_application = 20000;
     }
@@ -250,8 +251,10 @@ public class BuildFilterManyLists {
     
     public static boolean t1gramme_is_in_stop_words(String terme)
     {
-        
-        if(map_stop_word.containsKey(terme.trim())){
+        if(terme.equals("ce")){
+            System.out.println("STOOOOOOOOOOOP");
+        }
+        if(map_stop_word.containsKey(terme.toLowerCase().trim())){
             return true;
         }
         String num = terme.trim();
@@ -271,7 +274,7 @@ public class BuildFilterManyLists {
         String [] phrases = terme.split(" ");
         for(int j=0;j<phrases.length;j++)
         {
-            if(map_stop_word.containsKey(phrases[j].trim())){
+            if(map_stop_word.containsKey(phrases[j].toLowerCase().trim())){
                 return true;
             }
             String num = phrases[j].trim();
@@ -288,10 +291,17 @@ public class BuildFilterManyLists {
     public static boolean t3and4gramme_is_in_stop_words(String terme)
     {
         String [] phrases = terme.split(" ");
-        int length = phrases.length;
-        for(int ind=0;ind<articles_prep_french.length;ind++){
-            if(phrases[length-1].equalsIgnoreCase(articles_prep_french[ind])){
+        for(int j=0;j<phrases.length;j++)
+        {
+            if(map_stop_word.containsKey(phrases[j].toLowerCase().trim())){
                 return true;
+            }
+            String num = phrases[j].trim();
+            try{
+                int num_ = Integer.parseInt(num);
+                return true;
+            }catch(Exception ex){
+
             }
         }
         return false;
@@ -304,7 +314,7 @@ public class BuildFilterManyLists {
                 BufferedWriter bw = new BufferedWriter(fw);
 
                 for(int i=0;i<t1gramme.size();i++){
-                    bw.write(t1gramme.get(i));
+                    bw.buildOutput(t1gramme.get(i));
                     bw.newLine();
                 }
                 bw.close();
@@ -320,7 +330,7 @@ public class BuildFilterManyLists {
                 BufferedWriter bw = new BufferedWriter(fw);
 
                 for(int i=0;i<t2gramme.size();i++){
-                    bw.write(t2gramme.get(i));
+                    bw.buildOutput(t2gramme.get(i));
                     bw.newLine();
                 }
                 bw.close();
@@ -336,7 +346,7 @@ public class BuildFilterManyLists {
                 BufferedWriter bw = new BufferedWriter(fw);
 
                 for(int i=0;i<t3gramme.size();i++){
-                    bw.write(t3gramme.get(i));
+                    bw.buildOutput(t3gramme.get(i));
                     bw.newLine();
                 }
                 bw.close();
@@ -352,7 +362,7 @@ public class BuildFilterManyLists {
                 BufferedWriter bw = new BufferedWriter(fw);
 
                 for(int i=0;i<t4gramme.size();i++){
-                    bw.write(t4gramme.get(i));
+                    bw.buildOutput(t4gramme.get(i));
                     bw.newLine();
                 }
                 bw.close();

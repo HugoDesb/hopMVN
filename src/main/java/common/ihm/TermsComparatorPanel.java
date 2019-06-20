@@ -179,10 +179,21 @@ public class TermsComparatorPanel extends JPanel {
             }else{
                 sentencesArea.setText("");
 
+
                 //Get regular sentences
-                ArrayList<Sentence> regularSentences = ChainHandler.pretreatmentModule(regularFile, false, true);
+                ArrayList<Sentence> regularSentences = ChainHandler.pretreatmentModule("default.properties",
+                        regularFile.getAbsolutePath(),
+                        "test",
+                        "test",
+                        false,
+                        true).getLines();
                 //Get expert sentences
-                ArrayList<Sentence> expertSentences = ChainHandler.pretreatmentModule(expertFile, true, true);
+                ArrayList<Sentence> expertSentences = ChainHandler.pretreatmentModule("default.properties",
+                        expertFile.getAbsolutePath(),
+                        "test",
+                        "test",
+                        false,
+                        true).getLines();
                 File f = new File("./files/resultat_mon_algo_expert.txt");
                 try {
                     FileWriter writer = new FileWriter(f);

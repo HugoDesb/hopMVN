@@ -14,24 +14,59 @@ public class Sentence {
         allMWE = new HashMap<>();
     }
 
-    /*public addMWE(int length, String text, boolean validated, double measure){
-        if(allMWE.get())
-    }*/
+    public void addMWE(int length, String text, boolean validated, double measure){
+        if(!allMWE.containsKey(length)){
+            allMWE.put(length, new ArrayList<>());
+        }
+
+        allMWE.get(length).add(new MWE(text, validated, measure));
+    }
 
     @Override
     public String toString() {
         String ret = text+"\n";
 
         for (int i = 4; i > 0 ; i--) {
-            ArrayList<MWE> forOneSizeMWE = allMWE.get(Integer.valueOf(i));
-            if(forOneSizeMWE.size() != 0){
-                ret += "T"+i+"\n";
-                for (MWE mwe :forOneSizeMWE) {
-                    ret += mwe.toString() + "\n";
-                }
+            if(!allMWE.containsKey(i)){
+                allMWE.put(i, new ArrayList<>());
+            }
+
+            ArrayList<MWE> forOneSizeMWE = allMWE.get(i);
+            ret += "T"+i+"\n";
+            for (MWE mwe :forOneSizeMWE) {
+                ret += mwe.toString() + "\n";
             }
         }
+        ret += "##########END##########\n";
 
         return ret;
+    }
+
+    public int getMWECountFor(int length) {
+        if(!allMWE.containsKey(length)){
+            return 0;
+        }else{
+            return allMWE.get(length).size();
+        }
+    }
+
+    public ArrayList<MWE> getAllMWEFor(int length) {
+        if(!allMWE.containsKey(length)){
+            return new ArrayList<>();
+        }else{
+            return allMWE.get(length);
+        }
+    }
+
+    public String getOnlyMWEof(int length) {
+        if(!allMWE.containsKey(length)){
+            return null;
+        }else{
+            return allMWE.get(length).get(0).getText();
+        }
+    }
+
+    public String getText() {
+        return text;
     }
 }

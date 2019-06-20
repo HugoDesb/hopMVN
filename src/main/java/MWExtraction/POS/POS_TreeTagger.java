@@ -46,7 +46,7 @@ public class POS_TreeTagger {
                 		//System.out.println(line);
                 	}
                     al_POS.add(line);
-                    //System.out.println(line);
+                    System.out.println(line);
                 }
             }finally {
                 reader.close();

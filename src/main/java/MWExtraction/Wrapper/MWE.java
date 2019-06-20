@@ -16,4 +16,16 @@ public class MWE {
     public String toString() {
         return text + "\t" + validated + "\t" + measure;
     }
+
+    public String getText() {
+        return text;
+    }
+
+    public double getMeasure() {
+        return measure;
+    }
+
+    public boolean isValidated() {
+        return validated;
+    }
 }

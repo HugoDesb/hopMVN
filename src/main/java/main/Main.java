@@ -22,17 +22,9 @@ public class Main {
         //MainFrame mf = new MainFrame();
 
 
-        File fileDiabete = new File("./files/10irp04_reco_diabete_type_2.pdf");
+        File fileXML = new File("./files/files_to_treat.xml");
 
-        File fileExpert = new File("./files/depression_adulte_recommandations_version_mel expertisé.pdf");
-        //TextDocument tdExpert = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel expertisé.pdf", true);
-
-        File fileRegular = new File("./files/depression_adulte_recommandations_version_mel.pdf");
-        //TextDocument tdSource = PdfToSentences.extract("./files/depression_adulte_recommandations_version_mel.pdf", false);
-
-        File fileWiki = new File("./files/testWiki.pdf");
-
-        ChainHandler.fullChainStandard(fileDiabete);
+        ChainHandler.treatAllDeclaredFiles(fileXML);
         //ChainHandler.fullChainStandard(fileRegular);
 
 

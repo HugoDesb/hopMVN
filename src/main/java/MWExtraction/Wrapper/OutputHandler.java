@@ -2,64 +2,91 @@ package Wrapper;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 // TODO rename
 public class OutputHandler {
 
     private static final Double THRESHOLD = 0.0;
+    private static final int COUNT_THRESHOLD = 2;
 
-    public static void write(String sourceFile, String t4gramsCSVFile,
-                             String t3gramsCSVFile, String t2gramsCSVFile,
-                             String t1gramsCSVFile, String outputFilePath) {
+    private ArrayList<Sentence> allSentences;
+    private Set<String> basicRules;
 
-        File outPutFile = new File(outputFilePath);
-        FileWriter fw = null;
+    public OutputHandler() {
+        this.allSentences = new ArrayList<>();
+        this.basicRules = new HashSet<>();
+    }
+
+    public void write(String outputSentencesFP, String outputBasicRulesFP){
+        File outputSentencesFile = new File(outputSentencesFP);
+        File outputBasicRulesFile = new File(outputBasicRulesFP);
+
+        FileWriter fwS, fwR = null;
         try {
-            fw = new FileWriter(outPutFile);
-
-            for (String sentence: getSentences(sourceFile)) {
-                String s = sentence.toLowerCase();
-
-                // Write the sentence
-
-                fw.write(s+"\n");
-                // 4-mots
-                fw.write("T4\n");
-                recognizeMWE(t4gramsCSVFile, fw, s);
-
-                // 3-mots
-                fw.write("T3\n");
-                recognizeMWE(t3gramsCSVFile, fw, s);
-
-                // 2-mots
-                fw.write("T2\n");
-                recognizeMWE(t2gramsCSVFile, fw, s);
-
-                // 1-mots
-                fw.write("T1\n");
-                recognizeMWE(t1gramsCSVFile, fw, s);
-
-                fw.write("##########END##########\n");
+            fwS = new FileWriter(outputSentencesFile);
+            for (Sentence s: allSentences) {
+                fwS.write(s.toString());
             }
+            fwS.close();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
+            fwR = new FileWriter(outputBasicRulesFile);
+            for (String s : basicRules) {
+                fwR.write(s+"\n");
+            }
+            fwR.close();
+        }catch (IOException e) {
             e.printStackTrace();
         }
 
 
     }
 
-    private static void recognizeMWE(String gramsCSVFile, FileWriter fw, String s) throws Exception {
+    public void buildOutput(String sourceFile, String t4gramsCSVFile,
+                                     String t3gramsCSVFile, String t2gramsCSVFile,
+                                     String t1gramsCSVFile) {
+
+        ArrayList<Sentence> allSentences = new ArrayList<>();
+
+        try {
+            for (String s: getSentences(sourceFile)) {
+                s = s.toLowerCase();
+                Sentence sentence = new Sentence(s);
+
+                recognizeMWE(t4gramsCSVFile, 4, s, sentence);
+
+                // 3-mots
+                recognizeMWE(t3gramsCSVFile, 3, s, sentence);
+
+                // 2-mots
+                recognizeMWE(t2gramsCSVFile, 2, s, sentence);
+
+                // 1-mots
+                recognizeMWE(t1gramsCSVFile, 1, s, sentence);
+
+                allSentences.add(sentence);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        this.allSentences = allSentences;
+        this.basicRules = createBasicRules();
+    }
+
+    private static String recognizeMWE(String gramsCSVFile, int length, String s, Sentence sentence) throws Exception {
         for (List<String> csvLine : MultiColumnCSVSort.compareHetopThenMeasure(gramsCSVFile)) {
             if(s.contains(csvLine.get(0)) && Double.parseDouble(csvLine.get(2))> THRESHOLD){
-                fw.write(csvLine.get(0) + "\t"+ csvLine.get(1)+ "\t"+ csvLine.get(2)+"\n");
+                //int length, String text, boolean validated, double measure
+                sentence.addMWE(length, csvLine.get(0), (Integer.parseInt(csvLine.get(1))==1), Double.parseDouble(csvLine.get(2)));
+                //fw.buildOutput(csvLine.get(0) + "\t"+ csvLine.get(1)+ "\t"+ csvLine.get(2)+"\n");
                 s = s.replace(csvLine.get(0).subSequence(0, csvLine.get(0).length()), "");
                 //s.replaceAll(csvLine.get(0).replaceAll("\\(", "");
             }
         }
+        return s;
     }
 
 
@@ -81,5 +108,107 @@ public class OutputHandler {
             e.printStackTrace();
         }
         return sentences;
+    }
+
+    private Set<String> createBasicRules() {
+        Set<String> basicRules = new HashSet<>();
+        basicRules = firstRule(basicRules);
+        basicRules = secondRule(basicRules);
+        basicRules = thirdRule(basicRules);
+        return basicRules;
+    }
+
+    public Set<String> thirdRule(Set<String> basicRules){
+        for (Sentence s : allSentences) {
+            int i = 1;
+            boolean existsInBigger = false;
+            for (int j = 2; j < 4; j++) {
+                for (MWE ti : s.getAllMWEFor(1)) {
+                    boolean canbeAdded = oneWordExistsInBiggerNWords(s, ti) && (existsAsFirstOneWord(s, ti) || oneWordExistsInOtherOneWordsExpression(ti));
+                    if(canbeAdded){
+                        basicRules.add(ti.getText());
+                    }
+                }
+            }
+        }
+        return basicRules;
+    }
+
+    private boolean existsAsFirstOneWord(Sentence s, MWE ti) {
+        for (MWE otherT1: s.getAllMWEFor(1)) {
+            if(otherT1.getMeasure()>ti.getMeasure()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean oneWordExistsInOtherOneWordsExpression(MWE ti) {
+        for (Sentence s : allSentences) {
+            for (MWE t1prime: s.getAllMWEFor(1)) {
+                if(t1prime.getText().toLowerCase().equals(ti.getText().toLowerCase())){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean oneWordExistsInBiggerNWords(Sentence s, MWE nWord){
+        boolean existsInBigger = false;
+        for (MWE tj : s.getAllMWEFor(2)) {
+            if (tj.getText().toLowerCase().contains(nWord.getText().toLowerCase())) {
+                existsInBigger = true;
+            }
+        }
+        for (MWE tj : s.getAllMWEFor(3)) {
+            if (tj.getText().toLowerCase().contains(nWord.getText().toLowerCase())) {
+                existsInBigger = true;
+            }
+        }
+        for (MWE tj : s.getAllMWEFor(4)) {
+            if (tj.getText().toLowerCase().contains(nWord.getText().toLowerCase())) {
+                existsInBigger = true;
+            }
+        }
+        return existsInBigger;
+    }
+
+    private Set<String> secondRule(Set<String> basicRules){
+        for (Sentence s : allSentences) {
+            for (int i = 1; i < 4; i++) {
+                for (int j = i; j < 4; j++) {
+                    for (MWE ti : s.getAllMWEFor(i)) {
+                        int count = 0;
+                        for (MWE tj : s.getAllMWEFor(j)) {
+                            if (tj.getText().toLowerCase().contains(ti.getText().toLowerCase())) {
+                                count++;
+                            }
+                        }
+                        if (count >= COUNT_THRESHOLD) {
+                            basicRules.add(ti.getText());
+                        }
+                    }
+                }
+            }
+        }
+        return basicRules;
+    }
+
+    private Set<String> firstRule(Set<String> basicRules){
+        for (Sentence s : allSentences) {
+
+            if(s.getMWECountFor(4)==1 && s.getMWECountFor(3)==0 && s.getMWECountFor(2)==0){
+                System.out.println("## get 4");
+                basicRules.add(s.getAllMWEFor(4).get(0).getText());
+            }else if(s.getMWECountFor(4)==0 && s.getMWECountFor(3)==1 && s.getMWECountFor(2)==0){
+                System.out.println("## get 3");
+                basicRules.add(s.getAllMWEFor(3).get(0).getText());
+            }else if(s.getMWECountFor(4)==0 && s.getMWECountFor(3)==0 && s.getMWECountFor(2)==1){
+                System.out.println("## get 2");
+                basicRules.add(s.getAllMWEFor(2).get(0).getText());
+            }
+        }
+        return basicRules;
     }
 }

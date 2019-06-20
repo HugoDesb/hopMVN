@@ -115,7 +115,7 @@ public class Execution {
                                 al_Word_Phrases = Split.splitInPhrases(al_Word_Phrases_Pre.get(i).trim());
                                 allSentences.addAll(al_Word_Phrases);
                                 for(int j=0;j<al_Word_Phrases.size();j++){
-                                    bw.write(al_Word_Phrases.get(j) + " .");
+                                    bw.buildOutput(al_Word_Phrases.get(j) + " .");
                                     bw.newLine();
                                     //System.out.println(al_Word_Phrases.get(j));
                                 }
@@ -176,7 +176,7 @@ public class Execution {
                                         al_Word_Phrases = Split.splitInPhrases(al_Word_Phrases_Pre.get(i).trim());
                                         allSentences.addAll(al_Word_Phrases);
                                         for(int j=0;j<al_Word_Phrases.size();j++){
-                                            bw.write(al_Word_Phrases.get(j) + " .");
+                                            bw.buildOutput(al_Word_Phrases.get(j) + " .");
                                             bw.newLine();
                                             //System.out.println(al_Word_Phrases.get(j));
                                         }
@@ -215,7 +215,7 @@ public class Execution {
         //Aqui realizamos la validation con las bases de datos que disponemos
         //System.out.println(list_candidat_terms.size());
         if(list_candidat_terms.size()>0 && al_POS_Phrases.size()>0){
-        	// Ancienne ligne (validation par les stop words):
+        	// Ancienne ligne (validation par le dataset de reference):
             //      list_candidat_terms_validated = ValidationMesh.Validate_All_Terms(language, list_candidat_terms, source_datasetreference);
 
             //Validation avec ECMTE :

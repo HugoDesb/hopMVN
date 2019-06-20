@@ -1,5 +1,6 @@
 package pretreatement.Extractor;
 
+import common.config.Config;
 import common.document.Sentence;
 import common.document.TextDocument;
 import pretreatement.Filter.Filter;
@@ -15,12 +16,17 @@ public class PdfToSentences {
 
     /**
      * Extract sentences from source file to default target txt file (same name, same folder, with .txt extension)
+     *
+     * @param config_file config
      * @param source path to the source file
+     * @param name the name of the file
+     * @param type type
      * @param isExpertFile if the goal is to extract highlighted text
      * @return the TextDocument containing the sentences
      */
-    public static TextDocument extract(String source, boolean isExpertFile) throws IOException {
-        return extract(source, getDefaultTargetFile(source), isExpertFile);
+    public static TextDocument extract(String config_file, String source, String name, String type, boolean isExpertFile) throws IOException {
+        Config config = Config.getInstance("config_file");
+        return extract(source, getDefaultTargetFile(config.getProp("global.tmp"), source), isExpertFile);
     }
 
     /**
@@ -105,15 +111,17 @@ public class PdfToSentences {
 
     /**
      * Get the default target file path (same file, with .txt extension)
+     *
+     * @param tmpfolder
      * @param source path to the source file
      * @return returns the path
      */
-    private static Path getDefaultTargetFile(String source){
+    private static Path getDefaultTargetFile(String tmpfolder, String source){
         Path sourcePath = Paths.get(source);
         if(!sourcePath.toFile().isFile()){
             throw new IllegalArgumentException("The source path isn't a file");
         }
         String filenameWithoutExtension = sourcePath.getFileName().toString().split("\\.")[0];
-        return Paths.get(sourcePath.getParent()+"/"+filenameWithoutExtension+".txt");
+        return Paths.get(tmpfolder+filenameWithoutExtension+".txt");
     }
 }

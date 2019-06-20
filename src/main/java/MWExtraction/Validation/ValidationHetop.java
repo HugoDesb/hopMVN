@@ -1,8 +1,7 @@
 package Validation;
 
 import Object.CandidatTerm;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
+import org.apache.http.Header;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
@@ -10,16 +9,15 @@ import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
-import javax.xml.parsers.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -32,14 +30,15 @@ public class ValidationHetop {
 
         ArrayList<CandidatTerm> list_candidat_terms_validated = new ArrayList<CandidatTerm>();
 
+
         CredentialsProvider provider = new BasicCredentialsProvider();
         UsernamePasswordCredentials credentials
-                = new UsernamePasswordCredentials("sesstim-apiapps@univ-amu.fr", "Azerty123");
+                = new UsernamePasswordCredentials("hugo.desbiolles@etu.univ-amu.fr", "AconerIMumPk");
         provider.setCredentials(AuthScope.ANY, credentials);
 
 
         HttpClient client = HttpClientBuilder.create()
-                .setDefaultCredentialsProvider(provider)
+                //.setDefaultCredentialsProvider(provider)
                 .build();
 
         int count = 0;
@@ -70,17 +69,23 @@ public class ValidationHetop {
         try {
 
             //Send request
-            HttpGet b = new HttpGet("http://www.hetop.eu/CISMeFhetopservice/REST/searchConcepts/"+termURL+"/fr/f=T_DESC_MESH_DESCRIPTEUR&def=false");
-            String encoding = Base64.getEncoder().encodeToString("sesstim-apiapps@univ-amu.fr:Azerty123".getBytes());
+            HttpGet b = new HttpGet("http://www.hetop.fr/CISMeFhetopservice/REST/search/"+termURL+"/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR");
+
+            String encoding = Base64.getEncoder().encodeToString("hugo.desbiolles@etu.univ-amu.fr:AconerIMumPk".getBytes());
             b.setHeader(HttpHeaders.AUTHORIZATION, "Basic " + encoding);
+
             System.out.println("executing request " + b.getRequestLine());
+            for (Header h: b.getAllHeaders()) {
+                System.out.println(h.toString());
+            }
             HttpResponse response = client.execute(b);
             //http://www.hetop.eu/CISMeFhetopservice/REST/search/avant bras/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR
             statusCode = response.getStatusLine().getStatusCode();
 
+            /*
             if(statusCode != 200){
-                throw new HttpException("Error while connecting to hetop");
-            }
+                throw new HttpException("Error while connecting to hetop, code "+statusCode);
+            }*/
 
             //Getting the response body
             InputStream is = response.getEntity().getContent();
@@ -95,8 +100,9 @@ public class ValidationHetop {
 
 
             //choose utf-8 as charset
-            //write xml to temp file
+            //buildOutput xml to temp file
             String outText = result.toString("UTF-8");
+            System.out.println(outText);
             FileWriter fw = new FileWriter(tempFile);
             fw.write(outText);
             fw.close();
@@ -117,8 +123,6 @@ public class ValidationHetop {
 
         } catch (IOException | ParserConfigurationException | SAXException e) {
             System.out.println(e.getMessage());
-            e.printStackTrace();
-        } catch (HttpException e) {
             e.printStackTrace();
         }
 

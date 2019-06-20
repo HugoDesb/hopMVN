@@ -1,4 +1,4 @@
-package Main;
+package MWExtraction.Main;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,6 +10,7 @@ import BuildListToValidate.BuildFilterManyLists;
 import Object.CandidatTerm;
 import Wrapper.OutputHandler;
 import Wrapper.Preparation;
+import common.config.Config;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -26,51 +27,22 @@ public class Principal {
      */
     static ArrayList<CandidatTerm> list_candidat_terms_validated = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String config_file, File sourceFile, String language) {
 
-        // TODO : Arguments :
-        //
-
-        /*
-         * Variables to find: the Pattern List, DataSetReference for ValidationMesh, and file where the Tagger Tool is installed
-         */
-
-        String source_patterns = "./res/patterns"; // constante
-        //TODO : Soon to be moved to config file
-        String source_dataset_reference = "./res/dataSetReference"; // constante
-        String source_stop_words = "./res/stopWords"; // constante
-        String source_tagger = "/home/sesstim/Téléchargements/TreeTagger"; // config
-        int typeSource = 2;
+        Config config = Config.getInstance(config_file);
 
         //String [] measures = {"C_value", "L_value"};
         //String [] measures = {"LIDF_value", "F-OCapi_A", "F-OCapi_M", "F-OCapi_S", "F-TFIDF-C_A", "F-TFIDF-C_M", "F-TFIDF-C_S", "TFIDF_A", "TFIDF_M", "TFIDF_S","Okapi_A", "Okapi_M", "Okapi_S"};
-        String [] measures = {"F-OCapi_M"};
+        String [] measures = {"F-OCapi_A", "F-OCapi_S", "F-OCapi_M", "TFIDF_A", "TFIDF_M", "TFIDF_S"};
 
         for (int i = 0; i < measures.length; i++) {
             /*
              * Variable that saves the extracted terms
              */
-            String source_OUTPUT = "OUTPUT__"+measures[i];
-            File folder = new File("./res/"+source_OUTPUT+"/");
-            if (!folder.exists()){
-                if (!folder.mkdirs()) {
-                    // Directory creation failed
-                    source_OUTPUT = "./res";
-                }else{
-                    source_OUTPUT = "./res/"+source_OUTPUT;
-                }
-            }else {
-                source_OUTPUT = "./res/"+source_OUTPUT; //Mettre le dossier où vous voulez que les fichiers se sauvegardent
-            }
+            String source_OUTPUT = config.getProp("global.tmp")+"OUTPUT/"+measures[i];
 
-            /*
-             * File to be analized for the term extraction
-             */
-            //String file_to_be_analyzed = "/home/sesstim/IdeaProjects/hopMVN/files/out_test.txt";
-            String sourceFile = "/home/sesstim/IdeaProjects/hopMVN/files/10irp04_reco_diabete_type_2.txt";
-            String file_to_be_analyzed = Preparation.makeEachLineADocument(sourceFile);
-
-
+            // File to be analyzed for the term extraction
+            String file_to_be_analyzed = Preparation.makeEachLineADocument(sourceFile.getAbsolutePath());
 
             /*
              * Language : english, french, spanish
@@ -80,35 +52,45 @@ public class Principal {
              * measure = 15 possible measures
              * tool_Tagger: TreeTagger by default
              */
-            String type_of_terms = "all"; // all    multi
-            String language = "french"; // english french spanish
+            String type_of_terms = "multi"; // all    multi
             int frequency_min_of_terms = 1; // frequency minimal to extract the terms  (for big corpus is better to use more than 10.
 
             list_candidat_terms_validated = Execution.main_execution(
-                    language, //english french spanish
+                    language, //english french
                     200, // nombre de patrons
                     type_of_terms,
                     measures[i], // For one document       :   L_value     C_value
                     // For a set of documents :   LIDF_value  F-OCapi_A   F-OCapi_M   F-OCapi_S   F-TFIDF-C_A     F-TFIDF-C_M     F-TFIDF-C_S
                     //                            TFIDF_A     TFIDF_M     TFIDF_S     Okapi_A     Okapi_M     Okapi_S
-                    typeSource,/* 1 = single file (only for L_value  or C_value)
+                    2,/* 1 = single file (only for L_value  or C_value)
                      2 = set of files (for LIDF-value **strong recommended** or any other measure)
                 */
                     frequency_min_of_terms,
                     file_to_be_analyzed,
                     "TreeTagger",
-                    source_patterns,
-                    source_dataset_reference,
-                    source_tagger,
+                    config.getProp("mwe.patterns_path"),
+                    config.getProp("mwe.dataset_reference_path"),
+                    config.getProp("mwe.treetagger_path"),
                     source_OUTPUT
             );
 
-            BuildFilterManyLists.createList(list_candidat_terms_validated,source_stop_words,source_OUTPUT,type_of_terms,language);
-            OutputHandler.write(sourceFile, source_OUTPUT+"/t4gram["+measures[i]+"].csv",
+            BuildFilterManyLists.createList(list_candidat_terms_validated,
+                    config.getProp("mwe.stop_words_path"),
+                    source_OUTPUT,
+                    type_of_terms,
+                    language);
+
+
+            OutputHandler handler = new OutputHandler();
+
+            //handler.combineMeasures
+
+            handler.buildOutput(sourceFile.getAbsolutePath(),
+                    source_OUTPUT+"/t4gram["+measures[i]+"].csv",
                     source_OUTPUT+"/t3gram["+measures[i]+"].csv",
                     source_OUTPUT+"/t2gram["+measures[i]+"].csv",
-                    source_OUTPUT+"/t1gram["+measures[i]+"].csv",
-                    source_OUTPUT+"/out.txt");
+                    source_OUTPUT+"/t1gram["+measures[i]+"].csv");
+            handler.write(source_OUTPUT+"/outSentences.txt", source_OUTPUT+"/outBasicRules.txt");
             System.out.println("Fin de l'exécution");
         }
     }

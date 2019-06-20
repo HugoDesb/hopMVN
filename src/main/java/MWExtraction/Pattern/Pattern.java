@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * @author juanlossio
  */
 public class Pattern {
-    public static ArrayList<String> load_Patterns(String language, String typeTerms, String tool_POS, int num_patterns, String currentDir, 
+    public static ArrayList<String> load_Patterns(String language, String typeTerms, String tool_POS, int num_patterns, String currentDir,
     		int freq, String source_patterns){
         ArrayList<String> al_Patterns = new ArrayList<String>();
         //String nameFile = currentDir + "/patterns/Patterns_"+language+"_"+ tool_POS +".csv";

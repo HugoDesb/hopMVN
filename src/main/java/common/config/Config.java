@@ -15,14 +15,24 @@ public class Config {
 
     public static Config getInstance(){
         if(instance == null){
-            return new Config();
-        }else{
-            return instance;
+            instance = new Config();
         }
+        return instance;
+    }
+
+    public static Config getInstance(String config_file){
+        if( null == instance || !instance.filepath.equals(config_file)){
+            instance = new Config(config_file);
+        }
+        return instance;
     }
 
     private Config(){
+        this.filepath = "default.properties";
+    }
 
+    private Config(String config_file){
+        this.filepath = config_file;
     }
 
     public static void main (String [] args){
@@ -36,7 +46,7 @@ public class Config {
         return properties.getProperty(propertyName);
     }
 
-    public void readProperties(File configFile){
+    private void readProperties(File configFile){
         try {
             properties = new Properties();
 

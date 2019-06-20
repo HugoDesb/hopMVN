@@ -79,7 +79,7 @@ public class ValidationECMT {
             }
 
             //choose utf-8 as charset
-            //write xml to temp file
+            //buildOutput xml to temp file
             String outText = result.toString("UTF-8");
             FileWriter fw = new FileWriter(tempFile);
             fw.write(outText);
