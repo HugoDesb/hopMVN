@@ -2,12 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Measure.C_Value;
+package MWExtraction.Measure.C_Value;
 
-import CommonResources.*;
-import Object.CandidatTerm;
-import Object.List_PT_C_value;
-import Object.PT_C_value;
+import MWExtraction.CommonResources.Split;
+import MWExtraction.Object.CandidatTerm;
+import MWExtraction.Object.List_PT_C_value;
+import MWExtraction.Object.PT_C_value;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

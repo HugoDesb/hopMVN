@@ -1,4 +1,4 @@
-package Object;
+package MWExtraction.Object;
 
 import java.util.ArrayList;
 

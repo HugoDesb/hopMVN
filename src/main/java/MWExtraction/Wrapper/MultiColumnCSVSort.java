@@ -1,27 +1,14 @@
-package Wrapper;
+package MWExtraction.Wrapper;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class MultiColumnCSVSort {
     private static final String COLUMN_SEPARATOR = "\t";
 
-    public static List<List<String>> compareHetopThenMeasure(String filename) throws Exception
-    {
-        InputStream inputStream = new FileInputStream(filename);
-        List<List<String>> lines = readCsv(inputStream);
+    public static List<List<String>> compareHetopThenMeasure(String filename) throws Exception {
+
+        List<List<String>> lines = readCsv(filename);
 
         // Create a comparator that compares the elements from column 1,
         // in descending order
@@ -39,50 +26,53 @@ public class MultiColumnCSVSort {
         return lines;
     }
 
-    private static List<List<String>> readCsv(
-            InputStream inputStream) throws IOException {
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(inputStream));
+    public static List<List<String>> readCsv(String filename) {
         List<List<String>> lines = new ArrayList<List<String>>();
 
-        String line = null;
+        try {
+            InputStream inputStream = new FileInputStream(filename);
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(inputStream));
 
-        // Skip header
-        line = reader.readLine();
 
-        while (true)
-        {
-            line = reader.readLine();
-            if (line == null)
-            {
-                break;
+            String line = null;
+
+            while (true) {
+                line = reader.readLine();
+                if (line == null) {
+                    break;
+                }
+                List<String> list = Arrays.asList(line.split(COLUMN_SEPARATOR));
+                lines.add(list);
             }
-            List<String> list = Arrays.asList(line.split(COLUMN_SEPARATOR));
-            lines.add(list);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
         return lines;
     }
 
-    private static void writeCsv(
-            String header, List<List<String>> lines, OutputStream outputStream)
-            throws IOException
-    {
-        Writer writer = new OutputStreamWriter(outputStream);
-        writer.write(header+"\n");
-        for (List<String> list : lines)
-        {
-            for (int i = 0; i < list.size(); i++)
+    private static void writeCsv(List<List<String>> lines, String filename) {
+        try{
+            OutputStream outputStream = new FileOutputStream(new File(filename));
+            Writer writer = new OutputStreamWriter(outputStream);
+            for (List<String> list : lines)
             {
-                writer.write(list.get(i));
-                if (i < list.size() - 1)
+                for (int i = 0; i < list.size(); i++)
                 {
-                    writer.write(COLUMN_SEPARATOR);
+                    writer.write(list.get(i));
+                    if (i < list.size() - 1)
+                    {
+                        writer.write(COLUMN_SEPARATOR);
+                    }
                 }
+                writer.write("\n");
             }
-            writer.write("\n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        writer.close();
-
     }
 
     @SafeVarargs

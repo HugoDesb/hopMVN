@@ -24,8 +24,8 @@ public class Main {
 
         File fileXML = new File("./files/files_to_treat.xml");
 
-        ChainHandler.treatAllDeclaredFiles(fileXML);
-        //ChainHandler.fullChainStandard(fileRegular);
+        ChainHandler.treatAllDeclaredFiles(fileXML, false, true, false);
+
 
 
         /*

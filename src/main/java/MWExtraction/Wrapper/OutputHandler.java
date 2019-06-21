@@ -1,4 +1,4 @@
-package Wrapper;
+package MWExtraction.Wrapper;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -210,5 +210,25 @@ public class OutputHandler {
             }
         }
         return basicRules;
+    }
+
+    public void combineMeasures(String source_OUTPUT) {
+        String ocapi = source_OUTPUT+"F_Ocapi_M/t1gram.csv";
+        String tfidf = source_OUTPUT+"TFIDF_M/t1gram.csv";
+        String output= source_OUTPUT+"t1gram.csv";
+        List<List<String>> ocapiCSV = MultiColumnCSVSort.readCsv(ocapi);
+        List<List<String>> tfidfCSV = MultiColumnCSVSort.readCsv(tfidf);
+
+        List<List<String>> hop = new ArrayList<>();
+        for (List<String> lineOcapi: ocapiCSV) {
+            for (List<String> linetfidf: tfidfCSV) {
+                if(lineOcapi.get(0).equals(linetfidf.get(0))){
+                    double newValue = Double.parseDouble(lineOcapi.get(2)) - (1 - Double.parseDouble(linetfidf.get(2)));
+                    List<String> newLine = lineOcapi;
+                    newLine.set(2, Double.toString(newValue));
+                    hop.add(newLine);
+                }
+            }
+        }
     }
 }

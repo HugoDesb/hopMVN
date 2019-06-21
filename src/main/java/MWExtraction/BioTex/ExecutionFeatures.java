@@ -2,15 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package BioTex;
-import CommonResources.*;
-import Object.CandidatTerm;
-import POS.*;
-import Pattern.*;
-import Validation.*;
+package MWExtraction.BioTex;
+
+import MWExtraction.CommonResources.Cleaning;
+import MWExtraction.CommonResources.ParameterVerification;
+import MWExtraction.CommonResources.Split;
+import MWExtraction.Object.CandidatTerm;
+
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  *

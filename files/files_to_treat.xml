@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <task config_file="default.properties">
     <files>
-        <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/10irp04_reco_diabete_type_2.pdf"
-              name="10irp04_reco_diabete_type_2"
+        <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/10irp04_reco_diabete_type_2_test.pdf"
+              name="10irp04_reco_diabete_type_2_test"
               topic="diabète"
               language="french"
               type="HAS"

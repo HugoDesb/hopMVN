@@ -13,6 +13,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Class to have here the whole chain processes
@@ -72,51 +76,70 @@ public class ChainHandler {
 
     }
 
-    public static void treatAllDeclaredFiles(File xmlConfFile) {
+    public static List<Map<String, String>> processXml(File xmlFile){
+        List<Map<String, String>> hop = new ArrayList<>();
+
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = null;
         Document doc;
         try {
             dBuilder = dbFactory.newDocumentBuilder();
-            doc = dBuilder.parse(xmlConfFile);
+            doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
             Node base = doc.getElementsByTagName("task").item(0);
-
             String config_file = base.getAttributes().getNamedItem("config_file").getNodeName();
-
             NodeList nList = doc.getElementsByTagName("file");
             for (int i = 0; i<nList.getLength(); i++) {
-
-                String file_path = nList.item(i).getAttributes().getNamedItem("absolutePath").getNodeValue();
+                Map<String, String> hi = new HashMap<>();
+                String absolutePath = nList.item(i).getAttributes().getNamedItem("absolutePath").getNodeValue();
+                hi.put("absolutePath", absolutePath);
                 String name = nList.item(i).getAttributes().getNamedItem("name").getNodeValue();
+                hi.put("name", name);
                 String topic = nList.item(i).getAttributes().getNamedItem("topic").getNodeValue();
+                hi.put("topic", topic);
                 String language = nList.item(i).getAttributes().getNamedItem("language").getNodeValue();
+                hi.put("language", language);
                 String type = nList.item(i).getAttributes().getNamedItem("type").getNodeValue();
-                boolean isExpertFile = Boolean.parseBoolean(nList.item(i).getAttributes().getNamedItem("isExpertFile").getNodeValue());
-
-                TextDocument td = pretreatmentModule(config_file, file_path,name, type, isExpertFile, true);
-                multiWordExtractor(config_file, td, language);
-
+                hi.put("type", type);
+                String isExpertFile = nList.item(i).getAttributes().getNamedItem("isExpertFile").getNodeValue();
+                hi.put("isExpertFile", isExpertFile);
+                hi.put("config_file", config_file);
+                hop.add(hi);
             }
-
-
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
+        }
+        return hop;
+    }
+
+    public static void treatAllDeclaredFiles(File xmlFile, boolean doPretreatment, boolean doMWE, boolean doSemantics) {
+
+        List<Map<String, String>> xml = processXml(xmlFile);
+
+        for (Map<String, String> set: xml) {
+
+            if(doPretreatment){
+                TextDocument td = pretreatmentModule(set, true);
+            }
+
+            if(doMWE){
+                multiWordExtractor(set);
+            }
         }
     }
 
 
     /**
-     * Apply the pretreatment module for the specified pdf file
-     * @param file_path the path to the pdf file
-     * @param isExpertFile if the given file has to be treated as highlighted (by an expert)
+     * Apply the pretreatment module for the specified pdf file in set
+     *
+     * @param set
      * @param writeInTemporaryFile write in a text file the selected sentences
      * @return The list of sentences
      */
-    public static TextDocument pretreatmentModule(String config_file, String file_path, String name, String type, boolean isExpertFile, boolean writeInTemporaryFile){
+    public static TextDocument pretreatmentModule(Map<String, String> set, boolean writeInTemporaryFile){
         TextDocument textDocument = null;
         try {
-            textDocument = PdfToSentences.extract(config_file, file_path, name, type, isExpertFile);
+            textDocument = PdfToSentences.extract(set.get("config_file"), set.get("absolutePath"), set.get("name"), set.get("type"), set.get("isExpertFile").equals("true"));
             if(writeInTemporaryFile){
                 textDocument.writeFile();
             }
@@ -126,8 +149,12 @@ public class ChainHandler {
         return textDocument;
     }
 
-    public static void multiWordExtractor(String config_file, TextDocument textDocument, String language){
-        Principal.main(config_file, textDocument.getFile(), language);
+    public static void multiWordExtractor(Map<String, String> set){
+        // find mwe in all files
+        Principal.main(set.get("config_file"), set.get("name"), set.get("language"));
+
+        //Combine output -- generate output
+        Principal.combine(set.get("config_file"), set.get("name"));
     }
 
 }

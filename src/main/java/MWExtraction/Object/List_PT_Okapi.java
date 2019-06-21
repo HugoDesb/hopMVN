@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Object;
+package MWExtraction.Object;
 
-import CommonResources.MathFonctions;
+import MWExtraction.CommonResources.MathFonctions;
+
 import java.util.*;
 import java.util.Map.Entry;
 

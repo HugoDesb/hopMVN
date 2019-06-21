@@ -1,7 +1,8 @@
-package Format;
+package MWExtraction.Format;
+
+import MWExtraction.Object.CandidatTerm;
 
 import java.util.ArrayList;
-import Object.CandidatTerm;
 
 public class Formatter {
 

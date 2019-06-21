@@ -2,10 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Measure.Okapi;
+package MWExtraction.Measure.Okapi;
 
-import CommonResources.*;
-import Object.*;
+import MWExtraction.CommonResources.Split;
+import MWExtraction.Object.CandidatTerm;
+import MWExtraction.Object.List_PT_Okapi;
+import MWExtraction.Object.PT_AKE;
 
 import java.util.ArrayList;
 import java.util.HashMap;

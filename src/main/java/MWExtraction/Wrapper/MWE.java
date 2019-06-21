@@ -1,4 +1,4 @@
-package Wrapper;
+package MWExtraction.Wrapper;
 
 public class MWE {
 

@@ -1,13 +1,13 @@
-package Validation;
+package MWExtraction.Validation;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import MWExtraction.Object.CandidatTerm;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-
-import Object.CandidatTerm;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ValidationMesh {
 	public static ArrayList<CandidatTerm> Validate_All_Terms(String language, ArrayList<CandidatTerm> list_candidat_terms, String source_datasetreference){

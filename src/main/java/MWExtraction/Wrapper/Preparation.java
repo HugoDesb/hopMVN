@@ -1,4 +1,4 @@
-package Wrapper;
+package MWExtraction.Wrapper;
 
 import java.io.*;
 import java.util.ArrayList;

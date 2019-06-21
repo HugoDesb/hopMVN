@@ -26,7 +26,7 @@ public class PdfToSentences {
      */
     public static TextDocument extract(String config_file, String source, String name, String type, boolean isExpertFile) throws IOException {
         Config config = Config.getInstance("config_file");
-        return extract(source, getDefaultTargetFile(config.getProp("global.tmp"), source), isExpertFile);
+        return extract(source, getDefaultTargetFile(config.getProp("pretreatment.output_folder"), source), isExpertFile);
     }
 
     /**
@@ -121,7 +121,10 @@ public class PdfToSentences {
         if(!sourcePath.toFile().isFile()){
             throw new IllegalArgumentException("The source path isn't a file");
         }
+
         String filenameWithoutExtension = sourcePath.getFileName().toString().split("\\.")[0];
-        return Paths.get(tmpfolder+filenameWithoutExtension+".txt");
+        String basefolder = tmpfolder+"/"+filenameWithoutExtension+"/";
+        (new File(basefolder)).mkdirs();
+        return Paths.get(basefolder+filenameWithoutExtension+".txt");
     }
 }

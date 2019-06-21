@@ -1,19 +1,13 @@
-package Measure.LIDF_Value;
+package MWExtraction.Measure.LIDF_Value;
 
 
-import CommonResources.MathFonctions;
-import CommonResources.Split;
-import Object.CandidatTerm;
-import Object.PT_LIDF_value;
-import Object.Word;
+import MWExtraction.CommonResources.MathFonctions;
+import MWExtraction.CommonResources.Split;
+import MWExtraction.Object.CandidatTerm;
+import MWExtraction.Object.PT_LIDF_value;
+import MWExtraction.Object.Word;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
 
 

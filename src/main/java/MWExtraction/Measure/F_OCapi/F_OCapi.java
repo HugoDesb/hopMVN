@@ -2,20 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Measure.F_OCapi;
+package MWExtraction.Measure.F_OCapi;
 
-import CommonResources.MathFonctions;
-import Measure.C_Value.C_value;
-import Measure.Okapi.Okapi;
-import Object.*;
+import MWExtraction.CommonResources.MathFonctions;
+import MWExtraction.Measure.C_Value.C_value;
+import MWExtraction.Measure.Okapi.Okapi;
+import MWExtraction.Object.CandidatTerm;
+import MWExtraction.Object.PT_AKE;
+import MWExtraction.Object.PT_C_value;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  *

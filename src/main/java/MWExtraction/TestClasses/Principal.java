@@ -2,13 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package TestClasses;
-import BioTex.Execution;
-import Object.CandidatTerm;
-import BuildListToValidate.BuildFilterManyLists;
+package MWExtraction.TestClasses;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import MWExtraction.BioTex.Execution;
+import MWExtraction.BuildListToValidate.BuildFilterManyLists;
+import MWExtraction.Object.CandidatTerm;
+
 import java.util.ArrayList;
 
 

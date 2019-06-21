@@ -1,6 +1,6 @@
-package Validation;
+package MWExtraction.Validation;
 
-import Object.CandidatTerm;
+import MWExtraction.Object.CandidatTerm;
 import org.apache.http.Header;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
@@ -82,10 +82,8 @@ public class ValidationHetop {
             //http://www.hetop.eu/CISMeFhetopservice/REST/search/avant bras/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR
             statusCode = response.getStatusLine().getStatusCode();
 
-            /*
-            if(statusCode != 200){
-                throw new HttpException("Error while connecting to hetop, code "+statusCode);
-            }*/
+
+
 
             //Getting the response body
             InputStream is = response.getEntity().getContent();
@@ -98,6 +96,9 @@ public class ValidationHetop {
             response.getEntity().consumeContent();
             //EntityUtils.consume(response.getEntity());
 
+            if(statusCode != 200){
+                return false;
+            }
 
             //choose utf-8 as charset
             //buildOutput xml to temp file
@@ -110,7 +111,9 @@ public class ValidationHetop {
             // Parse file to read xml
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+
             Document doc = dBuilder.parse(tempFile);
+
             //optional, but recommended
             //read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
             doc.getDocumentElement().normalize();

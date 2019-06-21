@@ -2,16 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package BioTex;
+package MWExtraction.BioTex;
 
-import Measure.C_Value.*;
-import Measure.F_OCapi.F_OCapi;
-import Measure.F_TFIDF_C.F_TFIDF_C;
-import Measure.LIDF_Value.LIDF_value;
-import Measure.L_Value.L_value;
-import Measure.Okapi.Okapi;
-import Measure.TFIDF.TFIDF;
-import Object.CandidatTerm;
+import MWExtraction.Measure.C_Value.C_value;
+import MWExtraction.Measure.F_OCapi.F_OCapi;
+import MWExtraction.Measure.F_TFIDF_C.F_TFIDF_C;
+import MWExtraction.Measure.LIDF_Value.LIDF_value;
+import MWExtraction.Measure.L_Value.L_value;
+import MWExtraction.Measure.Okapi.Okapi;
+import MWExtraction.Measure.TFIDF.TFIDF;
+import MWExtraction.Object.CandidatTerm;
 
 import java.util.ArrayList;
 import java.util.HashMap;

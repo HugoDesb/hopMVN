@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Measure.TFIDF;
+package MWExtraction.Measure.TFIDF;
 
-import CommonResources.*;
-import Object.*;
+import MWExtraction.CommonResources.*;
+import MWExtraction.Object.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;

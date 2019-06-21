@@ -2,7 +2,6 @@ package common.ihm;
 
 import common.config.Config;
 import common.document.Sentence;
-import main.ChainHandler;
 import pretreatement.stemmer.Stemmer;
 import pretreatement.stemmer.snowball.SnowballStemmer;
 
@@ -181,19 +180,19 @@ public class TermsComparatorPanel extends JPanel {
 
 
                 //Get regular sentences
-                ArrayList<Sentence> regularSentences = ChainHandler.pretreatmentModule("default.properties",
+                ArrayList<Sentence> regularSentences = new ArrayList<>();/* ChainHandler.pretreatmentModule(xml, "default.properties",
                         regularFile.getAbsolutePath(),
                         "test",
                         "test",
                         false,
-                        true).getLines();
+                        true).getLines();*/
                 //Get expert sentences
-                ArrayList<Sentence> expertSentences = ChainHandler.pretreatmentModule("default.properties",
+                ArrayList<Sentence> expertSentences = new ArrayList<>();/* ChainHandler.pretreatmentModule(xml, "default.properties",
                         expertFile.getAbsolutePath(),
                         "test",
                         "test",
                         false,
-                        true).getLines();
+                        true).getLines();*/
                 File f = new File("./files/resultat_mon_algo_expert.txt");
                 try {
                     FileWriter writer = new FileWriter(f);

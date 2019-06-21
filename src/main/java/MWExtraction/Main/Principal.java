@@ -5,11 +5,12 @@ package MWExtraction.Main;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import BioTex.Execution;
-import BuildListToValidate.BuildFilterManyLists;
-import Object.CandidatTerm;
-import Wrapper.OutputHandler;
-import Wrapper.Preparation;
+
+import MWExtraction.BioTex.Execution;
+import MWExtraction.BuildListToValidate.BuildFilterManyLists;
+import MWExtraction.Object.CandidatTerm;
+import MWExtraction.Wrapper.OutputHandler;
+import MWExtraction.Wrapper.Preparation;
 import common.config.Config;
 
 import java.io.File;
@@ -27,22 +28,25 @@ public class Principal {
      */
     static ArrayList<CandidatTerm> list_candidat_terms_validated = new ArrayList<>();
 
-    public static void main(String config_file, File sourceFile, String language) {
+    public static void main(String config_file, String name, String language) {
 
         Config config = Config.getInstance(config_file);
 
         //String [] measures = {"C_value", "L_value"};
-        //String [] measures = {"LIDF_value", "F-OCapi_A", "F-OCapi_M", "F-OCapi_S", "F-TFIDF-C_A", "F-TFIDF-C_M", "F-TFIDF-C_S", "TFIDF_A", "TFIDF_M", "TFIDF_S","Okapi_A", "Okapi_M", "Okapi_S"};
-        String [] measures = {"F-OCapi_A", "F-OCapi_S", "F-OCapi_M", "TFIDF_A", "TFIDF_M", "TFIDF_S"};
+        String [] measures = {"F-OCapi_A","TFIDF_A"};
+        //String [] measures = {"F-OCapi_A", "F-OCapi_S", "F-OCapi_M", "TFIDF_A", "TFIDF_M", "TFIDF_S"};
 
         for (int i = 0; i < measures.length; i++) {
             /*
-             * Variable that saves the extracted terms
+             * Set up target folder and make needed folder if necessary
              */
-            String source_OUTPUT = config.getProp("global.tmp")+"OUTPUT/"+measures[i];
+            String source_OUTPUT = config.getProp("mwe.output_folder")+name+"/"+measures[i]+"/";
+            System.out.println("--------------------------------"+source_OUTPUT);
+            (new File(source_OUTPUT)).mkdirs();
 
             // File to be analyzed for the term extraction
-            String file_to_be_analyzed = Preparation.makeEachLineADocument(sourceFile.getAbsolutePath());
+            String sourceFile = config.getProp("pretreatment.output_folder")+name+"/"+name+".txt";
+            String file_to_be_analyzed = Preparation.makeEachLineADocument(sourceFile);
 
             /*
              * Language : english, french, spanish
@@ -52,7 +56,7 @@ public class Principal {
              * measure = 15 possible measures
              * tool_Tagger: TreeTagger by default
              */
-            String type_of_terms = "multi"; // all    multi
+            String type_of_terms = "all"; // all    multi
             int frequency_min_of_terms = 1; // frequency minimal to extract the terms  (for big corpus is better to use more than 10.
 
             list_candidat_terms_validated = Execution.main_execution(
@@ -83,16 +87,25 @@ public class Principal {
 
             OutputHandler handler = new OutputHandler();
 
-            //handler.combineMeasures
+            handler.combineMeasures(config.getProp("mwe.output_folder")+name+"/");
 
-            handler.buildOutput(sourceFile.getAbsolutePath(),
-                    source_OUTPUT+"/t4gram["+measures[i]+"].csv",
-                    source_OUTPUT+"/t3gram["+measures[i]+"].csv",
-                    source_OUTPUT+"/t2gram["+measures[i]+"].csv",
-                    source_OUTPUT+"/t1gram["+measures[i]+"].csv");
+            handler.buildOutput(sourceFile,
+                    source_OUTPUT+"t4gram.csv",
+                    source_OUTPUT+"t3gram.csv",
+                    source_OUTPUT+"t2gram.csv",
+                    source_OUTPUT+"t1gram.csv");
             handler.write(source_OUTPUT+"/outSentences.txt", source_OUTPUT+"/outBasicRules.txt");
             System.out.println("Fin de l'exécution");
         }
     }
 
+    public static void combine(String config_file, String name) {
+        String baseFolder = Config.getInstance(config_file).getProp("mwe.output_folder")+name+"/";
+
+
+    }
+
+    public static void writeOutput(){
+
+    }
 }
