@@ -213,8 +213,8 @@ public class OutputHandler {
     }
 
     public void combineMeasures(String source_OUTPUT) {
-        String ocapi = source_OUTPUT+"F_Ocapi_M/t1gram.csv";
-        String tfidf = source_OUTPUT+"TFIDF_M/t1gram.csv";
+        String ocapi = source_OUTPUT+"F-OCapi_A/t1gram.csv";
+        String tfidf = source_OUTPUT+"TFIDF_A/t1gram.csv";
         String output= source_OUTPUT+"t1gram.csv";
         List<List<String>> ocapiCSV = MultiColumnCSVSort.readCsv(ocapi);
         List<List<String>> tfidfCSV = MultiColumnCSVSort.readCsv(tfidf);

@@ -4,10 +4,6 @@ import java.io.File;
 
 public class Main {
 
-    public static final String pathReco = "./files/recos_txt/";
-    public static final String pathRecoAdjusted = "./files/recos_txt_adjusted/";
-    public static final String pathRecoTagged = "./files/recos_txt_adjusted/";
-
     public static void main(String [] args){
 
 
