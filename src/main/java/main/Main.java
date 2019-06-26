@@ -20,12 +20,11 @@ public class Main {
 
         File fileXML = new File("./files/files_to_treat.xml");
 
-        ChainHandler.treatAllDeclaredFiles(fileXML, false, true, false);
+        ChainHandler.treatAllDeclaredFiles(fileXML, true, false, false);
 
 
 
         /*
-
         Levenshtein l = new Levenshtein();
         double distance = 0.0;
         int countZero = 0;
@@ -49,7 +48,6 @@ public class Main {
         System.out.println("Total right : "+ countZero);
         System.out.println("Précision : "+precision);
         System.out.println("Rappel : " + rappel);
-
         */
 
         /*

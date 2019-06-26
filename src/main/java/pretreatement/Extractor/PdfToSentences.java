@@ -24,9 +24,9 @@ public class PdfToSentences {
      * @param isExpertFile if the goal is to extract highlighted text
      * @return the TextDocument containing the sentences
      */
-    public static TextDocument extract(String config_file, String source, String name, String type, boolean isExpertFile) throws IOException {
-        Config config = Config.getInstance("config_file");
-        return extract(source, getDefaultTargetFile(config.getProp("pretreatment.output_folder"), source), isExpertFile);
+    public static TextDocument extract(String config_file, String source, String name, String type, boolean isExpertFile, String language) throws IOException {
+        Config config = Config.getInstance(config_file);
+        return extract(source, getDefaultTargetFile(config.getProp("pretreatment.output_folder"), source), isExpertFile, type);
     }
 
     /**
@@ -36,14 +36,14 @@ public class PdfToSentences {
      * @param isExpertFile if the point is to extract highlighted text
      * @return the TextDocument containing the sentences
      */
-    public static TextDocument extract(String source, Path target, boolean isExpertFile) throws IOException {
+    public static TextDocument extract(String source, Path target, boolean isExpertFile, String type) throws IOException {
         TextDocument ret;
         Path sourcePath = Paths.get(source);
         File sourceFile = sourcePath.toFile();
         if(!sourceFile.isFile()){
             throw new IllegalArgumentException("The source path isn't a file");
         }
-        ArrayList<String> blocks = ExtractorPDF.extract(sourceFile, isExpertFile);
+        ArrayList<String> blocks = ExtractorPDF.extract(sourceFile, isExpertFile, type);
         ArrayList<Sentence> sentences = textToSentences(blocks);
         ret = new TextDocument(target.toFile(), sentences);
 

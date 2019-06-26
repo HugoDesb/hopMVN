@@ -1,4 +1,4 @@
-package common.document;
+package pretreatement.Extractor.HAS;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -31,7 +31,7 @@ public class SummaryHAS {
     }
 
     /**
-     * Get first and last usable page's number (ie without anything above summary, and any annexes and below)
+     * Get first and last usable page's number (ie without anything above summary, and any annexes and below).
      * @return first and last usable pages
      */
     public int [] getContentBoundaries(){
@@ -48,6 +48,15 @@ public class SummaryHAS {
             }
         }
         return hop;
+    }
+
+    public int getAbbrevPageNumber(){
+        for (String key : summary.keySet()) {
+            if(key.matches(".*Abréviations.*")){
+                return summary.get(key)-1;
+            }
+        }
+        return -1;
     }
 
     /**

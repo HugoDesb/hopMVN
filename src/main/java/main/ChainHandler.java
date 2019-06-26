@@ -139,7 +139,7 @@ public class ChainHandler {
     public static TextDocument pretreatmentModule(Map<String, String> set, boolean writeInTemporaryFile){
         TextDocument textDocument = null;
         try {
-            textDocument = PdfToSentences.extract(set.get("config_file"), set.get("absolutePath"), set.get("name"), set.get("type"), set.get("isExpertFile").equals("true"));
+            textDocument = PdfToSentences.extract(set.get("config_file"), set.get("absolutePath"), set.get("name"), set.get("type"), set.get("isExpertFile").equals("true"), set.get("language"));
             if(writeInTemporaryFile){
                 textDocument.writeFile();
             }

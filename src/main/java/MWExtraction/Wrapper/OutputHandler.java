@@ -213,22 +213,51 @@ public class OutputHandler {
     }
 
     public void combineMeasures(String source_OUTPUT) {
-        String ocapi = source_OUTPUT+"F-OCapi_A/t1gram.csv";
-        String tfidf = source_OUTPUT+"TFIDF_A/t1gram.csv";
-        String output= source_OUTPUT+"t1gram.csv";
-        List<List<String>> ocapiCSV = MultiColumnCSVSort.readCsv(ocapi);
-        List<List<String>> tfidfCSV = MultiColumnCSVSort.readCsv(tfidf);
+        for (int i = 1; i<=4; i++) {
+            String ocapi = source_OUTPUT+"F-OCapi_A/t"+i+"gram.csv";
+            String tfidf = source_OUTPUT+"TFIDF_A/t"+i+"gram.csv";
+            String output= source_OUTPUT+"t"+i+"gram.csv";
+            writeInFile(output, combineTwo(ocapi, tfidf));
+        }
+    }
 
+    public void writeInFile(String filepath, List<List<String>> lines){
+        File f = new File(filepath);
+        try {
+            PrintWriter pw = new PrintWriter(f);
+            String s;
+            for (List<String> line: lines) {
+                s = "";
+                for (String cell : line) {
+                    s += cell+"\t";
+                }
+                System.out.println("Write ["+s+"]");
+                pw.println(s);
+            }
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<List<String>> combineTwo(String sourceOcapi, String sourceTFIDF){
         List<List<String>> hop = new ArrayList<>();
+
+        List<List<String>> ocapiCSV = MultiColumnCSVSort.readCsv(sourceOcapi);
+        List<List<String>> tfidfCSV = MultiColumnCSVSort.readCsv(sourceTFIDF);
+
         for (List<String> lineOcapi: ocapiCSV) {
             for (List<String> linetfidf: tfidfCSV) {
                 if(lineOcapi.get(0).equals(linetfidf.get(0))){
+                    System.out.println("lineOcapi : "+lineOcapi.get(2));
+                    System.out.println("linetfidf : "+linetfidf.get(2));
                     double newValue = Double.parseDouble(lineOcapi.get(2)) - (1 - Double.parseDouble(linetfidf.get(2)));
-                    List<String> newLine = lineOcapi;
-                    newLine.set(2, Double.toString(newValue));
-                    hop.add(newLine);
+                    lineOcapi.set(2, Double.toString(newValue));
+                    hop.add(lineOcapi);
                 }
             }
         }
+
+        return hop;
     }
 }

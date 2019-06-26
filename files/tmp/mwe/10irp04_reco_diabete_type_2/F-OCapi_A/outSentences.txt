@@ -1,0 +1,2423 @@
+méthode « recommandations pour la pratique clinique ».
+T4
+recommandations pour la pratique	true	1.3979
+T3
+T2
+pratique clinique	true	1.3332
+T1
+pratique	true	1.3346
+méthode	true	1.2346
+pour	true	1.2262
+m	true	1.1677
+an	true	1.0
+##########END##########
+les recommandations de bonne pratique (rbp) sont définies dans le champ de la santé comme des propositions développées méthodiquement pour aider le praticien et le patient à rechercher les soins les plus appropriés dans des circonstances cliniques données.
+T4
+T3
+recommandations de bonne	true	1.3761
+T2
+bonne pratique	true	1.2978
+circonstances cliniques	false	1.2263
+T1
+pratique	true	1.3346
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+champ	true	1.2609
+pour	true	1.2262
+m	true	1.1677
+données	true	1.1015
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+aide	true	1.0
+an	true	1.0
+soins	true	1.0
+##########END##########
+elles ne sauraient dispenser le professionnel de santé de faire preuve de discernement, dans sa prise en charge du patient qui doit être celle qu’il estime la plus appropriée, en fonction de ses propres constatations.
+T4
+T3
+professionnel de santé	true	1.3333
+prise en charge	true	1.0893
+T2
+propres constatations	false	1.2263
+T1
+g	true	1.4308
+elle	true	1.3508
+si	true	1.2968
+il	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+constatations	true	1.0
+preuve	true	0.994
+prise	true	0.8695
+fonction	true	0.8675
+##########END##########
+cette recommandation de bonne pratique a été élaborée selon la méthode résumée dans l’argumentaire scientifique et décrite dans le guide méthodologique de la has disponible sur son site :.
+T4
+T3
+recommandation de bonne	true	1.3333
+T2
+cette recommandation	true	1.3213
+bonne pratique	true	1.2978
+T1
+g	true	1.4308
+pratique	true	1.3346
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+has	true	1.2609
+méthode	true	1.2346
+il	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ui	true	1.0208
+an	true	1.0
+##########END##########
+élaboration de recommandations de bonne pratique – méthode « recommandations pour la pratique clinique ».
+T4
+recommandations pour la pratique	true	1.3979
+T3
+recommandations de bonne	true	1.3761
+T2
+pratique clinique	true	1.3332
+bonne pratique	true	1.2978
+T1
+pratique	true	1.3346
+b	true	1.2814
+méthode	true	1.2346
+pour	true	1.2262
+m	true	1.1677
+an	true	1.0
+##########END##########
+les objectifs de cette recommandation, la population et les professionnels concernés par sa mise en œuvre sont résumés en dernière page (fiche descriptive) et décrits dans l’argumentaire scientifique.
+T4
+T3
+T2
+cette recommandation	true	1.3213
+T1
+g	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+population	true	1.2211
+mise	true	1.1723
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+fiche	true	1.0
+uvre	false	1.0257
+##########END##########
+ce dernier ainsi que la synthèse de la recommandation sont téléchargeables sur www.has-sante.fr.
+T4
+T3
+T2
+ce dernier	true	1.2263
+T1
+g	true	1.4308
+si	true	1.2968
+b	true	1.2814
+has	true	1.2609
+m	true	1.1677
+ce	true	1.0192
+an	true	1.0
+synthèse	true	1.0
+##########END##########
+grade des recommandations.
+T4
+T3
+T2
+T1
+g	true	1.4308
+m	true	1.1677
+des	true	1.0835
+an	true	1.0
+##########END##########
+en l’absence d’études, les recommandations sont fondées sur un accord entre experts du groupe de travail, après consultation du groupe de lecture.
+T4
+T3
+consultation du groupe	true	1.0145
+accord entre experts	false	1.0145
+T2
+T1
+groupe	true	1.6
+b	true	1.2814
+il	true	1.2211
+m	true	1.1677
+des	true	1.0835
+consultation	true	1.0783
+experts	true	1.0783
+accord	true	1.0454
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+un	true	1.0
+lecture	true	0.8092
+##########END##########
+l’absence de gradation ne signifie pas que les recommandations ne sont pas pertinentes et utiles.
+T4
+T3
+T2
+T1
+g	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+il	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+##########END##########
+elle doit, en revanche, inciter à engager des études complémentaires.
+T4
+T3
+T2
+études complémentaires	false	1.2263
+T1
+g	true	1.4308
+elle	true	1.3508
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+an	true	1.0
+##########END##########
+haute autorité de santé.
+T4
+T3
+T2
+T1
+autorité	true	1.5
+haute	true	1.5
+an	true	1.0
+##########END##########
+ce document a été validé par le collège de la haute autorité de santé en janvier 2013© haute autorité de santé – 2013.
+T4
+T3
+T2
+ce document	true	0.9858
+T1
+autorité	true	1.5
+haute	true	1.5
+g	true	1.4308
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+vie	true	0.9433
+##########END##########
+l’objectif glycémique doit être individualisé en fonction du profil des patients et peut donc évoluer au cours du temps.
+T4
+T3
+T2
+objectif glycémique	false	1.3619
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+cours	true	1.2252
+il	true	1.2211
+temps	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+fonction	true	0.8675
+##########END##########
+pour la plupart des patients diabétiques de type 2, une cible d’hba1c inférieure ou égale à 7 % est recommandée.
+T4
+T3
+T2
+une cible	true	1.2263
+type 2	true	0.9913
+hba1c inférieure	false	1.3575
+patients diabétiques	false	1.1033
+T1
+g	true	1.4308
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+type	true	1.0436
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+##########END##########
+le traitement médicamenteux doit être instauré ou réévalué si l’hba1c est supérieure à 7 %.
+T4
+T3
+T2
+traitement médicamenteux	true	1.3332
+T1
+si	true	1.2968
+b	true	1.2814
+médicament	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ou	true	0.7937
+##########END##########
+le diabète est évolutif et le traitement doit être réévalué régulièrement dans toutes ses composantes : mesures hygiéno-diététiques, éducation thérapeutique et traitement médicamenteux.
+T4
+T3
+T2
+traitement médicamenteux	true	1.3332
+éducation thérapeutique	true	1.1536
+mesures hygiéno-diététiques	false	0.9411
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+médicament	true	1.2211
+m	true	1.1677
+éducation	true	1.0426
+en	true	1.0211
+an	true	1.0
+ou	true	0.7937
+##########END##########
+la mise en place de mesures hygiéno-diététiques efficaces est un préalable nécessaire au traitement médicamenteux du contrôle glycémique.
+T4
+T3
+mise en place	true	1.5128
+mesures hygiéno-diététiques efficaces	false	1.5128
+T2
+traitement médicamenteux	true	1.3332
+hygiéno-diététiques efficaces	false	1.4644
+préalable nécessaire	false	1.4644
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+préalable	true	1.3434
+médicament	true	1.2211
+mise	true	1.1723
+m	true	1.1677
+place	true	1.035
+en	true	1.0211
+ce	true	1.0192
+un	true	1.0
+contrôle	true	0.983
+cas	true	0.8974
+##########END##########
+l’association metformine + sulfamide est la bithérapie à privilégier.
+T4
+T3
+T2
+T1
+g	true	1.4308
+association	true	1.4129
+et	true	1.3333
+b	true	1.2814
+il	true	1.2211
+sulfamide	true	1.179
+m	true	1.1677
+##########END##########
+elle doit être accompagnée et idéalement précédée d’une autosurveillance glycémique et doit faire l’objet d’un apprentissage.
+T4
+T3
+T2
+autosurveillance glycémique	true	0.9775
+T1
+g	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+b	true	1.2814
+surveillance	true	1.2609
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+##########END##########
+les femmes en âge de procréer doivent être informées de l'intérêt d'un bon contrôle glycémique avant et durant la grossesse afin d'améliorer le pronostic obstétrical.
+T4
+T3
+T2
+pronostic obstétrical	false	1.3761
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+pronostic	true	1.2211
+intérêt	true	1.1927
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+contrôle	true	0.983
+##########END##########
+l’autosurveillance glycémique n’est recommandée que si les résultats sont susceptibles d’entraîner une modification des mesures hygiéno-diététiques et/ou du traitement médicamenteux.
+T4
+T3
+T2
+traitement médicamenteux	true	1.3332
+autosurveillance glycémique	true	0.9775
+mesures hygiéno-diététiques	false	0.9411
+T1
+g	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+surveillance	true	1.2609
+il	true	1.2211
+médicament	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+résultats	false	1.2609
+##########END##########
+la réalisation systématique de l’autosurveillance glycémique chez les patients sous antidiabétiques ne provoquant pas d’hypoglycémie n’est pas recommandée.
+T4
+T3
+T2
+autosurveillance glycémique	true	0.9775
+réalisation systématique	false	1.4493
+T1
+g	true	1.4308
+antidiabétiques	true	1.2846
+surveillance	true	1.2609
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+ou	true	0.7937
+réalisation	false	1.1816
+##########END##########
+le recours à un endocrinologue est recommandé en cas de difficulté pour fixer l‘objectif glycémique ou pour l’atteindre.
+T4
+T3
+T2
+en cas	true	1.3761
+objectif glycémique	false	1.3619
+T1
+g	true	1.4308
+b	true	1.2814
+pour	true	1.2262
+cours	true	1.2252
+difficulté	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+cas	true	0.8974
+ou	true	0.7937
+##########END##########
+asg autosurveillance glycémique.
+T4
+T3
+asg autosurveillance glycémique	true	1.3333
+T2
+asg autosurveillance	true	1.2263
+T1
+g	true	1.4308
+surveillance	true	1.2609
+m	true	1.1677
+##########END##########
+la has a inscrit à son programme de travail 2009 l’élaboration de recommandations de bonne pratique sur la stratégie médicamenteuse du contrôle glycémique du diabète de type 2 en intégrant un critère d’efficience sur saisine de la direction de la sécurité sociale (dss) et la caisse nationale de l’assurance maladie des travailleurs salariés (cnamts).
+T4
+maladie des travailleurs salariés	true	1.3979
+diabète de type 2	true	1.3103
+T3
+recommandations de bonne	true	1.3761
+maladie des travailleurs	true	1.3333
+diabète de type	true	1.2359
+T2
+assurance maladie	true	1.4755
+bonne pratique	true	1.2978
+sécurité sociale	true	1.2263
+travailleurs salariés	true	1.2263
+type 2	true	0.9913
+caisse nationale	false	1.2263
+stratégie médicamenteuse	false	1.2177
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+assurance	true	1.3815
+maladie	true	1.3815
+pratique	true	1.3346
+et	true	1.3333
+efficience	true	1.3281
+si	true	1.2968
+b	true	1.2814
+has	true	1.2609
+il	true	1.2211
+médicament	true	1.2211
+m	true	1.1677
+des	true	1.0835
+critère	true	1.0547
+type	true	1.0436
+en	true	1.0211
+an	true	1.0
+caisse	true	1.0
+direction	true	1.0
+dss	true	1.0
+sécurité	true	1.0
+un	true	1.0
+valeur	true	1.0
+contrôle	true	0.983
+##########END##########
+la définition de nouvelles recommandations était devenue nécessaire du fait de l’apparition de nouvelles molécules (inhibiteurs de la dipeptidylpeptidase-4 et analogues du glp-1), du retrait du marché de la rosiglitazone et du déremboursement de la pioglitazone, et de la publication des essais cliniques d’intensification du contrôle glycémique (accord, advance, vadt).
+T4
+T3
+retrait du marché	true	1.3333
+analogues du glp-1	true	0.9485
+T2
+essais cliniques	true	1.2263
+nouvelles molécules	false	1.26
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+molécules	true	1.3658
+elle	true	1.3508
+et	true	1.3333
+vs	true	1.3266
+inhibiteurs	true	1.3081
+si	true	1.2968
+b	true	1.2814
+m	true	1.1677
+des	true	1.0835
+accord	true	1.0454
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+apparition	true	1.0
+dipeptidylpeptidase-4	true	1.0
+essais	true	1.0
+contrôle	true	0.983
+ou	true	0.7937
+vue	true	0.627
+vadt	false	1.0
+définition	false	0.9646
+##########END##########
+objectif de la recommandation.
+T4
+T3
+T2
+T1
+b	true	1.2814
+m	true	1.1677
+an	true	1.0
+##########END##########
+l’objectif de ce travail est d’améliorer la qualité de la prise en charge des patients adultes atteints d’un diabète de type 2 ; seul le contrôle glycémique est abordé dans cette recommandation.
+T4
+diabète de type 2	true	1.3103
+T3
+diabète de type	true	1.2359
+prise en charge	true	1.0893
+T2
+cette recommandation	true	1.3213
+type 2	true	0.9913
+patients adultes	false	1.2263
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+il	true	1.2211
+m	true	1.1677
+des	true	1.0835
+type	true	1.0436
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+un	true	1.0
+contrôle	true	0.983
+qualité	true	0.9457
+prise	true	0.8695
+adultes	true	0.627
+##########END##########
+cette recommandation vise à définir :  des objectifs glycémiques cibles ;  une stratégie médicamenteuse du contrôle glycémique ;  la place de l’autosurveillance glycémique.
+T4
+T3
+T2
+cette recommandation	true	1.3213
+des objectifs	true	1.2263
+autosurveillance glycémique	true	0.9775
+glycémiques cibles	false	1.2263
+stratégie médicamenteuse	false	1.2177
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+surveillance	true	1.2609
+il	true	1.2211
+médicament	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+place	true	1.035
+ce	true	1.0192
+an	true	1.0
+contrôle	true	0.983
+##########END##########
+cette recommandation n’aborde le thème du diabète de type 2 que dans le champ du contrôle glycémique (fixation d’objectifs glycémiques, stratégie médicamenteuse et place de l’autosurveillance glycémique).
+T4
+diabète de type 2	true	1.3103
+T3
+diabète de type	true	1.2359
+T2
+cette recommandation	true	1.3213
+type 2	true	0.9913
+autosurveillance glycémique	true	0.9775
+stratégie médicamenteuse	false	1.2177
+objectifs glycémiques	false	1.1782
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+champ	true	1.2609
+surveillance	true	1.2609
+médicament	true	1.2211
+m	true	1.1677
+type	true	1.0436
+place	true	1.035
+an	true	1.0
+fixation	true	1.0
+contrôle	true	0.983
+##########END##########
+la mise en place de mesures hygiéno-diététiques efficaces est un préalable nécessaire au traitement médicamenteux du contrôle glycémique et leur application doit être poursuivie tout au long de la prise en charge.
+T4
+T3
+mise en place	true	1.5128
+prise en charge	true	1.0893
+mesures hygiéno-diététiques efficaces	false	1.5128
+T2
+traitement médicamenteux	true	1.3332
+hygiéno-diététiques efficaces	false	1.4644
+préalable nécessaire	false	1.4644
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+préalable	true	1.3434
+et	true	1.3333
+application	true	1.2454
+pour	true	1.2262
+médicament	true	1.2211
+mise	true	1.1723
+m	true	1.1677
+place	true	1.035
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+un	true	1.0
+contrôle	true	0.983
+vie	true	0.9433
+cas	true	0.8974
+prise	true	0.8695
+ou	true	0.7937
+##########END##########
+ces trois aspects majeurs de la prise en charge des patients diabétiques de type 2 sont hors du champ de cette recommandation.
+T4
+T3
+prise en charge	true	1.0893
+T2
+cette recommandation	true	1.3213
+type 2	true	0.9913
+aspects majeurs	false	1.2263
+patients diabétiques	false	1.1033
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+champ	true	1.2609
+m	true	1.1677
+des	true	1.0835
+type	true	1.0436
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+aspects	true	1.0
+prise	true	0.8695
+trois	true	0.627
+##########END##########
+en conséquence, les recommandations sont essentiellement fondées sur un avis d’experts.
+T4
+T3
+T2
+en conséquence	true	1.2263
+T1
+elle	true	1.3508
+avis	true	1.2279
+m	true	1.1677
+experts	true	1.0783
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+un	true	1.0
+##########END##########
+le schéma général de la stratégie médicamenteuse du contrôle glycémique ne peut envisager tous les cas particuliers.
+T4
+T3
+T2
+cas particuliers	false	1.2263
+schéma général	false	1.2263
+stratégie médicamenteuse	false	1.2177
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+médicament	true	1.2211
+m	true	1.1677
+en	true	1.0211
+contrôle	true	0.983
+cas	true	0.8974
+ou	true	0.7937
+particulier	false	1.2211
+##########END##########
+cette recommandation sera actualisée en fonction des données nouvelles de la littérature.
+T4
+T3
+T2
+cette recommandation	true	1.3213
+données nouvelles	false	1.2263
+T1
+elle	true	1.3508
+et	true	1.3333
+vs	true	1.3266
+m	true	1.1677
+données	true	1.1015
+des	true	1.0835
+en	true	1.0211
+an	true	1.0
+fonction	true	0.8675
+ou	true	0.7937
+littérature	false	0.994
+##########END##########
+cette section aborde les objectifs glycémiques optimaux pour prévenir les risques liés à l’hyperglycémie et aux effets indésirables des traitements chez les patients diabétiques de type 2 (cas général) et dans quatre sous-populations particulières : les sujets âgés, les personnes ayant des antécédents cardio-vasculaires, les insuffisants rénaux chroniques et les femmes enceintes ou envisageant de l’être.
+T4
+T3
+objectifs glycémiques optimaux	false	1.3333
+T2
+effets indésirables	true	1.2263
+femmes enceintes	true	1.2263
+insuffisants rénaux	true	1.2263
+sujets âgés	true	1.2263
+type 2	true	0.9913
+cas général	false	1.3669
+antécédents cardio-vasculaires	false	1.2263
+cette section	false	1.2263
+glycémiques optimaux	false	1.2263
+sous-populations particulières	false	1.2263
+patients diabétiques	false	1.1033
+T1
+g	true	1.4308
+personne	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+pour	true	1.2262
+population	true	1.2211
+m	true	1.1677
+des	true	1.0835
+type	true	1.0436
+antécédent	true	1.0257
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+chroniques	true	1.0
+risques	true	1.0
+cas	true	0.8974
+ou	true	0.7937
+section	false	1.0
+##########END##########
+l’objectif à court terme de diminution de l’hyperglycémie est l’amélioration des symptômes (soif, polyurie, asthénie, amaigrissement et flou visuel) et la prévention des complications aiguês (infectieuses et coma hyperosmolaire).
+T4
+objectif à court terme	false	1.3979
+T3
+objectif à court	false	1.3333
+T2
+coma hyperosmolaire	true	1.3761
+court terme	true	1.2263
+complications aiguês	false	1.2263
+flou visuel	false	1.2263
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+asthénie	true	1.2211
+coma	true	1.2211
+terme	true	1.2211
+m	true	1.1677
+des	true	1.0835
+prévention	true	1.0357
+en	true	1.0211
+flou	true	1.0
+polyurie	true	1.0
+soif	true	1.0
+ou	true	0.7937
+##########END##########
+l’objectif à plus long terme est la prévention des complications chroniques microvasculaires (rétinopathie, néphropathie et neuropathie), macrovasculaires (infarctus du myocarde, accidents vasculaires cérébraux et artériopathie oblitérante des membres inférieurs) et la diminution de la mortalité.
+T4
+diminution de la mortalité	true	1.3979
+T3
+accidents vasculaires cérébraux	true	1.3333
+infarctus du myocarde	true	1.3333
+complications chroniques microvasculaires	false	1.3333
+T2
+accidents vasculaires	true	1.2263
+artériopathie oblitérante	true	1.2263
+long terme	true	1.2263
+membres inférieurs	true	1.2263
+chroniques microvasculaires	false	1.2263
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+terme	true	1.2211
+m	true	1.1677
+des	true	1.0835
+prévention	true	1.0357
+en	true	1.0211
+an	true	1.0
+artériopathie	true	1.0
+chroniques	true	1.0
+infarctus	true	1.0
+neuropathie	true	1.0
+néphropathie	true	1.0
+rétinopathie	true	1.0
+##########END##########
+le dosage de l’hba1c doit être réalisé 4 fois par an selon le guide has affection de longue durée sur le diabète de type 21.1 patients diabétiques de type 2 (cas général).
+T4
+affection de longue durée	true	1.3979
+diabète de type 2	true	1.3103
+T3
+affection de longue	true	1.3333
+diabète de type	true	1.2359
+21.1 patients diabétiques	false	1.3333
+T2
+longue durée	true	1.1847
+type 2	true	0.9913
+cas général	false	1.3669
+patients diabétiques	false	1.1033
+T1
+g	true	1.4308
+b	true	1.2814
+has	true	1.2609
+type	true	1.0436
+en	true	1.0211
+ui	true	1.0208
+affection	true	1.0
+an	true	1.0
+durée	true	0.9656
+cas	true	0.8974
+##########END##########
+recommandation 1 convient : • d’expliquer le choix de l’objectif et de s’accorder avec le patient dans le cadre d’une éducation thérapeutique ; • d’encourager la personne à atteindre et maintenir son objectif individualisé ; • de mobiliser les moyens thérapeutiques recommandés pour atteindre la cible d’hba1c, notamment les mesures hygiéno-diététiques ; • de réévaluer l’objectif et/ou les moyens :  si les effets secondaires (dont les hypoglycémies et la prise de poids) ou les efforts fournis altèrent sensiblement la qualité de vie,  si le profil clinique du patient se modifie ; • d’informer la personne ayant une hba1c au-delà de l’objectif fixé qu’une diminution de l’hba1c vers sa cible thérapeutique s’accompagne de bénéfices pour sa santé.
+T4
+T3
+prise de poids	true	1.2887
+T2
+effets secondaires	true	1.1536
+éducation thérapeutique	true	1.1536
+mesures hygiéno-diététiques	false	0.9411
+cible thérapeutique	false	0.8755
+moyens thérapeutiques	false	0.8755
+objectif individualisé	false	0.8755
+T1
+g	true	1.4308
+moyens	true	1.4308
+personne	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+une	true	1.2211
+poids	true	1.1762
+m	true	1.1677
+accord	true	1.0454
+éducation	true	1.0426
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+choix	true	0.9782
+qualité	true	0.9457
+vie	true	0.9433
+prise	true	0.8695
+ou	true	0.7937
+cadre	true	0.7537
+efforts	false	0.7537
+##########END##########
+en cas de difficulté sur la définition de l’objectif glycémique, un avis spécialisé (endocrinologue, gériatre…) devrait être demandé.
+T4
+T3
+T2
+en cas	true	1.3761
+objectif glycémique	false	1.3619
+T1
+g	true	1.4308
+b	true	1.2814
+avis	true	1.2279
+difficulté	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+cas	true	0.8974
+ou	true	0.7937
+définition	false	0.9646
+##########END##########
+b pour la plupart des patients diabétiques de type 2 : • une cible d’hba1c inférieure ou égale à 7 % est recommandée.
+T4
+T3
+T2
+une cible	true	1.2263
+type 2	true	0.9913
+hba1c inférieure	false	1.3575
+patients diabétiques	false	1.1033
+T1
+g	true	1.4308
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+type	true	1.0436
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+##########END##########
+le traitement médicamenteux doit être instauré ou réévalué si l’hba1c est supérieure à 7 %.
+T4
+T3
+T2
+traitement médicamenteux	true	1.3332
+T1
+si	true	1.2968
+b	true	1.2814
+médicament	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ou	true	0.7937
+##########END##########
+recommandation 2b • dont le diabète est nouvellement diagnostiqué, • et dont l’espérance de vie est supérieure à 15 ans, • et sans antécédent cardio-vasculaire, un objectif inférieur ou égal à 6,5 % est recommandé, sous réserve d’être atteint par la mise en œuvre ou le renforcement des mesures hygiéno-diététiques puis, en cas d’échec, par une monothérapie orale (cfrecommandation n° 16).
+T4
+T3
+espérance de vie	true	0.9506
+et sans antécédent	true	0.8867
+T2
+en cas	true	1.3761
+antécédent cardio-vasculaire	false	1.1329
+mesures hygiéno-diététiques	false	0.9411
+monothérapie orale	false	0.838
+T1
+g	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+b	true	1.2814
+une	true	1.2211
+mise	true	1.1723
+m	true	1.1677
+des	true	1.0835
+antécédent	true	1.0257
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+réserve	true	1.0019
+an	true	1.0
+un	true	1.0
+vie	true	0.9433
+cas	true	0.8974
+ou	true	0.7937
+échec	true	0.7258
+uvre	false	1.0257
+##########END##########
+recommandation 2c • avec une comorbidité grave avérée et/ou une espérance de vie limitée (< 5 ans),  • ou avec des complications macrovasculaires évoluées,  • ou ayant une longue durée d’évolution du diabète (> 10 ans) et pour lesquels la cible de 7 % s’avère difficile à atteindre car l’intensification médicamenteuse provoque des hypoglycémies sévères,.
+T4
+T3
+espérance de vie	true	0.9506
+T2
+longue durée	true	1.1847
+complications macrovasculaires	false	0.9298
+hypoglycémies sévères	false	0.9298
+intensification médicamenteuse	false	0.9298
+T1
+g	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+médicament	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+durée	true	0.9656
+vie	true	0.9433
+2c	true	0.7937
+ou	true	0.7937
+évolution	true	0.7937
+##########END##########
+une cible d’hba1c inférieure ou égale à 8 % est recommandée.
+T4
+T3
+T2
+une cible	true	1.2263
+hba1c inférieure	false	1.3575
+T1
+g	true	1.4308
+b	true	1.2814
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+##########END##########
+trois catégories de personnes âgées peuvent être individualisées en fonction de leur état de santé après 75 ans1 : • les personnes dites « vigoureuses » : en bon état de santé, indépendantes et bien intégrées socialement, c’est-à-dire autonomes d’un point de vue décisionnel et fonctionnel qui sont assimilables aux adultes plus jeunes ; • les personnes dites « fragiles » : à l’état de santé intermédiaire et à risque de basculer dans la catégorie des malades.
+T4
+T3
+état de santé	true	1.6814
+T2
+personnes âgées	true	0.995
+santé intermédiaire	false	0.7091
+vue décisionnel	false	0.7091
+T1
+état	true	1.5215
+g	true	1.4308
+personne	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ui	true	1.0208
+an	true	1.0
+un	true	1.0
+point	true	0.9698
+risque	true	0.9698
+fonction	true	0.8675
+ou	true	0.7937
+adultes	true	0.627
+trois	true	0.627
+vue	true	0.627
+##########END##########
+elles sont décrites comme une population vulnérable, avec des limitations fonctionnelles motrices et cognitives et une baisse des capacités d’adaptation ; • les personnes dites « malades » : dépendantes, en mauvais état de santé en raison d’une polypathologie chronique évoluée génératrice de handicaps et d’un isolement social.
+T4
+T3
+état de santé	true	1.6814
+limitations fonctionnelles motrices	false	1.3333
+T2
+isolement social	true	1.2263
+fonctionnelles motrices	false	1.2263
+mauvais état	false	1.2263
+population vulnérable	false	1.2263
+T1
+état	true	1.5215
+g	true	1.4308
+personne	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+b	true	1.2814
+adaptation	true	1.2242
+population	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+capacités	true	1.0
+raison	true	1.0
+un	true	1.0
+fonction	true	0.8675
+##########END##########
+recommandation 3b 8 % est recommandée1 http://www.has-sante.fr/portail/upload/docs/application/pdf/2009-06/chutes_repetees_personnes_agees_-_argumentaire.pdf.
+T4
+T3
+T2
+recommandée1 http	false	1.2263
+T1
+g	true	1.4308
+personne	true	1.4308
+3b	true	1.3434
+et	true	1.3333
+has	true	1.2609
+application	true	1.2454
+il	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+pdf	true	1.0
+docs	false	1.0
+http	false	1.0
+upload	false	1.0
+##########END##########
+recommandation 3c aiguës dues au diabète (déshydratation, coma hyperosmolaire) et les hypoglycémies ; des glycémies capillaires préprandiales comprises entre 1 et 2 g/l et/ou un taux d’hba1c inférieur à 9 % sont recommandés1.3 patients ayant un antécédent cardio-vasculaire connu.
+T4
+T3
+glycémies capillaires préprandiales	false	1.3333
+T2
+coma hyperosmolaire	true	1.3761
+2 g	true	1.2263
+3c aiguës	false	1.2263
+capillaires préprandiales	false	1.2263
+recommandés1.3 patients	false	1.2263
+antécédent cardio-vasculaire	false	1.1329
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+coma	true	1.2211
+déshydratation	true	1.2211
+il	true	1.2211
+m	true	1.1677
+des	true	1.0835
+antécédent	true	1.0257
+en	true	1.0211
+3c	true	1.0
+an	true	1.0
+un	true	1.0
+taux	true	0.9819
+prise	true	0.8695
+ou	true	0.7937
+##########END##########
+recommandation 4a comme non évoluée, un objectif inférieur ou égal à 7 % est recommandé.
+T4
+T3
+T2
+T1
+g	true	1.4308
+b	true	1.2814
+m	true	1.1677
+an	true	1.0
+un	true	1.0
+ou	true	0.7937
+##########END##########
+recommandation 4b comme évoluée, un objectif inférieur ou égal à 8 % est recommandé1.4 patients ayant une insuffisance rénale chronique.
+T4
+T3
+insuffisance rénale chronique	true	1.441
+T2
+rénale chronique	true	1.3761
+recommandé1.4 patients	false	1.2263
+T1
+g	true	1.4308
+b	true	1.2814
+insuffisance	true	1.2454
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+ou	true	0.7937
+##########END##########
+recommandation 5a 3b), une cible d’hba1c inférieure ou égale à 7 % est recommandée.
+T4
+T3
+T2
+une cible	true	1.2263
+hba1c inférieure	false	1.3575
+T1
+g	true	1.4308
+3b	true	1.3434
+b	true	1.2814
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+##########END##########
+recommandation 5b (stades 4 et 5), une cible d’hba1c inférieure ou égale à 8 % est recommandée1.5 patientes enceintes ou envisageant de l’être.
+T4
+T3
+recommandée1.5 patientes enceintes	false	1.3333
+T2
+une cible	true	1.2263
+patientes enceintes	false	1.3761
+hba1c inférieure	false	1.3575
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+il	true	1.2211
+patientes	true	1.2211
+une	true	1.2211
+m	true	1.1677
+stades	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+##########END##########
+recommandation 6 glycémique avant et durant la grossesse afin d'améliorer le pronostic obstétrical.
+T4
+T3
+T2
+pronostic obstétrical	false	1.3761
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+pronostic	true	1.2211
+m	true	1.1677
+an	true	1.0
+##########END##########
+recommandation 7a d’envisager la grossesse.
+T4
+T3
+T2
+T1
+g	true	1.4308
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+##########END##########
+des glycémies inférieures à 0,95 g/l à jeun et 1,20 g/l en post-prandial à 2 heures et un taux d’hba1c inférieur à 6,5 %, sous réserve d’être atteints sans hypoglycémie sévère, sont recommandés.
+T4
+T3
+T2
+glycémies inférieures	false	0.9622
+hypoglycémie sévère	false	0.8011
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+réserve	true	1.0019
+an	true	1.0
+un	true	1.0
+taux	true	0.9819
+ou	true	0.7937
+heures	true	0.746
+##########END##########
+en l’absence de données bibliographiques sur la comparaison directe des différentes stratégies thérapeutiques, les recommandations ne peuvent pas être élaborées selon un critère d’efficience2.
+T4
+T3
+différentes stratégies thérapeutiques	false	1.135
+T2
+données bibliographiques	true	1.2263
+différentes stratégies	false	1.4787
+comparaison directe	false	1.0943
+T1
+g	true	1.4308
+efficience	true	1.3281
+b	true	1.2814
+il	true	1.2211
+m	true	1.1677
+données	true	1.1015
+des	true	1.0835
+critère	true	1.0547
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+raison	true	1.0
+un	true	1.0
+##########END##########
+la hiérarchisation des traitements est issue de la discussion du groupe de travail, qui a été menée jusqu’à parvenir à l’accord soit à l’unanimité soit d’au moins 80 % des membres du groupe pour chaque recommandation, formalisé par un vote.
+T4
+T3
+discussion du groupe	true	1.0366
+T2
+T1
+groupe	true	1.6
+si	true	1.2968
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+m	true	1.1677
+des	true	1.0835
+accord	true	1.0454
+en	true	1.0211
+ui	true	1.0208
+an	true	1.0
+un	true	1.0
+vote	true	0.8233
+hiérarchisation	false	0.8233
+##########END##########
+la stratégie recommandée en première intention pour chaque étape de traitement (metformine en monothérapie, metformine + sulfamide hypoglycémiant en bithérapie, trithérapie comprenant au moins metformine + sulfamide hypoglycémiant) est la stratégie la plus efficace, la moins coûteuse et celle pour laquelle le recul d’utilisation est le plus important.
+T4
+T3
+T2
+sulfamide hypoglycémiant	false	1.4085
+première intention	false	1.129
+T1
+g	true	1.4308
+elle	true	1.3508
+coût	true	1.3333
+et	true	1.3333
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+sulfamide	true	1.179
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+trithérapie	true	0.9343
+étape	true	0.9343
+recul	false	0.9343
+##########END##########
+la mise en place de mesures hygiéno-diététiques efficaces est un préalable nécessaire au traitement médicamenteux du contrôle glycémique et leur application doit être poursuivie tout au long de la prise en charge2.1 patients présentant un diabète de type 2 (cas général).
+T4
+diabète de type 2	true	1.3103
+T3
+mise en place	true	1.5128
+diabète de type	true	1.2359
+prise en charge	true	1.0893
+mesures hygiéno-diététiques efficaces	false	1.5128
+T2
+traitement médicamenteux	true	1.3332
+type 2	true	0.9913
+hygiéno-diététiques efficaces	false	1.4644
+préalable nécessaire	false	1.4644
+cas général	false	1.3669
+charge2.1 patients	false	1.2263
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+préalable	true	1.3434
+et	true	1.3333
+b	true	1.2814
+application	true	1.2454
+pour	true	1.2262
+médicament	true	1.2211
+mise	true	1.1723
+m	true	1.1677
+type	true	1.0436
+place	true	1.035
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+un	true	1.0
+contrôle	true	0.983
+vie	true	0.9433
+cas	true	0.8974
+prise	true	0.8695
+ou	true	0.7937
+##########END##########
+recommandation 8 recommandé : • de prendre en compte l’environnement social, familial et culturel du patient (activité professionnelle, rythme des repas…) ; • de réévaluer l’application des mesures hygiéno-diététiques et de les renforcer si nécessaire.
+T4
+T3
+T2
+activité professionnelle	true	1.2263
+environnement social	true	1.2263
+mesures hygiéno-diététiques	false	0.9411
+T1
+g	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+si	true	1.2968
+application	true	1.2454
+il	true	1.2211
+repas	true	1.2211
+rythme	true	1.2211
+compte	true	1.175
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+activité	true	1.0
+an	true	1.0
+##########END##########
+le rythme des consultations doit être fixé en fonction des caractéristiques du patient.
+T4
+T3
+T2
+T1
+rythme	true	1.2211
+des	true	1.0835
+consultation	true	1.0783
+en	true	1.0211
+caractéristiques	true	1.0
+fonction	true	0.8675
+##########END##########
+une consultation tous les 3 mois est généralement suffisante2 fonder une recommandation sur l’efficience consiste à privilégier parmi plusieurs stratégies celle(s) dont le rapport différentiel entre les coûts et les résultats de santé est le plus faible (voir l’argumentaire pour une présentation plus détaillée)3 la médecine fondée sur les preuves suppose d’établir une recommandation sur des critères de morbi-mortalité (dits finaux).
+T4
+médecine fondée sur les preuves	true	1.4421
+T3
+T2
+médecine fondée	true	1.2263
+une consultation	true	1.2263
+rapport différentiel	false	1.2263
+stratégies celle(s)	false	1.2263
+T1
+g	true	1.4308
+critères	true	1.3554
+elle	true	1.3508
+coût	true	1.3333
+et	true	1.3333
+efficience	true	1.3281
+si	true	1.2968
+b	true	1.2814
+rapport	true	1.2609
+pour	true	1.2262
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+consultation	true	1.0783
+en	true	1.0211
+an	true	1.0
+preuves	true	1.0
+ou	true	0.7937
+résultats	false	1.2609
+##########END##########
+pour cette recommandation, le taux d’hba1c comme critère intermédiaire a été retenu afin de situer la place des nouvelles molécules dans la stratégie médicamenteuse en l’absence de données de morbi-mortalité pour ces molécules.
+T4
+T3
+T2
+cette recommandation	true	1.3213
+nouvelles molécules	false	1.26
+stratégie médicamenteuse	false	1.2177
+critère intermédiaire	false	1.0539
+T1
+g	true	1.4308
+molécules	true	1.3658
+elle	true	1.3508
+et	true	1.3333
+vs	true	1.3266
+si	true	1.2968
+b	true	1.2814
+pour	true	1.2262
+médicament	true	1.2211
+m	true	1.1677
+données	true	1.1015
+des	true	1.0835
+critère	true	1.0547
+place	true	1.035
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+taux	true	0.9819
+ou	true	0.7937
+##########END##########
+ce choix explique la faible gradation de la plupart des recommandations4 le coût journalier du traitement pharmacologique ne reflète qu’incomplètement le coût de la prise en charge.
+T4
+T3
+prise en charge	true	1.0893
+T2
+ce choix	true	0.8617
+traitement pharmacologique	true	0.8617
+coût journalier	false	0.8617
+faible gradation	false	0.8617
+T1
+g	true	1.4308
+coût	true	1.3333
+b	true	1.2814
+il	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+choix	true	0.9782
+jour	true	0.9163
+prise	true	0.8695
+##########END##########
+afin de favoriser leur tolérance, les traitements seront démarrés aux doses minimales recommandées qui seront augmentées progressivement jusqu’aux doses maximales tolérées ou jusqu’à l’atteinte de l’objectif.
+T4
+T3
+doses minimales recommandées	false	1.2693
+T2
+doses maximales	false	1.1719
+doses minimales	false	1.1719
+T1
+g	true	1.4308
+si	true	1.2968
+doses	true	1.2852
+b	true	1.2814
+m	true	1.1677
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+atteinte	true	0.9635
+ou	true	0.7937
+##########END##########
+ils devront être pris selon les règles pharmacologiques de prescription (horaire par rapport aux repas, nombre de prises, etc.).
+T4
+T3
+T2
+règles pharmacologiques	false	1.2263
+T1
+g	true	1.4308
+et	true	1.3333
+b	true	1.2814
+rapport	true	1.2609
+il	true	1.2211
+repas	true	1.2211
+prescription	true	1.1964
+m	true	1.1677
+prise	true	0.8695
+##########END##########
+certaines recommandations prévoient plusieurs options thérapeutiques non hiérarchisées.
+T4
+T3
+T2
+options thérapeutiques	false	1.2263
+T1
+si	true	1.2968
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+options	false	1.0
+##########END##########
+dans ce cas, et si le profil du patient le permet, le traitement le moins coûteux doit être privilégié.
+T4
+T3
+T2
+T1
+g	true	1.4308
+coût	true	1.3333
+et	true	1.3333
+si	true	1.2968
+il	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+cas	true	0.8974
+##########END##########
+un traitement ne doit pas être maintenu chez un patient non répondeur5 ; il sera  remplacé par un médicament d’une autre classe thérapeutique recommandée.
+T4
+T3
+T2
+un traitement	true	1.2263
+classe thérapeutique	false	1.2263
+T1
+il	true	1.2211
+médicament	true	1.2211
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+classe	true	1.0
+un	true	1.0
+##########END##########
+lors de l’introduction d’un médicament susceptible d’induire des hypoglycémies, il est important d’apprendre au patient à prévenir, identifier et prendre en charge une hypoglycémie.
+T4
+T3
+T2
+T1
+g	true	1.4308
+et	true	1.3333
+lors	true	1.3238
+b	true	1.2814
+il	true	1.2211
+médicament	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+introduction	true	1.0
+un	true	1.0
+##########END##########
+b il est recommandé de prescrire la metformine en première intention5 le patient n’est pas répondeur à un traitement quand au bout de 6 mois à la dose maximale bien tolérée, et sous réserve d’une bonne observance, l’objectif n’est pas atteint ou le taux d’hba1c n’a pas diminué d’au moins 0,5 point.
+T4
+T3
+T2
+dose maximale	true	1.2263
+un traitement	true	1.2263
+bonne observance	false	1.2263
+première intention5	false	1.2263
+T1
+et	true	1.3333
+b	true	1.2814
+il	true	1.2211
+une	true	1.2211
+dose	true	1.2124
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+réserve	true	1.0019
+an	true	1.0
+un	true	1.0
+taux	true	0.9819
+point	true	0.9698
+ou	true	0.7937
+##########END##########
+recommandation 14 prescrire un sulfamide hypoglycémiant en surveillant la prise de poids et la survenue d’hypoglycémies.
+T4
+T3
+prise de poids	true	1.2887
+T2
+sulfamide hypoglycémiant	false	1.4085
+T1
+g	true	1.4308
+et	true	1.3333
+il	true	1.2211
+sulfamide	true	1.179
+poids	true	1.1762
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+prise	true	0.8695
+vue	true	0.627
+##########END##########
+pour ces raisons, les inhibiteurs de la dpp-4 ne peuvent être utilisés en monothérapie que lorsqu’aucun autre traitement oral ne peut être proposé, après avis d’un diabétologue ; le patient doit être informé de l’absence de remboursement.
+T4
+inhibiteurs de la dpp-4	true	1.4779
+T3
+T2
+autre traitement	true	1.2263
+T1
+g	true	1.4308
+lors	true	1.3238
+inhibiteurs	true	1.3081
+b	true	1.2814
+avis	true	1.2279
+pour	true	1.2262
+il	true	1.2211
+m	true	1.1677
+dpp-4	true	1.1215
+en	true	1.0211
+ce	true	1.0192
+raison	true	1.0
+un	true	1.0
+ou	true	0.7937
+##########END##########
+recommandation 16 recommandation n°2b), la monothérapie doit reposer sur la metformine.
+T4
+T3
+T2
+T1
+et	true	1.3333
+b	true	1.2814
+m	true	1.1677
+an	true	1.0
+##########END##########
+en cas d’intolérance ou de contre-indication à la metformine, les inhibiteurs des alphaglucosidases peuvent être envisagés.
+T4
+T3
+T2
+en cas	true	1.3761
+T1
+g	true	1.4308
+et	true	1.3333
+inhibiteurs	true	1.3081
+si	true	1.2968
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+contre-indication	true	1.0
+cas	true	0.8974
+ou	true	0.7937
+##########END##########
+si l’objectif n’est pas atteint malgré cette monothérapie, l’objectif doit être redéfini avec un taux d’hba1c inférieur ou égal à 7 %► bithérapie • si monothérapie par metformine.
+T4
+T3
+T2
+T1
+g	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+m	true	1.1677
+un	true	1.0
+taux	true	0.9819
+ou	true	0.7937
+##########END##########
+si l’objectif glycémique n’est pas atteint malgré une monothérapie par metformine, l’association metformine + sulfamide hypoglycémiant est recommandée en surveillant la prise de poids et la survenue d’hypoglycémies.
+T4
+T3
+prise de poids	true	1.2887
+T2
+sulfamide hypoglycémiant	false	1.4085
+objectif glycémique	false	1.3619
+T1
+g	true	1.4308
+association	true	1.4129
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+il	true	1.2211
+une	true	1.2211
+sulfamide	true	1.179
+poids	true	1.1762
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+prise	true	0.8695
+vue	true	0.627
+##########END##########
+recommandation 20 inhibiteurs des alphaglucosidases ou inhibiteurs de la dpp-4 (metformine et sulfamide hypoglycémiant non tolérés ou contre-indiqués), il est recommandé.
+T4
+inhibiteurs de la dpp-4	true	1.4779
+T3
+T2
+sulfamide hypoglycémiant	false	1.4085
+T1
+g	true	1.4308
+et	true	1.3333
+inhibiteurs	true	1.3081
+si	true	1.2968
+il	true	1.2211
+sulfamide	true	1.179
+m	true	1.1677
+dpp-4	true	1.1215
+des	true	1.0835
+an	true	1.0
+ou	true	0.7937
+##########END##########
+elle doit être accompagnée et idéalement précédée d’une autosurveillance glycémique et faire l’objet d’un apprentissage.
+T4
+T3
+T2
+autosurveillance glycémique	true	0.9775
+T1
+g	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+b	true	1.2814
+surveillance	true	1.2609
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+un	true	1.0
+##########END##########
+l’intérêt de maintenir les antidiabétiques non insuliniques doit être évalué en fonction des bénéfices attendus pour chacune des molécules : • la metformine sera poursuivie ; • la posologie du sulfamide hypoglycémiant ou du répaglinide sera adaptée si besoin en fonction du schéma insulinique ; • les inhibiteurs de la dpp-4 et les inhibiteurs des alphaglucosidases seront arrêtés ; • l’association insuline + analogues du glp-1 relève d’un avis spécialisé9.
+T4
+inhibiteurs de la dpp-4	true	1.4779
+T3
+analogues du glp-1	true	0.9485
+T2
+sulfamide hypoglycémiant	false	1.4085
+association insuline	false	1.1751
+avis spécialisé9	false	1.1751
+schéma insulinique	false	1.1751
+T1
+g	true	1.4308
+association	true	1.4129
+molécules	true	1.3658
+et	true	1.3333
+inhibiteurs	true	1.3081
+si	true	1.2968
+antidiabétiques	true	1.2846
+b	true	1.2814
+avis	true	1.2279
+pour	true	1.2262
+une	true	1.2211
+intérêt	true	1.1927
+sulfamide	true	1.179
+insuline	true	1.178
+m	true	1.1677
+dpp-4	true	1.1215
+des	true	1.0835
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+arrêt	true	1.0
+un	true	1.0
+vie	true	0.9433
+fonction	true	0.8675
+ou	true	0.7937
+##########END##########
+l’instauration d’une insulinothérapie nécessite la définition d’objectifs glycémiques clairs, la réalisation d’une autosurveillance glycémique, l’adaptation des doses 7 en l’absence de données sur l’association de ces monothérapies avec des analogues du glp-1 et d’amm, ces associations ne peuvent pas être envisagées8 lors de la rédaction de la recommandation, seule la sitagliptine est autorisée et remboursable par l’assurance maladie en trithérapie9 lors de la rédaction de la recommandation, seul l’exénatide est autorisé en association avec l’insuline, et n’est pas remboursable par l’assurance maladie dans cette indication.
+T4
+T3
+analogues du glp-1	true	0.9485
+objectifs glycémiques clairs	false	0.9485
+T2
+assurance maladie	true	1.4755
+autosurveillance glycémique	true	0.9775
+objectifs glycémiques	false	1.1782
+T1
+g	true	1.4308
+rédaction	true	1.4308
+association	true	1.4129
+assurance	true	1.3815
+maladie	true	1.3815
+et	true	1.3333
+lors	true	1.3238
+si	true	1.2968
+doses	true	1.2852
+b	true	1.2814
+surveillance	true	1.2609
+adaptation	true	1.2242
+une	true	1.2211
+insuline	true	1.178
+m	true	1.1677
+données	true	1.1015
+des	true	1.0835
+insulinothérapie	true	1.0643
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+trithérapie	true	0.9343
+ou	true	0.7937
+exénatide	true	0.7667
+réalisation	false	1.1816
+définition	false	0.9646
+instauration	false	0.7052
+##########END##########
+has / service des bonnes pratiques professionnelles / service évaluation économique et santé publique / janvier 2013 17 d’insuline afin d’atteindre les objectifs glycémiques, la connaissance des moyens de prévenir et de corriger les hypoglycémies et la réalisation adéquate de l’injection d’insuline.
+T4
+T3
+bonnes pratiques professionnelles	true	1.3333
+service évaluation économique	false	1.3333
+T2
+bonnes pratiques	true	1.2263
+santé publique	true	1.2263
+évaluation économique	true	1.2263
+réalisation adéquate	false	1.2263
+objectifs glycémiques	false	1.1782
+T1
+g	true	1.4308
+moyens	true	1.4308
+elle	true	1.3508
+pratique	true	1.3346
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+has	true	1.2609
+évaluation	true	1.2211
+insuline	true	1.178
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+injection	true	1.0
+vie	true	0.9433
+réalisation	false	1.1816
+##########END##########
+l’instauration d’une insuline intermédiaire ou analogue lente pourra se faire avec les règles de pratiques suivantes : • prescription d’une dose initiale faible, de 6 à 10 ui par 24 heures ; • mise en place d’une autosurveillance glycémique pour la prévention des hypoglycémies et l’adaptation des doses d’insuline (au moins 2 mesures glycémiques capillaires par jour à l’initiation de l’insulinothérapie : au coucher pour prévenir les hypoglycémies et au réveil pour suivre l’objectif) ; • définition d’un objectif pour la glycémie à jeun au réveil selon l’objectif d’hba1c du patient (cfannexe 5 de l’argumentaire scientifique) ; • adaptation des doses d’insuline tous les 3 jours en fonction des glycémies au réveil et de l’objectif fixé ; la dose peut être augmentée ou réduite de 1 ou 2 ui ; • réévaluation du traitement (ado et/ou insuline) en cas d’hypoglycémies fréquentes ou d’une hypoglycémie sévère ; • recours éventuel à un(e) infirmier(ère) pour réaliser l’insulinothérapie (adaptation des doses selon la prescription…).
+T4
+T3
+mise en place	true	1.5128
+dose initiale faible	false	0.5994
+mesures glycémiques capillaires	false	0.5994
+T2
+en cas	true	1.3761
+autosurveillance glycémique	true	0.9775
+24 heures	true	0.5767
+3 jours	true	0.5767
+hypoglycémie sévère	false	0.8011
+analogue lente	false	0.5767
+dose initiale	false	0.5767
+glycémiques capillaires	false	0.5767
+hypoglycémies fréquentes	false	0.5767
+insuline intermédiaire	false	0.5767
+pratiques suivantes	false	0.5767
+un(e) infirmier(ère)	false	0.5767
+T1
+réveil	true	1.5
+g	true	1.4308
+pratique	true	1.3346
+et	true	1.3333
+doses	true	1.2852
+b	true	1.2814
+surveillance	true	1.2609
+pour	true	1.2262
+cours	true	1.2252
+adaptation	true	1.2242
+il	true	1.2211
+une	true	1.2211
+évaluation	true	1.2211
+dose	true	1.2124
+prescription	true	1.1964
+insuline	true	1.178
+mise	true	1.1723
+m	true	1.1677
+des	true	1.0835
+insulinothérapie	true	1.0643
+prévention	true	1.0357
+place	true	1.035
+en	true	1.0211
+ui	true	1.0208
+an	true	1.0
+un	true	1.0
+jour	true	0.9163
+cas	true	0.8974
+fonction	true	0.8675
+ou	true	0.7937
+heures	true	0.746
+ado	true	0.5213
+initiation	true	0.5213
+définition	false	0.9646
+instauration	false	0.7052
+##########END##########
+plusieurs caractéristiques doivent être prises en compte au cours de la prise en charge des personnes âgées : altération de la fonction rénale, polymédication, risque élevé d’hypoglycémie et conséquences plus délétères de l’hypoglycémie, risque de dénutrition.
+T4
+altération de la fonction	true	1.29
+T3
+prise en charge	true	1.0893
+T2
+fonction rénale	true	1.3179
+personnes âgées	true	0.995
+plusieurs caractéristiques	false	1.1425
+T1
+g	true	1.4308
+personne	true	1.4308
+et	true	1.3333
+si	true	1.2968
+cours	true	1.2252
+compte	true	1.175
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+caractéristiques	true	1.0
+risque	true	0.9698
+altération	true	0.9435
+dénutrition	true	0.9435
+prise	true	0.8695
+fonction	true	0.8675
+##########END##########
+recommandation 28 l’insulinothérapie est recommandée, avec recours éventuel à une tierce personne.
+T4
+T3
+T2
+tierce personne	true	1.2263
+T1
+personne	true	1.4308
+cours	true	1.2252
+une	true	1.2211
+m	true	1.1677
+insulinothérapie	true	1.0643
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+##########END##########
+cependant, pour les personnes âgées « fragiles » ou « malades », et si l’écart à l’objectif est faible (moins de 0,5 % en valeur absolue d’hba1c), l’absence de traitement médicamenteux du contrôle glycémique peut être envisagée, avec une surveillance de la glycémie.
+T4
+surveillance de la glycémie	true	1.3979
+T3
+T2
+traitement médicamenteux	true	1.3332
+personnes âgées	true	0.995
+contrôle glycémique	false	0.9995
+T1
+g	true	1.4308
+personne	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+surveillance	true	1.2609
+pour	true	1.2262
+il	true	1.2211
+médicament	true	1.2211
+une	true	1.2211
+écart	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+valeur	true	1.0
+contrôle	true	0.983
+ou	true	0.7937
+##########END##########
+recommandation 29 déshydratation avec insuffisance rénale fonctionnelle), ceux-ci doivent être interrompus, avec une surveillance accrue de la glycémie et un recours éventuel à l’insuline le temps de l’épisode.
+T4
+T3
+insuffisance rénale fonctionnelle	false	1.3333
+T2
+insuffisance rénale	true	1.3213
+T1
+g	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+surveillance	true	1.2609
+insuffisance	true	1.2454
+cours	true	1.2252
+déshydratation	true	1.2211
+temps	true	1.2211
+une	true	1.2211
+insuline	true	1.178
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+un	true	1.0
+épisode	true	1.0
+fonction	true	0.8675
+##########END##########
+recommandation 30 infectieux), une surveillance accrue de la glycémie et le recours éventuel à l’insuline sont recommandés.
+T4
+T3
+T2
+T1
+g	true	1.4308
+et	true	1.3333
+surveillance	true	1.2609
+cours	true	1.2252
+une	true	1.2211
+insuline	true	1.178
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+##########END##########
+recommandation 31 personnes âgées du fait d’une expérience clinique limitée.
+T4
+T3
+T2
+expérience clinique	true	1.2263
+personnes âgées	true	0.995
+T1
+g	true	1.4308
+personne	true	1.4308
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+##########END##########
+recommandation 33 recommandée2.4 patients ayant une insuffisance rénale chronique.
+T4
+T3
+insuffisance rénale chronique	true	1.441
+T2
+rénale chronique	true	1.3761
+recommandée2.4 patients	false	1.2263
+T1
+insuffisance	true	1.2454
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+##########END##########
+recommandation 34 entre 30 et 60 ml/min/1,73m² ; stades 3a et 3b), les molécules à élimination rénale doivent être utilisées avec précaution car il existe un risque accru d’effets secondaires dont les hypoglycémies pour certaines classes thérapeutiques.
+T4
+molécules à élimination rénale	false	1.3979
+T3
+molécules à élimination	false	1.3333
+T2
+élimination rénale	true	1.2263
+effets secondaires	true	1.1536
+stades 3a	false	1.2263
+classes thérapeutiques	false	1.2229
+T1
+g	true	1.4308
+ml	true	1.4231
+molécules	true	1.3658
+3b	true	1.3434
+et	true	1.3333
+pour	true	1.2262
+il	true	1.2211
+m	true	1.1677
+stades	true	1.1677
+classes	true	1.0989
+en	true	1.0211
+ce	true	1.0192
+3a	true	1.0
+an	true	1.0
+précaution	true	1.0
+un	true	1.0
+risque	true	0.9698
+##########END##########
+les traitements doivent être adaptés aux précautions d’emploi spécifiques à l’insuffisance rénale : la posologie sera adaptée, en particulier pour la metformine (cfannexe 2), et une attention particulière sera portée aux interactions médicamenteuses.
+T4
+T3
+T2
+insuffisance rénale	true	1.3213
+interactions médicamenteuses	true	1.2263
+attention particulière	false	1.2263
+emploi spécifiques	false	1.2263
+T1
+g	true	1.4308
+et	true	1.3333
+insuffisance	true	1.2454
+pour	true	1.2262
+médicament	true	1.2211
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+interactions	true	1.0
+précaution	true	1.0
+particulier	false	1.2211
+##########END##########
+recommandation 35 < 30 ml/min/1,73 m² ; stades 4 et 5), les seules classes thérapeutiques autorisées (amm) sont l’insuline, le répaglinide, les inhibiteurs des alphaglucosidases jusqu’à 25 ml/min et les inhibiteurs de la dpp-4 à posologie adaptée10.
+T4
+inhibiteurs de la dpp-4	true	1.4779
+T3
+seules classes thérapeutiques	false	1.0635
+T2
+classes thérapeutiques	false	1.2229
+posologie adaptée10	false	0.9943
+T1
+g	true	1.4308
+ml	true	1.4231
+et	true	1.3333
+inhibiteurs	true	1.3081
+si	true	1.2968
+insuline	true	1.178
+m	true	1.1677
+stades	true	1.1677
+dpp-4	true	1.1215
+classes	true	1.0989
+des	true	1.0835
+an	true	1.0
+##########END##########
+recommandation 36 recommandée, en particulier chez les patients avec une clairance de la créatinine < 45 ml/min/1,73 m²2.5 patientes enceintes ou envisageant de l’être.
+T4
+T3
+2.5 patientes enceintes	false	1.3333
+T2
+patientes enceintes	false	1.3761
+T1
+g	true	1.4308
+ml	true	1.4231
+clairance	true	1.2211
+créatinine	true	1.2211
+patientes	true	1.2211
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+ou	true	0.7937
+particulier	false	1.2211
+##########END##########
+recommandation 38 et médecin généraliste est recommandée.
+T4
+T3
+T2
+T1
+g	true	1.4308
+et	true	1.3333
+m	true	1.1677
+an	true	1.0
+##########END##########
+cette prise en charge doit débuter avant la conception10 lors de la rédaction de la recommandation, les inhibiteurs de la dpp-4 sont autorisés à dose réduite ; néanmoins, les présentations commercialisées et remboursables par l’assurance maladie ne permettent pas l’administration de doses réduites (comprimés non sécables).
+T4
+inhibiteurs de la dpp-4	true	1.4779
+T3
+prise en charge	true	1.0893
+T2
+assurance maladie	true	1.4755
+cette prise	true	1.2263
+T1
+g	true	1.4308
+rédaction	true	1.4308
+assurance	true	1.3815
+maladie	true	1.3815
+et	true	1.3333
+lors	true	1.3238
+inhibiteurs	true	1.3081
+doses	true	1.2852
+b	true	1.2814
+dose	true	1.2124
+m	true	1.1677
+dpp-4	true	1.1215
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+prise	true	0.8695
+ou	true	0.7937
+##########END##########
+lors de la prescription d’un dispositif d’asg, il est indispensable d’expliquer au patient et d’organiser avec lui cette autosurveillance, de définir les moments, la fréquence, les objectifs et les décisions à prendre en fonction des résultats.
+T4
+T3
+T2
+T1
+g	true	1.4308
+et	true	1.3333
+lors	true	1.3238
+si	true	1.2968
+b	true	1.2814
+surveillance	true	1.2609
+il	true	1.2211
+prescription	true	1.1964
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+un	true	1.0
+fonction	true	0.8675
+résultats	false	1.2609
+##########END##########
+b l’asg est recommandée chez les patients diabétiques de type 2 traités par insuline afin d’adapter les doses d’insuline et de prévenir les hypoglycémies.
+T4
+T3
+T2
+type 2	true	0.9913
+patients diabétiques	false	1.1033
+T1
+g	true	1.4308
+et	true	1.3333
+doses	true	1.2852
+b	true	1.2814
+insuline	true	1.178
+m	true	1.1677
+type	true	1.0436
+en	true	1.0211
+an	true	1.0
+traités	true	1.0
+##########END##########
+recommandation 42 ou glinides afin de prévenir et de détecter d’éventuelles hypoglycémies.
+T4
+T3
+T2
+éventuelles hypoglycémies	false	1.2263
+T1
+g	true	1.4308
+elle	true	1.3508
+et	true	1.3333
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+an	true	1.0
+ou	true	0.7937
+##########END##########
+b la réalisation systématique de l’asg chez les patients sous antidiabétiques ne provoquant pas d’hypoglycémie n’est pas recommandée.
+T4
+T3
+T2
+réalisation systématique	false	1.4493
+T1
+g	true	1.4308
+antidiabétiques	true	1.2846
+b	true	1.2814
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+ou	true	0.7937
+réalisation	false	1.1816
+##########END##########
+l’analyse de la littérature a souligné le faible niveau de preuve des données (effectif faible, suivi insuffisant, critères inadaptés) concernant : • la validation du taux d’hba1c comme critère de substitution à des critères finaux de morbi-mortalité dans le diabète de type 2 ; • l’effet des différents traitements sur la morbi-mortalité du diabète de type 2 (micro-angiopathie, événement cardio-vasculaire, mortalité liée au diabète) ; • la balance bénéfice/risque des différents médicaments antidiabétiques en comparaison directe (en particulier inhibiteurs dpp-4 vs sulfamides) ; • des comparaisons directes entre les différentes stratégies, en particulier une stratégie « classique » (schéma metformine puis sulfamide puis insuline) vs une stratégie visant à limiter les hypoglycémies et la prise de poids (metformine puis inhibiteurs dpp-4 puis analogues du glp-1), éventuellement en fonction du profil des patients ; • des données dans les sous-groupes de patients diabétiques tels que les personnes âgées, les patients atteints de comorbidités, les femmes enceintes ; • la modélisation de l’efficience :  de différentes stratégies thérapeutiques, dont les mesures hygiéno-diététiques,  pour certaines populations, dont les patients nouvellement diagnostiqués et les patients pour lesquels certains traitements sont contre-indiqués ; • la mesure de la qualité de vie associée aux hypoglycémies11, à la prise de poids et au traitement par insuline afin d’estimer la pondération de la durée de vie liée à ces états de santé dans une étude d’efficience.
+T4
+diabète de type 2	true	1.3103
+analyse de la littérature	true	0.8294
+T3
+prise de poids	true	1.2887
+diabète de type	true	1.2359
+analogues du glp-1	true	0.9485
+critère de substitution	true	0.8063
+durée de vie	true	0.8063
+niveau de preuve	true	0.8063
+états de santé	true	0.8063
+différentes stratégies thérapeutiques	false	1.135
+T2
+inhibiteurs dpp-4	true	1.5116
+femmes enceintes	true	1.2263
+personnes âgées	true	0.995
+type 2	true	0.9913
+balance bénéfice	true	0.7658
+médicaments antidiabétiques	true	0.7658
+différentes stratégies	false	1.4787
+patients diabétiques	false	1.1033
+comparaison directe	false	1.0943
+mesures hygiéno-diététiques	false	0.9411
+comparaisons directes	false	0.7658
+critères finaux	false	0.7658
+critères inadaptés	false	0.7658
+effectif faible	false	0.7658
+faible niveau	false	0.7658
+événement cardio-vasculaire	false	0.7658
+T1
+groupe	true	1.6
+état	true	1.5215
+g	true	1.4308
+personne	true	1.4308
+critères	true	1.3554
+elle	true	1.3508
+et	true	1.3333
+efficience	true	1.3281
+vs	true	1.3266
+inhibiteurs	true	1.3081
+si	true	1.2968
+antidiabétiques	true	1.2846
+b	true	1.2814
+pour	true	1.2262
+il	true	1.2211
+médicament	true	1.2211
+population	true	1.2211
+une	true	1.2211
+sulfamide	true	1.179
+insuline	true	1.178
+poids	true	1.1762
+m	true	1.1677
+dpp-4	true	1.1215
+données	true	1.1015
+des	true	1.0835
+critère	true	1.0547
+type	true	1.0436
+en	true	1.0211
+ui	true	1.0208
+ce	true	1.0192
+an	true	1.0
+raison	true	1.0
+preuve	true	0.994
+taux	true	0.9819
+risque	true	0.9698
+durée	true	0.9656
+qualité	true	0.9457
+vie	true	0.9433
+prise	true	0.8695
+fonction	true	0.8675
+ou	true	0.7937
+effectif	true	0.671
+niveau	true	0.671
+pondération	true	0.671
+validation	true	0.671
+étude	true	0.671
+particulier	false	1.2211
+littérature	false	0.994
+##########END##########
+des recherches pourraient également être menées sur l’effet d’un outil d’aide à la décision et à la prescription sur l’adéquation aux recommandations et sur l’évaluation et la valorisation de l’écart des pratiques par rapport aux recommandations11 en particulier sur le poids à donner et sur le choix entre mesure discrète ou continue.
+T4
+aide à la décision	true	1.3979
+T3
+adéquation aux recommandations	true	1.3333
+T2
+T1
+g	true	1.4308
+pratique	true	1.3346
+et	true	1.3333
+si	true	1.2968
+rapport	true	1.2609
+pour	true	1.2262
+il	true	1.2211
+écart	true	1.2211
+évaluation	true	1.2211
+prescription	true	1.1964
+poids	true	1.1762
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+adéquation	true	1.0
+aide	true	1.0
+an	true	1.0
+un	true	1.0
+valorisation	true	1.0
+choix	true	0.9782
+ou	true	0.7937
+particulier	false	1.2211
+recherches	false	1.0
+##########END##########
+il est donc recommandé de ne pas dépasser 1 500 mg de metformine par jour chez les patients dont la clairance de la créatinine se situe entre 30 et 60 ml/min/1,73 m².
+T4
+T3
+T2
+T1
+g	true	1.4308
+ml	true	1.4231
+et	true	1.3333
+si	true	1.2968
+clairance	true	1.2211
+créatinine	true	1.2211
+il	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+jour	true	0.9163
+##########END##########
+la possibilité d’une acidose lactique doit être systématiquement envisagée face à des signes non spécifiques tels que des troubles digestifs (douleurs abdominales, diarrhée, vomissements…), une dyspnée, des crampes musculaires, une asthénie sévère ou une anorexie.
+T4
+T3
+T2
+acidose lactique	true	1.3669
+douleurs abdominales	true	1.2263
+troubles digestifs	true	1.2263
+asthénie sévère	false	1.2263
+crampes musculaires	false	1.2263
+T1
+g	true	1.4308
+si	true	1.2968
+b	true	1.2814
+acidose	true	1.2609
+asthénie	true	1.2211
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+des	true	1.0835
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+diarrhée	true	1.0
+douleurs	true	1.0
+dyspnée	true	1.0
+ou	true	0.7937
+ado	true	0.5213
+##########END##########
+si de tels signes apparaissent au cours d’un traitement par metformine jusque-là bien toléré, l’arrêt du traitement est recommandé, au moins de façon temporaire, afin de s’assurer qu’il ne s’agit pas d’une acidose lactique.
+T4
+T3
+arrêt du traitement	true	1.3333
+T2
+acidose lactique	true	1.3669
+un traitement	true	1.2263
+façon temporaire	false	1.2263
+T1
+g	true	1.4308
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+acidose	true	1.2609
+cours	true	1.2252
+il	true	1.2211
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+an	true	1.0
+arrêt	true	1.0
+un	true	1.0
+façon	false	1.0
+##########END##########
+l’éventuelle reprise du traitement doit être extrêmement prudente et ne doit être entreprise qu’après s’être assuré de la normalité de la fonction rénale et de l’absence de persistance d’un facteur favorisant la survenue d’une acidose lactique.
+T4
+T3
+reprise du traitement	true	1.3333
+T2
+acidose lactique	true	1.3669
+fonction rénale	true	1.3179
+éventuelle reprise	false	1.2263
+T1
+elle	true	1.3508
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+acidose	true	1.2609
+une	true	1.2211
+m	true	1.1677
+en	true	1.0211
+ce	true	1.0192
+an	true	1.0
+facteur	true	1.0
+reprise	true	1.0
+un	true	1.0
+fonction	true	0.8675
+vue	true	0.627
+##########END##########
+les organismes professionnels et associations de patients et d’usagers suivants ont été sollicités pour l’élaboration de cet
+T4
+T3
+T2
+T1
+g	true	1.4308
+association	true	1.4129
+et	true	1.3333
+si	true	1.2968
+b	true	1.2814
+pour	true	1.2262
+m	true	1.1677
+en	true	1.0211
+ui	true	1.0208
+an	true	1.0
+##########END##########

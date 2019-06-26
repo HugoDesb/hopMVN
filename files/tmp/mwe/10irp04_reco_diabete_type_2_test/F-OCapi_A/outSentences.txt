@@ -2,17 +2,31 @@ l’autosurveillance glycémique n’est recommandée que si les résultats sont
 T4
 T3
 T2
+mesures hygiéno-diététiques	false	1.2263
 T1
+mesures	false	1.0
+modification	false	1.0
+résultats	false	1.0
 ##########END##########
 la réalisation systématique de l’autosurveillance glycémique chez les patients sous antidiabétiques ne provoquant pas d’hypoglycémie n’est pas recommandée.
 T4
 T3
 T2
+réalisation systématique	false	1.2263
 T1
+antidiabétiques	true	1.0
+hypoglycémie	false	1.0
+patients	false	1.0
+réalisation	false	1.0
 ##########END##########
 le recours à un endocrinologue est recommandé en cas de difficulté pour fixer l‘objectif glycémique ou pour l’atteindre.
 T4
 T3
 T2
+objectif glycémique	false	1.2263
 T1
+endocrinologue	true	1.0
+cas	false	1.0
+difficulté	false	1.0
+recours	false	1.0
 ##########END##########
