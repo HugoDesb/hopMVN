@@ -81,7 +81,7 @@ public class ExtractorPDF {
                 text += "\n"+hip[i];
             }
 
-            System.out.println(text);
+            //System.out.println(text);
 
             hop.add(text);
         } catch (IOException e) {

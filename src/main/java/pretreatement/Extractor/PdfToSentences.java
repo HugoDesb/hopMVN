@@ -26,7 +26,7 @@ public class PdfToSentences {
      */
     public static TextDocument extract(String config_file, String source, String name, String type, boolean isExpertFile, String language) throws IOException {
         Config config = Config.getInstance(config_file);
-        return extract(source, getDefaultTargetFile(config.getProp("pretreatment.output_folder"), source), isExpertFile, type);
+        return extract(source, getDefaultTargetFile(config.getProp("pretreatment.output_folder"), source), isExpertFile, type, language);
     }
 
     /**
@@ -36,7 +36,7 @@ public class PdfToSentences {
      * @param isExpertFile if the point is to extract highlighted text
      * @return the TextDocument containing the sentences
      */
-    public static TextDocument extract(String source, Path target, boolean isExpertFile, String type) throws IOException {
+    public static TextDocument extract(String source, Path target, boolean isExpertFile, String type, String language) throws IOException {
         TextDocument ret;
         Path sourcePath = Paths.get(source);
         File sourceFile = sourcePath.toFile();
@@ -48,7 +48,7 @@ public class PdfToSentences {
         ret = new TextDocument(target.toFile(), sentences);
 
         if(!isExpertFile){
-            ret.setLines((new Filter()).filter(ret.getLines()));
+            ret.setLines((new Filter(language)).filter(ret.getLines()));
         }
         return ret;
     }
@@ -77,15 +77,13 @@ public class PdfToSentences {
             //pour toutes les lignes du bloc
 
             for(String line : textLines){
-                if(line.trim().matches("AE\\s.*")){
-                    line = line.substring(3).trim();
-                }else if(!line.trim().matches(".*\\.\\.\\.\\..*")){
+                if(!line.trim().matches(".*\\.\\.\\.\\..*")){
                     String [] sentences = line.split("\\.\\s");
                     //pour toutes les "phrases"
                     for (String sentence: sentences) {
                         //System.out.println("Line : "+sentence);
                         //ligne non vide
-                        if(!sentence.trim().equals("")){
+                        if(!sentence.trim().isEmpty()){
                             // First character is a UPPERCASE
                             //TODO : [OPT] add empty or meaningless characters first ? (dots, spaces, ...)
                             if(sentence.matches("^[ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊÔŒÎÏËÇÆÂÀÙŸ].*")){
@@ -93,12 +91,13 @@ public class PdfToSentences {
                                 // add previous line
                                 //System.out.println("Sentence : "+toAdd+".");
                                 sentencesToReturn.add(new Sentence(toAdd.toString().trim()+"."));
+                                //System.out.println(toAdd.toString().trim()+".");
                                 //init new line
                                 toAdd = new StringBuilder(sentence);
                             } else {
                                 // first character is NOT an UPPERCASE
                                 // continue new line
-                                toAdd.append(sentence);
+                                toAdd.append(sentence+" ");
                             }
                         }
                     }

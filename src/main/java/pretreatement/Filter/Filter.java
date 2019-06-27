@@ -11,8 +11,15 @@ public class Filter {
     public String regexSelect;
     public String regexDelete;
 
-    public Filter(){
-        File f = new File(Config.getInstance().getProp("pretreatment.termes_declencheurs_path"));
+    public Filter(String language){
+        String folder = Config.getInstance().getProp("pretreatment.termes_declencheurs_path")+"termes_declencheurs_";
+        File f ;
+        if(language.equals("french")){
+            f = new File(folder+"fr");
+        }else{
+            f = new File(folder+"en");
+        }
+
         try {
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);

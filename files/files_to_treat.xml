@@ -7,5 +7,11 @@
               language="french"
               type="HAS"
               isExpertFile="false"/>
+        <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/CPG_diabetes_NHS.pdf"
+              name="CPG_diabetes_NHS"
+              topic="diabète"
+              language="english"
+              type="NICE"
+              isExpertFile="false"/>
     </files>
 </task>
