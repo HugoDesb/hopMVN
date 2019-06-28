@@ -1,5 +1,7 @@
 package main;
 
+import common.ihm.MainFrame;
+
 import java.io.File;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
         ArrayList<TaggedSentence> list = tagger.tag(td1);
         */
 
-        //MainFrame mf = new MainFrame();
+        MainFrame mf = new MainFrame();
 
 
         File fileXML = new File("./files/files_to_treat.xml");

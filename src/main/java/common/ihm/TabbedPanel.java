@@ -19,7 +19,11 @@ public class TabbedPanel extends JPanel {
         tabbedPane.addTab("Comparaison Extraction/Expert", panel2);
         tabbedPane.setMnemonicAt(1, KeyEvent.VK_2);
 
-        tabbedPane.setMnemonicAt(1, KeyEvent.VK_2);
+        JComponent panel3 = new VisualizerPanel();
+        tabbedPane.addTab("Visualize Open-Sesame tagging", panel3);
+        tabbedPane.setMnemonicAt(2, KeyEvent.VK_3);
+
+        tabbedPane.setMnemonicAt(2, KeyEvent.VK_3);
 
         //Add the tabbed pane to this panel.
         add(tabbedPane);
