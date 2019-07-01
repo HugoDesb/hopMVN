@@ -33,7 +33,7 @@ public class FrameSentence {
             FrameNetTag token = tokens.get(i);
 
             if (builder.isOfSameType(token)) {
-                builder.appendText(tokens.get(i).getWord());
+                builder.appendText(token.getWord());
             } else {
                 chunks.add(builder.build());
                 //new Chunk
@@ -82,4 +82,6 @@ public class FrameSentence {
     }
 
 
+    public boolean getSentenceNumber() {
+    }
 }

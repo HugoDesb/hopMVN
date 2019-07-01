@@ -4,7 +4,7 @@ import java.util.List;
 
 public class FrameNetTag {
 
-    private int index;
+    private int index, sentenceNumber;
     private String word, lemma, POSTag, target, frame, frameElement;
 
     public FrameNetTag(List<String> line) {
@@ -12,6 +12,7 @@ public class FrameNetTag {
         this.word = line.get(1);
         this.lemma = line.get(3);
         this.POSTag = line.get(5);
+        this.sentenceNumber = Integer.parseInt(line.get(6));
         this.target = line.get(12);
         this.frame = line.get(13);
         String[] fe = line.get(14).split("-");
@@ -20,6 +21,10 @@ public class FrameNetTag {
         }else{
             this.frameElement = fe[0];
         }
+    }
+
+    public int getSentenceNumber() {
+        return sentenceNumber;
     }
 
     public int getIndex() {
