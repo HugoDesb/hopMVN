@@ -1,18 +1,25 @@
 package common.ihm;
 
+import java.util.List;
+
 public class FrameNetTag {
 
     private int index;
     private String word, lemma, POSTag, target, frame, frameElement;
 
-    public FrameNetTag(int index, String word, String lemma, String POSTag, String target, String frame, String frameElement) {
-        this.index = index;
-        this.word = word;
-        this.lemma = lemma;
-        this.POSTag = POSTag;
-        this.target = target;
-        this.frame = frame;
-        this.frameElement = frameElement;
+    public FrameNetTag(List<String> line) {
+        this.index = Integer.parseInt(line.get(0));
+        this.word = line.get(1);
+        this.lemma = line.get(3);
+        this.POSTag = line.get(5);
+        this.target = line.get(12);
+        this.frame = line.get(13);
+        String[] fe = line.get(14).split("-");
+        if(fe.length>1){
+            this.frameElement = fe[1];
+        }else{
+            this.frameElement = fe[0];
+        }
     }
 
     public int getIndex() {
@@ -42,4 +49,6 @@ public class FrameNetTag {
     public String getFrameElement() {
         return frameElement;
     }
+
+
 }

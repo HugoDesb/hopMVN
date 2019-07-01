@@ -4,21 +4,52 @@ import common.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FrameSentence {
 
-    private String sentence;
-    private ArrayList<FrameNetTag> tokens;
 
-    public FrameSentence(ArrayList<FrameNetTag> tokens) {
-        this.tokens = tokens;
-        this.sentence = "";
-        for (FrameNetTag tok :tokens) {
-            sentence += tok.getWord();
-            if(!tok.getFrame().equals("_")){
+    private ArrayList<FrameNetTag> tokens;
+    private ArrayList<Chunk> chunks;
+
+    public FrameSentence(List<List<String>> lines) {
+        this.tokens = new ArrayList<>();
+        for (List<String> line :lines) {
+            tokens.add(new FrameNetTag(line));
+        }
+        chunks = createChunks();
+    }
+
+    public ArrayList<Chunk> getChunks() {
+        return chunks;
+    }
+
+    private ArrayList<Chunk> createChunks() {
+        ArrayList<Chunk> chunks = new ArrayList<>();
+
+        Chunk.Builder builder = new Chunk.Builder(tokens.get(0));
+        for (int i = 1; i < tokens.size(); i++) {
+            FrameNetTag token = tokens.get(i);
+
+            if (builder.isOfSameType(token)) {
+                builder.appendText(tokens.get(i).getWord());
+            } else {
+                chunks.add(builder.build());
+                //new Chunk
+                builder = new Chunk.Builder(token);
             }
         }
+        chunks.add(builder.build());
+        return chunks;
+    }
+
+    public String getSentence(){
+        String sentence = "";
+        for (FrameNetTag tags : tokens) {
+            sentence += tags.getWord()+" ";
+        }
+        return sentence.trim();
     }
 
     public ArrayList<FrameNetTag> getTokens() {

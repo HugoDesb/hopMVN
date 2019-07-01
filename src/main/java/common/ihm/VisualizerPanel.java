@@ -31,9 +31,7 @@ public class VisualizerPanel extends JComponent {
         btn_uploadCONLL.addActionListener(uploadListener);
         add(btn_uploadCONLL, BorderLayout.NORTH);
 
-        jp_annotations = new VisionPanel();
-        add(jp_annotations, BorderLayout.CENTER);
-
+        fc_regular = new JFileChooser();
     }
 
 
@@ -52,7 +50,8 @@ public class VisualizerPanel extends JComponent {
             //Check if regular or expert
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 conllFile= fc_regular.getSelectedFile();
-                //todo : LOAD csv file and frames
+                jp_annotations = new VisionPanel(conllFile);
+                add(jp_annotations, BorderLayout.CENTER);
             }
         }
     }

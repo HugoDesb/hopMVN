@@ -2,23 +2,32 @@ package common.ihm;
 
 import java.util.ArrayList;
 
+//ALL FRAMES, ONE SENTENCE
 public class SemanticSentence {
 
-    private String sentence;
-    private ArrayList<FrameSentence> tokens; //same for all sentences
+    //private String sentence;
+    private ArrayList<FrameSentence> frames; //same for all frames
 
 
-    public String getText(int index){
-        return tokens.get(index).get(1);
+
+    public SemanticSentence() {
+        frames = new ArrayList<>();
     }
 
-    public String getLemma(int index){
-        return tokens.get(index).get(3);
+    public void addFrameIdentification(FrameSentence fs){
+        frames.add(fs);
     }
 
-    public String getPOSTag(int index){
-        return tokens.get(index).get(5);
+    public boolean isSameSentence(FrameSentence fs){
+        //when first frame
+        if(frames.size() == 0){
+            return true;
+        }else{
+            return frames.get(0).getSentence().equals(fs.getSentence());
+        }
     }
 
-    public String getTarget
+    public ArrayList<FrameSentence> getFrames() {
+        return frames;
+    }
 }

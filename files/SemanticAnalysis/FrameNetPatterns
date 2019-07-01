@@ -1,0 +1,4 @@
+Intentionally_act[Act]-->Object
+Intentionally_act[Domain]-->Object
+Intentionally_act[Agent]-->Condition
+Purpose[Goal]-->Object
