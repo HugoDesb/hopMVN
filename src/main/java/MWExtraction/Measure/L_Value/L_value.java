@@ -235,7 +235,7 @@ public class L_value {
                         //que si es una palabra extraña, pondra como lema "unknown"
                         /*
                         if(list_word.get(r).getLemma().equalsIgnoreCase("<unknown>")){
-                            term_candidate = term_candidate + " " + list_word.get(r).getWord();
+                            term_candidate = term_candidate + " " + list_word.get(r).getText();
                         }else{
                             term_candidate = term_candidate + " " + list_word.get(r).getLemma();
                         }*/

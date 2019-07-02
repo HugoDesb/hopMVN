@@ -35,7 +35,22 @@ public class FrameNetPatterns {
         return hop;
     }
 
-    public Rule createRule(SemanticSentence semanticSentence) {
-        
+    public Rule createRule(Chunk chunk, FrameNetPattern fnp) {
+        ArrayList<String> condition = new ArrayList<>();
+        ArrayList<String> objet = new ArrayList<>();
+        if(fnp.getDestination().equals("Object")){
+            objet.add(chunk.getText());
+        }else{
+            condition.add(chunk.getText());
+        }
+        return new Rule(condition, objet, fnp.toString(), chunk.getSentenceFull());
+    }
+
+    public FrameNetPattern matches(Chunk chunk) {
+        for (FrameNetPattern fnp : frameNetPatterns) {
+            if(fnp.matches(chunk))
+                return fnp;
+        }
+        return null;
     }
 }

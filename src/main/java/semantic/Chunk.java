@@ -4,7 +4,9 @@ import java.awt.*;
 import java.util.Random;
 
 public class Chunk {
+    private String sentenceFull;
     private String text;
+    private String sentenceFrame;
     private boolean isFrame;
     private boolean isRole;
     private String subText;
@@ -13,8 +15,10 @@ public class Chunk {
 
     private Color color_bg;
 
-    public Chunk(String text, boolean isFrame, boolean isRole, String subText, int startIndex, int endIndex) {
+    public Chunk(String text, boolean isFrame, boolean isRole, String subText, int startIndex, int endIndex, String sentenceFrame, String sentenceFull) {
+        this.sentenceFull = sentenceFull;
         this.text = text;
+        this.sentenceFrame = sentenceFrame;
         this.isFrame = isFrame;
         this.isRole = isRole;
         this.subText = subText;
@@ -28,6 +32,10 @@ public class Chunk {
         float g = rand.nextFloat();
         float b = rand.nextFloat();
         return new Color(r, g, b);
+    }
+
+    public String getSentenceFrame() {
+        return sentenceFrame;
     }
 
     public boolean isFrame() {
@@ -57,6 +65,14 @@ public class Chunk {
         return color_bg;
     }
 
+    public String getSentenceFull() {
+        return sentenceFull;
+    }
+
+    public void setSentenceFull(String sentenceFull) {
+        this.sentenceFull = sentenceFull;
+    }
+
     static class Builder{
         private String text;
         private boolean isFrame;
@@ -65,6 +81,8 @@ public class Chunk {
         private Color color_bg;
         private int startIndex;
         private int endIndex;
+        private String sentenceFrame;
+        private String sentenceFull;
 
         public Builder(FrameNetTag token) {
             this.text = token.getWord();
@@ -87,18 +105,31 @@ public class Chunk {
         }
 
         public boolean isOfSameType(FrameNetTag token){
-
+            /*
             if(isFrame){
                 if(!token.getFrame().equals(subText)) return false;
             }else if(isRole){
-                if(!token.getFrame().equals(subText)) return false;
-            }
-            return true;
+                if(!token.getFrameElement().equals(subText)) return false;
+            }else{
+
+            }*/
+            return (token.getFrame().equals(subText) || token.getFrameElement().equals(subText));
+        }
+
+        public boolean isFrame() {
+            return isFrame;
+        }
+
+        public void addSentenceFrame(String sentenceFrame){
+            this.sentenceFrame = sentenceFrame;
         }
 
         public Chunk build(){
-            return new Chunk(text, isFrame, isRole, subText, startIndex, endIndex);
+            return new Chunk(text, isFrame, isRole, subText, startIndex, endIndex, sentenceFrame, sentenceFull);
         }
 
+        public void addSentenceFull(String sentence) {
+            this.sentenceFull = sentence;
+        }
     }
 }

@@ -58,4 +58,10 @@ public class FrameNetPattern {
     public int hashCode() {
         return Objects.hash(frameAndRoles, destination);
     }
+
+    public boolean matches(Chunk chunk) {
+        String leftLine = line.split("-->")[0];
+        String createdLine = chunk.getSentenceFrame()+"["+chunk.getSubText()+"]";
+        return createdLine.equals(leftLine);
+    }
 }
