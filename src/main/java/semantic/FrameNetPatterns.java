@@ -11,6 +11,11 @@ public class FrameNetPatterns {
         frameNetPatterns = loadPatterns(file);
     }
 
+    /**
+     * Load patterns from patterns file
+     * @param file
+     * @return
+     */
     private ArrayList<FrameNetPattern> loadPatterns(File file) {
         ArrayList<FrameNetPattern> hop = new ArrayList<>();
 
@@ -28,5 +33,9 @@ public class FrameNetPatterns {
         }
 
         return hop;
+    }
+
+    public Rule createRule(SemanticSentence semanticSentence) {
+        
     }
 }

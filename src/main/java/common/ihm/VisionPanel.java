@@ -1,5 +1,8 @@
 package common.ihm;
 
+import semantic.Chunk;
+import semantic.SemanticOpenSesameTagging;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;

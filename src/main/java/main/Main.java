@@ -20,9 +20,9 @@ public class Main {
         MainFrame mf = new MainFrame();
 
 
-        File fileXML = new File("./files/files_to_treat.xml");
+        //File fileXML = new File("./files/files_to_treat.xml");
 
-        ChainHandler.treatAllDeclaredFiles(fileXML, true, false, false);
+        //ChainHandler.treatAllDeclaredFiles(fileXML, true, false, false);
 
 
 

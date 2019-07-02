@@ -7,6 +7,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import pretreatement.Extractor.PdfToSentences;
+import semantic.RulesGenerator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -112,6 +113,13 @@ public class ChainHandler {
         return hop;
     }
 
+    /**
+     * Sequentially execute all files specified in the xml file
+     * @param xmlFile
+     * @param doPretreatment
+     * @param doMWE
+     * @param doSemantics
+     */
     public static void treatAllDeclaredFiles(File xmlFile, boolean doPretreatment, boolean doMWE, boolean doSemantics) {
 
         List<Map<String, String>> xml = processXml(xmlFile);
@@ -125,7 +133,17 @@ public class ChainHandler {
             if(doMWE){
                 multiWordExtractor(set);
             }
+
+            if(doSemantics){
+                launchOpenSesame(set);
+            }
+
+
         }
+    }
+
+    private static void launchOpenSesame(Map<String, String> set) {
+
     }
 
 
@@ -149,6 +167,10 @@ public class ChainHandler {
         return textDocument;
     }
 
+    /**
+     *
+     * @param set
+     */
     public static void multiWordExtractor(Map<String, String> set){
         // find mwe in all files
         Principal.main(set.get("config_file"), set.get("name"), set.get("language"));

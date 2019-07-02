@@ -1,4 +1,4 @@
-package common.ihm;
+package semantic;
 
 import java.util.List;
 

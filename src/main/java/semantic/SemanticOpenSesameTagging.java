@@ -1,4 +1,4 @@
-package common.ihm;
+package semantic;
 
 import MWExtraction.Wrapper.MultiColumnCSVSort;
 
@@ -37,7 +37,7 @@ public class SemanticOpenSesameTagging {
                     sentences.add(semanticSentence);
                     semanticSentence = new SemanticSentence();
                 }
-                semanticSentence.addFrameIdentification(fs);
+                semanticSentence.addFrameIdentification(fs, fs.getSentenceNumber());
                 tmpOneSentenceOneFrame = new ArrayList<>();
             }else{
                 tmpOneSentenceOneFrame.add(line);
@@ -48,7 +48,7 @@ public class SemanticOpenSesameTagging {
         return sentences;
     }
 
-    public ArrayList<ArrayList<Chunk>> getChunksForSentence(int index ){
+    public ArrayList<ArrayList<Chunk>> getChunksForSentence(int index){
         if(index<0 || index>=sentences.size()){
             throw new IndexOutOfBoundsException(""+index);
         }
@@ -56,7 +56,7 @@ public class SemanticOpenSesameTagging {
         ArrayList<ArrayList<Chunk>> hop = new ArrayList<>();
 
         for (FrameSentence frameSentence : sentences.get(index).getFrames()) {
-            hop.add(frameSentence.)
+            hop.add(frameSentence.getChunks());
         }
         return hop;
     }

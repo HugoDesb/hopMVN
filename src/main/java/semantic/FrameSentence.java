@@ -1,4 +1,4 @@
-package common.ihm;
+package semantic;
 
 import common.Pair;
 
@@ -82,6 +82,7 @@ public class FrameSentence {
     }
 
 
-    public boolean getSentenceNumber() {
+    public int getSentenceNumber() {
+        return tokens.get(0).getSentenceNumber();
     }
 }

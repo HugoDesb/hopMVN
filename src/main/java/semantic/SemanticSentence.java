@@ -1,4 +1,4 @@
-package common.ihm;
+package semantic;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,9 @@ public class SemanticSentence {
     private int sentenceNumber;
     private ArrayList<FrameSentence> frames; //same for all frames
 
-
+    public FrameGraph buildFrameGraph(){
+        return null;
+    }
 
     public SemanticSentence() {
         frames = new ArrayList<>();
@@ -21,7 +23,7 @@ public class SemanticSentence {
     }
 
     public boolean isSameSentence(FrameSentence fs){
-        return fs.getSentenceNumber().equals(sentenceNumber);
+        return fs.getSentenceNumber()==sentenceNumber;
     }
 
     public ArrayList<FrameSentence> getFrames() {

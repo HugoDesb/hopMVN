@@ -7,14 +7,20 @@ import java.util.Objects;
 
 public class FrameNetPattern {
 
+    private String line;
     private ArrayList<Pair<String, String>> frameAndRoles;
     private String destination;
 
     public FrameNetPattern(String line){
+        this.line = line;
         this.frameAndRoles = new ArrayList<>();
         deserialize(line);
     }
 
+    /**
+     * From a line from the patterns file, build a pattern
+     * @param line
+     */
     private void deserialize(String line){
         String [] tmp1 = line.split("-->");
         this.destination = tmp1[1];
@@ -32,6 +38,11 @@ public class FrameNetPattern {
 
     public String getDestination() {
         return destination;
+    }
+
+    @Override
+    public String toString() {
+        return line;
     }
 
     @Override
