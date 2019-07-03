@@ -15,7 +15,7 @@ public class Chunk {
 
     private Color color_bg;
 
-    public Chunk(String text, boolean isFrame, boolean isRole, String subText, int startIndex, int endIndex, String sentenceFrame, String sentenceFull) {
+    private Chunk(String text, boolean isFrame, boolean isRole, String subText, int startIndex, int endIndex, String sentenceFrame, String sentenceFull) {
         this.sentenceFull = sentenceFull;
         this.text = text;
         this.sentenceFrame = sentenceFrame;
@@ -26,6 +26,10 @@ public class Chunk {
         this.endIndex = endIndex;
     }
 
+    /**
+     * Generates a random Color
+     * @return a Color
+     */
     private Color getRandomColor() {
         Random rand = new Random();
         float r = rand.nextFloat();
@@ -34,26 +38,56 @@ public class Chunk {
         return new Color(r, g, b);
     }
 
-    public String getSentenceFrame() {
+    /**
+     * Getter for the full sentence
+     * @return the sentence
+     */
+    String getSentenceFrame() {
         return sentenceFrame;
     }
 
+    /**
+     * Getter for isFrame
+     * @return whether this chunk is of frame target type
+     */
     public boolean isFrame() {
         return isFrame;
     }
 
+    /**
+     * Getter for the text of the chunk
+     * @return the text of the chunk
+     */
     public String getText() {
         return text;
     }
 
+    /**
+     * Gets whether this chunk is special
+     * @return whether the chunk is of frame target or frame element type
+     */
     public boolean isSpecial() {
         return isRole || isFrame;
     }
 
-    public String getSubText() {
+    /**
+     * The SubText is equals to :
+     *      - the frame's name IF it is a frame target
+     *      - the frame element's name IF it is a frame element
+     *      - nothing ELSE
+     * @return the sub-text
+     */
+    String getSubText() {
         return subText;
     }
 
+    /**
+     * Getter for the background color of the chunk :
+     *      - black for a frame target
+     *      - random for a frame element
+     *      - transparent else
+     * @return the choosen color
+     */
     public Color getColor_bg() {
         if (isFrame) {
             color_bg = Color.BLACK;
@@ -65,7 +99,7 @@ public class Chunk {
         return color_bg;
     }
 
-    public String getSentenceFull() {
+    String getSentenceFull() {
         return sentenceFull;
     }
 
@@ -84,7 +118,7 @@ public class Chunk {
         private String sentenceFrame;
         private String sentenceFull;
 
-        public Builder(FrameNetTag token) {
+        Builder(FrameNetTag token) {
             this.text = token.getWord();
 
             this.subText = "";
@@ -99,12 +133,12 @@ public class Chunk {
             this.endIndex = startIndex+1;
         }
 
-        public void appendText(String text) {
+        void appendText(String text) {
             this.text += " " + text;
             endIndex += 1;
         }
 
-        public boolean isOfSameType(FrameNetTag token){
+        boolean isOfSameType(FrameNetTag token){
             /*
             if(isFrame){
                 if(!token.getFrame().equals(subText)) return false;
@@ -120,15 +154,15 @@ public class Chunk {
             return isFrame;
         }
 
-        public void addSentenceFrame(String sentenceFrame){
+        void addSentenceFrame(String sentenceFrame){
             this.sentenceFrame = sentenceFrame;
         }
 
-        public Chunk build(){
+        Chunk build(){
             return new Chunk(text, isFrame, isRole, subText, startIndex, endIndex, sentenceFrame, sentenceFull);
         }
 
-        public void addSentenceFull(String sentence) {
+        void addSentenceFull(String sentence) {
             this.sentenceFull = sentence;
         }
     }

@@ -7,7 +7,7 @@ public class FrameNetTag {
     private int index, sentenceNumber;
     private String word, lemma, POSTag, target, frame, frameElement;
 
-    public FrameNetTag(List<String> line) {
+    FrameNetTag(List<String> line) {
         this.index = Integer.parseInt(line.get(0));
         this.word = line.get(1);
         this.lemma = line.get(3);
@@ -23,7 +23,7 @@ public class FrameNetTag {
         }
     }
 
-    public int getSentenceNumber() {
+    int getSentenceNumber() {
         return sentenceNumber;
     }
 
@@ -47,11 +47,11 @@ public class FrameNetTag {
         return target;
     }
 
-    public String getFrame() {
+    String getFrame() {
         return frame;
     }
 
-    public String getFrameElement() {
+    String getFrameElement() {
         return frameElement;
     }
 

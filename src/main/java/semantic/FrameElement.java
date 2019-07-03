@@ -8,28 +8,27 @@ import java.util.ArrayList;
 public class FrameElement {
     private String name;
     private ArrayList<Integer> indexes;
-    private String text;
+    private ArrayList<FrameNetTag> tokens;
 
     /**
-     * constructor
-     * @param name the frame element name
-     * @param word the word
-     * @param index and his index in the sentence
+     * Constructor
+     * @param token the first token
      */
-    public FrameElement(String name, String word, int index) {
-        this.name = name;
-        this.indexes = new ArrayList<>(); indexes.add(index);
-        this.text = word;
+    FrameElement(FrameNetTag token) {
+        tokens = new ArrayList<>();
+        tokens.add(token);
+        this.name = token.getFrameElement();
+        this.indexes = new ArrayList<>();
+        indexes.add(token.getIndex());
     }
 
     /**
      * Adds a token to this frame element
-     * @param word the word
-     * @param index and his index in the sentence
+     * @param token the token
      */
-    public void addToken(String word, int index){
-        this.text += " "+word;
-        indexes.add(index);
+    void addToken(FrameNetTag token){
+        tokens.add(token);
+        indexes.add(token.getIndex());
     }
 
     /**
@@ -53,7 +52,11 @@ public class FrameElement {
      * @return the text
      */
     public String getText() {
-        return text;
+        StringBuilder sentence = new StringBuilder();
+        for (FrameNetTag tags : tokens) {
+            sentence.append(tags.getWord()).append(" ");
+        }
+        return sentence.toString().trim();
     }
 
     @Override
@@ -61,7 +64,7 @@ public class FrameElement {
         return "FrameElement{" +
                 "name='" + name + '\'' +
                 ", indexes=" + indexes +
-                ", text='" + text + '\'' +
+                ", tokens=" + tokens +
                 '}';
     }
 }

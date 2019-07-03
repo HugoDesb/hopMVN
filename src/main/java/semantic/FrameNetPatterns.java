@@ -7,7 +7,7 @@ public class FrameNetPatterns {
 
     private ArrayList<FrameNetPattern> frameNetPatterns;
 
-    public FrameNetPatterns(File file) {
+    FrameNetPatterns(File file) {
         frameNetPatterns = loadPatterns(file);
     }
 
@@ -35,7 +35,13 @@ public class FrameNetPatterns {
         return hop;
     }
 
-    public Rule createRule(Chunk chunk, FrameNetPattern fnp) {
+    /**
+     *
+     * @param chunk
+     * @param fnp
+     * @return
+     */
+    Rule createRule(Chunk chunk, FrameNetPattern fnp) {
         ArrayList<String> condition = new ArrayList<>();
         ArrayList<String> objet = new ArrayList<>();
         if(fnp.getDestination().equals("Object")){
@@ -46,6 +52,11 @@ public class FrameNetPatterns {
         return new Rule(condition, objet, fnp.toString(), chunk.getSentenceFull());
     }
 
+    /**
+     * Compare a Chunk to this pattern to see if it matches
+     * @param chunk a chunk
+     * @return whether the chunk matches the pattern
+     */
     public FrameNetPattern matches(Chunk chunk) {
         for (FrameNetPattern fnp : frameNetPatterns) {
             if(fnp.matches(chunk))

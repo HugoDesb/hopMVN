@@ -10,7 +10,7 @@ public class Rule {
     private String correspondingPattern;
 
 
-    public Rule(ArrayList<String> condition, ArrayList<String> object, String correspondingPattern, String sentence) {
+    Rule(ArrayList<String> condition, ArrayList<String> object, String correspondingPattern, String sentence) {
         this.sentence = sentence;
         this.condition = condition;
         this.object = object;

@@ -11,7 +11,7 @@ public class FrameNetPattern {
     private ArrayList<Pair<String, String>> frameAndRoles;
     private String destination;
 
-    public FrameNetPattern(String line){
+    FrameNetPattern(String line){
         this.line = line;
         this.frameAndRoles = new ArrayList<>();
         deserialize(line);
@@ -36,7 +36,7 @@ public class FrameNetPattern {
         return frameAndRoles;
     }
 
-    public String getDestination() {
+    String getDestination() {
         return destination;
     }
 

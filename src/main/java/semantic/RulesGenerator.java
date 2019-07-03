@@ -8,12 +8,12 @@ public class RulesGenerator {
     private SemanticOpenSesameTagging sentences;
     private FrameNetPatterns matcher;
 
-    public RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns matcher) {
+    private RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns matcher) {
         this.sentences = sentences;
         this.matcher = matcher;
     }
 
-    public ArrayList<Rule> generateRules(){
+    private ArrayList<Rule> generateRules(){
         ArrayList<Rule> rules = new ArrayList<>();
 
 
@@ -32,9 +32,6 @@ public class RulesGenerator {
             }
 
         }
-
-
-
         return rules;
     }
 

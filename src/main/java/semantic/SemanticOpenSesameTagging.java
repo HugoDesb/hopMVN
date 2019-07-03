@@ -10,44 +10,52 @@ public class SemanticOpenSesameTagging {
 
     private File file;
 
-    private ArrayList<SemanticSentence> sentences;
+    private ArrayList<Sentence> sentences;
 
     public SemanticOpenSesameTagging(File file) {
         this.file = file;
-        this.sentences = readCSV();
+        this.sentences = readCONLL();
     }
 
-    public ArrayList<SemanticSentence> getSentences() {
+    public ArrayList<Sentence> getSentences() {
         return sentences;
     }
 
-    public ArrayList<SemanticSentence> readCSV(){
+    /**
+     * Read the conll file and extract its content
+     * @return All sentences with their taggings
+     */
+    private ArrayList<Sentence> readCONLL(){
         List<List<String>> hop = MultiColumnCSVSort.readCsv(file.getAbsolutePath());
 
-        ArrayList<SemanticSentence> sentences = new ArrayList<>();
+        ArrayList<Sentence> sentences = new ArrayList<>();
 
-        SemanticSentence semanticSentence = new SemanticSentence();
+        Sentence sentence = new Sentence();
+
         List<List<String>> tmpOneSentenceOneFrame = new ArrayList<>();
-        for (List<String> line : hop) {
-
-            if(line.get(0).isEmpty()){
-                //new Block
-                FrameSentence fs = new FrameSentence(tmpOneSentenceOneFrame);
-                if(!semanticSentence.isSameSentence(fs)){
-                    sentences.add(semanticSentence);
-                    semanticSentence = new SemanticSentence();
+        int currentSentenceNumber = 0;
+        for (List<String> line : hop)
+            if (line.get(0).isEmpty()) {
+                if (Integer.parseInt(line.get(6)) == currentSentenceNumber) {
+                    sentence.addFrameIdentification(tmpOneSentenceOneFrame);
+                    sentences.add(sentence);
+                    sentence = new Sentence();
                 }
-                semanticSentence.addFrameIdentification(fs, fs.getSentenceNumber());
+                sentence.addFrameIdentification(tmpOneSentenceOneFrame);
                 tmpOneSentenceOneFrame = new ArrayList<>();
-            }else{
+            } else {
                 tmpOneSentenceOneFrame.add(line);
             }
-        }
-        sentences.add(semanticSentence);
+        sentences.add(sentence);
 
         return sentences;
     }
 
+    /**
+     * Gets the Chunks for each frames of the sentence
+     * @param index sentence number
+     * @return list of list of Chunk
+     */
     public ArrayList<ArrayList<Chunk>> getChunksForSentence(int index){
         if(index<0 || index>=sentences.size()){
             throw new IndexOutOfBoundsException(""+index);
@@ -55,8 +63,8 @@ public class SemanticOpenSesameTagging {
 
         ArrayList<ArrayList<Chunk>> hop = new ArrayList<>();
 
-        for (FrameSentence frameSentence : sentences.get(index).getFrames()) {
-            hop.add(frameSentence.getChunks());
+        for (Frame frame : sentences.get(index).getFrames()) {
+            hop.add(frame.getChunks());
         }
         return hop;
     }

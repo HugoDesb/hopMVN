@@ -1,52 +1,17 @@
 package semantic;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class FrameSentence {
+public class Frame {
 
-    private String frameName;
-    private int targetIndex;
     private ArrayList<FrameElement> frameElements;
 
-    private ArrayList<FrameNetTag> tokens;
-    private ArrayList<Chunk> chunks;
+    private FrameNetTag token;
 
-    public FrameSentence(List<List<String>> lines) {
-        this.frameElements = new ArrayList<>();
-        this.tokens = new ArrayList<>();
-        for (List<String> line :lines) {
-            tokens.add(new FrameNetTag(line));
-        }
-        chunks = createChunks();
-        frameElements = parse();
-        for (FrameElement fe :frameElements) {
-            System.out.println(frameName+" : "+fe);
-        }
-    }
 
-    /**
-     * Gets all frame elements for this sentence
-     * @return a list of FrameElemnts
-     */
-    private ArrayList<FrameElement> parse(){
-        ArrayList<FrameElement> frameElements = new ArrayList<>();
-
-        for (FrameNetTag token: tokens) {
-            if(!token.getFrame().equals("_")){
-                this.frameName = token.getFrame();
-                this.targetIndex = token.getIndex();
-            }else if(!token.getFrameElement().equals("O")){
-                FrameElement fe = getFrameElementIfExists(frameElements, token.getFrameElement());
-                if(fe != null){
-                    fe.addToken(token.getWord(), token.getIndex());
-                }else{
-                    fe = new FrameElement(token.getFrameElement(), token.getIndex(), token.getWord());
-                    frameElements.add(fe);
-                }
-            }
-        }
-        return frameElements;
+    Frame(FrameNetTag token){
+        this.token = token;
+        frameElements = new ArrayList<>();
     }
 
     /**
@@ -69,7 +34,20 @@ public class FrameSentence {
      * @return the frame name
      */
     public String getFrameName() {
-        return frameName;
+        return token.getFrame();
+    }
+
+    public void addToFrame(FrameNetTag token) {
+        boolean added = false;
+        for (FrameElement fetmp:frameElements) {
+            if(token.getFrameElement().equals(fetmp.getName())){
+                fetmp.addToken(token);
+                added = true;
+            }
+        }
+        if(!added) {
+            frameElements.add(new FrameElement(token));
+        }
     }
 
     /**
@@ -80,18 +58,22 @@ public class FrameSentence {
         return frameElements;
     }
 
+
     /**
      * Getter for the chunks
      * @return a list of Chunk
      */
-    public ArrayList<Chunk> getChunks() {
-        return chunks;
+    /*
+    ArrayList<Chunk> getChunks() {
+        return createChunks();
     }
+    */
 
     /**
      * Create chunks based on the tokens
      * @return a list of Chunk
      */
+    /*
     private ArrayList<Chunk> createChunks() {
         ArrayList<Chunk> chunks = new ArrayList<>();
 
@@ -125,40 +107,14 @@ public class FrameSentence {
         }
         return chunks;
     }
+    */
 
-    /**
-     * Gets the full sentence
-     * @return the sentence
-     */
-    public String getSentence(){
-        String sentence = "";
-        for (FrameNetTag tags : tokens) {
-            sentence += tags.getWord()+" ";
-        }
-        return sentence.trim();
-    }
-
-    /**
-     * Getter for the tokens
-     * @return a list of tokens
-     */
-    public ArrayList<FrameNetTag> getTokens() {
-        return tokens;
-    }
 
     /**
      * Getter for the target index
      * @return the target index
      */
     public int getTargetIndex(){
-        return targetIndex;
-    }
-
-    /**
-     * Getter for the sentence number in the corpus
-     * @return the sentence number
-     */
-    public int getSentenceNumber() {
-        return tokens.get(0).getSentenceNumber();
+        return token.getIndex();
     }
 }
