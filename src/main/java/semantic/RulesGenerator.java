@@ -1,38 +1,50 @@
 package semantic;
 
+import common.Pair;
+
 import java.io.File;
 import java.util.ArrayList;
 
 public class RulesGenerator {
 
     private SemanticOpenSesameTagging sentences;
-    private FrameNetPatterns matcher;
+    private FrameNetPatterns patterns;
 
-    private RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns matcher) {
+    private RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns patterns) {
         this.sentences = sentences;
-        this.matcher = matcher;
+        this.patterns = patterns;
     }
 
     private ArrayList<Rule> generateRules(){
         ArrayList<Rule> rules = new ArrayList<>();
 
 
+        for(int i = 0; i<sentences.getSentences().size(); i++){
+            Rule r = new Rule(sentences.getSentences().get(i));
+            for (FrameNetPattern pattern : patterns.getFrameNetPatterns()) {
+                Pair<ArrayList<FrameNetTag>, ArrayList<FrameNetTag>> hop = sentences.getSentences().get(i).matches(pattern);
+                if(!hop.getValue1().isEmpty() && !hop.getValue2().isEmpty()){
+                    r.addMatch(hop.getValue1() , hop.getValue1(), pattern);
+                }
+            }
+        }
+        return rules;
+
+        /**
         for (int i = 0; i < sentences.getSentences().size();i++) {
             ArrayList<ArrayList<Chunk>> hop = sentences.getChunksForSentence(i);
-
             //list frames and their roles
-
             for (ArrayList<Chunk> frameChunks: hop) {
                 for (Chunk chunk: frameChunks) {
-                    FrameNetPattern fnp = matcher.matches(chunk);
+                    FrameNetPattern fnp = patterns.matches(chunk);
                     if(fnp!=null){
-                        rules.add(matcher.createRule(chunk, fnp));
+                        rules.add(patterns.createRule(chunk, fnp));
                     }
                 }
             }
-
         }
         return rules;
+        */
     }
 
     public static void main(String [] args){

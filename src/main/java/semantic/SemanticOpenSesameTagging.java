@@ -36,14 +36,16 @@ public class SemanticOpenSesameTagging {
         int currentSentenceNumber = 0;
         for (List<String> line : hop)
             if (line.get(0).isEmpty()) {
-                if (Integer.parseInt(line.get(6)) == currentSentenceNumber) {
+                if (tmpOneSentenceOneFrame.get(0).get() == currentSentenceNumber) {
                     sentence.addFrameIdentification(tmpOneSentenceOneFrame);
                     sentences.add(sentence);
                     sentence = new Sentence();
+                    currentSentenceNumber++;
                 }
                 sentence.addFrameIdentification(tmpOneSentenceOneFrame);
                 tmpOneSentenceOneFrame = new ArrayList<>();
             } else {
+                currentSentenceNumber = Integer.parseInt(line.get(6));
                 tmpOneSentenceOneFrame.add(line);
             }
         sentences.add(sentence);
@@ -64,7 +66,7 @@ public class SemanticOpenSesameTagging {
         ArrayList<ArrayList<Chunk>> hop = new ArrayList<>();
 
         for (Frame frame : sentences.get(index).getFrames()) {
-            hop.add(frame.getChunks());
+            //hop.add(frame.getChunks());
         }
         return hop;
     }

@@ -1,6 +1,7 @@
 package semantic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Frame {
 
@@ -27,6 +28,19 @@ public class Frame {
             }
         }
         return null;
+    }
+
+    public ArrayList<Integer> getRange(){
+        ArrayList<Integer> ranger = new ArrayList<>();
+
+        for (FrameElement fe :frameElements) {
+            ranger.addAll(fe.getRange());
+        }
+        ranger.add(token.getIndex());
+
+        Collections.sort(ranger);
+
+        return ranger;
     }
 
     /**

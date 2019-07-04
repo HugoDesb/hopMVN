@@ -35,21 +35,8 @@ public class FrameNetPatterns {
         return hop;
     }
 
-    /**
-     *
-     * @param chunk
-     * @param fnp
-     * @return
-     */
-    Rule createRule(Chunk chunk, FrameNetPattern fnp) {
-        ArrayList<String> condition = new ArrayList<>();
-        ArrayList<String> objet = new ArrayList<>();
-        if(fnp.getDestination().equals("Object")){
-            objet.add(chunk.getText());
-        }else{
-            condition.add(chunk.getText());
-        }
-        return new Rule(condition, objet, fnp.toString(), chunk.getSentenceFull());
+    public ArrayList<FrameNetPattern> getFrameNetPatterns() {
+        return frameNetPatterns;
     }
 
     /**

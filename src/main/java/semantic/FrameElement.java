@@ -43,7 +43,7 @@ public class FrameElement {
      * Getter for the indexes in the sentence of this frame element
      * @return a list of Integers
      */
-    public ArrayList<Integer> getIndexes() {
+    public ArrayList<Integer> getRange() {
         return indexes;
     }
 
@@ -67,4 +67,5 @@ public class FrameElement {
                 ", tokens=" + tokens +
                 '}';
     }
+
 }
