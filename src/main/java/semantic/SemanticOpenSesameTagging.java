@@ -3,6 +3,8 @@ package semantic;
 import MWExtraction.Wrapper.MultiColumnCSVSort;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,11 @@ public class SemanticOpenSesameTagging {
 
     public SemanticOpenSesameTagging(File file) {
         this.file = file;
-        this.sentences = readCONLL();
+        try {
+            this.sentences = readCONLL();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public ArrayList<Sentence> getSentences() {
@@ -25,29 +31,39 @@ public class SemanticOpenSesameTagging {
      * Read the conll file and extract its content
      * @return All sentences with their taggings
      */
-    private ArrayList<Sentence> readCONLL(){
+    private ArrayList<Sentence> readCONLL() throws IOException {
         List<List<String>> hop = MultiColumnCSVSort.readCsv(file.getAbsolutePath());
 
         ArrayList<Sentence> sentences = new ArrayList<>();
 
         Sentence sentence = new Sentence();
-
+        PrintStream ps = new PrintStream(new File("./files/tmp.txt"));
+        //PrintWriter pw = new PrintWriter(new File("./files/tmp.txt"));
+        //pw.println("hop");
         List<List<String>> tmpOneSentenceOneFrame = new ArrayList<>();
-        int currentSentenceNumber = 0;
-        for (List<String> line : hop)
-            if (line.get(0).isEmpty()) {
-                if (Integer.parseInt(tmpOneSentenceOneFrame.get(0).get(6)) == currentSentenceNumber) {
-                    sentence.addFrameIdentification(tmpOneSentenceOneFrame);
+        for (List<String> line : hop) {
+            //System.out.println(line.size());
+            if (line.isEmpty() || line.get(0).isEmpty()) {
+                //System.out.println(tmpOneSentenceOneFrame);
+
+                int thisEndedSentenceNumber = Integer.parseInt(tmpOneSentenceOneFrame.get(0).get(6));
+
+                if (sentences.size() != thisEndedSentenceNumber-1) {
+                    //this sentence is not the same (next)
                     sentences.add(sentence);
                     sentence = new Sentence();
-                    currentSentenceNumber++;
                 }
                 sentence.addFrameIdentification(tmpOneSentenceOneFrame);
                 tmpOneSentenceOneFrame = new ArrayList<>();
             } else {
-                currentSentenceNumber = Integer.parseInt(line.get(6));
+                //System.out.println(line);
+                ps.println(line);
+                //System.out.println(line);
                 tmpOneSentenceOneFrame.add(line);
             }
+        }
+        //pw.close();
+        //sentence.addFrameIdentification(tmpOneSentenceOneFrame);
         sentences.add(sentence);
 
         return sentences;

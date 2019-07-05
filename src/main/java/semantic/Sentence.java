@@ -27,6 +27,8 @@ public class Sentence {
         for (FrameNetTag token: tokens) {
             Set<String> tmp = new HashSet<>();
             for (Frame frame : frames) {
+                System.out.println(frame);
+                System.out.println(token);
                 if(frame.getRange().contains(token.getIndex())){
                     for (FrameElement fe : frame.getFrameElements()) {
                         if(fe.getRange().contains(token.getIndex())){
@@ -45,12 +47,12 @@ public class Sentence {
      * @param fnp
      * @return
      */
-    public Pair<ArrayList<FrameNetTag>, ArrayList<FrameNetTag>> matches(FrameNetPattern fnp){
-        if(deconstructedFramesAndRolesPerToken  == null){
+    public Pair<Set<FrameNetTag>, Set<FrameNetTag>> matches(FrameNetPattern fnp){
+        if(deconstructedFramesAndRolesPerToken == null){
             deconstructedFramesAndRolesPerToken = deconstructIntoTokens();
         }
-        ArrayList<FrameNetTag> premises = new ArrayList<>();
-        ArrayList<FrameNetTag> conslusion = new ArrayList<>();
+        Set<FrameNetTag> premises = new HashSet<>();
+        Set<FrameNetTag> conslusion = new HashSet<>();
         boolean matchesPremise = false, matchesConclusion = false;
 
         for (FrameNetTag token: deconstructedFramesAndRolesPerToken.keySet()) {
@@ -121,9 +123,16 @@ public class Sentence {
      * @param lines
      */
     void addFrameIdentification(List<List<String>> lines){
+        ArrayList<FrameNetTag> tokens = new ArrayList<>();
+
         for (List<String> line :lines) {
             tokens.add(new FrameNetTag(line));
         }
+
+        if(this.tokens.size() == 0){
+            this.tokens = tokens;
+        }
+
         Frame m = findFrame(tokens);
 
         frames.add(findFrameElements(tokens, m));
@@ -171,12 +180,9 @@ public class Sentence {
         return sentence.toString().trim();
     }
 
-    /**
-     *
-     * @return
-     */
-    public int getSentenceNumber(){
-        return tokens.get(0).getSentenceNumber();
+    @Override
+    public String toString(){
+        return getSentence();
     }
 
     /**

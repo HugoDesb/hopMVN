@@ -38,9 +38,7 @@ public class FrameNetPattern {
         }
 
         if(tmp1.length > 1){
-            System.out.println(tmp1[1]);
             for (String conslusion: tmp1[1].split("\\+")) {
-                System.out.println(conslusion);
                 conslusions.add(conslusion);
             }
         }

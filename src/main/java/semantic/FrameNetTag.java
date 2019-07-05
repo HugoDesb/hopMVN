@@ -1,8 +1,18 @@
 package semantic;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class FrameNetTag {
+
+    public static Comparator<FrameNetTag> indexComparator = new Comparator<FrameNetTag>() {
+        @Override
+        public int compare(FrameNetTag t1, FrameNetTag t2) {
+
+            return (t2.getIndex() < t1.getIndex() ? -1 :
+                    (t2.getIndex() == t1.getIndex() ? 0 : 1));
+        }
+    };
 
     private int index, sentenceNumber;
     private String word, lemma, POSTag, target, frame, frameElement;

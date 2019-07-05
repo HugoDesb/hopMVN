@@ -1,0 +1,7 @@
+;Means[Descriptor]
+;Means[Means]+Means[Descriptor]
+;Means[Means]+Means[Descriptor]+Means[Purpose]
+Means[Agent];Means[Means]+Means[Descriptor]
+;Inclusion[Total]
+;Inclusion[Part]
+;Risk[Action]
