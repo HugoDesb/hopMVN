@@ -55,5 +55,12 @@ public class FrameNetTag {
         return frameElement;
     }
 
-
+    @Override
+    public String toString() {
+        return "{" +
+                "i=" + index +
+                ", word='" + word + '\'' +
+                ", lemma='" + lemma + '\'' +
+                '}';
+    }
 }

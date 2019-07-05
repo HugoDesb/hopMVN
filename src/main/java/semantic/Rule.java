@@ -36,6 +36,10 @@ public class Rule {
         correspondingPatterns.add(fnp);
     }
 
+    public boolean isEmpty(){
+        return correspondingPatterns.size() == 0;
+    }
+
 
     public ArrayList<FrameNetTag> getPremise() {
         return premise;

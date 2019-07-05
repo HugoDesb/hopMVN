@@ -36,7 +36,7 @@ public class SemanticOpenSesameTagging {
         int currentSentenceNumber = 0;
         for (List<String> line : hop)
             if (line.get(0).isEmpty()) {
-                if (tmpOneSentenceOneFrame.get(0).get() == currentSentenceNumber) {
+                if (Integer.parseInt(tmpOneSentenceOneFrame.get(0).get(6)) == currentSentenceNumber) {
                     sentence.addFrameIdentification(tmpOneSentenceOneFrame);
                     sentences.add(sentence);
                     sentence = new Sentence();

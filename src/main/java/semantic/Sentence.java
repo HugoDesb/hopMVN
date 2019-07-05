@@ -16,7 +16,6 @@ public class Sentence {
     Sentence() {
         this.tokens = new ArrayList<>();
         frames = new ArrayList<>();
-        deconstructedFramesAndRolesPerToken = deconstructIntoTokens();
     }
 
     /**
@@ -24,7 +23,7 @@ public class Sentence {
      * @return
      */
     private Map<FrameNetTag, Set<String>> deconstructIntoTokens(){
-        Map<FrameNetTag, Set<String>> framesPerToken = new HashMap<>();
+        Map<FrameNetTag, Set<String>> framesPerToken = new LinkedHashMap<>();
         for (FrameNetTag token: tokens) {
             Set<String> tmp = new HashSet<>();
             for (Frame frame : frames) {
@@ -47,21 +46,24 @@ public class Sentence {
      * @return
      */
     public Pair<ArrayList<FrameNetTag>, ArrayList<FrameNetTag>> matches(FrameNetPattern fnp){
+        if(deconstructedFramesAndRolesPerToken  == null){
+            deconstructedFramesAndRolesPerToken = deconstructIntoTokens();
+        }
         ArrayList<FrameNetTag> premises = new ArrayList<>();
         ArrayList<FrameNetTag> conslusion = new ArrayList<>();
-        boolean matchesPremise = true, matchesConclusion = true;
+        boolean matchesPremise = false, matchesConclusion = false;
 
         for (FrameNetTag token: deconstructedFramesAndRolesPerToken.keySet()) {
-            int objective = fnp.getPremises().size();
-            matchesPremise = tokenMatches(fnp, token, objective);
-
-
-            objective = fnp.getConslusions().size();
-            matchesConclusion = tokenMatches(fnp, token, objective);
+            matchesPremise = tokenMatchesPremise(fnp, token);
+            matchesConclusion = tokenMatchesConclusion(fnp, token);
 
             if(matchesPremise && matchesConclusion){
-                premises.add(token);
-                conslusion.add(token);
+                if(fnp.getPremises().size() != 0){
+                    premises.add(token);
+                }
+                if(fnp.getConslusions().size() != 0){
+                    conslusion.add(token);
+                }
             }
         }
 
@@ -72,13 +74,31 @@ public class Sentence {
      *
      * @param fnp
      * @param token
-     * @param objective
      * @return
      */
-    private boolean tokenMatches(FrameNetPattern fnp, FrameNetTag token, int objective) {
+    private boolean tokenMatchesPremise(FrameNetPattern fnp, FrameNetTag token) {
+        int objective =  fnp.getPremises().size();
         Set<String> frameAndRole = deconstructedFramesAndRolesPerToken.get(token);
         int current = 0;
         for (String pattern : fnp.getPremises()) {
+            if(frameAndRole.contains(pattern)){
+                current++;
+            }
+        }
+        return objective == current;
+    }
+
+    /**
+     *
+     * @param fnp
+     * @param token
+     * @return
+     */
+    private boolean tokenMatchesConclusion(FrameNetPattern fnp, FrameNetTag token) {
+        int objective =  fnp.getConslusions().size();
+        Set<String> frameAndRole = deconstructedFramesAndRolesPerToken.get(token);
+        int current = 0;
+        for (String pattern : fnp.getConslusions()) {
             if(frameAndRole.contains(pattern)){
                 current++;
             }

@@ -18,6 +18,8 @@ public class FrameNetPattern {
     FrameNetPattern(String line){
         this.line = line;
         this.frameAndRoles = new ArrayList<>();
+        this.premises = new ArrayList<>();
+        this.conslusions = new ArrayList<>();
         deserialize(line);
     }
 
@@ -26,6 +28,7 @@ public class FrameNetPattern {
      * @param line
      */
     private void deserialize(String line){
+        System.out.println(line);
         this.line = "("+line+")";
         String [] tmp1 = line.split(";");
         if(!tmp1[0].isEmpty()){
@@ -34,8 +37,10 @@ public class FrameNetPattern {
             }
         }
 
-        if(!tmp1[1].isEmpty()){
+        if(tmp1.length > 1){
+            System.out.println(tmp1[1]);
             for (String conslusion: tmp1[1].split("\\+")) {
+                System.out.println(conslusion);
                 conslusions.add(conslusion);
             }
         }
