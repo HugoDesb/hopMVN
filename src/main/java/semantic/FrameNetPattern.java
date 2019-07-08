@@ -28,7 +28,6 @@ public class FrameNetPattern {
      * @param line
      */
     private void deserialize(String line){
-        System.out.println(line);
         this.line = "("+line+")";
         String [] tmp1 = line.split(";");
         if(!tmp1[0].isEmpty()){

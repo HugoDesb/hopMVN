@@ -9,8 +9,8 @@ public class FrameNetTag {
         @Override
         public int compare(FrameNetTag t1, FrameNetTag t2) {
 
-            return (t2.getIndex() < t1.getIndex() ? -1 :
-                    (t2.getIndex() == t1.getIndex() ? 0 : 1));
+            return (t2.getIndex() < t1.getIndex() ? 1 :
+                    (t2.getIndex() == t1.getIndex() ? 0 : -1));
         }
     };
 

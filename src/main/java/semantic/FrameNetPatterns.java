@@ -24,8 +24,9 @@ public class FrameNetPatterns {
 
             String line;
             while((line = bf.readLine())!=null){
-                if(!line.trim().isEmpty()){
+                if(!line.trim().isEmpty() && line.charAt(0) != '#'){
                     hop.add(new FrameNetPattern(line));
+                    System.out.println(line);
                 }
             }
         } catch (IOException e) {

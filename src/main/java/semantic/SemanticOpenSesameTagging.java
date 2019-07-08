@@ -4,8 +4,8 @@ import MWExtraction.Wrapper.MultiColumnCSVSort;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class SemanticOpenSesameTagging {
@@ -37,33 +37,32 @@ public class SemanticOpenSesameTagging {
         ArrayList<Sentence> sentences = new ArrayList<>();
 
         Sentence sentence = new Sentence();
-        PrintStream ps = new PrintStream(new File("./files/tmp.txt"));
-        //PrintWriter pw = new PrintWriter(new File("./files/tmp.txt"));
-        //pw.println("hop");
         List<List<String>> tmpOneSentenceOneFrame = new ArrayList<>();
-        for (List<String> line : hop) {
-            //System.out.println(line.size());
-            if (line.isEmpty() || line.get(0).isEmpty()) {
-                //System.out.println(tmpOneSentenceOneFrame);
 
-                int thisEndedSentenceNumber = Integer.parseInt(tmpOneSentenceOneFrame.get(0).get(6));
-
-                if (sentences.size() != thisEndedSentenceNumber-1) {
-                    //this sentence is not the same (next)
-                    sentences.add(sentence);
-                    sentence = new Sentence();
-                }
-                sentence.addFrameIdentification(tmpOneSentenceOneFrame);
-                tmpOneSentenceOneFrame = new ArrayList<>();
-            } else {
-                //System.out.println(line);
-                ps.println(line);
-                //System.out.println(line);
-                tmpOneSentenceOneFrame.add(line);
-            }
+        Iterator<List<String>> it = hop.iterator();
+        List<String> line;
+        int lastSentenceNumber=0, currentSentenceNumber=0;
+        while(it.hasNext()){
+             line = it.next();
+             if(line.size() == 1){
+                 if(lastSentenceNumber != currentSentenceNumber) {
+                     sentences.add(sentence);
+                     sentence = new Sentence();
+                     lastSentenceNumber = currentSentenceNumber;
+                 }
+                 sentence.addFrameIdentification(tmpOneSentenceOneFrame);
+                 tmpOneSentenceOneFrame = new ArrayList<>();
+             }else{
+                 currentSentenceNumber = Integer.parseInt(line.get(6));
+                 tmpOneSentenceOneFrame.add(line);
+             }
         }
-        //pw.close();
-        //sentence.addFrameIdentification(tmpOneSentenceOneFrame);
+
+        if(lastSentenceNumber != currentSentenceNumber) {
+            sentences.add(sentence);
+            sentence = new Sentence();
+        }
+        sentence.addFrameIdentification(tmpOneSentenceOneFrame);
         sentences.add(sentence);
 
         return sentences;
