@@ -1,32 +1,32 @@
 ##### 1
 # An Addiction can represent a
-Addiction[Addictant]+Mental_Activity[Content];
-Addiction[Addictant]+Mental_Activity[Expression];
-Addiction[Addictant]+Mental_Activity[Topic];
-Addiction[Degree]+Mental_Activity[Content];
-Addiction[Degree]+Mental_Activity[Expression];
-Addiction[Degree]+Mental_Activity[Topic];
+Addiction[Addictant],Mental_Activity[Content];
+Addiction[Addictant],Mental_Activity[Expression];
+Addiction[Addictant],Mental_Activity[Topic];
+Addiction[Degree],Mental_Activity[Content];
+Addiction[Degree],Mental_Activity[Expression];
+Addiction[Degree],Mental_Activity[Topic];
 ##### 2
-;Process_continue[Event]+Supply[Theme]
+;Process_continue[Event],Supply[Theme]
 ##### 3
 ;Supply[Theme]
 ##### 4
-People_by_age[Person];Medical_conditions[Patient,Ailment]
+People_by_age[Person];Medical_conditions[Patient+Ailment]
 ##### 5
-;Inclusion[Part]+Food[Food]
+;Inclusion[Part],Food[Food]
 ##### 6
-;Inclusion[Total]+Purpose[Goal]
+;Inclusion[Total],Purpose[Goal]
 ##### 7
-;Inclusion[Part]+Increment[Class]
+;Inclusion[Part],Increment[Class]
 ##### 7
-;Inclusion[Part]+Change_position_on_a_scale[Item]+Intentionally_act[Domain]
-;Inclusion[Part]+Change_position_on_a_scale[Item]+Earnings_and_losses[Earnings]
+;Inclusion[Part],Change_position_on_a_scale[Item],Intentionally_act[Domain]
+;Inclusion[Part],Change_position_on_a_scale[Item],Earnings_and_losses[Earnings]
 ##### 8
 People_by_age[Person];
 ##### 9
-;Placing[Theme]+Dimension[Object]
-;Placing[Theme]+Dimension[Dimension]
+;Placing[Theme],Dimension[Object]
+;Placing[Theme],Dimension[Dimension]
 ##### 10
-;Execute_plan[Plan]+System[Complex]
-;Execute_plan[Plan]+System[Function]
-;Execute_plan[Plan]+System[Component_utilities]
+;Execute_plan[Plan],System[Complex]
+;Execute_plan[Plan],System[Function]
+;Execute_plan[Plan],System[Component_utilities]

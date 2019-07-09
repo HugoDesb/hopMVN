@@ -31,13 +31,13 @@ public class FrameNetPattern {
         this.line = "("+line+")";
         String [] tmp1 = line.split(";");
         if(!tmp1[0].isEmpty()){
-            for (String premise: tmp1[0].split("\\+")) {
+            for (String premise: tmp1[0].split("\\,")) {
                 premises.add(premise);
             }
         }
 
         if(tmp1.length > 1){
-            for (String conslusion: tmp1[1].split("\\+")) {
+            for (String conslusion: tmp1[1].split("\\,")) {
                 conslusions.add(conslusion);
             }
         }

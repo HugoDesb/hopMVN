@@ -1,45 +1,45 @@
 ##############################################################################
+Sentence :ensure the unk programme provides the necessary resources to support the educators , and that educators are properly trained and given time to develop and maintain their skills .
+IF :['type 2 diabetes']
+THEN :['the necessary resources to support the educators']
+CorrespondingPatterns :[(;Supply[Theme])]
+##############################################################################
+Sentence :offer group education programmes as the preferred option . provide an alternative of equal standard for a person unable or unwilling to participate in group education .
+IF :['type 2 diabetes']
+THEN :['an alternative of equal standard for a person unable or unwilling to participate in group education']
+CorrespondingPatterns :[(;Supply[Theme])]
+##############################################################################
 Sentence :provide individualised and ongoing nutritional advice from a healthcare professional with specific expertise and competencies in nutrition .
 IF :['type 2 diabetes']
-THEN :['nutritional advice']
-CorrespondingPatterns :[(;Process_continue[Event]+Supply[Theme])]
+THEN :['individualised and ongoing nutritional advice from a healthcare professional with specific expertise and competencies in nutrition']
+CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Supply[Theme])]
+##############################################################################
+Sentence :provide dietary advice in a form sensitive to the person 's needs , culture and beliefs , being sensitive to their willingness to change and the effects on their quality of life .
+IF :['type 2 diabetes']
+THEN :['dietary advice']
+CorrespondingPatterns :[(;Supply[Theme])]
 ##############################################################################
 Sentence :emphasise advice on healthy balanced eating that is applicable to the general population when providing advice to adults with type 2 diabetes .
-IF :['type 2 diabetes', 'adults']
-THEN :['balanced eating']
-CorrespondingPatterns :[(People_by_age[Person];Medical_conditions[Patient])]
+IF :['type 2 diabetes']
+THEN :['advice to adults with type 2 diabetes']
+CorrespondingPatterns :[(;Supply[Theme])]
 ##############################################################################
 Sentence :encourage unk , unk sources of carbohydrate in the diet , such as fruit , vegetables , unk and pulses ; include low-fat dairy products and oily fish ; and control the intake of foods containing saturated and trans fatty acids .
 IF :['type 2 diabetes']
 THEN :['foods']
-CorrespondingPatterns :[(;Inclusion[Part]+Food[Food])]
+CorrespondingPatterns :[(;Inclusion[Part],Food[Food])]
 ##############################################################################
 Sentence :integrate dietary advice with a personalised diabetes management plan , including other aspects of lifestyle modification , such as increasing physical activity and losing weight .
 IF :['type 2 diabetes']
 THEN :['personalised diabetes management']
-CorrespondingPatterns :[(;Inclusion[Total]+Purpose[Goal]), (;Inclusion[Part]+Increment[Class]), (;Inclusion[Part]+Change_position_on_a_scale[Item]+Intentionally_act[Domain]), (;Inclusion[Part]+Change_position_on_a_scale[Item]+Earnings_and_losses[Earnings])]
+CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Inclusion[Part],Increment[Class]), (;Inclusion[Part],Change_position_on_a_scale[Item],Intentionally_act[Domain]), (;Inclusion[Part],Change_position_on_a_scale[Item],Earnings_and_losses[Earnings])]
 ##############################################################################
 Sentence :for adults with type 2 diabetes who are overweight , set an initial body weight loss target of unk % . remember that lesser degrees of weight loss may still be of benefit , and that larger degrees of weight loss in the longer term will have advantageous metabolic impact .
 IF :['type 2 diabetes']
 THEN :['body weight']
-CorrespondingPatterns :[(;Placing[Theme]+Dimension[Object]), (;Placing[Theme]+Dimension[Dimension])]
+CorrespondingPatterns :[(;Placing[Theme],Dimension[Object]), (;Placing[Theme],Dimension[Dimension])]
 ##############################################################################
 Sentence :when adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting , implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks .
 IF :['type 2 diabetes']
 THEN :['planning system']
-CorrespondingPatterns :[(;Execute_plan[Plan]+System[Complex]), (;Execute_plan[Plan]+System[Function])]
-##############################################################################
-Sentence :measure blood pressure at least annually in an adult with type 2 diabetes without previously diagnosed hypertension or renal disease . offer and reinforce preventive lifestyle advice .
-IF :['type 2 diabetes', 'adult']
-THEN :['renal']
-CorrespondingPatterns :[(People_by_age[Person];Medical_conditions[Patient])]
-##############################################################################
-Sentence :for guidance on managing kidney disease in adults with type 2 diabetes , see the nice guideline on chronic kidney disease in adults .
-IF :['type 2 diabetes', 'adults']
-THEN :['kidney']
-CorrespondingPatterns :[(People_by_age[Person];Medical_conditions[Patient])]
-##############################################################################
-Sentence :assess , educate and support men with type 2 diabetes who have problematic erectile dysfunction , addressing contributory factors such as cardiovascular disease as well as possible treatment options .
-IF :['type 2 diabetes']
-THEN :['cardiovascular']
-CorrespondingPatterns :[(People_by_age[Person];Medical_conditions[Patient])]
+CorrespondingPatterns :[(;Supply[Theme]), (;Execute_plan[Plan],System[Complex]), (;Execute_plan[Plan],System[Function])]
