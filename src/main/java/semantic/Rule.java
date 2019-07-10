@@ -1,25 +1,14 @@
 package semantic;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Rule {
 
     private Sentence sentence;
-    private Set<FrameNetTag> premise;
-    private Set<FrameNetTag> conclusion;
+    private Set<Word> premise;
+    private Set<Word> conclusion;
     private ArrayList<FrameNetPattern> correspondingPatterns;
     private String topic;
-
-
-    Rule(Set<FrameNetTag> premise, Set<FrameNetTag> conclusion, ArrayList<FrameNetPattern> correspondingPattern, Sentence sentence) {
-        this.sentence = sentence;
-        this.premise = premise;
-        this.conclusion = conclusion;
-        this.correspondingPatterns = correspondingPattern;
-    }
 
     Rule(Sentence sentence, String topic){
         this.sentence = sentence;
@@ -29,15 +18,13 @@ public class Rule {
         this.topic = topic;
     }
 
-    public void addMatch(FrameNetTag premise, FrameNetTag conclusion, FrameNetPattern fnp){
-        this.premise.add(premise);
-        this.conclusion.add(conclusion);
-        correspondingPatterns.add(fnp);
+    public void addMatchPremise(List<Word> words){
+        premise.addAll(words);
     }
-
-    public void addMatch(Set<FrameNetTag> premise, Set<FrameNetTag> conclusion, FrameNetPattern fnp){
-        this.premise.addAll(premise);
-        this.conclusion.addAll(conclusion);
+    public void addMatchConclusion(List<Word> words){
+        conclusion.addAll(words);
+    }
+    public void addMatchPattern(FrameNetPattern fnp){
         correspondingPatterns.add(fnp);
     }
 
@@ -46,11 +33,11 @@ public class Rule {
     }
 
 
-    public Set<FrameNetTag> getPremise() {
+    public Set<Word> getPremise() {
         return premise;
     }
 
-    public Set<FrameNetTag> getConclusion() {
+    public Set<Word> getConclusion() {
         return conclusion;
     }
 
@@ -58,10 +45,10 @@ public class Rule {
         return correspondingPatterns;
     }
 
-    private Set<String> simplifyFrameNetTagList(Set<FrameNetTag> tokens){
+    private Set<String> simplifyFrameNetTagList(Set<Word> tokens){
         Set<String> out = new HashSet<>();
-        ArrayList<FrameNetTag> sorted = new ArrayList<>(tokens);
-        Collections.sort(sorted, FrameNetTag.indexComparator);
+        ArrayList<Word> sorted = new ArrayList<>(tokens);
+        Collections.sort(sorted, Word.indexComparator);
         StringBuilder builder = new StringBuilder();
         int last = -2;
         for (int i = 0; i < sorted.size(); i++) {
@@ -70,9 +57,9 @@ public class Rule {
             }
             if(last == sorted.get(i).getIndex()-1){
                 if(builder.length() == 0){
-                    builder.append(sorted.get(i).getWord());
+                    builder.append(sorted.get(i).getText());
                 }else{
-                    builder.append(" "+sorted.get(i).getWord());
+                    builder.append(" "+sorted.get(i).getText());
                 }
                 last++;
             }else{

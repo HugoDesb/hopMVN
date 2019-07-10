@@ -1,7 +1,5 @@
 package semantic;
 
-import common.Pair;
-
 import java.util.*;
 
 //ALL FRAMES, ONE SENTENCE
@@ -10,195 +8,53 @@ public class Sentence {
     //private String sentence;
     private int sentenceNumber;
     private ArrayList<Frame> frames; //same for all frames
-    private ArrayList<FrameNetTag> tokens;
-    private Map<FrameNetTag, Set<String>> deconstructedFramesAndRolesPerToken;
+    private Map<Word, Set<String>> deconstructedFramesAndRolesPerToken;
 
-    Sentence() {
-        this.tokens = new ArrayList<>();
-        frames = new ArrayList<>();
+    private ArrayList<Word> words;
+
+    public Sentence(int sentenceNumber, ArrayList<Frame> frames, ArrayList<Word> words) {
+        this.sentenceNumber = sentenceNumber;
+        this.frames = frames;
+        this.words = words;
     }
 
     /**
      *
      * @return
      */
-    private Map<FrameNetTag, Set<String>> deconstructIntoTokens(){
-        Map<FrameNetTag, Set<String>> framesPerToken = new LinkedHashMap<>();
-        for (FrameNetTag token: tokens) {
+    private Map<Word, Set<String>> deconstructIntoTokens(){
+        Map<Word, Set<String>> framesPerToken = new LinkedHashMap<>();
+        for (Word word: words) {
             Set<String> tmp = new HashSet<>();
             for (Frame frame : frames) {
-                if(frame.getRange().contains(token.getIndex())){
+                if(frame.getRange().contains(word.getIndex())){
                     for (FrameElement fe : frame.getFrameElements()) {
-                        if(fe.getRange().contains(token.getIndex())){
+                        if(fe.getRange().contains(word.getIndex())){
                             tmp.add(frame.getFrameName()+"["+fe.getName()+"]");
                         }
                     }
                 }
             }
-            framesPerToken.put(token, tmp);
+            framesPerToken.put(word, tmp);
         }
         return framesPerToken;
     }
 
     /**
-     *
-     * @param fnp
-     * @return
+     * Returns all indexes for words concerned by the specified pattern
+     * @param fnp the pattern
+     * @return an ArrayList of concerned words index's
      */
-    public Pair<Set<FrameNetTag>, Set<FrameNetTag>> matches(FrameNetPattern fnp){
-        if(deconstructedFramesAndRolesPerToken == null){
-            deconstructedFramesAndRolesPerToken = deconstructIntoTokens();
-        }
-        Set<FrameNetTag> premises = matchesPremise(fnp);
-        Set<FrameNetTag> conslusion = matchesConclusion(fnp);
-
-
-
-        /*
-        boolean matchesPremise = false, matchesConclusion = false;
-        for (FrameNetTag token: deconstructedFramesAndRolesPerToken.keySet()) {
-            matchesPremise = tokenMatchesPremise(fnp, token);
-            matchesConclusion = tokenMatchesConclusion(fnp, token);
-
-            if(matchesPremise || matchesConclusion){
-                if(fnp.getPremises().size() != 0){
-                    premises.add(token);
-                }
-                if(fnp.getConslusions().size() != 0){
-                    conslusion.add(token);
+    public ArrayList<Integer> matches(Pattern fnp){
+        ArrayList<Integer> ret = new ArrayList<>();
+        for (Frame frame: frames) {
+            if(frame.getFrameName().equals(fnp.getFrame())){
+                for (String frameElement : fnp.getFrameElements()) {
+                    ret.addAll(frame.getFrameElementIndexes(frameElement));
                 }
             }
         }
-        */
-
-        return new Pair<>(premises, conslusion);
-    }
-
-    private Set<FrameNetTag> matchesPremise(FrameNetPattern fnp){
-        Set<FrameNetTag> premises = new HashSet<>();
-        boolean matchesPremise = false;
-        for (FrameNetTag token: deconstructedFramesAndRolesPerToken.keySet()) {
-            matchesPremise = tokenMatchesPremise(fnp, token);
-            if(matchesPremise){
-                if(fnp.getPremises().size() != 0){
-                    premises.add(token);
-                }
-            }
-        }
-        return premises;
-    }
-
-    private Set<FrameNetTag> matchesConclusion(FrameNetPattern fnp){
-        Set<FrameNetTag> conclusions = new HashSet<>();
-        boolean matchesPremise = false;
-        for (FrameNetTag token: deconstructedFramesAndRolesPerToken.keySet()) {
-            matchesPremise = tokenMatchesConclusion(fnp, token);
-            if(matchesPremise){
-                if(fnp.getConslusions().size() != 0){
-                    conclusions.add(token);
-                }
-            }
-        }
-        return conclusions;
-    }
-
-    /**
-     *
-     * @param fnp
-     * @param token
-     * @return
-     */
-    private boolean tokenMatchesPremise(FrameNetPattern fnp, FrameNetTag token) {
-        int objective =  fnp.getPremises().size();
-        if(objective == 0) return false;
-
-        Set<String> frameAndRole = deconstructedFramesAndRolesPerToken.get(token);
-        int current = 0;
-        for (String pattern : fnp.getPremises()) {
-            if(frameAndRole.contains(pattern)){
-                current++;
-            }
-        }
-        return objective == current;
-    }
-
-    /**
-     *
-     * @param fnp
-     * @param token
-     * @return
-     */
-    private boolean tokenMatchesConclusion(FrameNetPattern fnp, FrameNetTag token) {
-        int objective =  fnp.getConslusions().size();
-        if(objective == 0) return false;
-
-        Set<String> frameAndRole = deconstructedFramesAndRolesPerToken.get(token);
-        int current = 0;
-        for (String pattern : fnp.getConslusions()) {
-            if(frameAndRole.contains(pattern)){
-                current++;
-            }
-        }
-        return objective == current;
-    }
-
-    /**
-     *
-     * @param fs
-     * @param sentenceNumber
-     */
-    void addFrameIdentification(Frame fs, int sentenceNumber){
-        frames.add(fs);
-        this.sentenceNumber = sentenceNumber;
-    }
-
-    /**
-     *
-     * @param lines
-     */
-    void addFrameIdentification(List<List<String>> lines){
-        ArrayList<FrameNetTag> tokens = new ArrayList<>();
-
-        for (List<String> line :lines) {
-            tokens.add(new FrameNetTag(line));
-        }
-
-        if(this.tokens.size() == 0){
-            this.tokens = tokens;
-        }
-
-        Frame m = findFrame(tokens);
-        frames.add(findFrameElements(tokens, m));
-    }
-
-    /**
-     *
-     * @param tokens
-     * @return
-     */
-    private Frame findFrame(ArrayList<FrameNetTag> tokens) {
-        for (FrameNetTag token: tokens) {
-            if(!token.getFrame().equals("_")){
-                return new Frame(token);
-            }
-        }
-        return null;
-    }
-
-    /**
-     *
-     * @param tokens
-     * @param frame
-     * @return
-     */
-    private Frame findFrameElements(ArrayList<FrameNetTag> tokens, Frame frame) {
-        ArrayList<FrameElement> frameElements = new ArrayList<>();
-        for (FrameNetTag token: tokens) {
-            if(!token.getFrameElement().equals("O")){
-                frame.addToFrame(token);
-            }
-        }
-        return frame;
+        return ret;
     }
 
     /**
@@ -207,8 +63,8 @@ public class Sentence {
      */
     public String getSentence(){
         StringBuilder sentence = new StringBuilder();
-        for (FrameNetTag tags : tokens) {
-            sentence.append(tags.getWord()).append(" ");
+        for (Word word: words) {
+            sentence.append(word.getText()).append(" ");
         }
         return sentence.toString().trim();
     }
@@ -224,5 +80,62 @@ public class Sentence {
      */
     ArrayList<Frame> getFrames() {
         return frames;
+    }
+
+    private Word getWord(Integer index){
+        return words.get(words.indexOf(index));
+    }
+
+    public List<Word> getSentence(ArrayList<Integer> matched) {
+        List<Word> words = new ArrayList<>();
+        Collections.sort(matched);
+        for (Integer i : matched) {
+            words.add(getWord(i));
+        }
+        return words;
+    }
+
+    public static class Builder{
+        private int sentenceNumber;
+        private ArrayList<Frame> frames; //same for all frames
+        private ArrayList<Word> words;
+
+        public Builder() {
+            frames = new ArrayList<>();
+            words = new ArrayList<>();
+        }
+
+        /**
+         * Adds Frame
+         * @param lines
+         */
+        void addFrameIdentification(List<List<String>> lines){
+            ArrayList<FrameNetTag> tokens = new ArrayList<>();
+
+            ArrayList<FrameElement.Builder> fes = new ArrayList<>();
+            Frame.Builder fr = new Frame.Builder();
+
+            for (List<String> line :lines) {
+                int index = Integer.parseInt(line.get(0));
+                if(words.size() == 0){
+                    words.add(new Word(line));
+                    sentenceNumber = Integer.parseInt(line.get(6));
+                }
+
+                if(!line.get(13).equals("_")){
+                    fr.setIndexTarget(index);
+                    fr.setName(line.get(13));
+                }
+                if(!line.get(14).equals("O")){
+                    fr.addFrameElement(line.get(14).split("-")[1], index);
+                }
+            }
+            frames.add(fr.build());
+        }
+
+        public Sentence build(){
+            return new Sentence(sentenceNumber, frames, words);
+        }
+
     }
 }

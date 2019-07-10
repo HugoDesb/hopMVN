@@ -3,6 +3,8 @@ package semantic;
 import common.Pair;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class FrameNetPattern {
@@ -10,8 +12,8 @@ public class FrameNetPattern {
     private String line;
     private ArrayList<Pair<String, String>> frameAndRoles;
 
-    private ArrayList<String> premises;
-    private ArrayList<String> conslusions;
+    private ArrayList<Pattern> premises;
+    private ArrayList<Pattern> conclusions;
 
     private String destination;
 
@@ -19,7 +21,7 @@ public class FrameNetPattern {
         this.line = line;
         this.frameAndRoles = new ArrayList<>();
         this.premises = new ArrayList<>();
-        this.conslusions = new ArrayList<>();
+        this.conclusions = new ArrayList<>();
         deserialize(line);
     }
 
@@ -32,27 +34,35 @@ public class FrameNetPattern {
         String [] tmp1 = line.split(";");
         if(!tmp1[0].isEmpty()){
             for (String premise: tmp1[0].split("\\,")) {
-                premises.add(premise);
+                premises.add(createPatternForOneframe(premise));
             }
         }
 
         if(tmp1.length > 1){
-            for (String conslusion: tmp1[1].split("\\,")) {
-                conslusions.add(conslusion);
+            for (String conclusion: tmp1[1].split("\\,")) {
+                conclusions.add(createPatternForOneframe(conclusion));
             }
         }
+    }
+
+    public static Pattern createPatternForOneframe(String partPattern){
+        //gets frame name
+        String name = partPattern.split("\\[")[0];
+        //get list of frameElements
+        List<String> fes = Arrays.asList(partPattern.substring(0, partPattern.length() - 1).split("\\[")[1]);
+        return new Pattern(name, new ArrayList<>(fes));
     }
 
     public String getLine() {
         return line;
     }
 
-    public ArrayList<String> getPremises() {
+    public ArrayList<Pattern> getPremises() {
         return premises;
     }
 
-    public ArrayList<String> getConslusions() {
-        return conslusions;
+    public ArrayList<Pattern> getConclusions() {
+        return conclusions;
     }
 
     public ArrayList<Pair<String, String>> getFrameAndRoles() {

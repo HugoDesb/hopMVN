@@ -9,7 +9,7 @@ Addiction[Degree],Mental_Activity[Topic];
 ##### 2
 ;Process_continue[Event],Supply[Theme]
 ##### 3
-;Supply[Theme]
+;Supply[Theme]--
 ##### 4
 People_by_age[Person];Medical_conditions[Patient+Ailment]
 ##### 5

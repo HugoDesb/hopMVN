@@ -36,7 +36,7 @@ public class SemanticOpenSesameTagging {
 
         ArrayList<Sentence> sentences = new ArrayList<>();
 
-        Sentence sentence = new Sentence();
+        Sentence.Builder sentence = new Sentence.Builder();
         List<List<String>> tmpOneSentenceOneFrame = new ArrayList<>();
 
         Iterator<List<String>> it = hop.iterator();
@@ -46,8 +46,8 @@ public class SemanticOpenSesameTagging {
              line = it.next();
              if(line.size() == 1){
                  if(lastSentenceNumber != currentSentenceNumber) {
-                     sentences.add(sentence);
-                     sentence = new Sentence();
+                     sentences.add(sentence.build());
+                     sentence = new Sentence.Builder();
                      lastSentenceNumber = currentSentenceNumber;
                  }
                  sentence.addFrameIdentification(tmpOneSentenceOneFrame);
@@ -59,11 +59,11 @@ public class SemanticOpenSesameTagging {
         }
 
         if(lastSentenceNumber != currentSentenceNumber) {
-            sentences.add(sentence);
-            sentence = new Sentence();
+            sentences.add(sentence.build());
+            sentence = new Sentence.Builder();
         }
         sentence.addFrameIdentification(tmpOneSentenceOneFrame);
-        sentences.add(sentence);
+        sentences.add(sentence.build());
 
         return sentences;
     }

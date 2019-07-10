@@ -7,12 +7,16 @@ public class Frame {
 
     private ArrayList<FrameElement> frameElements;
 
-    private FrameNetTag token;
 
 
-    Frame(FrameNetTag token){
-        this.token = token;
-        frameElements = new ArrayList<>();
+    private String name;
+    private int indexTarget;
+
+
+    public Frame(String name, int indexTarget, ArrayList<FrameElement> frameElements) {
+        this.name = name;
+        this.indexTarget = indexTarget;
+        this.frameElements = frameElements;
     }
 
     /**
@@ -36,7 +40,7 @@ public class Frame {
         for (FrameElement fe :frameElements) {
             ranger.addAll(fe.getRange());
         }
-        ranger.add(token.getIndex());
+        ranger.add(indexTarget);
 
         Collections.sort(ranger);
 
@@ -44,24 +48,34 @@ public class Frame {
     }
 
     /**
+     * Returns all indexes for words concerned by the specified frameElement
+     * If the frameElement doesn't exists, an empty ArrayList is returned
+     * @param frameElementName the FrameNet name of the Frame Element
+     * @return an ArrayList of concerned words index's
+     */
+    public ArrayList<Integer> getFrameElementIndexes(String frameElementName){
+        ArrayList<Integer> ret = new ArrayList<>();
+        for (FrameElement fe : frameElements) {
+            if(fe.getName().equals(frameElementName)){
+                ret = fe.getRange();
+            }
+        }
+        if(ret.size()!=0){
+            Collections.sort(ret);
+            if(ret.get(ret.size()-1)+1 == indexTarget){
+                ret.add(indexTarget);
+            }
+        }
+
+        return ret;
+    }
+
+    /**
      * Getter for the frame name
      * @return the frame name
      */
     public String getFrameName() {
-        return token.getFrame();
-    }
-
-    public void addToFrame(FrameNetTag token) {
-        boolean added = false;
-        for (FrameElement fetmp:frameElements) {
-            if(token.getFrameElement().equals(fetmp.getName())){
-                fetmp.addToken(token);
-                added = true;
-            }
-        }
-        if(!added) {
-            frameElements.add(new FrameElement(token));
-        }
+        return name;
     }
 
     /**
@@ -129,6 +143,48 @@ public class Frame {
      * @return the target index
      */
     public int getTargetIndex(){
-        return token.getIndex();
+        return indexTarget;
+    }
+
+    public static class Builder {
+
+        private ArrayList<FrameElement.Builder> builders;
+        private String name;
+        private int indexTarget;
+
+        public Builder() {
+            builders = new ArrayList<>();
+        }
+
+        public void setName(String name){
+            this.name = name;
+        }
+
+        public void setIndexTarget(int indexTarget){
+            this.indexTarget = indexTarget;
+        }
+
+        public void addFrameElement(String name, int index){
+
+            boolean exists = false;
+            for (FrameElement.Builder builder: builders) {
+                if(builder.same(name)){
+                    exists = true;
+                    builder.addIndex(index);
+                }
+            }
+            if(!exists){
+                builders.add(new FrameElement.Builder(name, index));
+            }
+        }
+
+        public Frame build(){
+            ArrayList<FrameElement> frameElements = new ArrayList<>();
+            for (FrameElement.Builder builder: builders) {
+                frameElements.add(builder.build());
+            }
+            return new Frame(name, indexTarget, frameElements);
+        }
+
     }
 }

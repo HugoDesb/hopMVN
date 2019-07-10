@@ -8,27 +8,10 @@ import java.util.ArrayList;
 public class FrameElement {
     private String name;
     private ArrayList<Integer> indexes;
-    private ArrayList<FrameNetTag> tokens;
 
-    /**
-     * Constructor
-     * @param token the first token
-     */
-    FrameElement(FrameNetTag token) {
-        tokens = new ArrayList<>();
-        tokens.add(token);
-        this.name = token.getFrameElement();
-        this.indexes = new ArrayList<>();
-        indexes.add(token.getIndex());
-    }
-
-    /**
-     * Adds a token to this frame element
-     * @param token the token
-     */
-    void addToken(FrameNetTag token){
-        tokens.add(token);
-        indexes.add(token.getIndex());
+    public FrameElement(String name, ArrayList<Integer> indexes) {
+        this.name = name;
+        this.indexes = indexes;
     }
 
     /**
@@ -47,25 +30,37 @@ public class FrameElement {
         return indexes;
     }
 
-    /**
-     * Getter for the text concerned
-     * @return the text
-     */
-    public String getText() {
-        StringBuilder sentence = new StringBuilder();
-        for (FrameNetTag tags : tokens) {
-            sentence.append(tags.getWord()).append(" ");
-        }
-        return sentence.toString().trim();
-    }
-
     @Override
+    @Deprecated
     public String toString() {
         return "FrameElement{" +
                 "name='" + name + '\'' +
                 ", indexes=" + indexes +
-                ", tokens=" + tokens +
                 '}';
+    }
+
+    static class Builder{
+        private String name;
+        private ArrayList<Integer> indexes;
+
+
+        public Builder(String name, int index) {
+            this.name = name;
+            this.indexes = new ArrayList<>();
+            this.indexes.add(index);
+        }
+
+        public void addIndex(int index){
+            this.indexes.add(index);
+        }
+
+        public boolean same(String otherName){
+            return this.name.equals(otherName);
+        }
+
+        public FrameElement build(){
+            return new FrameElement(name, indexes);
+        }
     }
 
 }

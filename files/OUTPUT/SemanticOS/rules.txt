@@ -1,45 +1,380 @@
 ##############################################################################
-Sentence :ensure the unk programme provides the necessary resources to support the educators , and that educators are properly trained and given time to develop and maintain their skills .
+Sentence :adopt
 IF :['type 2 diabetes']
-THEN :['the necessary resources to support the educators']
-CorrespondingPatterns :[(;Supply[Theme])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :offer group education programmes as the preferred option . provide an alternative of equal standard for a person unable or unwilling to participate in group education .
+Sentence :such
 IF :['type 2 diabetes']
-THEN :['an alternative of equal standard for a person unable or unwilling to participate in group education']
-CorrespondingPatterns :[(;Supply[Theme])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :provide individualised and ongoing nutritional advice from a healthcare professional with specific expertise and competencies in nutrition .
+Sentence :reassess
 IF :['type 2 diabetes']
-THEN :['individualised and ongoing nutritional advice from a healthcare professional with specific expertise and competencies in nutrition']
-CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Supply[Theme])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :provide dietary advice in a form sensitive to the person 's needs , culture and beliefs , being sensitive to their willingness to change and the effects on their quality of life .
+Sentence :take
 IF :['type 2 diabetes']
-THEN :['dietary advice']
-CorrespondingPatterns :[(;Supply[Theme])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :emphasise advice on healthy balanced eating that is applicable to the general population when providing advice to adults with type 2 diabetes .
+Sentence :offer
 IF :['type 2 diabetes']
-THEN :['advice to adults with type 2 diabetes']
-CorrespondingPatterns :[(;Supply[Theme])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :encourage unk , unk sources of carbohydrate in the diet , such as fruit , vegetables , unk and pulses ; include low-fat dairy products and oily fish ; and control the intake of foods containing saturated and trans fatty acids .
+Sentence :explain
 IF :['type 2 diabetes']
-THEN :['foods']
-CorrespondingPatterns :[(;Inclusion[Part],Food[Food])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :integrate dietary advice with a personalised diabetes management plan , including other aspects of lifestyle modification , such as increasing physical activity and losing weight .
+Sentence :ensure
 IF :['type 2 diabetes']
-THEN :['personalised diabetes management']
-CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Inclusion[Part],Increment[Class]), (;Inclusion[Part],Change_position_on_a_scale[Item],Intentionally_act[Domain]), (;Inclusion[Part],Change_position_on_a_scale[Item],Earnings_and_losses[Earnings])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :for adults with type 2 diabetes who are overweight , set an initial body weight loss target of unk % . remember that lesser degrees of weight loss may still be of benefit , and that larger degrees of weight loss in the longer term will have advantageous metabolic impact .
+Sentence :ensure
 IF :['type 2 diabetes']
-THEN :['body weight']
-CorrespondingPatterns :[(;Placing[Theme],Dimension[Object]), (;Placing[Theme],Dimension[Dimension])]
+THEN :[]
+CorrespondingPatterns :[]
 ##############################################################################
-Sentence :when adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting , implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks .
+Sentence :offer
 IF :['type 2 diabetes']
-THEN :['planning system']
-CorrespondingPatterns :[(;Supply[Theme]), (;Execute_plan[Plan],System[Complex]), (;Execute_plan[Plan],System[Function])]
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :ensure
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :ensure
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :provide
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :provide
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :emphasise
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :encourage
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :integrate
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :unk
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :reducing
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :advise
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :discourage
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :when
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :measure
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :add
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :monitor
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :exceptions
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :the
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :a
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :do
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :if
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :if
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :monitor
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :do
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :use
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :investigate
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :involve
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :in
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :if
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :if
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :target
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :maintain
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :level
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :do
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :consider
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :think
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :the
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :if
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :think
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :think
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :when
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :investigate
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :in
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :for
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :offer
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :assess
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :consider
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :following
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :on
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :explain
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :use
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :discussions
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :use
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :perform
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :depending
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :earlier
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :arrange
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+##############################################################################
+Sentence :refer
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
