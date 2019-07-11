@@ -1,11 +1,6 @@
 ##### 1
 # An Addiction can represent a
-Addiction[Addictant],Mental_Activity[Content];
-Addiction[Addictant],Mental_Activity[Expression];
-Addiction[Addictant],Mental_Activity[Topic];
-Addiction[Degree],Mental_Activity[Content];
-Addiction[Degree],Mental_Activity[Expression];
-Addiction[Degree],Mental_Activity[Topic];
+Addiction[Addictant+Degree],Mental_Activity[Topic+Expression+Content];
 ##### 2
 ;Process_continue[Event],Supply[Theme]
 ##### 3
@@ -24,9 +19,7 @@ People_by_age[Person];Medical_conditions[Patient+Ailment]
 ##### 8
 People_by_age[Person];
 ##### 9
-;Placing[Theme],Dimension[Object]
-;Placing[Theme],Dimension[Dimension]
+;Placing[Theme],Dimension[Object+Dimension]
 ##### 10
-;Execute_plan[Plan],System[Complex]
-;Execute_plan[Plan],System[Function]
-;Execute_plan[Plan],System[Component_utilities]
+;Execute_plan[Plan],System[Function+Complex+Component_utilities]
+##### 11

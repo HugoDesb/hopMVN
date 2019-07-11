@@ -46,33 +46,77 @@ public class RulesGenerator {
     }
 
     private ArrayList<Integer> findMatchingWordsIndexes(ArrayList<Pattern> patterns, Sentence sentence){
-        ArrayList<Integer> matched = new ArrayList<>();
-        //ArrayList<Pattern> frameNetPatterns = frameNetPattern.getPremises();
+
+        if(patterns.size()==0){
+            return new ArrayList<>();
+        }
+
         int max = patterns.size();
-        while(max>=0){
+        List<Pattern> partialPattern;
+        ArrayList<Set<Integer>> hop = new ArrayList<>();
+
+        int i = (frameNetPatterns.isInBlacklist(patterns.get(0))) ? 2 : 1;
+
+        for (; i <= max; i++) {
+            partialPattern = patterns.subList(0, i);
+
+            Set<Integer> toAdd = new HashSet<>();
+            for (Pattern pattern: partialPattern) {
+                Set<Integer> tmp3 = new HashSet<>(sentence.matches(pattern));
+                if(toAdd.size()==0){
+                    toAdd = tmp3;
+                }else{
+                    toAdd.retainAll(tmp3);
+                }
+            }
+            hop.add(toAdd);
+        }
+
+        for (int j = hop.size()-1; i>=0; i--) {
+            if(hop.get(j).size()!=0){
+                return new ArrayList<>(hop.get(j));
+            }
+        }
+
+        return new ArrayList<>();
+
+        /**
+        while(max>=1){
             // try with all frameNetPatterns, then minus le last one, and again
+            ArrayList<Set<Integer>> hop = new ArrayList<>();
+
+            Set<Integer> toAdd = new HashSet<>();
+            for (Pattern pattern: patterns) {
+                Set<Integer> tmp3 = new HashSet<>(sentence.matches(pattern));
+                if(toAdd.size()==0){
+                    toAdd = tmp3;
+                }else{
+                    toAdd.retainAll(tmp3);
+                }
+            }
+            hop.add(toAdd);
+
+
             for (int i = 0; i < max; i++) {
-                ArrayList<ArrayList<Integer>> hop = new ArrayList<>();
                 ArrayList<Integer> tmp2 = new ArrayList<>();
                 // Each frameNetPatterns separated by a comma
                 List<Pattern> tmp = patterns.subList(0, i);
                 for (Pattern p :tmp) {
                     tmp2 = sentence.matches(p);
+
                     if((tmp2.size() != 0) && !(frameNetPatterns.isInBlacklist(p) && max == 0)){
                         hop.add(tmp2);
                     }
                 }
-
-                if(hop.size()!=0){
-                    matched = reduce(hop);
-                    max = -1;
-                }
             }
-
+            if(max == 1){
+                matched = reduce(hop);
+                max = -1;
+            }
             max--;
         }
-
         return matched;
+         */
     }
 
     private ArrayList<Integer> reduce(ArrayList<ArrayList<Integer>> hop) {
@@ -105,7 +149,7 @@ public class RulesGenerator {
         SemanticOpenSesameTagging sost = new SemanticOpenSesameTagging(new File(
                 "/home/sesstim/Telechargements/open-sesame/open-sesame/logs/myargid/predicted-args.conll"
         ));
-        FrameNetPatterns fnp = new FrameNetPatterns(new File("./files/SemanticAnalysis/patterns"));
+        FrameNetPatterns fnp = new FrameNetPatterns(new File("./files/SemanticAnalysis/framenetpatternV2"));
 
         RulesGenerator rg = new RulesGenerator(sost, fnp, "type 2 diabetes");
 

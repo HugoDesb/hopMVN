@@ -45,6 +45,9 @@ public class SemanticOpenSesameTagging {
         while(it.hasNext()){
              line = it.next();
              if(line.size() == 1){
+                 if(!it.hasNext()){
+                     break;
+                 }
                  if(lastSentenceNumber != currentSentenceNumber) {
                      sentences.add(sentence.build());
                      sentence = new Sentence.Builder();

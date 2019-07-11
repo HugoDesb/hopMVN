@@ -65,7 +65,7 @@ public class Rule {
             }else{
                 out.add(builder.toString());
                 builder = new StringBuilder();
-                last = sorted.get(i).getIndex()-1;
+                last = sorted.get(i).getIndex();
             }
         }
         if(builder.length() != 0){
@@ -79,7 +79,7 @@ public class Rule {
         if(set.size() != 0){
             for (String string: set) {
                 if(string.length()!=0){
-                    //System.out.println(set);
+
                     if(sb.length() == 0){
                         sb.append("['" + string);
                     }else{

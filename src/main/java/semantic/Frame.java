@@ -57,12 +57,12 @@ public class Frame {
         ArrayList<Integer> ret = new ArrayList<>();
         for (FrameElement fe : frameElements) {
             if(fe.getName().equals(frameElementName)){
-                ret = fe.getRange();
+                ret.addAll(fe.getRange());
             }
         }
         if(ret.size()!=0){
             Collections.sort(ret);
-            if(ret.get(ret.size()-1)+1 == indexTarget){
+            if(ret.contains(indexTarget-1)){
                 ret.add(indexTarget);
             }
         }

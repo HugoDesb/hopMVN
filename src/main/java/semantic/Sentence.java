@@ -83,7 +83,12 @@ public class Sentence {
     }
 
     private Word getWord(Integer index){
-        return words.get(words.indexOf(index));
+        for (Word word :words) {
+            if(word.getIndex()==index){
+                return word;
+            }
+        }
+        return null;
     }
 
     public List<Word> getSentence(ArrayList<Integer> matched) {
@@ -117,7 +122,7 @@ public class Sentence {
 
             for (List<String> line :lines) {
                 int index = Integer.parseInt(line.get(0));
-                if(words.size() == 0){
+                if(words.size() != lines.size()){
                     words.add(new Word(line));
                     sentenceNumber = Integer.parseInt(line.get(6));
                 }

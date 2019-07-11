@@ -1,1 +1,2 @@
-;Process_continue[Event]+Supply[Theme]
+;Inclusion[Total+Part]
+;Inclusion[Total],Increment[Class]
