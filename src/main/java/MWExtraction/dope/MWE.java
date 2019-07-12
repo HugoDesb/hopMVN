@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 import java.io.File;
 import java.io.FileWriter;

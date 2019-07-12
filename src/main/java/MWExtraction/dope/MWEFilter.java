@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 public class MWEFilter {
 

@@ -1,6 +1,6 @@
 package common.document;
 
-import MWExtraction.NGram;
+import MWExtraction.dope.NGram;
 import tagging.RNNTagger.RNNTag;
 
 import java.util.ArrayList;

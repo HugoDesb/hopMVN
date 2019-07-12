@@ -1,0 +1,1521 @@
+adopt an individualised approach to diabetes care that is tailored to the needs and circumstances of adults with type 2 diabetes, taking into account their personal preferences, comorbidities, risks from polypharmacy, and their ability to benefit from long-term interventions because of reduced life expectancy.
+T4
+T3
+T2
+life expectancy	false	1.2263
+long-term interventions	false	1.2263
+personal preferences	false	1.2263
+diabetes care	false	1.21
+T1
+preferences	true	1.0
+account	true	0.8139000000000001
+needs	true	0.7031999999999999
+adult	false	1.0571000000000002
+approach	false	1.0571000000000002
+risks	false	1.0571000000000002
+ability	false	1.0
+adopt	false	1.0
+comorbidities	false	1.0
+expectancy	false	1.0
+individualise	false	1.0
+polypharmacy	false	1.0
+circumstances	false	0.9963000000000001
+life	false	0.9925000000000002
+benefit	false	0.6795
+care	false	0.6437999999999999
+interventions	false	0.62
+term	false	0.27159999999999995
+person	false	0.22960000000000003
+##########END##########
+such an approach is especially important in the context of multimorbidity.
+T4
+T3
+T2
+T1
+approach	false	1.0571000000000002
+context	false	1.0
+multimorbidity	false	1.0
+##########END##########
+reassess the person's needs and circumstances at each review and think about whether to stop any medicines that are not effective.
+T4
+T3
+T2
+T1
+review	true	0.7920999999999999
+needs	true	0.7031999999999999
+medicines	false	1.0571000000000002
+assess	false	1.0
+circumstances	false	0.9963000000000001
+person	false	0.22960000000000003
+##########END##########
+take into account any disabilities, including visual impairment, when planning and delivering care for adults with type 2 diabetes.
+T4
+T3
+T2
+visual impairment	false	1.2263
+T1
+impairment	true	1.0
+account	true	0.8139000000000001
+adult	false	1.0571000000000002
+plan	false	1.0571000000000002
+disabilities	false	1.0
+care	false	0.6437999999999999
+##########END##########
+offer structured education to adults with type 2 diabetes and/or their family members or carers (as appropriate) at and around the time of diagnosis, with annual reinforcement and review.
+T4
+T3
+T2
+annual reinforcement	false	1.2263
+structured education	false	0.8885
+family members	false	0.694
+T1
+review	true	0.7920999999999999
+family	true	0.6025000000000001
+adult	false	1.0571000000000002
+members	false	1.0445000000000002
+reinforcement	false	1.0
+diagnosis	false	0.9069999999999999
+education	false	0.7976000000000001
+time	false	0.7657999999999999
+offer	false	0.7148000000000001
+care	false	0.6437999999999999
+##########END##########
+explain to people and their carers that structured education is an integral part of diabetes care.
+T4
+T3
+T2
+integral part	false	1.2263
+diabetes care	false	1.21
+structured education	false	0.8885
+T1
+people	true	0.9069999999999999
+explain	false	1.0571000000000002
+part	false	0.9963000000000001
+education	false	0.7976000000000001
+care	false	0.6437999999999999
+##########END##########
+ensure that any structured education programme for adults with type 2 diabetes includes the following components: it is evidence-based, and suits the needs of the person. it has specific aims and learning objectives, and supports the person and their family members and carers in developing attitudes, beliefs, knowledge and skills to self-manage diabetes. it has a structured curriculum that is theory-driven, evidence-based and resource-effective, has supporting materials, and is written down. it is delivered by trained educators who have an understanding of educational theory appropriate to the age and needs of the person, and who are trained and competent to deliver the principles and content of the programme. it is quality assured, and reviewed by trained, competent, independent assessors who measure it against criteria that ensure consistency. the outcomes are audited regularly.
+T4
+T3
+structured education programme	false	0.6746999999999999
+T2
+structured education	false	0.8885
+family members	false	0.694
+educational theory	false	0.612
+independent assessors	false	0.612
+self-manage diabetes	false	0.612
+specific aims	false	0.612
+structured curriculum	false	0.612
+supporting materials	false	0.612
+trained educators	false	0.612
+T1
+quality	true	0.7994000000000001
+review	true	0.7920999999999999
+knowledge	true	0.7715
+needs	true	0.7031999999999999
+family	true	0.6025000000000001
+aims	true	0.4707
+curriculum	true	0.4707
+outcomes	true	0.4707
+theory	true	0.4707
+adult	false	1.0571000000000002
+programme	false	1.0457999999999998
+members	false	1.0445000000000002
+educators	false	1.0364
+assess	false	1.0
+measure	false	1.0
+evidence	false	0.9575000000000001
+education	false	0.7976000000000001
+beliefs	false	0.7715
+consistency	false	0.7715
+content	false	0.7715
+care	false	0.6437999999999999
+ensure	false	0.48960000000000004
+age	false	0.4707
+attitudes	false	0.4707
+components	false	0.4707
+materials	false	0.4707
+objectives	false	0.4707
+principles	false	0.4707
+understanding	false	0.4707
+skills	false	0.46709999999999996
+person	false	0.22960000000000003
+##########END##########
+ensure the patient-education programme provides the necessary resources to support the educators, and that educators are properly trained and given time to develop and maintain their skills. 
+T4
+T3
+T2
+education programme	false	0.612
+T1
+resources	true	0.4356
+programme	false	1.0457999999999998
+educators	false	1.0364
+education	false	0.7976000000000001
+time	false	0.7657999999999999
+ensure	false	0.48960000000000004
+skills	false	0.46709999999999996
+##########END##########
+offer group education programmes as the preferred option. provide an alternative of equal standard for a person unable or unwilling to participate in group education.
+T4
+offer group education programmes	false	0.44789999999999996
+T3
+group education programmes	false	0.41769999999999996
+T2
+education programmes	true	0.3657
+group education	false	1.5204
+equal standard	false	0.3657
+offer group	false	0.3657
+person unable	false	0.3657
+preferred option	false	0.3657
+T1
+programme	false	1.0457999999999998
+part	false	0.9963000000000001
+education	false	0.7976000000000001
+offer	false	0.7148000000000001
+alternative	false	0.6639999999999999
+option	false	0.24650000000000005
+standard	false	0.24650000000000005
+person	false	0.22960000000000003
+group	false	0.18230000000000002
+##########END##########
+ensure that the patient-education programmes available meet the cultural, linguistic, cognitive and literacy needs within the local area. 
+T4
+T3
+T2
+local area	true	1.2263
+education programmes	true	0.3657
+T1
+area	true	1.0
+needs	true	0.7031999999999999
+programme	false	1.0457999999999998
+literacy	false	1.0
+education	false	0.7976000000000001
+ensure	false	0.48960000000000004
+##########END##########
+ensure that all members of the diabetes healthcare team are familiar with the patient-education programmes available locally, that these programmes are integrated with the rest of the care pathway, and that adults with type 2 diabetes and their family members or carers (as appropriate) have the opportunity to contribute to the design and provision of local programmes.
+T4
+T3
+diabetes healthcare team	false	0.7303999999999999
+T2
+education programmes	true	0.3657
+family members	false	0.694
+care pathway	false	0.6607999999999999
+diabetes healthcare	false	0.6607999999999999
+local programmes	false	0.6607999999999999
+T1
+integrate	true	1.0
+healthcare	true	0.795
+family	true	0.6025000000000001
+pathway	true	0.5058999999999999
+adult	false	1.0571000000000002
+programme	false	1.0457999999999998
+members	false	1.0445000000000002
+vision	false	1.0
+education	false	0.7976000000000001
+opportunity	false	0.795
+team	false	0.795
+care	false	0.6437999999999999
+design	false	0.5058999999999999
+rest	false	0.5058999999999999
+ensure	false	0.48960000000000004
+##########END##########
+provide individualised and ongoing nutritional advice from a healthcare professional with specific expertise and competencies in nutrition.
+T4
+T3
+ongoing nutritional advice	false	1.3333
+T2
+healthcare professional	false	1.2263
+nutritional advice	false	1.2263
+specific expertise	false	1.2263
+T1
+healthcare	true	0.795
+expertise	false	1.0571000000000002
+competencies	false	1.0
+individualise	false	1.0
+nutrition	false	1.0
+advice	false	0.3981
+##########END##########
+provide dietary advice in a form sensitive to the person's needs, culture and beliefs, being sensitive to their willingness to change and the effects on their quality of life.
+T4
+T3
+T2
+form sensitive	false	1.2263
+dietary advice	false	1.21
+T1
+diet	true	1.0086
+quality	true	0.7994000000000001
+needs	true	0.7031999999999999
+culture	false	1.0
+form	false	1.0
+willingness	false	1.0
+life	false	0.9925000000000002
+effects	false	0.9044
+beliefs	false	0.7715
+advice	false	0.3981
+person	false	0.22960000000000003
+##########END##########
+emphasise advice on healthy balanced eating that is applicable to the general population when providing advice to adults with type 2 diabetes.
+T4
+T3
+healthy balanced eating	false	1.3182
+T2
+general population	true	1.2111999999999998
+balanced eating	false	1.2111999999999998
+emphasise advice	false	1.2111999999999998
+T1
+adult	false	1.0571000000000002
+eating	false	0.9849
+emphasise	false	0.9849
+population	false	0.9849
+advice	false	0.3981
+##########END##########
+encourage high-fibre, low-glycaemic-index sources of carbohydrate in the diet, such as fruit, vegetables, wholegrains and pulses; include low-fat dairy products and oily fish; and control the intake of foods containing saturated and trans fatty acids.
+T4
+T3
+low-fat dairy products	false	1.3333
+T2
+dairy products	false	1.2263
+encourage high-fibre	false	1.2263
+fatty acids	false	1.2263
+low-glycaemic-index sources	false	1.2263
+oily fish	false	1.2263
+T1
+diet	true	1.0086
+acids	true	1.0
+products	true	1.0
+carbohydrate	true	0.9069999999999999
+encourage	false	1.0507
+dairy	false	1.0
+fish	false	1.0
+fruit	false	1.0
+high-fibre	false	1.0
+low-glycaemic-index	false	1.0
+pulses	false	1.0
+sources	false	1.0
+trans	false	1.0
+vegetables	false	1.0
+wholegrains	false	1.0
+control	false	0.9963000000000001
+foods	false	0.9963000000000001
+intake	false	0.9963000000000001
+##########END##########
+integrate dietary advice with a personalised diabetes management plan, including other aspects of lifestyle modification, such as increasing physical activity and losing weight.
+T4
+T3
+diabetes management plan	false	1.3333
+integrate dietary advice	false	1.3333
+T2
+diabetes management	false	1.2263
+integrate dietary	false	1.2263
+lifestyle modification	false	1.2263
+physical activity	false	0.5792999999999999
+T1
+diet	true	1.0086
+integrate	true	1.0
+plan	false	1.0571000000000002
+aspects	false	1.0
+modification	false	1.0
+life	false	0.9925000000000002
+men	false	0.9069999999999999
+weight	false	0.7574
+activity	false	0.4921
+age	false	0.4707
+advice	false	0.3981
+person	false	0.22960000000000003
+##########END##########
+for adults with type 2 diabetes who are overweight, set an initial body weight loss target of 5–10%.
+T4
+initial body weight loss target	false	1.4421
+T3
+body weight loss	false	1.3333
+T2
+body weight	false	1.2263
+loss target	false	1.2263
+T1
+loss	true	0.9482
+adult	false	1.0571000000000002
+body	false	1.0
+target	false	0.8399
+weight	false	0.7574
+##########END##########
+remember that lesser degrees of weight loss may still be of benefit, and that larger degrees of weight loss in the longer term will have advantageous metabolic impact.
+T4
+T3
+advantageous metabolic impact	false	0.45599999999999996
+T2
+weight loss	false	1.1595
+advantageous metabolic	false	0.39970000000000006
+T1
+loss	true	0.9482
+degrees	false	1.3333
+weight	false	0.7574
+benefit	false	0.6795
+age	false	0.4707
+impact	false	0.27159999999999995
+term	false	0.27159999999999995
+##########END##########
+individualise recommendations for carbohydrate and alcohol intake, and meal patterns.
+T4
+T3
+T2
+alcohol intake	false	1.2263
+individualise recommendations	false	1.2263
+meal patterns	false	1.2263
+T1
+alcohol	true	1.0
+carbohydrate	true	0.9069999999999999
+individualise	false	1.0
+patterns	false	1.0
+intake	false	0.9963000000000001
+meal	false	0.9963000000000001
+men	false	0.9069999999999999
+##########END##########
+reducing the risk of hypoglycaemia should be a particular aim for a person using insulin or an insulin secretagogue.
+T4
+T3
+T2
+insulin secretagogue	false	0.5911
+T1
+secretagogue	true	0.4356
+insulin	false	1.2828
+part	false	0.9963000000000001
+risk	false	0.7644000000000001
+hypoglycaemia	false	0.6407999999999999
+aim	false	0.4356
+person	false	0.22960000000000003
+##########END##########
+advise adults with type 2 diabetes that limited substitution of sucrose-containing foods for other carbohydrate in the meal plan is allowable, but that they should take care to avoid excess energy intake.
+T4
+T3
+excess energy intake	false	1.3333
+T2
+advise adults	false	1.2263
+energy intake	false	1.2263
+limited substitution	false	1.2263
+meal plan	false	1.2263
+sucrose-containing foods	false	1.2263
+T1
+energy	true	1.0
+carbohydrate	true	0.9069999999999999
+adult	false	1.0571000000000002
+plan	false	1.0571000000000002
+advise	false	1.0
+substitution	false	1.0
+sucrose-containing	false	1.0
+foods	false	0.9963000000000001
+intake	false	0.9963000000000001
+meal	false	0.9963000000000001
+care	false	0.6437999999999999
+##########END##########
+discourage the use of foods marketed specifically for people with diabetes.
+T4
+T3
+T2
+T1
+people	true	0.9069999999999999
+discourage	false	1.0
+foods	false	0.9963000000000001
+##########END##########
+when adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting, implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks.
+T4
+T3
+meal planning system	false	1.3333
+T2
+carbohydrate content	false	1.2263
+meal plan	false	1.2263
+T1
+carbohydrate	true	0.9069999999999999
+adult	false	1.0571000000000002
+plan	false	1.0571000000000002
+system	false	1.0571000000000002
+hospital	false	1.0
+inpatients	false	1.0
+meals	false	1.0
+snacks	false	1.0
+meal	false	0.9963000000000001
+men	false	0.9069999999999999
+consistency	false	0.7715
+content	false	0.7715
+care	false	0.6437999999999999
+##########END##########
+for recommendations on lifestyle advice, see the nice guidelines on: preventing excess weight gain, weight management, obesity, physical activity, smoking: brief interventions and referrals, stop smoking services, smoking: harm reduction, and smoking: acute, maternity and mental health services. 
+T4
+T3
+T2
+physical activity	false	0.5792999999999999
+nice guideline	false	0.5271999999999999
+lifestyle advice	false	0.4646
+T1
+smoking	true	1.5
+nice	true	0.2348999999999999
+referral	false	1.0626000000000002
+service	false	1.0571000000000002
+life	false	0.9925000000000002
+men	false	0.9069999999999999
+weight	false	0.7574
+interventions	false	0.62
+activity	false	0.4921
+age	false	0.4707
+guideline	false	0.4663999999999999
+advice	false	0.3981
+##########END##########
+measure blood pressure at least annually in an adult with type 2 diabetes without previously diagnosed hypertension or renal disease.
+T4
+T3
+measure blood pressure	false	1.3333
+T2
+measure blood	false	1.2263
+renal disease	false	1.2263
+T1
+blood	true	0.41369999999999996
+adult	false	1.0571000000000002
+hypertension	false	1.0571000000000002
+measure	false	1.0
+disease	false	0.9451999999999999
+pressure	false	0.6714000000000001
+##########END##########
+offer and reinforce preventive lifestyle advice. 
+T4
+T3
+preventive lifestyle advice	false	1.3333
+T2
+preventive lifestyle	false	1.2263
+T1
+life	false	0.9925000000000002
+offer	false	0.7148000000000001
+advice	false	0.3981
+##########END##########
+for an adult with type 2 diabetes on antihypertensive drug treatment when diabetes is diagnosed, review blood pressure control and medications used.
+T4
+T3
+blood pressure control	false	1.3333
+antihypertensive drug treatment	false	0.6084
+T2
+pressure control	false	1.2263
+antihypertensive drug	false	0.5332
+T1
+review	true	0.7920999999999999
+blood	true	0.41369999999999996
+drug	true	0.2317999999999999
+adult	false	1.0571000000000002
+control	false	0.9963000000000001
+men	false	0.9069999999999999
+medication	false	0.8454
+pressure	false	0.6714000000000001
+antihypertensive	false	0.5063000000000001
+##########END##########
+make changes only if there is poor control or if current drug treatment is not appropriate because of microvascular complications or metabolic problems.
+T4
+T3
+current drug treatment	false	1.3333
+T2
+current drug	false	1.2263
+metabolic problems	false	1.2263
+microvascular complications	false	1.2263
+poor control	false	1.2263
+T1
+changes	true	1.0
+drug	true	0.2317999999999999
+problems	false	1.0642
+complications	false	1.0
+control	false	0.9963000000000001
+men	false	0.9069999999999999
+##########END##########
+add medications if lifestyle advice does not reduce blood pressure to below 140/80 mmhg (below 130/80 mmhg if there is kidney, eye or cerebrovascular damage). 
+T4
+T3
+T2
+blood pressure	false	0.6939000000000001
+cerebrovascular damage	false	0.5036
+lifestyle advice	false	0.4646
+T1
+kidney	true	0.621
+eye	true	0.47450000000000003
+blood	true	0.41369999999999996
+mmhg	false	1.6
+life	false	0.9925000000000002
+medication	false	0.8454
+pressure	false	0.6714000000000001
+damage	false	0.5751999999999999
+advice	false	0.3981
+##########END##########
+monitor blood pressure every 1–2 months, and intensify therapy if the person is already on antihypertensive drug treatment, until the blood pressure is consistently below 140/80 mmhg (below 130/80 mmhg if there is kidney, eye or cerebrovascular damage).
+T4
+T3
+antihypertensive drug treatment	false	0.6084
+monitor blood pressure	false	0.5928999999999999
+T2
+blood pressure	false	0.6939000000000001
+antihypertensive drug	false	0.5332
+1–2 months	false	0.5314
+cerebrovascular damage	false	0.5036
+T1
+kidney	true	0.621
+eye	true	0.47450000000000003
+blood	true	0.41369999999999996
+drug	true	0.2317999999999999
+mmhg	false	1.6
+men	false	0.9069999999999999
+months	false	0.8632
+monitor	false	0.7101999999999999
+pressure	false	0.6714000000000001
+therapy	false	0.6264
+damage	false	0.5751999999999999
+antihypertensive	false	0.5063000000000001
+person	false	0.22960000000000003
+##########END##########
+first-line antihypertensive drug treatment should be a once-daily, generic angiotensin-converting enzyme (ace) inhibitor.
+T4
+first-line antihypertensive drug treatment	false	1.0027
+T3
+generic angiotensin-converting enzyme	false	1.3333
+first-line antihypertensive drug	false	0.983
+T2
+angiotensin-converting enzyme	false	1.2263
+first-line antihypertensive	false	0.9471999999999999
+drug treatment	false	0.5060000000000001
+T1
+enzyme	true	1.0
+angiotensin	true	0.8562
+inhibitor	true	0.7425
+drug	true	0.2317999999999999
+once-daily	false	1.0
+men	false	0.9069999999999999
+first-line	false	0.8041
+antihypertensive	false	0.5063000000000001
+##########END##########
+exceptions to this are people of african or caribbean family origin, or women for whom there is a possibility of becoming pregnant.
+T4
+T3
+caribbean family origin	false	1.2739
+T2
+caribbean family	false	1.21
+T1
+women	true	1.0
+people	true	0.9069999999999999
+family	true	0.6025000000000001
+origin	false	1.0571000000000002
+exceptions	false	1.0
+possibility	false	0.7342000000000001
+##########END##########
+the first-line antihypertensive drug treatment for a person of african or caribbean family origin should be an ace inhibitor plus either a diuretic or a generic calcium-channel blocker. 
+T4
+first-line antihypertensive drug treatment	false	1.0027
+T3
+generic calcium-channel blocker	false	1.3333
+caribbean family origin	false	1.2739
+first-line antihypertensive drug	false	0.983
+T2
+generic calcium-channel	false	1.2263
+caribbean family	false	1.21
+ace inhibitor	false	1.2016
+first-line antihypertensive	false	0.9471999999999999
+drug treatment	false	0.5060000000000001
+T1
+diuretic	true	0.9963000000000001
+inhibitor	true	0.7425
+family	true	0.6025000000000001
+drug	true	0.2317999999999999
+origin	false	1.0571000000000002
+men	false	0.9069999999999999
+blocker	false	0.8041
+calcium-channel	false	0.8041
+first-line	false	0.8041
+antihypertensive	false	0.5063000000000001
+person	false	0.22960000000000003
+##########END##########
+a calcium-channel blocker should be the first-line antihypertensive drug treatment for a woman for whom, after an informed discussion, it is agreed there is a possibility of her becoming pregnant
+T4
+first-line antihypertensive drug treatment	false	1.0027
+T3
+first-line antihypertensive drug	false	0.983
+T2
+first-line antihypertensive	false	0.9471999999999999
+calcium-channel blocker	false	0.8699999999999999
+informed discussion	false	0.7768999999999999
+drug treatment	false	0.5060000000000001
+T1
+drug	true	0.2317999999999999
+form	false	1.0
+men	false	0.9069999999999999
+discussion	false	0.8562
+blocker	false	0.8041
+calcium-channel	false	0.8041
+first-line	false	0.8041
+possibility	false	0.7342000000000001
+woman	false	0.6061
+antihypertensive	false	0.5063000000000001
+##########END##########
+for a person with continuing intolerance to an ace inhibitor (other than renal deterioration or hyperkalaemia), substitute an angiotensin ii-receptor antagonist for the ace inhibitor.
+T4
+T3
+angiotensin ii-receptor antagonist	false	0.983
+T2
+ace inhibitor	false	1.2016
+angiotensin ii-receptor	false	0.9471999999999999
+renal deterioration	false	0.7768999999999999
+T1
+angiotensin	true	0.8562
+inhibitor	true	0.7425
+antagonist	false	0.8562
+ii-receptor	false	0.8562
+hyperkalaemia	false	0.6061
+intolerance	false	0.6061
+person	false	0.22960000000000003
+##########END##########
+do not combine an ace inhibitor with an angiotensin ii-receptor antagonist to treat hypertension. 
+T4
+T3
+angiotensin ii-receptor antagonist	false	0.983
+T2
+ace inhibitor	false	1.2016
+angiotensin ii-receptor	false	0.9471999999999999
+T1
+angiotensin	true	0.8562
+inhibitor	true	0.7425
+hypertension	false	1.0571000000000002
+antagonist	false	0.8562
+ii-receptor	false	0.8562
+##########END##########
+if the person's blood pressure is not reduced to the individually agreed target with first-line therapy, add a calcium-channel blocker or a diuretic (usually a thiazide or thiazide-related diuretic).
+T4
+T3
+T2
+first-line therapy	false	1.2263
+thiazide-related diuretic	false	1.2263
+calcium-channel blocker	false	0.8699999999999999
+blood pressure	false	0.6939000000000001
+T1
+thiazide	true	1.0
+diuretic	true	0.9963000000000001
+blood	true	0.41369999999999996
+target	false	0.8399
+blocker	false	0.8041
+calcium-channel	false	0.8041
+first-line	false	0.8041
+pressure	false	0.6714000000000001
+therapy	false	0.6264
+person	false	0.22960000000000003
+##########END##########
+add the other drug (that is, the calcium-channel blocker or diuretic) if the target is not reached with dual therapy.
+T4
+T3
+T2
+dual therapy	false	1.2263
+calcium-channel blocker	false	0.8699999999999999
+T1
+diuretic	true	0.9963000000000001
+drug	true	0.2317999999999999
+target	false	0.8399
+blocker	false	0.8041
+calcium-channel	false	0.8041
+therapy	false	0.6264
+##########END##########
+if the person's blood pressure is not reduced to the individually agreed target with triple therapy, add an alpha-blocker, a beta-blocker or a potassium-sparing diuretic (the last with caution if the person is already taking an ace inhibitor or an angiotensin ii-receptor antagonist).
+T4
+T3
+angiotensin ii-receptor antagonist	false	0.983
+T2
+potassium-sparing diuretic	false	1.2263
+triple therapy	false	1.2263
+ace inhibitor	false	1.2016
+angiotensin ii-receptor	false	0.9471999999999999
+blood pressure	false	0.6939000000000001
+T1
+diuretic	true	0.9963000000000001
+angiotensin	true	0.8562
+inhibitor	true	0.7425
+blood	true	0.41369999999999996
+alpha-blocker	false	1.0
+beta-blocker	false	1.0
+caution	false	1.0
+potassium-sparing	false	1.0
+antagonist	false	0.8562
+ii-receptor	false	0.8562
+target	false	0.8399
+pressure	false	0.6714000000000001
+therapy	false	0.6264
+person	false	0.22960000000000003
+##########END##########
+monitor the blood pressure of a person who has attained and consistently remained at his or her blood pressure target every 4–6 months.
+T4
+T3
+blood pressure target	false	1.2698
+T2
+4–6 months	false	1.1627999999999998
+pressure target	false	1.1627999999999998
+blood pressure	false	0.6939000000000001
+T1
+blood	true	0.41369999999999996
+months	false	0.8632
+target	false	0.8399
+monitor	false	0.7101999999999999
+pressure	false	0.6714000000000001
+person	false	0.22960000000000003
+##########END##########
+check for possible adverse effects of antihypertensive drug treatment – including the risks from unnecessarily low blood pressure.
+T4
+T3
+low blood pressure	false	1.3333
+antihypertensive drug treatment	false	0.6084
+T2
+low blood	false	1.2263
+adverse effects	false	1.2035999999999998
+antihypertensive drug	false	0.5332
+T1
+check	true	1.0
+blood	true	0.41369999999999996
+drug	true	0.2317999999999999
+risks	false	1.0571000000000002
+men	false	0.9069999999999999
+effects	false	0.9044
+pressure	false	0.6714000000000001
+antihypertensive	false	0.5063000000000001
+##########END##########
+do not offer antiplatelet therapy (aspirin or clopidogrel) for adults with type 2 diabetes without cardiovascular disease.
+T4
+T3
+T2
+antiplatelet therapy	false	1.2263
+cardiovascular disease	false	1.21
+T1
+clopidogrel	true	1.0
+adult	false	1.0571000000000002
+antiplatelet	false	1.0
+aspirin	false	1.0
+disease	false	0.9451999999999999
+offer	false	0.7148000000000001
+therapy	false	0.6264
+##########END##########
+use methods to measure hba1c that have been calibrated according to international federation of clinical chemistry (ifcc) standardisation.
+T4
+T3
+T2
+clinical chemistry	false	1.2263
+international federation	false	1.2263
+T1
+chemistry	true	1.0
+standardisation	true	1.0
+hba1c	true	0.6739999999999999
+clinical	false	1.0
+federation	false	1.0
+ifcc	false	1.0
+international	false	1.0
+measure	false	1.0
+methods	false	1.0
+##########END##########
+investigate unexplained discrepancies between hba1c and other glucose measurements.
+T4
+T3
+investigate unexplained discrepancies	false	1.3333
+T2
+glucose measurements	false	1.2263
+investigate unexplained	false	1.2263
+T1
+investigate	true	1.0
+hba1c	true	0.6739999999999999
+explain	false	1.0571000000000002
+discrepancies	false	1.0
+measure	false	1.0
+men	false	0.9069999999999999
+glucose	false	0.8804
+##########END##########
+seek advice from a team with specialist expertise in diabetes or clinical biochemistry.
+T4
+T3
+T2
+clinical biochemistry	false	1.2263
+seek advice	false	1.2263
+specialist expertise	false	1.2263
+T1
+chemistry	true	1.0
+expertise	false	1.0571000000000002
+specialist	false	1.0571000000000002
+clinical	false	1.0
+seek	false	1.0
+team	false	0.795
+advice	false	0.3981
+##########END##########
+involve adults with type 2 diabetes in decisions about their individual hba1c target.
+T4
+T3
+individual hba1c target	false	1.3333
+T2
+hba1c target	false	1.2263
+involve adults	false	1.2263
+T1
+hba1c	true	0.6739999999999999
+adult	false	1.0571000000000002
+decisions	false	1.0
+involve	false	1.0
+target	false	0.8399
+##########END##########
+encourage them to achieve the target and maintain it unless any resulting adverse effects (including hypoglycaemia), or their efforts to achievetheir target, impair their quality of life. 
+T4
+T3
+T2
+achievetheir target	false	1.2111999999999998
+adverse effects	false	1.2035999999999998
+T1
+quality	true	0.7994000000000001
+encourage	false	1.0507
+life	false	0.9925000000000002
+achievetheir	false	0.9849
+efforts	false	0.9849
+effects	false	0.9044
+target	false	0.8399
+hypoglycaemia	false	0.6407999999999999
+##########END##########
+for adults with type 2 diabetes managed either by lifestyle and diet, or by lifestyle and diet combined with a single drug not associated with hypoglycaemia, support the person to aim for an hba1c level of 48 mmol/mol(6.5%).
+T4
+T3
+T2
+hba1c level	false	0.9669000000000001
+single drug	false	0.5370999999999999
+T1
+diet	true	1.0086
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+drug	true	0.2317999999999999
+mol	false	1.5
+adult	false	1.0571000000000002
+life	false	0.9925000000000002
+hypoglycaemia	false	0.6407999999999999
+age	false	0.4707
+aim	false	0.4356
+person	false	0.22960000000000003
+##########END##########
+for adults on a drug associated with hypoglycaemia, support the person to aim for an hba1c level of 53 mmol/mol (7.0%).
+T4
+T3
+T2
+hba1c level	false	0.9669000000000001
+T1
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+drug	true	0.2317999999999999
+mol	false	1.5
+adult	false	1.0571000000000002
+hypoglycaemia	false	0.6407999999999999
+aim	false	0.4356
+person	false	0.22960000000000003
+##########END##########
+in adults with type 2 diabetes, if hba1c levels are not adequately controlled by a single drug and rise to 58 mmol/mol (7.5%) or higher: reinforce advice about diet, lifestyle and adherence to drug treatment and support the person to aim for an hba1c level of 53 mmol/mol (7.0%) and intensify drug treatment.
+T4
+T3
+T2
+hba1c level	false	0.9669000000000001
+single drug	false	0.5370999999999999
+drug treatment	false	0.5060000000000001
+T1
+diet	true	1.0086
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+rise	true	0.36349999999999993
+drug	true	0.2317999999999999
+mol	false	1.5
+adult	false	1.0571000000000002
+control	false	0.9963000000000001
+life	false	0.9925000000000002
+men	false	0.9069999999999999
+aim	false	0.4356
+advice	false	0.3981
+adherence	false	0.36349999999999993
+person	false	0.22960000000000003
+##########END##########
+if adults with type 2 diabetes achieve an hba1c level that is lower than their target and they are not experiencing hypoglycaemia, encourage them to maintain it.
+T4
+T3
+T2
+hba1c level	false	0.9669000000000001
+T1
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+adult	false	1.0571000000000002
+encourage	false	1.0507
+target	false	0.8399
+hypoglycaemia	false	0.6407999999999999
+##########END##########
+be aware that there are other possible reasons for a low hba1c level, for example, deteriorating renal function or sudden weight loss. 
+T4
+T3
+low hba1c level	false	1.6
+sudden weight loss	false	1.6
+T2
+low hba1c	false	1.5204
+renal function	false	1.5204
+sudden weight	false	1.5204
+T1
+loss	true	0.9482
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+function	false	1.3333
+reasons	false	1.1848999999999998
+weight	false	0.7574
+##########END##########
+if adults with type 2 diabetes achieve an hba1c level that is lower than their target and they are not experiencing hypoglycaemia, encourage them to maintain it.
+T4
+T3
+T2
+hba1c level	false	0.9669000000000001
+T1
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+adult	false	1.0571000000000002
+encourage	false	1.0507
+target	false	0.8399
+hypoglycaemia	false	0.6407999999999999
+##########END##########
+be aware that there are other possible reasons for a low hba1c level, for example, deteriorating renal function or sudden weight loss. 
+T4
+T3
+low hba1c level	false	1.6
+sudden weight loss	false	1.6
+T2
+low hba1c	false	1.5204
+renal function	false	1.5204
+sudden weight	false	1.5204
+T1
+loss	true	0.9482
+level	true	0.9242000000000001
+hba1c	true	0.6739999999999999
+function	false	1.3333
+reasons	false	1.1848999999999998
+weight	false	0.7574
+##########END##########
+do not routinely offer self-monitoring of blood glucose levels for adults with type 2 diabetes unless: the person is on insulin or there is evidence of hypoglycaemic episodes or the person is on oral medication that may increase their risk of hypoglycaemia while driving or operating machinery or the person is pregnant, or is planning to become pregnant. 
+T4
+T3
+blood glucose levels	false	1.2086000000000001
+T2
+glucose levels	false	1.1446999999999998
+hypoglycaemic episodes	false	1.0716999999999999
+oral medication	false	1.0716999999999999
+T1
+level	true	0.9242000000000001
+blood	true	0.41369999999999996
+insulin	false	1.2828
+adult	false	1.0571000000000002
+plan	false	1.0571000000000002
+driving	false	1.0
+self-monitoring	false	0.9918000000000001
+evidence	false	0.9575000000000001
+glucose	false	0.8804
+episodes	false	0.8454
+machinery	false	0.8454
+medication	false	0.8454
+risk	false	0.7644000000000001
+offer	false	0.7148000000000001
+hypoglycaemia	false	0.6407999999999999
+person	false	0.22960000000000003
+##########END##########
+consider short-term self-monitoring of blood glucose levels in adults with type 2 diabetes (and review treatment as necessary): when starting treatment with oral or intravenous corticosteroids or to confirm suspected hypoglycaemia.
+T4
+T3
+blood glucose levels	false	1.2086000000000001
+T2
+intravenous corticosteroids	false	1.2263
+review treatment	false	1.2263
+short-term self-monitoring	false	1.2263
+suspected hypoglycaemia	false	1.2263
+glucose levels	false	1.1446999999999998
+T1
+side	true	1.0
+level	true	0.9242000000000001
+review	true	0.7920999999999999
+blood	true	0.41369999999999996
+adult	false	1.0571000000000002
+corticosteroids	false	1.0
+self-monitoring	false	0.9918000000000001
+men	false	0.9069999999999999
+glucose	false	0.8804
+hypoglycaemia	false	0.6407999999999999
+term	false	0.27159999999999995
+##########END##########
+think about a diagnosis of gastroparesis in adults with type 2 diabetes with erratic blood glucose control or unexplained gastric bloating or vomiting, taking into account possible alternative diagnoses.
+T4
+erratic blood glucose control	false	1.3979
+T3
+blood glucose control	false	1.3333
+T2
+alternative diagnoses	false	1.2263
+erratic blood	false	1.2263
+glucose control	false	1.2263
+unexplained gastric	false	1.2263
+T1
+account	true	0.8139000000000001
+blood	true	0.41369999999999996
+adult	false	1.0571000000000002
+explain	false	1.0571000000000002
+diagnoses	false	1.0
+control	false	0.9963000000000001
+vomiting	false	0.9963000000000001
+diagnosis	false	0.9069999999999999
+gastroparesis	false	0.9069999999999999
+glucose	false	0.8804
+alternative	false	0.6639999999999999
+##########END##########
+for adults with type 2 diabetes who have vomiting caused by gastroparesis, explain that: there is not strong evidence that any available antiemetic therapy is effective some people have had benefit with domperidone[11], erythromycin[12] or metoclopramide[13].
+T4
+T3
+T2
+antiemetic therapy	false	1.2263
+strong evidence	false	1.2263
+T1
+domperidone	true	1.0
+people	true	0.9069999999999999
+adult	false	1.0571000000000002
+explain	false	1.0571000000000002
+vomiting	false	0.9963000000000001
+evidence	false	0.9575000000000001
+gastroparesis	false	0.9069999999999999
+benefit	false	0.6795
+therapy	false	0.6264
+##########END##########
+the strongest evidence for effectiveness is for domperidone[11], but prescribers must take into account its safety profile, in particular its cardiac risk and potential interactions with other medicines.
+T4
+T3
+T2
+cardiac risk	false	1.2263
+potential interactions	false	1.2263
+safety profile	false	1.2263
+T1
+domperidone	true	1.0
+profile	true	1.0
+safety	true	1.0
+account	true	0.8139000000000001
+medicines	false	1.0571000000000002
+effectiveness	false	1.0
+interactions	false	1.0
+prescribers	false	1.0
+part	false	0.9963000000000001
+evidence	false	0.9575000000000001
+risk	false	0.7644000000000001
+##########END##########
+for treating vomiting caused by gastroparesis in adults with type 2 diabetes: consider alternating use of erythomycin[12] and metoclopramide[13] consider domperidone[11] only in exceptional circumstances (if domperidone is the only effective treatment) and in accordance with mhra guidance.
+T4
+T3
+T2
+effective treatment	false	1.2263
+exceptional circumstances	false	1.2263
+mhra guidance	false	1.2263
+T1
+domperidone	true	1.0
+side	true	1.0
+adult	false	1.0571000000000002
+mhra	false	1.0
+circumstances	false	0.9963000000000001
+vomiting	false	0.9963000000000001
+eating	false	0.9849
+gastroparesis	false	0.9069999999999999
+men	false	0.9069999999999999
+guidance	false	0.5212999999999999
+accordance	false	0.137
+##########END##########
+if gastroparesis is suspected, consider referral to specialist services if: the differential diagnosis is in doubt or persistent or severe vomiting occurs.
+T4
+T3
+T2
+differential diagnosis	false	1.2263
+severe vomiting	false	1.2263
+specialist services	false	1.2263
+T1
+side	true	1.0
+referral	false	1.0626000000000002
+service	false	1.0571000000000002
+specialist	false	1.0571000000000002
+doubt	false	1.0
+vomiting	false	0.9963000000000001
+diagnosis	false	0.9069999999999999
+gastroparesis	false	0.9069999999999999
+##########END##########
+for guidance on managing painful diabetic peripheral neuropathy in adults with type 2 diabetes, see the nice guideline on neuropathic pain in adults.
+T4
+painful diabetic peripheral neuropathy	false	1.3979
+T3
+diabetic peripheral neuropathy	false	1.3333
+T2
+diabetic peripheral	false	1.2263
+neuropathic pain	false	1.2263
+nice guideline	false	0.5271999999999999
+T1
+nice	true	0.2348999999999999
+adult	false	1.0571000000000002
+pain	false	1.0
+neuropathy	false	0.8139000000000001
+guidance	false	0.5212999999999999
+guideline	false	0.4663999999999999
+##########END##########
+think about the possibility of contributory sympathetic nervous system damage for adults with type 2 diabetes who lose the warning signs of hypoglycaemia.
+T4
+contributory sympathetic nervous system	false	1.3979
+T3
+nervous system damage	false	1.3333
+T2
+contributory sympathetic	false	1.2263
+nervous system	false	1.2263
+T1
+adult	false	1.0571000000000002
+system	false	1.0571000000000002
+signs	false	1.0
+possibility	false	0.7342000000000001
+hypoglycaemia	false	0.6407999999999999
+damage	false	0.5751999999999999
+##########END##########
+think about the possibility of autonomic neuropathy affecting the gut in adults with type 2 diabetes who have unexplained diarrhoea that happens particularly at night.
+T4
+T3
+T2
+unexplained diarrhoea	false	1.2263
+autonomic neuropathy	false	0.9794999999999999
+T1
+gut	true	1.0
+adult	false	1.0571000000000002
+diarrhoea	false	1.0571000000000002
+explain	false	1.0571000000000002
+night	false	1.0
+part	false	0.9963000000000001
+neuropathy	false	0.8139000000000001
+possibility	false	0.7342000000000001
+##########END##########
+when using tricyclic drugs and antihypertensive drug treatments in adults with type 2 diabetes who have autonomic neuropathy, be aware of the increased likelihood of side effects such as orthostatic hypotension.
+T4
+T3
+antihypertensive drug treatments	false	1.3333
+T2
+drug treatments	false	1.2263
+orthostatic hypotension	false	1.2263
+side effects	false	1.2263
+tricyclic drugs	false	1.2263
+autonomic neuropathy	false	0.9794999999999999
+T1
+drugs	true	1.0
+hypotension	true	1.0
+side	true	1.0
+drug	true	0.2317999999999999
+adult	false	1.0571000000000002
+likelihood	false	1.0
+treatments	false	1.0
+effects	false	0.9044
+neuropathy	false	0.8139000000000001
+antihypertensive	false	0.5063000000000001
+##########END##########
+investigate the possibility of autonomic neuropathy affecting the bladder in adults with type 2 diabetes who have unexplained bladder-emptying problems.
+T4
+T3
+unexplained bladder-emptying problems	false	1.3333
+T2
+bladder-emptying problems	false	1.2263
+autonomic neuropathy	false	0.9794999999999999
+T1
+investigate	true	1.0
+problems	false	1.0642
+adult	false	1.0571000000000002
+explain	false	1.0571000000000002
+bladder	false	1.0
+neuropathy	false	0.8139000000000001
+possibility	false	0.7342000000000001
+##########END##########
+in managing autonomic neuropathy symptoms, include specific interventions indicated by the manifestations (for example, for abnormal sweating or nocturnal diarrhoea).
+T4
+T3
+autonomic neuropathy symptoms	false	1.3333
+T2
+neuropathy symptoms	false	1.2263
+nocturnal diarrhoea	false	1.2263
+specific interventions	false	1.2263
+T1
+diarrhoea	false	1.0571000000000002
+manifestations	false	1.0
+symptoms	false	1.0
+eating	false	0.9849
+neuropathy	false	0.8139000000000001
+interventions	false	0.62
+##########END##########
+for guidance on preventing and managing foot problems in adults with type 2 diabetes, see the nice guideline on diabetic foot problems.
+T4
+T3
+diabetic foot problems	false	0.42200000000000004
+T2
+foot problems	false	1.5204
+nice guideline	false	0.5271999999999999
+T1
+nice	true	0.2348999999999999
+foot	false	1.3333
+problems	false	1.0642
+adult	false	1.0571000000000002
+guidance	false	0.5212999999999999
+guideline	false	0.4663999999999999
+##########END##########
+for guidance on managing kidney disease in adults with type 2 diabetes, see the nice guideline on chronic kidney disease in adults.
+T4
+T3
+chronic kidney disease	false	0.42200000000000004
+T2
+kidney disease	true	1.5204
+nice guideline	false	0.5271999999999999
+T1
+kidney	true	0.621
+nice	true	0.2348999999999999
+adult	false	1.0571000000000002
+disease	false	0.9451999999999999
+guidance	false	0.5212999999999999
+guideline	false	0.4663999999999999
+##########END##########
+offer men with type 2 diabetes the opportunity to discuss erectile dysfunction as part of their annual review.
+T4
+T3
+T2
+annual review	false	1.2263
+offer men	false	1.2263
+erectile dysfunction	false	0.9794999999999999
+T1
+dysfunction	true	0.9069999999999999
+review	true	0.7920999999999999
+part	false	0.9963000000000001
+men	false	0.9069999999999999
+opportunity	false	0.795
+offer	false	0.7148000000000001
+##########END##########
+assess, educate and support men with type 2 diabetes who have problematic erectile dysfunction, addressing contributory factors such as cardiovascular disease as well as possible treatment options.
+T4
+T3
+problematic erectile dysfunction	false	1.2739
+T2
+contributory factors	false	1.2263
+treatment options	false	1.2263
+cardiovascular disease	false	1.21
+problematic erectile	false	1.21
+T1
+dysfunction	true	0.9069999999999999
+assess	false	1.0
+factors	false	1.0
+options	false	1.0
+disease	false	0.9451999999999999
+men	false	0.9069999999999999
+##########END##########
+consider a phosphodiesterase-5 inhibitor to treat problematic erectile dysfunction in men with type 2 diabetes, initially choosing the drug with the lowest acquisition cost and taking into account any contraindications.
+T4
+T3
+problematic erectile dysfunction	false	1.2739
+T2
+acquisition cost	false	1.2263
+phosphodiesterase-5 inhibitor	false	1.21
+problematic erectile	false	1.21
+T1
+side	true	1.0
+dysfunction	true	0.9069999999999999
+account	true	0.8139000000000001
+inhibitor	true	0.7425
+drug	true	0.2317999999999999
+acquisition	false	1.0
+contraindications	false	1.0
+cost	false	1.0
+men	false	0.9069999999999999
+##########END##########
+following discussion, refer men with type 2 diabetes to a service offering other medical, surgical or psychological management of erectile dysfunction if treatment (including a phosphodiesterase-5 inhibitor, as appropriate) has been unsuccessful.
+T4
+T3
+T2
+psychological management	false	1.2263
+phosphodiesterase-5 inhibitor	false	1.21
+erectile dysfunction	false	0.9794999999999999
+T1
+dysfunction	true	0.9069999999999999
+inhibitor	true	0.7425
+service	false	1.0571000000000002
+success	false	1.0
+men	false	0.9069999999999999
+discussion	false	0.8562
+offer	false	0.7148000000000001
+age	false	0.4707
+##########END##########
+on diagnosis, gps should immediately refer adults with type 2 diabetes to the local eye screening service.
+T4
+local eye screening service	false	1.3979
+T3
+eye screening service	false	1.3333
+T2
+local eye	false	1.2263
+screening service	false	1.2263
+T1
+gps	true	1.0
+eye	true	0.47450000000000003
+screening	true	0.4738
+adult	false	1.0571000000000002
+service	false	1.0571000000000002
+diagnosis	false	0.9069999999999999
+##########END##########
+perform screening as soon as possible and no later than 3 months from referral.
+T4
+T3
+T2
+T1
+screening	true	0.4738
+perform	false	1.1966999999999999
+referral	false	1.0626000000000002
+months	false	0.8632
+##########END##########
+arrange repeat structured eye screening annually.
+T4
+T3
+structured eye screening	false	1.3333
+T2
+structured eye	false	1.2263
+T1
+arrange	true	0.9963000000000001
+eye	true	0.47450000000000003
+screening	true	0.4738
+##########END##########
+explain the reasons for, and success of, eye screening systems to adults with type 2 diabetes, so that attendance is not reduced by lack of knowledge or fear of outcome.
+T4
+T3
+eye screening systems	false	1.3333
+T2
+screening systems	false	1.2263
+T1
+systems	true	1.0
+knowledge	true	0.7715
+eye	true	0.47450000000000003
+screening	true	0.4738
+reasons	false	1.1848999999999998
+adult	false	1.0571000000000002
+explain	false	1.0571000000000002
+attendance	false	1.0
+fear	false	1.0
+lack	false	1.0
+outcome	false	1.0
+success	false	1.0
+##########END##########
+use mydriasis with tropicamide when photographing the retina, after prior informed agreement following discussion of the advantages and disadvantages. 
+T4
+T3
+T2
+T1
+tropicamide	true	1.0
+advantages	false	1.0
+agreement	false	1.0
+form	false	1.0
+mydriasis	false	1.0
+retina	false	1.0
+discussion	false	0.8562
+##########END##########
+discussions should include precautions for driving.
+T4
+T3
+T2
+T1
+discussions	true	1.0
+caution	false	1.0
+driving	false	1.0
+##########END##########
+use a quality-assured digital retinal photography programme using appropriately trained staff.
+T4
+digital retinal photography programme	false	1.3979
+T3
+digital retinal photography	false	1.3333
+T2
+digital retinal	false	1.2263
+photography programme	false	1.2263
+trained staff	false	1.2263
+T1
+quality	true	0.7994000000000001
+programme	false	1.0457999999999998
+photography	false	1.0
+retina	false	1.0
+staff	false	1.0
+##########END##########
+perform visual acuity testing as a routine part of eye screening programmes.
+T4
+perform visual acuity testing	false	1.3979
+T3
+eye screening programmes	false	1.3333
+perform visual acuity	false	1.3333
+T2
+acuity testing	false	1.2263
+perform visual	false	1.2263
+routine part	false	1.2263
+screening programmes	false	1.2263
+T1
+testing	true	1.0
+eye	true	0.47450000000000003
+screening	true	0.4738
+perform	false	1.1966999999999999
+programme	false	1.0457999999999998
+part	false	0.9963000000000001
+acuity	false	0.18230000000000002
+##########END##########
+depending on the findings, follow structured eye screening by: routine review in 1 year or earlier review or referral to an ophthalmologist.
+T4
+T3
+structured eye screening	false	1.3333
+T2
+structured eye	false	1.2263
+routine review	false	1.1133
+T1
+review	true	0.7920999999999999
+eye	true	0.47450000000000003
+screening	true	0.4738
+mol	false	1.5
+referral	false	1.0626000000000002
+findings	false	0.887
+year	false	0.887
+##########END##########
+arrange emergency review by an ophthalmologist for: sudden loss of vision rubeosis iridis pre-retinal or vitreous haemorrhage retinal detachment.
+T4
+vitreous haemorrhage retinal detachment	false	1.3979
+T3
+arrange emergency review	false	1.3333
+haemorrhage retinal detachment	false	1.3333
+vision rubeosis iridis	false	1.3333
+T2
+arrange emergency	false	1.2263
+haemorrhage retinal	false	1.2263
+iridis pre-retinal	false	1.2263
+sudden loss	false	1.2263
+vision rubeosis	false	1.2263
+T1
+arrange	true	0.9963000000000001
+loss	true	0.9482
+review	true	0.7920999999999999
+mol	false	1.5
+detachment	false	1.0
+emergency	false	1.0
+iridis	false	1.0
+retina	false	1.0
+rubeosis	false	1.0
+vision	false	1.0
+age	false	0.4707
+##########END##########
+arrange rapid review by an ophthalmologist for new vessel formation.
+T4
+T3
+arrange rapid review	false	1.3333
+T2
+arrange rapid	false	1.2263
+vessel formation	false	1.2263
+T1
+arrange	true	0.9963000000000001
+review	true	0.7920999999999999
+mol	false	1.5
+form	false	1.0
+vessel	false	1.0
+##########END##########
+refer to an ophthalmologist in accordance with the national screening committee criteria and timelines if any of these features are present: referable maculopathy: exudate or retinal thickening within 1 disc diameter of the centre of the fovea circinate or group of exudates within the macula (the macula is defined here as a circle centred on the fovea, with a diameter the distance between the temporal border of the optic disc and the fovea) any microaneurysm or haemorrhage within 1 disc diameter of the centre of the fovea, only if associated with deterioration of best visual acuity to 6/12 or worse. referable pre-proliferative retinopathy (if cotton wool spots are present, look carefully for the following features, but cotton wool spots themselves do not define pre-proliferative retinopathy): any venous beading any venous reduplication any intraretinal microvascular abnormalities multiple deep, round or blot haemorrhages. any large, sudden unexplained drop in visual acuity. 
+T4
+T3
+T2
+visual acuity	false	0.21960000000000002
+T1
+screening	true	0.4738
+mol	false	1.5
+explain	false	1.0571000000000002
+retina	false	1.0
+life	false	0.9925000000000002
+time	false	0.7657999999999999
+care	false	0.6437999999999999
+age	false	0.4707
+acuity	false	0.18230000000000002
+group	false	0.18230000000000002
+accordance	false	0.137
+##########END##########

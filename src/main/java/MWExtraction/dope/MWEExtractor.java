@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 
 import common.document.Sentence;

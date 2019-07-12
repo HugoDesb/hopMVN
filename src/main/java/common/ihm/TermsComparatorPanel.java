@@ -59,7 +59,7 @@ public class TermsComparatorPanel extends JPanel {
         //CENTER
         jp_center = new JPanel(new GridLayout(3,3));
 
-        //Main Label
+        //MainSemantic Label
         lbl_upload = new JLabel("Files (regular and expert): ");
         jp_center.add(lbl_upload);
 

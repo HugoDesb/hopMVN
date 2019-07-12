@@ -5,6 +5,7 @@ import common.Pair;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class RulesGenerator {
@@ -13,13 +14,13 @@ public class RulesGenerator {
     private FrameNetPatterns frameNetPatterns;
     private String topic;
 
-    private RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns patterns, String topic) {
+    RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns patterns, String topic) {
         this.sentences = sentences;
         this.frameNetPatterns = patterns;
         this.topic = topic;
     }
 
-    private ArrayList<Rule> generateRules(){
+    public ArrayList<Rule> generateRules(){
         Map<String, Pair<ArrayList<Integer>, ArrayList<Integer>>> map = new HashMap<>();
         ArrayList<Rule> rules = new ArrayList<>();
         ArrayList<Sentence> sentences = this.sentences.getSentences();
@@ -132,9 +133,12 @@ public class RulesGenerator {
         return ret;
     }
 
-    private void writeResults(ArrayList<Rule> rules) {
+    void writeResults(ArrayList<Rule> rules, String file) {
+        //File f = new File(file);
+        (new File(Paths.get(file).getParent().toString())).mkdirs();
+        //f.mkdirs();
         try {
-            PrintStream ps = new PrintStream(new File("./files/OUTPUT/SemanticOS/rules.txt"));
+            PrintStream ps = new PrintStream(new File(file));
             //PrintWriter pw = new PrintWriter(new File("./files/tmp.txt"));
             for (Rule r : rules) {
                 ps.println(r.toStringOutput());
@@ -145,6 +149,11 @@ public class RulesGenerator {
 
     }
 
+    /**
+     * MAIN -----> read and analyse results from Open-Sesame to create rules.txt.backup
+     * @param args
+     */
+    /*
     public static void main(String [] args){
         SemanticOpenSesameTagging sost = new SemanticOpenSesameTagging(new File(
                 "/home/sesstim/Telechargements/open-sesame/open-sesame/logs/myargid/predicted-args.conll"
@@ -157,6 +166,7 @@ public class RulesGenerator {
 
         rg.writeResults(hop);
     }
+    */
 
 
 }

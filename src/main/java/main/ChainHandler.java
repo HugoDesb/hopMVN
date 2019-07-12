@@ -7,7 +7,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import pretreatement.Extractor.PdfToSentences;
-import semantic.RulesGenerator;
+import semantic.MainSemantic;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -29,17 +29,17 @@ public class ChainHandler {
             throw new IllegalArgumentException("The file given doesn't exists");
         }
 
-        // Main 1 --- PDF TO SENTENCES
+        // MainSemantic 1 --- PDF TO SENTENCES
         //TODO : extractor instance with common.config file or common.config Object (better) and whether it's an expert extraction
         //TextDocument textDocument = PdfToSentences.extract(pdfFile.getPath(), false);
 
         //textDocument.writeFile();
 
-        // Main 2 --- TAG THE SENTENCES
+        // MainSemantic 2 --- TAG THE SENTENCES
         //RNNTagger tagger = new RNNTagger();
         //tagger.tag(textDocument);
 
-        // Main 3 --- Extract Multi-words expressions
+        // MainSemantic 3 --- Extract Multi-words expressions
         //TODO : common.config file ?
             /*
             MWEExtractor mweExtractor = new MWEExtractor(1, 4);
@@ -59,7 +59,7 @@ public class ChainHandler {
                 System.out.println(n.toString());
             }
 
-            // Main 4 --- Branch 1 --- Compute C-value for all MWE -- branch 1
+            // MainSemantic 4 --- Branch 1 --- Compute C-value for all MWE -- branch 1
             Map<NGram, Double> ngramCollocation = mwe.getCValueForAll();
             //PRINT
             //TODO : the print here isn't meant to stay
@@ -114,7 +114,7 @@ public class ChainHandler {
     }
 
     /**
-     * Sequentially execute all files specified in the xml file
+     * Sequentially execute a file specified in the xml file
      * @param xmlFile
      * @param doPretreatment
      * @param doMWE
@@ -143,7 +143,8 @@ public class ChainHandler {
     }
 
     private static void launchOpenSesame(Map<String, String> set) {
-
+        MainSemantic main = new MainSemantic(set);
+        main.run(false, true, true);
     }
 
 

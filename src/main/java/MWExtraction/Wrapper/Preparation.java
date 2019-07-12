@@ -21,9 +21,10 @@ public class Preparation {
             BufferedReader bf = new BufferedReader(new FileReader(sourceFile));
 
             String line = bf.readLine();
+
             while(line != null){
-                fw.write(line+"\n");
                 fw.write("##########END##########\n");
+                fw.write(line+"\n");
                 line = bf.readLine();
             }
             fw.close();

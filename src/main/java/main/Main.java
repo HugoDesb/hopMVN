@@ -1,7 +1,5 @@
 package main;
 
-import common.ihm.MainFrame;
-
 import java.io.File;
 
 public class Main {
@@ -17,12 +15,11 @@ public class Main {
         ArrayList<TaggedSentence> list = tagger.tag(td1);
         */
 
-        MainFrame mf = new MainFrame();
+        //MainFrame mf = new MainFrame();
 
 
-        //File fileXML = new File("./files/files_to_treat.xml");
-
-        //ChainHandler.treatAllDeclaredFiles(fileXML, true, false, false);
+        File fileXML = new File("./files/files_to_treat.xml");
+        ChainHandler.treatAllDeclaredFiles(fileXML, false, false, true);
 
 
 
@@ -61,7 +58,7 @@ public class Main {
     }
 
     public static void showHelp(){
-        System.out.println("Show Help - Main");
+        System.out.println("Show Help - MainSemantic");
         System.out.println();
         System.out.println("No help has been written yet, as no command line functionnality has been written");
     }

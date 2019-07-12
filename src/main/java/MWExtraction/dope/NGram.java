@@ -1,7 +1,6 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 import tagging.RNNTagger.RNNTag;
-
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Objects;

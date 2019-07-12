@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <task config_file="default.properties">
     <files>
+        <!--
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/10irp04_reco_diabete_type_2.pdf"
               name="10irp04_reco_diabete_type_2"
               topic="diabète"
               language="french"
               type="HAS"
               isExpertFile="false"/>
+        -->
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/CPG_diabetes_NHS.pdf"
               name="CPG_diabetes_NHS"
-              topic="diabète"
+              topic="type 2 diabetes"
               language="english"
               type="NICE"
               isExpertFile="false"/>

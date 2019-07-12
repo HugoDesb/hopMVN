@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 import tagging.RNNTagger.RNNTag;
 

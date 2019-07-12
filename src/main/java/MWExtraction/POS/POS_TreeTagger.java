@@ -20,7 +20,7 @@ public class POS_TreeTagger {
         try{
 			
             //Local Machine : 
-        	String cmd = source_tagger + File.separator + "cmd"+ File.separator +"tree-tagger-"+language;
+        	String cmd = source_tagger + "cmd"+ File.separator +"tree-tagger-"+language;
         	//String cmd =  "cmd /c tag-"+language;
        
             

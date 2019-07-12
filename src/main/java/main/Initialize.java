@@ -24,7 +24,7 @@ public class Initialize {
     }
 
     /**
-     * Main access to run the initialization for the process.
+     * MainSemantic access to run the initialization for the process.
      * @return this
      */
     public Initialize run(){

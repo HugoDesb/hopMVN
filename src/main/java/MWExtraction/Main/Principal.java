@@ -36,17 +36,21 @@ public class Principal {
         String [] measures = {"F-OCapi_A","TFIDF_A"};
         //String [] measures = {"F-OCapi_A", "F-OCapi_S", "F-OCapi_M", "TFIDF_A", "TFIDF_M", "TFIDF_S"};
 
+        String outputForFile = config.getProp("mwe.output_folder")+name+"/";
+        String sourceFile = config.getProp("pretreatment.output_folder")+name+"/"+name+".txt";
+
+        // File to be analyzed for the term extraction
+        String file_to_be_analyzed = Preparation.makeEachLineADocument(sourceFile);
         for (int i = 0; i < measures.length; i++) {
             /*
              * Set up target folder and make needed folder if necessary
              */
-            String source_OUTPUT = config.getProp("mwe.output_folder")+name+"/"+measures[i]+"/";
+            String source_OUTPUT = outputForFile+measures[i]+"/";
             System.out.println("--------------------------------"+source_OUTPUT);
             (new File(source_OUTPUT)).mkdirs();
 
-            // File to be analyzed for the term extraction
-            String sourceFile = config.getProp("pretreatment.output_folder")+name+"/"+name+".txt";
-            String file_to_be_analyzed = Preparation.makeEachLineADocument(sourceFile);
+
+
 
             /*
              * Language : english, french, spanish
@@ -77,6 +81,7 @@ public class Principal {
                     config.getProp("mwe.treetagger_path"),
                     source_OUTPUT
             );
+            System.out.println(list_candidat_terms_validated);
 
             BuildFilterManyLists.createList(list_candidat_terms_validated,
                     config.getProp("mwe.stop_words_path"),
@@ -84,19 +89,20 @@ public class Principal {
                     type_of_terms,
                     language);
 
-
-            OutputHandler handler = new OutputHandler();
-
-            handler.combineMeasures(config.getProp("mwe.output_folder")+name+"/");
-
-            handler.buildOutput(sourceFile,
-                    source_OUTPUT+"t4gram.csv",
-                    source_OUTPUT+"t3gram.csv",
-                    source_OUTPUT+"t2gram.csv",
-                    source_OUTPUT+"t1gram.csv");
-            handler.write(source_OUTPUT+"/outSentences.txt", source_OUTPUT+"/outBasicRules.txt");
-            System.out.println("Fin de l'exécution");
         }
+        OutputHandler handler = new OutputHandler();
+
+        System.out.println(language);
+        System.out.println(config.getProp("mwe.output_folder")+name+"/");
+        handler.combineMeasures(outputForFile);
+
+        handler.buildOutput(sourceFile,
+                outputForFile+"t4gram.csv",
+                outputForFile+"t3gram.csv",
+                outputForFile+"t2gram.csv",
+                outputForFile+"t1gram.csv");
+        handler.write(outputForFile+"/outSentences.txt", outputForFile+"/outBasicRules.txt");
+        System.out.println("Fin de l'exécution");
     }
 
     public static void combine(String config_file, String name) {

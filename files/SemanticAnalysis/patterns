@@ -23,3 +23,31 @@ People_by_age[Person];
 ##### 10
 ;Execute_plan[Plan],System[Function+Complex+Component_utilities]
 ##### 11
+;Delivery[Theme]
+#####
+;Frequency[Interval+Event]
+#####
+Attempt_suasion[Addressee];
+#####
+;Attempt_suasion[Manner+Content]
+;Attempt_suasion[Frequency]+Desirable_event[State_of_affairs]
+#####
+;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]
+#####
+Means[Agent];
+;Means[Means]+Means[Descriptor]+Means[Purpose]
+Means[Agent];Means[Means]+Means[Descriptor]+Means[Purpose]
+#####
+;Risk[Action]
+#####
+;Process_continue[Event]+Supply[Theme]
+#####
+;Intentionally_act[Act+Domain]
+Intentionally_act[Agent];
+;Purpose[Goal]
+;Increment[Class]
+;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]
+;Earnings_and_losses[Earner+Earnings]
+People_by_age[Ethnicity+Person+Age+Persistent_characteristic];
+#####
+;Inclusion[Total+Part]

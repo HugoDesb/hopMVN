@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 import tagging.RNNTagger.RNNTag;
 
@@ -23,7 +23,7 @@ public class TriGram extends BiGram{
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o){
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TriGram triGram = (TriGram) o;

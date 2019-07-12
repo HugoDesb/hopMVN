@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 import org.jetbrains.annotations.NotNull;
 import tagging.RNNTagger.RNNTag;

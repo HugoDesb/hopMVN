@@ -262,6 +262,8 @@ public class Cleaning {
         ligne = ligne.replaceAll("\t", " ");
         ligne = ligne.replaceAll("•", " ");
         ligne = ligne.replaceAll("\uF0B7", " ");
+        ligne = ligne.replaceAll("\\[", "");
+        ligne = ligne.replaceAll("]", "");
         //CONTRIBUTION STOP --
 
         if(language.equalsIgnoreCase("french")){

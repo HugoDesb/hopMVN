@@ -1,4 +1,4 @@
-package MWExtraction;
+package MWExtraction.dope;
 
 import java.util.HashMap;
 import java.util.Map;
