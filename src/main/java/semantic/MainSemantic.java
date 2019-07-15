@@ -5,7 +5,11 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -19,20 +23,22 @@ public class MainSemantic {
         this.config = Config.getInstance(configSet.get("config_file"));
     }
 
-    public void run(boolean opensesame, boolean ruleGenerator, boolean combineMWE){
+    public void run(boolean opensesame, boolean ruleGenerator){
+
+
         if(opensesame){
             runOpenSesame();
         }
         if(ruleGenerator){
             runAnalysis();
         }
-        if(combineMWE){
-            runCombinator();
-        }
     }
 
-    private void runCombinator() {
+    private void runCombinator(ArrayList<Rule> rules) {
         System.out.println("[runCombinator] : Not Yet Implemented");
+
+
+
         throw new NotImplementedException();
     }
 
@@ -56,7 +62,7 @@ public class MainSemantic {
             Runtime runtime = Runtime.getRuntime();
             final Process process = runtime.exec(cmd);
 
-            //PARA WINDOWS
+            //POUR WINDOWS
         	/*Runtime runtime = Runtime.getRuntime();
         	final Process process = runtime.exec(cmd + " " + file);
         	*/
@@ -76,17 +82,30 @@ public class MainSemantic {
     }
 
     public void runAnalysis(){
-        String output = config.getProp("os_analysis.output_folder")+configSet.get("name")+ File.separator+"rules.txt";
+
+        String outputFolder = config.getProp("os_analysis.output_folder")+configSet.get("name")+File.separator;
+        String mweFolder = config.getProp("mwe.output_folder")+configSet.get("name")+File.separator;
+
         String annotated_file = config.getProp("open-sesame.absolute_path")+"logs/"+config.getProp("open-sesame.model-arg_id")+"/predicted-args.conll";
+        String annotated_file_local = outputFolder + "annotatedSentences.txt";
+
+        //Copy result to OUTPUT folder
+        try {
+            Files.copy(Paths.get(annotated_file), Paths.get(annotated_file_local), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String output = outputFolder + "rules.txt";
         String patterns = config.getProp("open-sesame.patterns");
 
         SemanticOpenSesameTagging sost = new SemanticOpenSesameTagging(new File(annotated_file));
         FrameNetPatterns fnp = new FrameNetPatterns(new File(patterns));
-
         RulesGenerator rg = new RulesGenerator(sost, fnp, "type 2 diabetes");
 
-        ArrayList<Rule> hop = rg.generateRules();
+        rg.generateRules();
+        rg.combineWithMWE(mweFolder);
 
-        rg.writeResults(hop, output);
+        rg.writeResults(rg.getGeneratedRules(), output);
     }
 }

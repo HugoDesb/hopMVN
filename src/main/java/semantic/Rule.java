@@ -10,6 +10,9 @@ public class Rule {
     private ArrayList<FrameNetPattern> correspondingPatterns;
     private String topic;
 
+    private Set<String> premisesString;
+    private Set<String> conclusionsString;
+
     Rule(Sentence sentence, String topic){
         this.sentence = sentence;
         this.premise = new HashSet<>();
@@ -43,6 +46,20 @@ public class Rule {
 
     public ArrayList<FrameNetPattern> getCorrespondingPatterns() {
         return correspondingPatterns;
+    }
+
+    public Set<String> getPremisesToStrings(){
+        if(premisesString == null){
+            premisesString = simplifyFrameNetTagList(this.premise);
+        }
+        return premisesString;
+    }
+
+    public Set<String> getConclusionsToStrings(){
+        if(conclusionsString == null){
+            conclusionsString = simplifyFrameNetTagList(this.conclusion);
+        }
+        return simplifyFrameNetTagList(this.conclusion);
     }
 
     private Set<String> simplifyFrameNetTagList(Set<Word> tokens){
@@ -95,13 +112,13 @@ public class Rule {
     }
 
     private String preparePremiseToString(){
-        Set<String> out = simplifyFrameNetTagList(this.premise);
+        Set<String> out = getPremisesToStrings();
         out.add(topic);
         return setToString(out);
     }
 
     private String prepareConclusionToString(){
-        return setToString(simplifyFrameNetTagList(this.conclusion));
+        return setToString(getConclusionsToStrings());
     }
 
     public String toStringOutput(){

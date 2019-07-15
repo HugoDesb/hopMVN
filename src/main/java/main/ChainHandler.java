@@ -137,14 +137,12 @@ public class ChainHandler {
             if(doSemantics){
                 launchOpenSesame(set);
             }
-
-
         }
     }
 
     private static void launchOpenSesame(Map<String, String> set) {
         MainSemantic main = new MainSemantic(set);
-        main.run(false, true, true);
+        main.run(false, true);
     }
 
 

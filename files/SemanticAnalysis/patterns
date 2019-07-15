@@ -43,11 +43,28 @@ Means[Agent];Means[Means]+Means[Descriptor]+Means[Purpose]
 ;Process_continue[Event]+Supply[Theme]
 #####
 ;Intentionally_act[Act+Domain]
+#####
 Intentionally_act[Agent];
+#####
 ;Purpose[Goal]
+#####
 ;Increment[Class]
+#####
 ;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]
+#####
 ;Earnings_and_losses[Earner+Earnings]
+#####
 People_by_age[Ethnicity+Person+Age+Persistent_characteristic];
 #####
 ;Inclusion[Total+Part]
+#####
+;Frequency[Interval+Event]
+#####
+Medical_intervention[Medical_condition];
+;Medical_intervention[Intervention+Result]
+##### ???
+;Discussion[Topic]
+##### FRAME : MEDICAL_CONDITIONS
+Medical_conditions[Place+Patient+AilmentBody_part+Cause+Degree+Name+Symptom+Place+Duration+Place];
+##### FRAME : CURE
+Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]

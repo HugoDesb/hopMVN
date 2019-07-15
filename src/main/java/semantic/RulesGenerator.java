@@ -1,5 +1,6 @@
 package semantic;
 
+import MWExtraction.Wrapper.MultiColumnCSVSort;
 import common.Pair;
 
 import java.io.File;
@@ -14,13 +15,15 @@ public class RulesGenerator {
     private FrameNetPatterns frameNetPatterns;
     private String topic;
 
+    private ArrayList<Rule> generatedRules;
+
     RulesGenerator(SemanticOpenSesameTagging sentences, FrameNetPatterns patterns, String topic) {
         this.sentences = sentences;
         this.frameNetPatterns = patterns;
         this.topic = topic;
     }
 
-    public ArrayList<Rule> generateRules(){
+    public void generateRules(){
         Map<String, Pair<ArrayList<Integer>, ArrayList<Integer>>> map = new HashMap<>();
         ArrayList<Rule> rules = new ArrayList<>();
         ArrayList<Sentence> sentences = this.sentences.getSentences();
@@ -43,7 +46,8 @@ public class RulesGenerator {
             }
             rules.add(r);
         }
-        return rules;
+
+        generatedRules = rules;
     }
 
     private ArrayList<Integer> findMatchingWordsIndexes(ArrayList<Pattern> patterns, Sentence sentence){
@@ -80,44 +84,6 @@ public class RulesGenerator {
         }
 
         return new ArrayList<>();
-
-        /**
-        while(max>=1){
-            // try with all frameNetPatterns, then minus le last one, and again
-            ArrayList<Set<Integer>> hop = new ArrayList<>();
-
-            Set<Integer> toAdd = new HashSet<>();
-            for (Pattern pattern: patterns) {
-                Set<Integer> tmp3 = new HashSet<>(sentence.matches(pattern));
-                if(toAdd.size()==0){
-                    toAdd = tmp3;
-                }else{
-                    toAdd.retainAll(tmp3);
-                }
-            }
-            hop.add(toAdd);
-
-
-            for (int i = 0; i < max; i++) {
-                ArrayList<Integer> tmp2 = new ArrayList<>();
-                // Each frameNetPatterns separated by a comma
-                List<Pattern> tmp = patterns.subList(0, i);
-                for (Pattern p :tmp) {
-                    tmp2 = sentence.matches(p);
-
-                    if((tmp2.size() != 0) && !(frameNetPatterns.isInBlacklist(p) && max == 0)){
-                        hop.add(tmp2);
-                    }
-                }
-            }
-            if(max == 1){
-                matched = reduce(hop);
-                max = -1;
-            }
-            max--;
-        }
-        return matched;
-         */
     }
 
     private ArrayList<Integer> reduce(ArrayList<ArrayList<Integer>> hop) {
@@ -148,6 +114,176 @@ public class RulesGenerator {
         }
 
     }
+
+
+
+    public void combineWithMWE(String mweFolder) {
+
+        // if comparing fails, at least we have the regular csv file
+        List<List<String>> t2grams = MultiColumnCSVSort.readCsv(mweFolder+"t2gram.csv");
+        List<List<String>> t3grams = MultiColumnCSVSort.readCsv(mweFolder+"t3gram.csv");
+        List<List<String>> t4grams = MultiColumnCSVSort.readCsv(mweFolder+"t4gram.csv");
+        try {
+            t2grams = MultiColumnCSVSort.compareHetopThenMeasure(mweFolder+"t2gram.csv");
+            t3grams = MultiColumnCSVSort.compareHetopThenMeasure(mweFolder+"t3gram.csv");
+            t4grams = MultiColumnCSVSort.compareHetopThenMeasure(mweFolder+"t4gram.csv");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        for (Rule r : generatedRules) {
+            ArrayList<String> premises = new ArrayList<>(r.getPremisesToStrings());
+            for (String s: premises) {
+                boolean foundT2Start = false;
+                boolean foundT2End = false;
+
+                boolean foundT3Start = false;
+                boolean foundT3End = false;
+
+                boolean foundT4Start = false;
+                boolean foundT4End = false;
+
+
+                //for (int i = 4; i > 1 ; i--) {
+
+
+                String[] words = s.split("\\w");
+                // Check if t2 exists at the start and/or at the end
+                // if YES then don't try to find other m-w COMBINE
+                String ret, query;
+                if (!foundT2Start) {
+                    query = words[0].trim();
+                    ret = searchInCSV(t2grams, query, false, 0);
+                    if (ret != null) {
+                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                        foundT2Start = true;
+                    }
+                }
+
+                if (!foundT2End) {
+                    query = words[words.length - 1].trim();
+                    ret = searchInCSV(t2grams, query, true, 0);
+                    if (ret != null) {
+                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                        foundT2End = true;
+                    }
+                }
+
+                // Check if t3 exists at the start and the end
+                // if YES then don't try to find other m-w
+                // if NOT then try to find a mw ending or starting with respectively same first word and last word
+                //      IF NOTHING try to find a mw starting or ending with respectively two same first and last words
+                // both line above to be inverted
+                if (!foundT2Start && !foundT3Start && words.length >= 2) {
+                    query = words[0].trim() + " " + words[1].trim();
+                    ret = searchInCSV(t3grams, query, true, 0);
+                    if (ret != null) {
+                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                        foundT3Start = true;
+                    } else {
+                        query = words[0].trim();
+                        ret = searchInCSV(t3grams, query, true, 0);
+                        if (ret != null) {
+                            premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                            foundT3Start = true;
+                        }
+                    }
+
+                    if (!foundT2End && !foundT3End && words.length >= 2) {
+                        query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                        ret = searchInCSV(t3grams, query, false, 0);
+                        if (ret != null) {
+                            premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                            foundT3End = true;
+                        }else{
+                            query = words[words.length - 1].trim();
+                            ret = searchInCSV(t3grams, query, false, 0);
+                            if (ret != null) {
+                                premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                foundT3Start = true;
+                            }
+                        }
+                    }
+
+                    // do the same for t4
+                    // Check if t2 exists at the start and the end
+                    // if YES then don't try to find other m-w
+                    // if NOT then try to find a mw ending or starting with respectively first word and last word
+
+                    if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
+                        query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
+                        ret = searchInCSV(t4grams, query, true, 0);
+                        if (ret != null) {
+                            premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                            foundT4Start = true;
+                        } else {
+                            query = words[0].trim() + " " + words[1].trim();
+                            ret = searchInCSV(t4grams, query, true, 0);
+                            if (ret != null) {
+                                premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                foundT4Start = true;
+                            }else{
+                                query = words[0].trim();
+                                ret = searchInCSV(t4grams, query, true, 0);
+                                if (ret != null) {
+                                    premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                    foundT4Start = true;
+                                }
+                            }
+                        }
+
+                        if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
+                            query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                            ret = searchInCSV(t4grams, query, false, 0);
+                            if (ret != null) {
+                                premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                foundT4Start = true;
+                            } else {
+                                query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                                ret = searchInCSV(t4grams, query, false, 0);
+                                if (ret != null) {
+                                    premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                    foundT4End = true;
+                                }else{
+                                    query = words[words.length - 1].trim();
+                                    ret = searchInCSV(t4grams, query, false, 0);
+                                    if (ret != null) {
+                                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                        foundT4End = true;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    //}
+                }
+            }
+        }
+    }
+
+    private String searchInCSV(List<List<String>> csvFile, String queryWords ,boolean atTheStart, int column){
+        for (List<String> line: csvFile) {
+            if(atTheStart){
+                if(line.get(column).toLowerCase().indexOf(queryWords)!=-1){
+                    return line.get(column).toLowerCase();
+                }
+            }else{
+                int lastIndex = line.get(column).toLowerCase().indexOf(queryWords);
+                lastIndex += queryWords.length();
+                if(lastIndex == queryWords.length()){
+                    return line.get(column).toLowerCase();
+                }
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Rule> getGeneratedRules() {
+        return generatedRules;
+    }
+
 
     /**
      * MAIN -----> read and analyse results from Open-Sesame to create rules.txt.backup
