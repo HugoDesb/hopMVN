@@ -104,7 +104,7 @@ public class MainSemantic {
         RulesGenerator rg = new RulesGenerator(sost, fnp, "type 2 diabetes");
 
         rg.generateRules();
-        rg.combineWithMWE(mweFolder);
+        //rg.combineWithMWE(mweFolder);
 
         rg.writeResults(rg.getGeneratedRules(), output);
     }

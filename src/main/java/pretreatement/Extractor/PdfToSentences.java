@@ -26,17 +26,8 @@ public class PdfToSentences {
      */
     public static TextDocument extract(String config_file, String source, String name, String type, boolean isExpertFile, String language) throws IOException {
         Config config = Config.getInstance(config_file);
-        return extract(source, getDefaultTargetFile(config.getProp("pretreatment.output_folder"), source), isExpertFile, type, language);
-    }
+        Path target = getDefaultTargetFile(config.getProp("pretreatment.output_folder"), name);
 
-    /**
-     * Extract sentences from source file to the target txt file
-     * @param source path to the source file
-     * @param target path to the target file
-     * @param isExpertFile if the point is to extract highlighted text
-     * @return the TextDocument containing the sentences
-     */
-    public static TextDocument extract(String source, Path target, boolean isExpertFile, String type, String language) throws IOException {
         TextDocument ret;
         Path sourcePath = Paths.get(source);
         File sourceFile = sourcePath.toFile();
@@ -45,10 +36,27 @@ public class PdfToSentences {
         }
         ArrayList<String> blocks = ExtractorPDF.extract(sourceFile, isExpertFile, type);
         ArrayList<Sentence> sentences = textToSentences(blocks);
+        sentences = breakPointsSentences(sentences);
         ret = new TextDocument(target.toFile(), sentences);
 
         if(!isExpertFile){
             ret.setLines((new Filter(language)).filter(ret.getLines()));
+        }
+        return ret;
+    }
+
+    private static ArrayList<Sentence> breakPointsSentences(ArrayList<Sentence> sentences) {
+        ArrayList<Sentence> ret = new ArrayList<>();
+        for (Sentence s: sentences) {
+            if(s.getText().matches(".*:.*(•)")){
+                String base = s.getText().split(":")[0];
+                String [] nexts = s.getText().replaceFirst(base, "").split("•");
+                for (String next : nexts) {
+                    ret.add(new Sentence(base+" "+ next));
+                }
+            }else{
+                ret.add(new Sentence(s.getText()));
+            }
         }
         return ret;
     }
@@ -77,6 +85,7 @@ public class PdfToSentences {
             //pour toutes les lignes du bloc
 
             for(String line : textLines){
+                line = line.trim();
                 if(!line.trim().matches(".*\\.\\.\\.\\..*")){
                     String [] sentences = line.split("\\.\\s");
                     //pour toutes les "phrases"
@@ -103,27 +112,21 @@ public class PdfToSentences {
                     }
                 }
             }
-            sentencesToReturn.add(new Sentence(toAdd+"."));
         }
+        sentencesToReturn.add(new Sentence(toAdd.toString()));
         return sentencesToReturn;
     }
 
     /**
      * Get the default target file path (same file, with .txt extension)
      *
-     * @param tmpfolder
-     * @param source path to the source file
+     * @param outFolder
+     * @param name path to the name file
      * @return returns the path
      */
-    private static Path getDefaultTargetFile(String tmpfolder, String source){
-        Path sourcePath = Paths.get(source);
-        if(!sourcePath.toFile().isFile()){
-            throw new IllegalArgumentException("The source path isn't a file");
-        }
-
-        String filenameWithoutExtension = sourcePath.getFileName().toString().split("\\.")[0];
-        String basefolder = tmpfolder+"/"+filenameWithoutExtension+"/";
+    private static Path getDefaultTargetFile(String outFolder, String name){
+        String basefolder = outFolder+name+File.separator;
         (new File(basefolder)).mkdirs();
-        return Paths.get(basefolder+filenameWithoutExtension+".txt");
+        return Paths.get(basefolder+name+".txt");
     }
 }

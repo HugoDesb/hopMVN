@@ -91,6 +91,14 @@ public class Rule {
         return out;
     }
 
+    public void setPremisesString(Set<String> premisesString) {
+        this.premisesString = premisesString;
+    }
+
+    public void setConclusionsString(Set<String> conclusionsString) {
+        this.conclusionsString = conclusionsString;
+    }
+
     private String setToString(Set<String> set){
         StringBuilder sb = new StringBuilder();
         if(set.size() != 0){

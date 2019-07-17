@@ -133,139 +133,155 @@ public class RulesGenerator {
 
 
         for (Rule r : generatedRules) {
-            ArrayList<String> premises = new ArrayList<>(r.getPremisesToStrings());
-            for (String s: premises) {
-                boolean foundT2Start = false;
-                boolean foundT2End = false;
 
-                boolean foundT3Start = false;
-                boolean foundT3End = false;
+            ArrayList<String> extendedPremises = extendRules(new ArrayList<>(r.getPremisesToStrings()), t2grams, t3grams,t4grams);
+            r.setPremisesString(new HashSet<>(extendedPremises));
 
-                boolean foundT4Start = false;
-                boolean foundT4End = false;
+            ArrayList<String> extendedConclusions = extendRules(new ArrayList<>(r.getConclusionsToStrings()), t2grams, t3grams,t4grams);
+            r.setConclusionsString(new HashSet<>(extendedConclusions));
+            //ArrayList<String> premises = new ArrayList<>(r.getPremisesToStrings());
 
 
-                //for (int i = 4; i > 1 ; i--) {
+        }
+    }
+
+    private ArrayList<String> extendRules(ArrayList<String> premises, List<List<String>> t2grams, List<List<String>> t3grams, List<List<String>> t4grams) {
+        for (int i = 0; i < premises.size(); i++) {
+            boolean foundT2Start = false;
+            boolean foundT2End = false;
+
+            boolean foundT3Start = false;
+            boolean foundT3End = false;
+
+            boolean foundT4Start = false;
+            boolean foundT4End = false;
+
+            String[] words = premises.get(i).split(" ");
+            // Check if t2 exists at the start and/or at the end
+            // if YES then don't try to find other m-w COMBINE
+            String ret, query;
+            if (!foundT2Start && words.length>=1) {
+                query = words[0].trim();
+                ret = searchInCSV(t2grams, query, false, 0);
+                if (ret != null) {
+                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                    foundT2Start = true;
+                }
+            }
+
+            if (!foundT2End && words.length>=1) {
+                query = words[words.length - 1];
+                ret = searchInCSV(t2grams, query, true, 0);
+                if (ret != null) {
+                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                    foundT2End = true;
+                }
+            }
 
 
-                String[] words = s.split("\\w");
-                // Check if t2 exists at the start and/or at the end
-                // if YES then don't try to find other m-w COMBINE
-                String ret, query;
-                if (!foundT2Start) {
+
+            // Check if t3 exists at the start and the end
+            // if YES then don't try to find other m-w
+            // if NOT then try to find a mw ending or starting with respectively same first word and last word
+            //      IF NOTHING try to find a mw starting or ending with respectively two same first and last words
+            // both line above to be inverted
+            if (!foundT2Start && !foundT3Start && words.length >= 2) {
+                query = words[0].trim() + " " + words[1].trim();
+                ret = searchInCSV(t3grams, query, true, 0);
+                if (ret != null) {
+                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                    foundT3Start = true;
+                } else {
                     query = words[0].trim();
-                    ret = searchInCSV(t2grams, query, false, 0);
-                    if (ret != null) {
-                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                        foundT2Start = true;
-                    }
-                }
-
-                if (!foundT2End) {
-                    query = words[words.length - 1].trim();
-                    ret = searchInCSV(t2grams, query, true, 0);
-                    if (ret != null) {
-                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                        foundT2End = true;
-                    }
-                }
-
-                // Check if t3 exists at the start and the end
-                // if YES then don't try to find other m-w
-                // if NOT then try to find a mw ending or starting with respectively same first word and last word
-                //      IF NOTHING try to find a mw starting or ending with respectively two same first and last words
-                // both line above to be inverted
-                if (!foundT2Start && !foundT3Start && words.length >= 2) {
-                    query = words[0].trim() + " " + words[1].trim();
                     ret = searchInCSV(t3grams, query, true, 0);
                     if (ret != null) {
-                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                         foundT3Start = true;
-                    } else {
-                        query = words[0].trim();
-                        ret = searchInCSV(t3grams, query, true, 0);
+                    }
+                }
+
+                if (!foundT2End && !foundT3End && words.length >= 2) {
+                    query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                    ret = searchInCSV(t3grams, query, false, 0);
+                    if (ret != null) {
+                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                        foundT3End = true;
+                    }else{
+                        query = words[words.length - 1].trim();
+                        ret = searchInCSV(t3grams, query, false, 0);
                         if (ret != null) {
-                            premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                            premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                             foundT3Start = true;
                         }
                     }
+                }
 
-                    if (!foundT2End && !foundT3End && words.length >= 2) {
-                        query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                        ret = searchInCSV(t3grams, query, false, 0);
-                        if (ret != null) {
-                            premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                            foundT3End = true;
-                        }else{
-                            query = words[words.length - 1].trim();
-                            ret = searchInCSV(t3grams, query, false, 0);
-                            if (ret != null) {
-                                premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                                foundT3Start = true;
-                            }
-                        }
-                    }
 
-                    // do the same for t4
-                    // Check if t2 exists at the start and the end
-                    // if YES then don't try to find other m-w
-                    // if NOT then try to find a mw ending or starting with respectively first word and last word
 
-                    if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
-                        query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
+
+                // do the same for t4
+                // Check if t2 exists at the start and the end
+                // if YES then don't try to find other m-w
+                // if NOT then try to find a mw ending or starting with respectively first word and last word
+
+                if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
+                    query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
+                    ret = searchInCSV(t4grams, query, true, 0);
+                    if (ret != null) {
+                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                        foundT4Start = true;
+                    } else {
+                        query = words[0].trim() + " " + words[1].trim();
                         ret = searchInCSV(t4grams, query, true, 0);
                         if (ret != null) {
-                            premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                            premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                             foundT4Start = true;
-                        } else {
-                            query = words[0].trim() + " " + words[1].trim();
+                        }else{
+                            query = words[0].trim();
                             ret = searchInCSV(t4grams, query, true, 0);
                             if (ret != null) {
-                                premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                                 foundT4Start = true;
-                            }else{
-                                query = words[0].trim();
-                                ret = searchInCSV(t4grams, query, true, 0);
-                                if (ret != null) {
-                                    premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                                    foundT4Start = true;
-                                }
                             }
                         }
+                    }
 
-                        if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
-                            query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                    if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
+                        query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                        ret = searchInCSV(t4grams, query, false, 0);
+                        if (ret != null) {
+                            premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                            foundT4Start = true;
+                        } else {
+                            query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
                             ret = searchInCSV(t4grams, query, false, 0);
                             if (ret != null) {
-                                premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                                foundT4Start = true;
-                            } else {
-                                query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                                premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                                foundT4End = true;
+                            }else{
+                                query = words[words.length - 1].trim();
                                 ret = searchInCSV(t4grams, query, false, 0);
                                 if (ret != null) {
-                                    premises.set(premises.indexOf(s), s.replaceAll(query, ret));
+                                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                                     foundT4End = true;
-                                }else{
-                                    query = words[words.length - 1].trim();
-                                    ret = searchInCSV(t4grams, query, false, 0);
-                                    if (ret != null) {
-                                        premises.set(premises.indexOf(s), s.replaceAll(query, ret));
-                                        foundT4End = true;
-                                    }
                                 }
                             }
                         }
-
                     }
-                    //}
+
                 }
+
             }
         }
+        return premises;
     }
 
     private String searchInCSV(List<List<String>> csvFile, String queryWords ,boolean atTheStart, int column){
         for (List<String> line: csvFile) {
             if(atTheStart){
+                System.out.println(line.get(column));
+                System.out.println(queryWords);
+                System.out.println(line.get(column).toLowerCase().indexOf(queryWords));
                 if(line.get(column).toLowerCase().indexOf(queryWords)!=-1){
                     return line.get(column).toLowerCase();
                 }

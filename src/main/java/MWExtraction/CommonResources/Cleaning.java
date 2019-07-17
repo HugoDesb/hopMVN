@@ -46,7 +46,7 @@ public class Cleaning {
         ligne = ligne.replaceAll("&gt;", ">");
         ligne = ligne.replaceAll("&euro;", "€");
         
-        /*
+
         ligne = ligne.replaceAll("&dagger;", "†");
         ligne = ligne.replaceAll("&Dagger;", "‡");
         ligne = ligne.replaceAll("&lt;", "‹");
@@ -84,7 +84,7 @@ public class Cleaning {
         ligne = ligne.replaceAll("&frac14;", "¼");
         ligne = ligne.replaceAll("&frac12;", "½");
         ligne = ligne.replaceAll("&frac34;", "¾");
-        * */
+
         ligne = ligne.replaceAll("&iquest;", "¿");
         ligne = ligne.replaceAll("&Agrave;", "À");
         ligne = ligne.replaceAll("&Aacute;", "Á");

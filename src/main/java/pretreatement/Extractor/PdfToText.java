@@ -1,7 +1,7 @@
 package pretreatement.Extractor;
 
 
-import pretreatement.Extractor.HAS.SummaryHAS;
+import pretreatement.Extractor.Summaries.SummaryHAS;
 import common.document.TextDocument;
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessFile;
@@ -106,7 +106,7 @@ public class PdfToText {
      * Create a file
      * @return
      */
-    static File getTargetTXTPath(File file){
+    public static File getTargetTXTPath(File file){
         String filename = file.getName().split("\\.")[0];
         String p = Paths.get(file.getPath()).getParent().toString()+"/"+filename+".txt";
         return new File(p);

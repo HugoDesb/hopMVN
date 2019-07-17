@@ -1,8 +1,6 @@
 package main;
 
 import common.document.TextDocument;
-import pretreatement.Extractor.ExtractorHAS;
-import pretreatement.Extractor.ExtractorPDF;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -28,7 +26,7 @@ public class Initialize {
      * @return this
      */
     public Initialize run(){
-        textDocuments = extractAndFilter(listFilesPathAndTypes());
+        //textDocuments = extractAndFilter(listFilesPathAndTypes());
         return this;
     }
 
@@ -56,10 +54,10 @@ public class Initialize {
      * @param map of path,type
      * @return An ArrayList of TextDocuments
      */
+    /*
     private ArrayList<TextDocument> extractAndFilter(Map<String, String> map){
         ArrayList<TextDocument> textDocuments = new ArrayList<>();
         File f;
-        ExtractorHAS extHAS = new ExtractorHAS();
         ExtractorPDF extPDF = new ExtractorPDF();
 
         for (String path : map.keySet()) {
@@ -70,12 +68,13 @@ public class Initialize {
                     break;
                 default:
                     f = new File(path);
-                    //textDocuments.add(extPDF.extract(f));
+                    textDocuments.add(extPDF.extract(f));
                     break;
             }
         }
         return textDocuments;
     }
+    */
 
     /**
      * Given a base folder, get the path of all reco files and their type into a HashMap

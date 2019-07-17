@@ -1,58 +1,102 @@
-nice guideline
-screening
 education
-ii-receptor
-antagonist
-hba1c level
-drug
+recommendation
+mol
+antiplatelet
 loss
-kidney
-inhibitor
-acuity
-members
-function
-group
-family members
-blood pressure
-level
-weight loss
-weight
-pressure
-eye
-effects
-group education
-guideline
-adverse effects
-angiotensin
-neuropathy
-lifestyle advice
-calcium-channel blocker
+review
+guide
+non-insulin
+human insulin
+treatment(s)
+standards
+dose
+mhra
+adult
+cotransporter
 care
-problems
 blood glucose
-eye screening
 damage
 blocker
+insulin
 activity
-advice
-origin
-life
-erectile dysfunction
-diabetes care
-men
+kidney disease
+products
+healthcare
+plasma glucose
+glance
 first-line
+glargine
 autonomic neuropathy
-diet
-hba1c
+programme
 foot
 cardiovascular disease
 glucose
-disease
-visual acuity
-blood
+side
+agency
+drugs
+hypoglycaemia
+metformin
+people
 nice
 drug treatment
-family
-antihypertensive
+analogues
+mhra guidance
 calcium-channel
-dietary advice
+plasma
+surgery
+inhibitors
+glp-1 mimetic
+section
+ii-receptor
+body
+antagonist
+drug
+kidney
+inhibitor
+members
+sglt-2
+combination
+group
+heart failure
+therapies
+level
+hba1c target
+weight loss
+weight
+pressure
+standard-release
+heart
+effects
+group education
+failure
+nph insulin
+angiotensin
+neuropathy
+dpp-4
+detemir
+sodium–glucose cotransporter
+advice
+regulatory
+origin
+life
+glp-1
+diet
+recent-onset
+hba1c
+dipeptidyl
+delivery
+disease
+initial drug
+titration
+therapy
+peptidase-4
+nph
+incombination
+control
+target
+lifestyle
+guidance
+response
+risk
+antihypertensive
+family

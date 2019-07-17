@@ -8,7 +8,9 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.text.PDFTextStripperByArea;
-import pretreatement.Extractor.HAS.SummaryHAS;
+import pretreatement.Extractor.Extractors.Extractor;
+import pretreatement.Extractor.Extractors.ExtractorHAS;
+import pretreatement.Extractor.Extractors.ExtractorNICE;
 
 import java.awt.geom.Rectangle2D;
 import java.io.File;
@@ -25,69 +27,22 @@ public class ExtractorPDF {
      * @return an array of text blocks
      */
     public static ArrayList<String> extract(File file, boolean extractHighlight, String type) {
+        Extractor extractor;
+
         if(extractHighlight){
             return extractHighlight(file);
         }else{
             switch(type){
                 case "HAS":
-                    return extractHAS(file);
+                    extractor = new ExtractorHAS(file);
+                    return extractor.extract();
+                case "NICE":
+                    extractor = new ExtractorNICE(file);
+                    return extractor.extract();
                 default:
                     return extractStandard(file);
             }
         }
-    }
-
-    /**
-     * Extract text from pdf file (standard)
-     * @param file the source file
-     * @return an array of text blocks
-     */
-    private static ArrayList<String> extractHAS(File file) {
-        ArrayList<String> hop = new ArrayList<>();
-        PDFParser parser;
-        try {
-            parser = new PDFParser(new RandomAccessFile(file, "r"));
-            parser.parse();
-            PDDocument contentDocument = PDDocument.load(file);
-            SummaryHAS summary = ExtractorHAS.readSummary(contentDocument);
-
-            PDFTextStripper textStripper = new PDFTextStripper();
-            textStripper.setStartPage(summary.getContentBoundaries()[0]);
-            textStripper.setEndPage(summary.getContentBoundaries()[1]);
-
-            String text = textStripper.getText(contentDocument);
-
-            // replace all abbreviations by their values
-            for (String key: ExtractorHAS.getAbbrevs(contentDocument, summary.getAbbrevPageNumber()).keySet()) {
-                text = text.replaceAll(key, ExtractorHAS.getAbbrevs(contentDocument, summary.getAbbrevPageNumber()).get(key));
-            }
-
-            text = text.replaceAll(ExtractorHAS.getTitle(contentDocument), "");
-
-            //System.out.println(ExtractorHAS.getTitle(contentDocument));
-
-
-            String [] hip = text.split("\\n");
-            text = "";
-            for (int i = 0; i< hip.length; i++) {
-                if(hip[i].matches("Recommandation.[0-9].*")){
-                    hip[i] = "";
-                    int j = i+1;
-                    while(hip[j].trim().isEmpty()){
-                        j++;
-                    }
-                    hip[j] = hip[j].replace(hip[j].split(" ")[0]+" ", "");
-                }
-                text += "\n"+hip[i];
-            }
-
-            //System.out.println(text);
-
-            hop.add(text);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return hop;
     }
 
     /**

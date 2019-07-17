@@ -1,29 +1,36 @@
-##### 1
-# An Addiction can represent a
+##### 1. OK
 Addiction[Addictant+Degree],Mental_Activity[Topic+Expression+Content];
-##### 2
+##### 2. OK
 ;Process_continue[Event],Supply[Theme]
-##### 3
+##### 3. OK
 ;Supply[Theme]--
-##### 4
-People_by_age[Person];Medical_conditions[Patient+Ailment]
-##### 5
-;Inclusion[Part],Food[Food]
-##### 6
+##### 4. OK
+People_by_age[Ethnicity+Person+Age+Persistent_characteristic];
+##### 5. OK
+Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];
+##### 6. OK
+Medical_intervention[Medical_condition];
+##### 7. OK
+;Medical_intervention[Intervention+Result]
+##### 8. OK
+;Food[Food]
+##### 9. OK
+;Delivery[Theme]
+##### 10.
+Cure[Affliction+Healer+Patient+Reciprocation];
+##### 11.
+Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]
+##### 9.
 ;Inclusion[Total],Purpose[Goal]
 ##### 7
 ;Inclusion[Part],Increment[Class]
 ##### 7
 ;Inclusion[Part],Change_position_on_a_scale[Item],Intentionally_act[Domain]
 ;Inclusion[Part],Change_position_on_a_scale[Item],Earnings_and_losses[Earnings]
-##### 8
-People_by_age[Person];
 ##### 9
 ;Placing[Theme],Dimension[Object+Dimension]
 ##### 10
 ;Execute_plan[Plan],System[Function+Complex+Component_utilities]
-##### 11
-;Delivery[Theme]
 #####
 ;Frequency[Interval+Event]
 #####
@@ -40,8 +47,6 @@ Means[Agent];Means[Means]+Means[Descriptor]+Means[Purpose]
 #####
 ;Risk[Action]
 #####
-;Process_continue[Event]+Supply[Theme]
-#####
 ;Intentionally_act[Act+Domain]
 #####
 Intentionally_act[Agent];
@@ -54,17 +59,10 @@ Intentionally_act[Agent];
 #####
 ;Earnings_and_losses[Earner+Earnings]
 #####
-People_by_age[Ethnicity+Person+Age+Persistent_characteristic];
-#####
 ;Inclusion[Total+Part]
 #####
 ;Frequency[Interval+Event]
-#####
-Medical_intervention[Medical_condition];
-;Medical_intervention[Intervention+Result]
 ##### ???
 ;Discussion[Topic]
-##### FRAME : MEDICAL_CONDITIONS
-Medical_conditions[Place+Patient+AilmentBody_part+Cause+Degree+Name+Symptom+Place+Duration+Place];
 ##### FRAME : CURE
 Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]

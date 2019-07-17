@@ -1,9 +1,9 @@
-package pretreatement.Extractor.HAS;
+package pretreatement.Extractor.Summaries;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class SummaryHAS {
+public class SummaryHAS extends Summary {
 
     private Map<String, Integer> summary;
 
@@ -34,6 +34,7 @@ public class SummaryHAS {
      * Get first and last usable page's number (ie without anything above summary, and any annexes and below).
      * @return first and last usable pages
      */
+    @Override
     public int [] getContentBoundaries(){
         int [] hop = {3,3};
         for (String key : summary.keySet()) {
@@ -64,10 +65,7 @@ public class SummaryHAS {
      * @param line
      */
     private void addEntry(String line){
-        int i = line.lastIndexOf('.');
-        Integer startPage = Integer.parseInt(line.substring(i+1).trim());
-        System.out.println("startPage: "+startPage);
-        String [] hop = line.split("\\.\\.\\.");
+        int startPage = super.getPage(line);
         String title = line.split("\\.\\.\\.")[0];
         summary.put(title, startPage);
     }
