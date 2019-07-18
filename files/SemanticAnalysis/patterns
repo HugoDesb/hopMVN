@@ -15,7 +15,7 @@ Medical_intervention[Medical_condition];
 ##### 8. OK
 ;Food[Food]
 ##### 9. OK
-;Delivery[Theme]
+;Delivery[Theme+Deliverer+Manner]
 ##### 10.
 Cure[Affliction+Healer+Patient+Reciprocation];
 ##### 11.
@@ -25,8 +25,8 @@ Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]
 ##### 7
 ;Inclusion[Part],Increment[Class]
 ##### 7
-;Inclusion[Part],Change_position_on_a_scale[Item],Intentionally_act[Domain]
-;Inclusion[Part],Change_position_on_a_scale[Item],Earnings_and_losses[Earnings]
+;Inclusion[Part],Change_position_on_a_scale[Value+Item],Intentionally_act[Domain]
+;Inclusion[Part],Change_position_on_a_scale[Value+Item],Earnings_and_losses[Earnings]
 ##### 9
 ;Placing[Theme],Dimension[Object+Dimension]
 ##### 10
@@ -36,7 +36,7 @@ Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]
 #####
 Attempt_suasion[Addressee];
 #####
-;Attempt_suasion[Manner+Content]
+;Attempt_suasion[Manner+Content+Speaker]
 ;Attempt_suasion[Frequency]+Desirable_event[State_of_affairs]
 #####
 ;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]
@@ -66,3 +66,48 @@ Intentionally_act[Agent];
 ;Discussion[Topic]
 ##### FRAME : CURE
 Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]
+#####
+;Cause_change_of_strength[Patient]
+#####
+;Using[Instrument]
+#####
+Suitability[Evaluee];
+#####
+Causation[Cause];Causation[Effect]
+#####
+Predicament[Domain+Situation]
+#####
+Damaging[Patient];
+#####
+Locative_relation[Ground];
+#####
+People[Origin+Person];
+#####
+Kinship[Relatives];
+#####
+Origin[Origin+Entity];
+#####
+;Becoming[Final_category]
+#####
+;Make_agreement_on_action[Obligation]
+#####
+;Statement[Message]
+#####
+Arriving[Theme+Goal];
+#####
+State_continue[State];
+#####
+;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]
+#####
+Measurable_attributes[Entity];
+#####
+;Building[Created_entity]
+#####
+;Change_tool[New_tool]
+#####
+;Alternatives[Salient_entity]
+#####
+Sign[Indicator];
+#####
+Response[Trigger];
+;Response[Response]

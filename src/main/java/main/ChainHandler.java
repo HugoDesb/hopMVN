@@ -142,7 +142,7 @@ public class ChainHandler {
 
     private static void launchOpenSesame(Map<String, String> set) {
         MainSemantic main = new MainSemantic(set);
-        main.run(true, true);
+        main.run(false, true);
     }
 
 

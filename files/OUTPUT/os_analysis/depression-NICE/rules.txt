@@ -1,410 +1,410 @@
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : build a trusting relationship and work in an open , engaging and unk manner .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['a trusting relationship and work']
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];), (;Building[Created_entity])]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : explore treatment options in an atmosphere of hope and optimism , explaining the different courses of depression and that recovery is possible .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : be aware that stigma and discrimination can be associated with a diagnosis of depression
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : ensure that discussions take place in settings in which confidentiality , privacy and dignity are respected .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['take place in settings']
 CorrespondingPatterns :[(;Discussion[Topic]), (People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : provide information appropriate to their level of understanding about the nature of depression and the range of treatments available
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['information appropriate to their level of understanding about the nature of depression and the range of treatments']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : avoid clinical language without adequate explanation
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : ensure that comprehensive written information is available in the appropriate language and in audio format if possible
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when working with people with depression and their families or carers : provide and work proficiently with independent interpreters ( that is , someone who is not known to the person with depression ) if needed .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :inform people with depression about self-help groups , support groups and other local and national resources .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['local and national resources']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :make all efforts necessary to ensure that a person with depression can give meaningful and informed consent before treatment starts .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :[]
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];)]
 ##############################################################################
 Sentence :this is especially important when a person has severe depression or is subject to the mental health act .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :ensure that consent to treatment is based on the provision of clear information ( which should also be available in written form ) about the intervention , covering : what it comprises
-IF :['treatment', 'type 2 diabetes']
+IF :['treatment', 'depression']
 THEN :['available in written form ) about the intervention', 'which should']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree])]
 ##############################################################################
 Sentence :ensure that consent to treatment is based on the provision of clear information ( which should also be available in written form ) about the intervention , covering : what is expected of the person while having it
-IF :['treatment', 'type 2 diabetes']
+IF :['treatment', 'depression']
 THEN :['available in written form ) about the intervention', 'which should']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :ensure that consent to treatment is based on the provision of clear information ( which should also be available in written form ) about the intervention , covering : likely outcomes ( including any side effects ) .
-IF :['treatment', 'type 2 diabetes']
+IF :['treatment', 'depression']
 THEN :['available in written form ) about the intervention , covering : likely outcomes ( including any side effects )', 'which should']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Inclusion[Total+Part])]
 ##############################################################################
 Sentence :for people with recurrent severe depression or depression with psychotic symptoms and for those who have been treated under the mental health act , consider developing advance decisions and advance statements collaboratively with the person .
-IF :['type 2 diabetes', 'the mental health act', 'people']
+IF :['the mental health act', 'depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(Medical_intervention[Medical_condition];), (People[Origin+Person];), (Sign[Indicator];)]
 ##############################################################################
 Sentence :record the decisions and statements and include copies in the person 's care plan in primary and secondary care .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :['record the decisions and statements and include copies in the person 's care plan in primary and secondary care']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :give copies to the person and to their family or carer , if the person agrees .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 ##############################################################################
 Sentence :when assessing a person who may have depression , conduct a comprehensive assessment that does not rely simply on a symptom count .
-IF :['type 2 diabetes', 'count', 'person who']
+IF :['count', 'depression', 'person who']
 THEN :['a comprehensive assessment that does not rely simply on a symptom count']
 CorrespondingPatterns :[(;Intentionally_act[Act+Domain]), (Intentionally_act[Agent];), (People[Origin+Person];), (Sign[Indicator];)]
 ##############################################################################
 Sentence :take into account both the degree of functional impairment and/or disability associated with the possible depression and the duration of the episode .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[]
 ##############################################################################
 Sentence :in addition to assessing symptoms and associated functional impairment , consider how the following factors may have affected the development , course and severity of a person 's depression : any history of depression and comorbid mental health or physical disorders
-IF :['type 2 diabetes', 'functional impairment']
+IF :['functional impairment', 'depression']
 THEN :['the development']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];)]
 ##############################################################################
 Sentence :in addition to assessing symptoms and associated functional impairment , consider how the following factors may have affected the development , course and severity of a person 's depression : any past history of mood elevation ( to determine if the depression may be part of bipolar disorder )
-IF :['type 2 diabetes', 'functional impairment']
+IF :['functional impairment', 'depression']
 THEN :['the development']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];)]
 ##############################################################################
 Sentence :in addition to assessing symptoms and associated functional impairment , consider how the following factors may have affected the development , course and severity of a person 's depression : any past experience of , and response to , treatments
-IF :['type 2 diabetes', 'functional impairment']
+IF :['functional impairment', 'depression']
 THEN :['the development']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];), (Response[Trigger];)]
 ##############################################################################
 Sentence :in addition to assessing symptoms and associated functional impairment , consider how the following factors may have affected the development , course and severity of a person 's depression : the quality of interpersonal relationships
-IF :['type 2 diabetes', 'functional impairment']
+IF :['functional impairment', 'depression']
 THEN :['the development']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];)]
 ##############################################################################
 Sentence :in addition to assessing symptoms and associated functional impairment , consider how the following factors may have affected the development , course and severity of a person 's depression : living conditions and social isolation .
-IF :['type 2 diabetes', 'functional impairment']
+IF :['functional impairment', 'depression']
 THEN :['the development']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];)]
 ##############################################################################
 Sentence :when assessing a person with suspected depression , be aware of any learning disabilities or acquired cognitive impairments , and if necessary consider consulting with a relevant specialist when developing treatment plans and strategies .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :['treatment plans']
 CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :when providing interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression : where possible , provide the same interventions as for other people with depression
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression : where possible', 'same interventions']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Inclusion[Part],Increment[Class]), (;Increment[Class]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :when providing interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression : if necessary , adjust the method of delivery or duration of the intervention to take account of the disability or impairment .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression', 'the intervention to take account of the disability or impairment']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Delivery[Theme+Deliverer+Manner]), (;Means[Means]+Means[Descriptor]+Means[Purpose]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :when depression is accompanied by symptoms of anxiety , the first priority should usually be to treat the depression .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['the first priority should usually be to treat the depression']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree])]
 ##############################################################################
 Sentence :when the person has an anxiety disorder and comorbid depression or depressive symptoms , consult the nice guideline for the relevant anxiety disorder ( see find guidance ) and consider treating the anxiety disorder first ( since effective treatment of the anxiety disorder will often improve the depression or the depressive symptoms ) .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Sign[Indicator];)]
 ##############################################################################
 Sentence :offer people with depression advice on sleep hygiene if needed , including : establishing regular sleep and wake times
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['offer people with depression advice on sleep hygiene if needed']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :offer people with depression advice on sleep hygiene if needed , including : avoiding excess eating , smoking or drinking alcohol before sleep
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :offer people with depression advice on sleep hygiene if needed , including : creating a proper environment for sleep
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['offer people with depression advice on sleep hygiene if needed']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :offer people with depression advice on sleep hygiene if needed , including : taking regular physical exercise .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['taking regular physical exercise']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people who , in the judgement of the practitioner , may recover with no formal intervention , or people with mild depression who do not want an intervention , or people with subthreshold depressive symptoms who request an intervention : discuss the presenting problem ( s ) and any concerns that the person may have about them
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['the presenting problem ( s )']
 CorrespondingPatterns :[(;Discussion[Topic]), (Predicament[Domain+Situation]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people who , in the judgement of the practitioner , may recover with no formal intervention , or people with mild depression who do not want an intervention , or people with subthreshold depressive symptoms who request an intervention : provide information about the nature and course of depression
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['information']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people who , in the judgement of the practitioner , may recover with no formal intervention , or people with mild depression who do not want an intervention , or people with subthreshold depressive symptoms who request an intervention : arrange a further assessment , normally within 2 weeks
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['assessment']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people who , in the judgement of the practitioner , may recover with no formal intervention , or people with mild depression who do not want an intervention , or people with subthreshold depressive symptoms who request an intervention : make contact if the person does not attend follow-up appointments .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with persistent subthreshold depressive symptoms or mild to moderate depression , consider offering one or more of the following interventions , guided by the person 's preference : individual guided self-help based on the principles of cognitive behavioural therapy
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with persistent subthreshold depressive symptoms or mild to moderate depression , consider offering one or more of the following interventions , guided by the person 's preference : computerised cognitive behavioural therapy
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with persistent subthreshold depressive symptoms or mild to moderate depression , consider offering one or more of the following interventions , guided by the person 's preference : a structured group physical activity programme .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :group-based cbt for people with persistent subthreshold unk or mild to moderate depression should : be based on a structured model such as unk with depression '
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :group-based cbt for people with persistent subthreshold unk or mild to moderate depression should : be delivered by two trained and competent practitioners
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['group-based cbt for people with persistent subthreshold unk or mild to moderate depression']
 CorrespondingPatterns :[(;Delivery[Theme+Deliverer+Manner]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :group-based cbt for people with persistent subthreshold unk or mild to moderate depression should : consist of 10 to 12 meetings of eight to ten participants
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['group-based cbt for people with persistent subthreshold unk or mild to moderate depression should']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :group-based cbt for people with persistent subthreshold unk or mild to moderate depression should : normally take place over 12 to 16 weeks , including follow-up .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['group-based cbt for people with persistent subthreshold unk or mild to moderate depression should', '12 to 16 weeks']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Inclusion[Total+Part]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the unk ratio is poor , but consider them for people with : a past history of moderate or severe depression
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['antidepressants']
 CorrespondingPatterns :[(;Using[Instrument]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the unk ratio is poor , but consider them for people with : initial presentation of subthreshold depressive symptoms that have been present for a long period ( typically at least 2 years )
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['antidepressants']
 CorrespondingPatterns :[(;Using[Instrument]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the unk ratio is poor , but consider them for people with : subthreshold depressive symptoms or mild depression that persist ( s ) after other interventions .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['antidepressants']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Using[Instrument]), (People[Origin+Person];), (Sign[Indicator];)]
 ##############################################################################
 Sentence :for people with moderate or severe depression , provide a combination of antidepressant medication and a high-intensity psychological intervention ( cbt or ipt ) .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['a combination of antidepressant medication and a high-intensity psychological intervention ( cbt or ipt )']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :the choice of intervention should be influenced by the duration of the episode of depression and the trajectory of symptoms
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[]
 ##############################################################################
 Sentence :the choice of intervention should be influenced by the previous course of depression and response to treatment
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[]
 ##############################################################################
 Sentence :the choice of intervention should be influenced by the likelihood of adherence to treatment and any potential adverse effects
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[]
 ##############################################################################
 Sentence :the choice of intervention should be influenced by the person 's treatment preference and priorities .
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :when an antidepressant is to be prescribed , it should normally be an ssri in a generic form because ssris are equally effective as other antidepressants and have a favourable unk ratio .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['it should normally be an ssri in a generic form because ssris']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Increment[Class])]
 ##############################################################################
 Sentence :also take the following into account : ssris are associated with an increased risk of bleeding , especially in older people or in people taking other drugs that have the potential to damage the gastrointestinal mucosa or interfere with clotting .
-IF :['type 2 diabetes', 'people', 'gastrointestinal mucosa']
+IF :['depression', 'people', 'gastrointestinal mucosa']
 THEN :['risk of bleeding']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (Damaging[Patient];), (People[Origin+Person];)]
 ##############################################################################
 Sentence :in particular , consider prescribing a unk drug in older people who are taking non-steroidal anti-inflammatory drugs ( nsaids ) or aspirin .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :also take the following into account fluoxetine , fluvoxamine and paroxetine are associated with a higher propensity for drug interactions than other ssris
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['ssris']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class])]
 ##############################################################################
 Sentence :also take the following into account paroxetine is associated with a higher incidence of discontinuation symptoms than other ssris .
-IF :['symptoms', 'type 2 diabetes']
+IF :['symptoms', 'depression']
 THEN :['ssris']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (Sign[Indicator];)]
 ##############################################################################
 Sentence :do not routinely vary the treatment strategies for depression described in this guideline either by depression subtype ( for example , atypical depression or seasonal depression ) or by personal characteristics ( for example , sex or ethnicity ) as there is no convincing evidence to support such action .
-IF :['type 2 diabetes', 'convincing evidence to support such action', 'there']
+IF :['convincing evidence to support such action', 'there', 'depression']
 THEN :['action']
 CorrespondingPatterns :[(;Intentionally_act[Act+Domain]), (Locative_relation[Ground];)]
 ##############################################################################
 Sentence :advise people with winter depression that follows a seasonal pattern and who wish to try light therapy in preference to antidepressant or psychological treatment that the evidence for the efficacy of light therapy is uncertain .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :when prescribing antidepressants for older people : prescribe at an age-appropriate dose taking into account the effect of general physical health and concomitant medication on pharmacokinetics and pharmacodynamics
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['of general physical health']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
 ##############################################################################
 Sentence :when prescribing antidepressants for older people : carefully monitor for side effects .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with long-standing moderate or severe depression who would benefit from additional social or vocational support , consider : befriending as an adjunct to pharmacological or psychological treatments ; befriending should be by trained volunteers providing , typically , at least weekly contact for between 2 and 6 months
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['should be by trained volunteers providing', 'social or vocational support']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Frequency[Interval+Event]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Increment[Class]), (;Frequency[Interval+Event]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with long-standing moderate or severe depression who would benefit from additional social or vocational support , consider : a rehabilitation programme if a person 's depression has resulted in loss of work or disengagement from other social activities over a longer term .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['activities', 'social or vocational support']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Inclusion[Part],Change_position_on_a_scale[Value+Item],Intentionally_act[Domain]), (;Intentionally_act[Act+Domain]), (;Increment[Class]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :medication management as a separate intervention for people with depression should not be provided routinely by services . it is likely to be effective only when provided as part of a more complex intervention .
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :['medication management as a separate intervention for people with depression should not be provided routinely by services', 'part of a more complex intervention']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with severe depression and those with moderate depression and complex problems , consider : referring to specialist mental health services for a programme of coordinated unk care
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(Predicament[Domain+Situation]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :for people with severe depression and those with moderate depression and complex problems , consider : providing collaborative care if the depression is in the context of a chronic physical health problem with associated functional impairment
-IF :['type 2 diabetes', 'people']
+IF :['depression', 'people']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 ##############################################################################
 Sentence :when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions : check adherence to , and side effects from , initial treatment
-IF :['symptoms', 'type 2 diabetes', 'person', 'initial pharmacological interventions']
+IF :['symptoms', 'person', 'depression', 'initial pharmacological interventions']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 ##############################################################################
 Sentence :when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions : increase the frequency of appointments using outcome monitoring with a validated outcome measure
-IF :['symptoms', 'type 2 diabetes', 'person', 'initial pharmacological interventions']
+IF :['symptoms', 'person', 'depression', 'initial pharmacological interventions']
 THEN :['of appointments', 'monitoring']
 CorrespondingPatterns :[(;Frequency[Interval+Event]), (;Frequency[Interval+Event]), (;Using[Instrument]), (People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 ##############################################################################
 Sentence :when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions : be aware that using a single antidepressant rather than combination medication or augmentation ( see recommendations unk to unk ) is usually associated with a lower side-effect burden
-IF :['symptoms', 'type 2 diabetes', 'person', 'initial pharmacological interventions']
+IF :['symptoms', 'person', 'depression', 'initial pharmacological interventions']
 THEN :['a single antidepressant rather than combination medication or augmentation']
 CorrespondingPatterns :[(;Using[Instrument]), (People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 ##############################################################################
 Sentence :when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions : consider reintroducing previous treatments that have been inadequately delivered or adhered to , including increasing the dose
-IF :['symptoms', 'type 2 diabetes', 'person', 'initial pharmacological interventions']
+IF :['symptoms', 'person', 'depression', 'initial pharmacological interventions']
 THEN :['dose', 'delivered', 'consider reintroducing previous treatments that']
 CorrespondingPatterns :[(;Delivery[Theme+Deliverer+Manner]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Inclusion[Total+Part]), (People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 ##############################################################################
 Sentence :when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions : consider switching to an alternative antidepressant .
-IF :['symptoms', 'type 2 diabetes', 'person', 'initial pharmacological interventions']
+IF :['symptoms', 'person', 'depression', 'initial pharmacological interventions']
 THEN :['to an alternative antidepressant']
 CorrespondingPatterns :[(People[Origin+Person];), (;Change_tool[New_tool]), (;Alternatives[Salient_entity]), (Sign[Indicator];), (Response[Trigger];)]
 ##############################################################################
 Sentence :when switching to another antidepressant , be aware that the evidence for the relative advantage of switching either within or between classes is weak .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['within or between classes', 'to another antidepressant']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Change_tool[New_tool])]
 ##############################################################################
 Sentence :consider switching to : initially a different ssri or a better tolerated unk antidepressant subsequently an antidepressant of a different pharmacological class that may be less well tolerated , for example venlafaxine , a tca or an maoi .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['to']
 CorrespondingPatterns :[(;Change_tool[New_tool])]
 ##############################################################################
 Sentence :do not switch to , or start , unk because evidence supporting its tolerability relative to other antidepressants is outweighed by the increased cardiac risk and toxicity in overdose .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['to', 'risk and toxicity in overdose']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Change_tool[New_tool])]
 ##############################################################################
 Sentence :when using combinations of medications ( which should only normally be started in primary care in consultation with a consultant psychiatrist ) : select medications that are known to be safe when used together
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Using[Instrument])]
 ##############################################################################
 Sentence :when using combinations of medications ( which should only normally be started in primary care in consultation with a consultant psychiatrist ) : be aware of the increased side-effect burden this usually causes
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Using[Instrument])]
 ##############################################################################
 Sentence :when using combinations of medications ( which should only normally be started in primary care in consultation with a consultant psychiatrist ) : discuss the rationale for any combination with the person with depression , follow gmc guidance if off-label medication is prescribed , and monitor carefully for adverse effects
-IF :['type 2 diabetes', 'person']
+IF :['person', 'depression']
 THEN :['combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )', 'rationale']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Discussion[Topic]), (;Using[Instrument]), (People[Origin+Person];)]
 ##############################################################################
 Sentence :when using combinations of medications ( which should only normally be started in primary care in consultation with a consultant psychiatrist ) : be familiar with primary evidence and consider obtaining a second opinion when using unusual combinations , the evidence for the efficacy of a chosen strategy is limited or the unk ratio is unclear
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['combinations', 'combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Using[Instrument])]
 ##############################################################################
 Sentence :when using combinations of medications ( which should only normally be started in primary care in consultation with a consultant psychiatrist ) : document the rationale for the chosen combination .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :['combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Using[Instrument])]
 ##############################################################################
 Sentence :when prescribing lithium : monitor renal and thyroid function before treatment and every 6 months unk ( more often if there is evidence of renal impairment )
-IF :['type 2 diabetes', 'there', 'of renal impairment']
+IF :['there', 'of renal impairment', 'depression']
 THEN :[]
 CorrespondingPatterns :[(Locative_relation[Ground];)]
 ##############################################################################
 Sentence :when prescribing lithium : consider ecg monitoring in people with depression who are at high risk unk disease
-IF :['type 2 diabetes', 'risk unk disease', 'people']
+IF :['depression', 'risk unk disease', 'people']
 THEN :[]
 CorrespondingPatterns :[(Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (People[Origin+Person];)]
 ##############################################################################
 Sentence :when prescribing lithium : monitor serum lithium levels 1 week after initiation and each dose change until stable , and every 3 months thereafter .
-IF :['type 2 diabetes']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[]

@@ -19,7 +19,7 @@ public class Main {
 
 
         File fileXML = new File("./files/files_to_treat.xml");
-        ChainHandler.treatAllDeclaredFiles(fileXML, true, false, true);
+        ChainHandler.treatAllDeclaredFiles(fileXML, false, false, true);
 
 
 

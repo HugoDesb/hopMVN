@@ -1,0 +1,1025 @@
+when working with people with depression and their families or carers: build a trusting relationship and work in an open, engaging and non-judgemental manner.
+T4
+T3
+T2
+T1
+carers	false	1.3927
+families	false	1.3927
+mental	false	0.7947000000000001
+work	false	0.6303
+##########END##########
+when working with people with depression and their families or carers: explore treatment options in an atmosphere of hope and optimism, explaining the different courses of depression and that recovery is possible.
+T4
+T3
+T2
+T1
+carers	false	1.3927
+families	false	1.3927
+work	false	0.6303
+treatment	false	0.05750000000000011
+##########END##########
+when working with people with depression and their families or carers: be aware that stigma and discrimination can be associated with a diagnosis of depression
+T4
+T3
+T2
+T1
+carers	false	1.3927
+families	false	1.3927
+diagnosis	false	0.7709
+work	false	0.6303
+##########END##########
+when working with people with depression and their families or carers: ensure that discussions take place in settings in which confidentiality, privacy and dignity are respected.
+T4
+T3
+T2
+T1
+ensure	false	1.5
+carers	false	1.3927
+families	false	1.3927
+work	false	0.6303
+place	false	0.15369999999999995
+##########END##########
+when working with people with depression and their families or carers: provide information appropriate to their level of understanding about the nature of depression and the range of treatments available
+T4
+T3
+T2
+T1
+carers	false	1.3927
+families	false	1.3927
+form	false	1.2708
+work	false	0.6303
+treatment	false	0.05750000000000011
+##########END##########
+when working with people with depression and their families or carers: avoid clinical language without adequate explanation
+T4
+T3
+T2
+T1
+language	true	0.8062000000000001
+carers	false	1.3927
+families	false	1.3927
+work	false	0.6303
+##########END##########
+when working with people with depression and their families or carers: ensure that comprehensive written information is available in the appropriate language and in audio format if possible
+T4
+T3
+T2
+T1
+language	true	0.8062000000000001
+ensure	false	1.5
+carers	false	1.3927
+families	false	1.3927
+form	false	1.2708
+work	false	0.6303
+##########END##########
+when working with people with depression and their families or carers: provide and work proficiently with independent interpreters (that is, someone who is not known to the person with depression) if needed.
+T4
+T3
+T2
+T1
+carers	false	1.3927
+families	false	1.3927
+work	false	0.6303
+##########END##########
+inform people with depression about self-help groups, support groups and other local and national resources.
+T4
+T3
+T2
+T1
+groups	true	1.3333
+form	false	1.2708
+support	false	0.7492
+self-help	false	0.0343
+##########END##########
+make all efforts necessary to ensure that a person with depression can give meaningful and informed consent before treatment starts.
+T4
+T3
+T2
+T1
+ensure	false	1.5
+consent	false	1.2708
+form	false	1.2708
+treatment	false	0.05750000000000011
+##########END##########
+this is especially important when a person has severe depression or is subject to the mental health act.
+T4
+T3
+mental health act	false	0.9646
+T2
+health act	true	0.9151999999999999
+severe depression	false	0.3084
+T1
+health	true	0.15749999999999997
+act	false	0.7947000000000001
+mental	false	0.7947000000000001
+##########END##########
+ensure that consent to treatment is based on the provision of clear information (which should also be available in written form) about the intervention, covering: what it comprises
+T4
+T3
+T2
+clear information	false	1.6525
+written form	false	1.6525
+T1
+ensure	false	1.5
+provision	false	1.5
+consent	false	1.2708
+form	false	1.2708
+intervention	false	1.0076999999999998
+treatment	false	0.05750000000000011
+##########END##########
+ensure that consent to treatment is based on the provision of clear information (which should also be available in written form) about the intervention, covering: what is expected of the person while having it
+T4
+T3
+T2
+clear information	false	1.6525
+written form	false	1.6525
+T1
+ensure	false	1.5
+provision	false	1.5
+consent	false	1.2708
+form	false	1.2708
+intervention	false	1.0076999999999998
+treatment	false	0.05750000000000011
+##########END##########
+ensure that consent to treatment is based on the provision of clear information (which should also be available in written form) about the intervention, covering: likely outcomes (including any side effects).
+T4
+T3
+T2
+clear information	false	1.6525
+written form	false	1.6525
+T1
+ensure	false	1.5
+provision	false	1.5
+consent	false	1.2708
+form	false	1.2708
+intervention	false	1.0076999999999998
+outcome	false	0.08040000000000003
+treatment	false	0.05750000000000011
+##########END##########
+for people with recurrent severe depression or depression with psychotic symptoms and for those who have been treated under the mental health act, consider developing advance decisions and advance statements collaboratively with the person. 
+T4
+T3
+mental health act	false	0.9646
+T2
+health act	true	0.9151999999999999
+severe depression	false	0.3084
+T1
+health	true	0.15749999999999997
+advance	false	1.3333
+act	false	0.7947000000000001
+mental	false	0.7947000000000001
+decisions	false	0.38280000000000003
+statements	false	0.38280000000000003
+symptoms	false	0.11740000000000006
+##########END##########
+record the decisions and statements and include copies in the person's care plan in primary and secondary care.
+T4
+T3
+T2
+T1
+copies	true	0.8084
+care	false	0.8753000000000001
+decisions	false	0.38280000000000003
+statements	false	0.38280000000000003
+##########END##########
+give copies to the person and to their family or carer, if the person agrees.
+T4
+T3
+T2
+T1
+copies	true	0.8084
+care	false	0.8753000000000001
+##########END##########
+when assessing a person who may have depression, conduct a comprehensive assessment that does not rely simply on a symptom count.
+T4
+T3
+T2
+T1
+assessment	false	0.28700000000000003
+##########END##########
+take into account both the degree of functional impairment and/or disability associated with the possible depression and the duration of the episode.
+T4
+T3
+T2
+functional impairment	false	0.6441999999999999
+T1
+account	true	0.5522
+impairment	true	0.2854000000000001
+disability	false	1.4364999999999999
+ratio	false	0.43909999999999993
+episode	false	0.4003
+##########END##########
+in addition to assessing symptoms and associated functional impairment, consider how the following factors may have affected the development, course and severity of a person's depression: any history of depression and comorbid mental health or physical disorders
+T4
+T3
+T2
+mental health	true	0.07819999999999994
+functional impairment	false	0.6441999999999999
+T1
+addition	true	1.6667
+severity	true	1.6667
+disorder	true	0.4619
+impairment	true	0.2854000000000001
+health	true	0.15749999999999997
+development	false	1.6667
+factors	false	1.6667
+mental	false	0.7947000000000001
+symptoms	false	0.11740000000000006
+##########END##########
+in addition to assessing symptoms and associated functional impairment, consider how the following factors may have affected the development, course and severity of a person's depression: any past history of mood elevation (to determine if the depression may be part of bipolar disorder)
+T4
+T3
+T2
+functional impairment	false	0.6441999999999999
+T1
+addition	true	1.6667
+severity	true	1.6667
+disorder	true	0.4619
+impairment	true	0.2854000000000001
+development	false	1.6667
+factors	false	1.6667
+part	false	0.25429999999999997
+symptoms	false	0.11740000000000006
+##########END##########
+in addition to assessing symptoms and associated functional impairment, consider how the following factors may have affected the development, course and severity of a person's depression: any past experience of, and response to, treatments
+T4
+T3
+T2
+functional impairment	false	0.6441999999999999
+T1
+addition	true	1.6667
+severity	true	1.6667
+impairment	true	0.2854000000000001
+development	false	1.6667
+factors	false	1.6667
+symptoms	false	0.11740000000000006
+treatment	false	0.05750000000000011
+##########END##########
+in addition to assessing symptoms and associated functional impairment, consider how the following factors may have affected the development, course and severity of a person's depression: the quality of interpersonal relationships
+T4
+T3
+T2
+functional impairment	false	0.6441999999999999
+T1
+addition	true	1.6667
+severity	true	1.6667
+impairment	true	0.2854000000000001
+development	false	1.6667
+factors	false	1.6667
+symptoms	false	0.11740000000000006
+##########END##########
+in addition to assessing symptoms and associated functional impairment, consider how the following factors may have affected the development, course and severity of a person's depression: living conditions and social isolation.
+T4
+T3
+T2
+functional impairment	false	0.6441999999999999
+T1
+addition	true	1.6667
+severity	true	1.6667
+impairment	true	0.2854000000000001
+development	false	1.6667
+factors	false	1.6667
+symptoms	false	0.11740000000000006
+##########END##########
+when assessing a person with suspected depression, be aware of any learning disabilities or acquired cognitive impairments, and if necessary consider consulting with a relevant specialist when developing treatment plans and strategies.
+T4
+T3
+T2
+cognitive impairment	true	1.1114
+T1
+impairment	true	0.2854000000000001
+strategies	false	0.71
+treatment	false	0.05750000000000011
+##########END##########
+when providing interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression: where possible, provide the same interventions as for other people with depression
+T4
+T3
+T2
+cognitive impairment	true	1.1114
+T1
+impairment	true	0.2854000000000001
+disability	false	1.4364999999999999
+intervention	false	1.0076999999999998
+diagnosis	false	0.7709
+##########END##########
+when providing interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression: if necessary, adjust the method of delivery or duration of the intervention to take account of the disability or impairment.
+T4
+T3
+T2
+cognitive impairment	true	1.1114
+T1
+account	true	0.5522
+impairment	true	0.2854000000000001
+disability	false	1.4364999999999999
+intervention	false	1.0076999999999998
+diagnosis	false	0.7709
+ratio	false	0.43909999999999993
+##########END##########
+when depression is accompanied by symptoms of anxiety, the first priority should usually be to treat the depression.
+T4
+T3
+T2
+T1
+anxiety	true	1.3236999999999999
+symptoms	false	0.11740000000000006
+##########END##########
+when the person has an anxiety disorder and comorbid depression or depressive symptoms, consult the nice guideline for the relevant anxiety disorder (see find guidance) and consider treating the anxiety disorder first (since effective treatment of the anxiety disorder will often improve the depression or the depressive symptoms).
+T4
+T3
+T2
+anxiety disorder	true	1.7275
+depressive symptoms	false	0.7860999999999999
+T1
+anxiety	true	1.3236999999999999
+disorder	true	0.4619
+symptoms	false	0.11740000000000006
+treatment	false	0.05750000000000011
+guideline	false	0.01969999999999994
+##########END##########
+offer people with depression advice on sleep hygiene if needed, including: establishing regular sleep and wake times
+T4
+T3
+T2
+depression advice	false	0.6753000000000001
+offer people	false	0.6753000000000001
+sleep hygiene	false	0.6753000000000001
+T1
+sleep	false	1.75
+advice	false	0.6218
+hygiene	false	0.6218
+offer	false	0.6218
+##########END##########
+offer people with depression advice on sleep hygiene if needed, including: avoiding excess eating, smoking or drinking alcohol before sleep
+T4
+T3
+T2
+depression advice	false	0.6753000000000001
+offer people	false	0.6753000000000001
+sleep hygiene	false	0.6753000000000001
+T1
+sleep	false	1.75
+advice	false	0.6218
+hygiene	false	0.6218
+offer	false	0.6218
+##########END##########
+offer people with depression advice on sleep hygiene if needed, including: creating a proper environment for sleep
+T4
+T3
+T2
+depression advice	false	0.6753000000000001
+offer people	false	0.6753000000000001
+sleep hygiene	false	0.6753000000000001
+T1
+sleep	false	1.75
+advice	false	0.6218
+hygiene	false	0.6218
+offer	false	0.6218
+##########END##########
+offer people with depression advice on sleep hygiene if needed, including: taking regular physical exercise.
+T4
+T3
+T2
+depression advice	false	0.6753000000000001
+offer people	false	0.6753000000000001
+sleep hygiene	false	0.6753000000000001
+T1
+sleep	false	1.75
+advice	false	0.6218
+hygiene	false	0.6218
+offer	false	0.6218
+##########END##########
+for people who, in the judgement of the practitioner, may recover with no formal intervention, or people with mild depression who do not want an intervention, or people with subthreshold depressive symptoms who request an intervention: discuss the presenting problem(s) and any concerns that the person may have about them
+T4
+T3
+subthreshold depressive symptoms	false	1.1864
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+formal intervention	false	0.6814
+T1
+practitioner	true	0.6262000000000001
+form	false	1.2708
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+judgement	false	0.6262000000000001
+symptoms	false	0.11740000000000006
+##########END##########
+for people who, in the judgement of the practitioner, may recover with no formal intervention, or people with mild depression who do not want an intervention, or people with subthreshold depressive symptoms who request an intervention: provide information about the nature and course of depression
+T4
+T3
+subthreshold depressive symptoms	false	1.1864
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+formal intervention	false	0.6814
+T1
+practitioner	true	0.6262000000000001
+form	false	1.2708
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+judgement	false	0.6262000000000001
+symptoms	false	0.11740000000000006
+##########END##########
+for people who, in the judgement of the practitioner, may recover with no formal intervention, or people with mild depression who do not want an intervention, or people with subthreshold depressive symptoms who request an intervention: arrange a further assessment, normally within 2 weeks
+T4
+T3
+subthreshold depressive symptoms	false	1.1864
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+formal intervention	false	0.6814
+T1
+practitioner	true	0.6262000000000001
+form	false	1.2708
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+judgement	false	0.6262000000000001
+assessment	false	0.28700000000000003
+symptoms	false	0.11740000000000006
+##########END##########
+for people who, in the judgement of the practitioner, may recover with no formal intervention, or people with mild depression who do not want an intervention, or people with subthreshold depressive symptoms who request an intervention: make contact if the person does not attend follow-up appointments.
+T4
+T3
+subthreshold depressive symptoms	false	1.1864
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+formal intervention	false	0.6814
+T1
+practitioner	true	0.6262000000000001
+form	false	1.2708
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+act	false	0.7947000000000001
+judgement	false	0.6262000000000001
+symptoms	false	0.11740000000000006
+##########END##########
+for people with persistent subthreshold depressive symptoms or mild to moderate depression, consider offering one or more of the following interventions, guided by the person's preference: individual guided self-help based on the principles of cognitive behavioural therapy
+T4
+T3
+persistent subthreshold depressive	false	1.2428
+cognitive behavioural therapy	false	0.8583
+T2
+subthreshold depressive	false	1.1748
+behavioural therapy	false	0.8136
+moderate depression	false	0.804
+T1
+offering	false	1.5
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+therapy	false	0.9496000000000001
+preference	false	0.31689999999999996
+symptoms	false	0.11740000000000006
+self-help	false	0.0343
+##########END##########
+for people with persistent subthreshold depressive symptoms or mild to moderate depression, consider offering one or more of the following interventions, guided by the person's preference: computerised cognitive behavioural therapy
+T4
+T3
+persistent subthreshold depressive	false	1.2428
+cognitive behavioural therapy	false	0.8583
+T2
+subthreshold depressive	false	1.1748
+behavioural therapy	false	0.8136
+moderate depression	false	0.804
+T1
+offering	false	1.5
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+therapy	false	0.9496000000000001
+preference	false	0.31689999999999996
+symptoms	false	0.11740000000000006
+##########END##########
+for people with persistent subthreshold depressive symptoms or mild to moderate depression, consider offering one or more of the following interventions, guided by the person's preference: a structured group physical activity programme.
+T4
+T3
+persistent subthreshold depressive	false	1.2428
+T2
+subthreshold depressive	false	1.1748
+moderate depression	false	0.804
+T1
+offering	false	1.5
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+act	false	0.7947000000000001
+preference	false	0.31689999999999996
+symptoms	false	0.11740000000000006
+##########END##########
+group-based cbt for people with persistent subthreshold depressivesymptoms or mild to moderate depression should: be based on a structured model such as 'coping with depression'
+T4
+T3
+persistent subthreshold depressivesymptoms	false	1.7778
+T2
+group-based cbt	false	1.7275
+subthreshold depressivesymptoms	false	1.7275
+moderate depression	false	0.804
+T1
+depressivesymptoms	false	1.6
+cbt	false	1.3236999999999999
+subthreshold	false	1.0703999999999998
+group-based	false	0.9832000000000001
+##########END##########
+group-based cbt for people with persistent subthreshold depressivesymptoms or mild to moderate depression should: be delivered by two trained and competent practitioners
+T4
+T3
+persistent subthreshold depressivesymptoms	false	1.7778
+T2
+group-based cbt	false	1.7275
+subthreshold depressivesymptoms	false	1.7275
+moderate depression	false	0.804
+T1
+practitioner	true	0.6262000000000001
+depressivesymptoms	false	1.6
+cbt	false	1.3236999999999999
+subthreshold	false	1.0703999999999998
+group-based	false	0.9832000000000001
+##########END##########
+group-based cbt for people with persistent subthreshold depressivesymptoms or mild to moderate depression should: consist of 10 to 12 meetings of eight to ten participants
+T4
+T3
+persistent subthreshold depressivesymptoms	false	1.7778
+T2
+group-based cbt	false	1.7275
+subthreshold depressivesymptoms	false	1.7275
+moderate depression	false	0.804
+T1
+depressivesymptoms	false	1.6
+cbt	false	1.3236999999999999
+subthreshold	false	1.0703999999999998
+group-based	false	0.9832000000000001
+part	false	0.25429999999999997
+##########END##########
+group-based cbt for people with persistent subthreshold depressivesymptoms or mild to moderate depression should: normally take place over 12 to 16 weeks, including follow-up.
+T4
+T3
+persistent subthreshold depressivesymptoms	false	1.7778
+T2
+group-based cbt	false	1.7275
+subthreshold depressivesymptoms	false	1.7275
+moderate depression	false	0.804
+T1
+depressivesymptoms	false	1.6
+cbt	false	1.3236999999999999
+subthreshold	false	1.0703999999999998
+group-based	false	0.9832000000000001
+place	false	0.15369999999999995
+##########END##########
+do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor, but consider them for people with: a past history of moderate or severe depression
+T4
+T3
+persistent subthreshold depressive	false	1.2428
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+risk–benefit ratio	false	0.47339999999999993
+severe depression	false	0.3084
+T1
+antidepressants	false	1.0927
+subthreshold	false	1.0703999999999998
+ratio	false	0.43909999999999993
+risk–benefit	false	0.43909999999999993
+symptoms	false	0.11740000000000006
+##########END##########
+do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor, but consider them for people with:initial presentation of subthreshold depressive symptoms that have been present for a long period (typically at least 2 years)
+T4
+T3
+persistent subthreshold depressive	false	1.2428
+subthreshold depressive symptoms	false	1.1864
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+risk–benefit ratio	false	0.47339999999999993
+T1
+antidepressants	false	1.0927
+subthreshold	false	1.0703999999999998
+ratio	false	0.43909999999999993
+risk–benefit	false	0.43909999999999993
+symptoms	false	0.11740000000000006
+##########END##########
+do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor, but consider them for people with: subthreshold depressive symptoms or mild depression that persist(s) after other interventions.
+T4
+T3
+persistent subthreshold depressive	false	1.2428
+subthreshold depressive symptoms	false	1.1864
+T2
+subthreshold depressive	false	1.1748
+mild depression	false	1.06
+risk–benefit ratio	false	0.47339999999999993
+T1
+antidepressants	false	1.0927
+subthreshold	false	1.0703999999999998
+intervention	false	1.0076999999999998
+ratio	false	0.43909999999999993
+risk–benefit	false	0.43909999999999993
+symptoms	false	0.11740000000000006
+##########END##########
+for people with moderate or severe depression, provide a combination of antidepressant medication and a high-intensity psychological intervention (cbt or ipt).
+T4
+T3
+T2
+severe depression	false	0.3084
+T1
+cbt	false	1.3236999999999999
+intervention	false	1.0076999999999998
+antidepressant	false	0.6265999999999999
+medication	false	0.14169999999999994
+combination	false	0.12639999999999996
+##########END##########
+the choice of intervention should be influenced by the duration of the episode of depression and the trajectory of symptoms 
+T4
+T3
+T2
+T1
+choice	true	1.6
+intervention	false	1.0076999999999998
+ratio	false	0.43909999999999993
+episode	false	0.4003
+symptoms	false	0.11740000000000006
+##########END##########
+the choice of intervention should be influenced by the previous course of depression and response to treatment 
+T4
+T3
+T2
+T1
+choice	true	1.6
+intervention	false	1.0076999999999998
+treatment	false	0.05750000000000011
+##########END##########
+the choice of intervention should be influenced by the likelihood of adherence to treatment and any potential adverse effects 
+T4
+T3
+T2
+T1
+choice	true	1.6
+intervention	false	1.0076999999999998
+treatment	false	0.05750000000000011
+##########END##########
+the choice of intervention should be influenced by the person's treatment preference and priorities.
+T4
+T3
+T2
+T1
+choice	true	1.6
+intervention	false	1.0076999999999998
+preference	false	0.31689999999999996
+treatment	false	0.05750000000000011
+##########END##########
+when an antidepressant is to be prescribed, it should normally be an ssri in a generic form because ssris are equally effective as other antidepressants and have a favourable risk–benefit ratio. 
+T4
+T3
+T2
+risk–benefit ratio	false	0.47339999999999993
+T1
+ssri	true	0.9584000000000001
+form	false	1.2708
+antidepressants	false	1.0927
+antidepressant	false	0.6265999999999999
+ratio	false	0.43909999999999993
+risk–benefit	false	0.43909999999999993
+##########END##########
+also take the following into account: ssris are associated with an increased risk of bleeding, especially in older people or in people taking other drugs that have the potential to damage the gastrointestinal mucosa or interfere with clotting. 
+T4
+T3
+T2
+T1
+drugs	true	1.0546
+ssri	true	0.9584000000000001
+account	true	0.5522
+risk	false	0.3889
+##########END##########
+in particular, consider prescribing a gastroprotective drug in older people who are taking non-steroidal anti-inflammatory drugs (nsaids) or aspirin.
+T4
+T3
+T2
+T1
+drugs	true	1.0546
+drug	true	0.8442
+part	false	0.25429999999999997
+##########END##########
+also take the following into account fluoxetine, fluvoxamine and paroxetine are associated with a higher propensity for drug interactions than other ssris
+T4
+T3
+T2
+T1
+ssri	true	0.9584000000000001
+drug	true	0.8442
+account	true	0.5522
+act	false	0.7947000000000001
+##########END##########
+also take the following into account paroxetine is associated with a higher incidence of discontinuation symptoms than other ssris.
+T4
+T3
+T2
+T1
+ssri	true	0.9584000000000001
+account	true	0.5522
+symptoms	false	0.11740000000000006
+##########END##########
+do not routinely vary the treatment strategies for depression described in this guideline either by depression subtype (for example, atypical depression or seasonal depression) or by personal characteristics (for example, sex or ethnicity) as there is no convincing evidence to support such action.
+T4
+T3
+T2
+T1
+act	false	0.7947000000000001
+support	false	0.7492
+strategies	false	0.71
+treatment	false	0.05750000000000011
+evidence	false	0.03190000000000004
+guideline	false	0.01969999999999994
+##########END##########
+advise people with winter depression that follows a seasonal pattern and who wish to try light therapy in preference to antidepressant or psychological treatment that the evidence for the efficacy of light therapy is uncertain.
+T4
+T3
+T2
+light therapy	false	1.5204
+T1
+therapy	false	0.9496000000000001
+antidepressant	false	0.6265999999999999
+preference	false	0.31689999999999996
+treatment	false	0.05750000000000011
+evidence	false	0.03190000000000004
+##########END##########
+when prescribing antidepressants for older people: prescribe at an age-appropriate dose taking into account the effect of general physical health and concomitant medication on pharmacokinetics and pharmacodynamics
+T4
+T3
+T2
+physical health	false	0.15090000000000003
+T1
+account	true	0.5522
+health	true	0.15749999999999997
+antidepressants	false	1.0927
+medication	false	0.14169999999999994
+##########END##########
+when prescribing antidepressants for older people: carefully monitor for side effects.
+T4
+T3
+T2
+T1
+antidepressants	false	1.0927
+care	false	0.8753000000000001
+##########END##########
+for people with long-standing moderate or severe depression who would benefit from additional social or vocational support, consider: befriending as an adjunct to pharmacological or psychological treatments; befriending should be by trained volunteers providing, typically, at least weekly contact for between 2 and 6 months
+T4
+T3
+T2
+additional social	false	1.5204
+long-standing moderate	false	1.5204
+vocational support	false	1.5204
+severe depression	false	0.3084
+T1
+addition	true	1.6667
+act	false	0.7947000000000001
+support	false	0.7492
+treatment	false	0.05750000000000011
+##########END##########
+for people with long-standing moderate or severe depression who would benefit from additional social or vocational support, consider: a rehabilitation programme if a person's depression has resulted in loss of work or disengagement from other social activities over a longer term.
+T4
+T3
+T2
+additional social	false	1.5204
+long-standing moderate	false	1.5204
+vocational support	false	1.5204
+severe depression	false	0.3084
+T1
+addition	true	1.6667
+act	false	0.7947000000000001
+support	false	0.7492
+work	false	0.6303
+##########END##########
+medication management as a separate intervention for people with depression should not be provided routinely by services. it is likely to be effective only when provided as part of a more complex intervention.
+T4
+T3
+T2
+T1
+intervention	false	1.0076999999999998
+part	false	0.25429999999999997
+services	false	0.2489
+medication	false	0.14169999999999994
+##########END##########
+for people with severe depression and those with moderate depression and complex problems, consider: referring to specialist mental health services for a programme of coordinated multiprofessional care
+T4
+T3
+T2
+mental health	true	0.07819999999999994
+moderate depression	false	0.804
+severe depression	false	0.3084
+complex problems	false	0.1259
+T1
+health	true	0.15749999999999997
+care	false	0.8753000000000001
+mental	false	0.7947000000000001
+services	false	0.2489
+problems	false	0.08040000000000003
+##########END##########
+for people with severe depression and those with moderate depression and complex problems, consider: providing collaborative care if the depression is in the context of a chronic physical health problem with associated functional impairment
+T4
+T3
+T2
+moderate depression	false	0.804
+functional impairment	false	0.6441999999999999
+severe depression	false	0.3084
+physical health	false	0.15090000000000003
+complex problems	false	0.1259
+T1
+impairment	true	0.2854000000000001
+health	true	0.15749999999999997
+care	false	0.8753000000000001
+problems	false	0.08040000000000003
+##########END##########
+when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions: check adherence to, and side effects from, initial treatment
+T4
+T3
+initial pharmacological interventions	false	1.8182
+T2
+drug treatment	false	1.7759
+initial pharmacological	false	1.7759
+T1
+drug	true	0.8442
+intervention	false	1.0076999999999998
+symptoms	false	0.11740000000000006
+treatment	false	0.05750000000000011
+##########END##########
+when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions: increase the frequency of appointments using outcome monitoring with a validated outcome measure
+T4
+T3
+initial pharmacological interventions	false	1.8182
+T2
+drug treatment	false	1.7759
+initial pharmacological	false	1.7759
+T1
+drug	true	0.8442
+intervention	false	1.0076999999999998
+symptoms	false	0.11740000000000006
+outcome	false	0.08040000000000003
+treatment	false	0.05750000000000011
+##########END##########
+when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions: be aware that using a single antidepressant rather than combination medication or augmentation (see recommendations 1.8.1.5 to 1.8.1.9) is usually associated with a lower side-effect burden
+T4
+T3
+initial pharmacological interventions	false	1.8182
+T2
+drug treatment	false	1.7759
+initial pharmacological	false	1.7759
+T1
+drug	true	0.8442
+intervention	false	1.0076999999999998
+antidepressant	false	0.6265999999999999
+medication	false	0.14169999999999994
+combination	false	0.12639999999999996
+symptoms	false	0.11740000000000006
+treatment	false	0.05750000000000011
+##########END##########
+when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions: consider reintroducing previous treatments that have been inadequately delivered or adhered to, including increasing the dose
+T4
+T3
+initial pharmacological interventions	false	1.8182
+T2
+drug treatment	false	1.7759
+initial pharmacological	false	1.7759
+T1
+drug	true	0.8442
+intervention	false	1.0076999999999998
+symptoms	false	0.11740000000000006
+treatment	false	0.05750000000000011
+##########END##########
+when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions: consider switching to an alternative antidepressant.
+T4
+T3
+initial pharmacological interventions	false	1.8182
+T2
+drug treatment	false	1.7759
+initial pharmacological	false	1.7759
+T1
+drug	true	0.8442
+intervention	false	1.0076999999999998
+antidepressant	false	0.6265999999999999
+symptoms	false	0.11740000000000006
+treatment	false	0.05750000000000011
+##########END##########
+when switching to another antidepressant, be aware that the evidence for the relative advantage of switching either within or between classes is weak.
+T4
+T3
+T2
+T1
+antidepressant	false	0.6265999999999999
+evidence	false	0.03190000000000004
+##########END##########
+consider switching to: initially a different ssri or a better tolerated newer-generation antidepressant subsequently an antidepressant of a different pharmacological class that may be less well tolerated, for example venlafaxine, a tca or an maoi.
+T4
+T3
+T2
+T1
+ssri	true	0.9584000000000001
+antidepressant	false	0.6265999999999999
+ratio	false	0.43909999999999993
+##########END##########
+do not switch to, or start, dosulepin because evidence supporting its tolerability relative to other antidepressants is outweighed by the increased cardiac risk and toxicity in overdose.
+T4
+T3
+T2
+T1
+antidepressants	false	1.0927
+support	false	0.7492
+risk	false	0.3889
+evidence	false	0.03190000000000004
+##########END##########
+when using combinations of medications (which should only normally be started in primary care in consultation with a consultant psychiatrist): select medications that are known to be safe when used together
+T4
+T3
+T2
+primary care	true	1.3704999999999998
+consultant psychiatrist	false	1.3704999999999998
+T1
+combinations	false	1.7143
+medications	false	1.7143
+consultant	false	1.2879999999999998
+consultation	false	1.2879999999999998
+psychiatrist	false	1.2879999999999998
+care	false	0.8753000000000001
+##########END##########
+when using combinations of medications (which should only normally be started in primary care in consultation with a consultant psychiatrist): be aware of the increased side-effect burden this usually causes
+T4
+T3
+T2
+primary care	true	1.3704999999999998
+consultant psychiatrist	false	1.3704999999999998
+T1
+combinations	false	1.7143
+medications	false	1.7143
+consultant	false	1.2879999999999998
+consultation	false	1.2879999999999998
+psychiatrist	false	1.2879999999999998
+care	false	0.8753000000000001
+##########END##########
+when using combinations of medications (which should only normally be started in primary care in consultation with a consultant psychiatrist): discuss the rationale for any combination with the person with depression, follow gmc guidance if off-label medication is prescribed, and monitor carefully for adverse effects
+T4
+T3
+T2
+primary care	true	1.3704999999999998
+consultant psychiatrist	false	1.3704999999999998
+T1
+combinations	false	1.7143
+medications	false	1.7143
+consultant	false	1.2879999999999998
+consultation	false	1.2879999999999998
+psychiatrist	false	1.2879999999999998
+care	false	0.8753000000000001
+ratio	false	0.43909999999999993
+medication	false	0.14169999999999994
+combination	false	0.12639999999999996
+##########END##########
+when using combinations of medications (which should only normally be started in primary care in consultation with a consultant psychiatrist): be familiar with primary evidence and consider obtaining a second opinion when using unusual combinations, the evidence for the efficacy of a chosen strategy is limited or the risk–benefit ratio is unclear
+T4
+T3
+T2
+primary care	true	1.3704999999999998
+consultant psychiatrist	false	1.3704999999999998
+risk–benefit ratio	false	0.47339999999999993
+T1
+combinations	false	1.7143
+medications	false	1.7143
+consultant	false	1.2879999999999998
+consultation	false	1.2879999999999998
+psychiatrist	false	1.2879999999999998
+care	false	0.8753000000000001
+ratio	false	0.43909999999999993
+risk–benefit	false	0.43909999999999993
+evidence	false	0.03190000000000004
+##########END##########
+when using combinations of medications (which should only normally be started in primary care in consultation with a consultant psychiatrist): document the rationale for the chosen combination.
+T4
+T3
+T2
+primary care	true	1.3704999999999998
+consultant psychiatrist	false	1.3704999999999998
+T1
+combinations	false	1.7143
+medications	false	1.7143
+consultant	false	1.2879999999999998
+consultation	false	1.2879999999999998
+psychiatrist	false	1.2879999999999998
+care	false	0.8753000000000001
+ratio	false	0.43909999999999993
+combination	false	0.12639999999999996
+##########END##########
+when prescribing lithium:monitor renal and thyroid function before treatment and every 6 months duringtreatment (more often if there is evidence of renal impairment)
+T4
+T3
+T2
+T1
+impairment	true	0.2854000000000001
+treatment	false	0.05750000000000011
+evidence	false	0.03190000000000004
+##########END##########
+when prescribing lithium: consider ecg monitoring in people with depression who are at high risk ofcardiovascular disease
+T4
+T3
+T2
+T1
+risk	false	0.3889
+##########END##########
+when prescribing lithium:monitor serum lithium levels 1 week after initiation and each dose change until stable, and every 3 months thereafter.
+T4
+T3
+T2
+T1
+##########END##########

@@ -15,17 +15,19 @@
               language="english"
               type="NICE"
               isExpertFile="false"/>
-        <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/cardiovascular-disease-risk-assessment-and-reduction-including-lipid-modification.pdf"
-              name="cardiovascular-disease-risk-assessment-and-reduction-including-lipid-modification"
-              topic="cardiovascular disease"
+        <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/depression-NICE.pdf"
+              name="depression-NICE"
+              topic="depression"
               language="english"
               type="NICE"
               isExpertFile="false"/>
+        <!--
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/myocardial-infarction-cardiac-rehabilitation-and-prevention-of-further-cardiovascular-disease.pdf"
               name="myocardial-infarction-cardiac-rehabilitation-and-prevention-of-further-cardiovascular-disease"
               topic="myocardial infarction"
               language="english"
               type="NICE"
               isExpertFile="false"/>
+              -->
     </files>
 </task>

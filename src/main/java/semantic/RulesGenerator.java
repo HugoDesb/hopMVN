@@ -67,10 +67,45 @@ public class RulesGenerator {
 
             Set<Integer> toAdd = new HashSet<>();
             for (Pattern pattern: partialPattern) {
+                Integer targetIndex = sentence.getTargetMatch(pattern);
                 Set<Integer> tmp3 = new HashSet<>(sentence.matches(pattern));
                 if(toAdd.size()==0){
                     toAdd = tmp3;
                 }else{
+                    if(targetIndex!=-1){
+                        for (Integer index : toAdd) {
+                            // target is after
+                            Word w = sentence.getWord(targetIndex);
+                            if(index.equals(targetIndex-1)){
+                                if(w.getPos_tag().equals("JJ") ||
+                                    w.getPos_tag().equals("JJR") ||
+                                    w.getPos_tag().equals("JJS") ||
+                                    w.getPos_tag().equals("NN") ||
+                                    w.getPos_tag().equals("NNS") ||
+                                    w.getPos_tag().equals("POS") ||
+                                    w.getPos_tag().equals("RB") ||
+                                    w.getPos_tag().equals("RBR") ||
+                                    w.getPos_tag().equals("RBS") ||
+                                    w.getPos_tag().equals("RP"))
+                                {
+                                    toAdd.add(targetIndex);
+                                }
+                            }
+                            // target is before
+                            else if(index.equals(targetIndex+1)){
+                                if(w.getPos_tag().equals("VB") ||
+                                    w.getPos_tag().equals("VBD") ||
+                                    w.getPos_tag().equals("VBG") ||
+                                    w.getPos_tag().equals("VBP") ||
+                                    w.getPos_tag().equals("VBZ") ||
+                                    w.getPos_tag().equals("VBN"))
+                                {
+                                    toAdd.add(targetIndex);
+                                }
+                            }
+                        }
+                    }
+
                     toAdd.retainAll(tmp3);
                 }
             }
@@ -156,6 +191,8 @@ public class RulesGenerator {
             boolean foundT4Start = false;
             boolean foundT4End = false;
 
+            boolean illegalCharacters;
+
             String[] words = premises.get(i).split(" ");
             // Check if t2 exists at the start and/or at the end
             // if YES then don't try to find other m-w COMBINE
@@ -163,7 +200,8 @@ public class RulesGenerator {
             if (!foundT2Start && words.length>=1) {
                 query = words[0].trim();
                 ret = searchInCSV(t2grams, query, false, 0);
-                if (ret != null) {
+                illegalCharacters = query.contains(")") || query.contains(")");
+                if (ret != null && !illegalCharacters) {
                     premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                     foundT2Start = true;
                 }
@@ -172,7 +210,8 @@ public class RulesGenerator {
             if (!foundT2End && words.length>=1) {
                 query = words[words.length - 1];
                 ret = searchInCSV(t2grams, query, true, 0);
-                if (ret != null) {
+                illegalCharacters = query.contains(")") || query.contains(")");
+                if (ret != null && !illegalCharacters) {
                     premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                     foundT2End = true;
                 }
@@ -188,13 +227,15 @@ public class RulesGenerator {
             if (!foundT2Start && !foundT3Start && words.length >= 2) {
                 query = words[0].trim() + " " + words[1].trim();
                 ret = searchInCSV(t3grams, query, true, 0);
-                if (ret != null) {
+                illegalCharacters = query.contains(")") || query.contains(")");
+                if (ret != null && !illegalCharacters) {
                     premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                     foundT3Start = true;
                 } else {
                     query = words[0].trim();
                     ret = searchInCSV(t3grams, query, true, 0);
-                    if (ret != null) {
+                    illegalCharacters = query.contains(")") || query.contains(")");
+                    if (ret != null && !illegalCharacters) {
                         premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                         foundT3Start = true;
                     }
@@ -203,13 +244,15 @@ public class RulesGenerator {
                 if (!foundT2End && !foundT3End && words.length >= 2) {
                     query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
                     ret = searchInCSV(t3grams, query, false, 0);
-                    if (ret != null) {
+                    illegalCharacters = query.contains(")") || query.contains(")");
+                    if (ret != null && !illegalCharacters) {
                         premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                         foundT3End = true;
                     }else{
                         query = words[words.length - 1].trim();
+                        illegalCharacters = query.contains(")") || query.contains(")");
                         ret = searchInCSV(t3grams, query, false, 0);
-                        if (ret != null) {
+                        if (ret != null && !illegalCharacters) {
                             premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                             foundT3Start = true;
                         }
@@ -226,20 +269,23 @@ public class RulesGenerator {
 
                 if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
                     query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
+                    illegalCharacters = query.contains(")") || query.contains(")");
                     ret = searchInCSV(t4grams, query, true, 0);
-                    if (ret != null) {
+                    if (ret != null && !illegalCharacters) {
                         premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                         foundT4Start = true;
                     } else {
                         query = words[0].trim() + " " + words[1].trim();
+                        illegalCharacters = query.contains(")") || query.contains(")");
                         ret = searchInCSV(t4grams, query, true, 0);
-                        if (ret != null) {
+                        if (ret != null && !illegalCharacters) {
                             premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                             foundT4Start = true;
                         }else{
                             query = words[0].trim();
+                            illegalCharacters = query.contains(")") || query.contains(")");
                             ret = searchInCSV(t4grams, query, true, 0);
-                            if (ret != null) {
+                            if (ret != null && !illegalCharacters) {
                                 premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                                 foundT4Start = true;
                             }
@@ -249,19 +295,22 @@ public class RulesGenerator {
                     if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
                         query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
                         ret = searchInCSV(t4grams, query, false, 0);
-                        if (ret != null) {
+                        illegalCharacters = query.contains(")") || query.contains(")");
+                        if (ret != null && !illegalCharacters) {
                             premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                             foundT4Start = true;
                         } else {
                             query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                            illegalCharacters = query.contains(")") || query.contains(")");
                             ret = searchInCSV(t4grams, query, false, 0);
-                            if (ret != null) {
+                            if (ret != null && !illegalCharacters) {
                                 premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                                 foundT4End = true;
                             }else{
                                 query = words[words.length - 1].trim();
+                                illegalCharacters = query.contains(")") || query.contains(")");
                                 ret = searchInCSV(t4grams, query, false, 0);
-                                if (ret != null) {
+                                if (ret != null && !illegalCharacters) {
                                     premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                                     foundT4End = true;
                                 }

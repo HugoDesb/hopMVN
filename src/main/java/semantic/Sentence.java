@@ -82,7 +82,7 @@ public class Sentence {
         return frames;
     }
 
-    private Word getWord(Integer index){
+    public Word getWord(Integer index){
         for (Word word :words) {
             if(word.getIndex()==index){
                 return word;
@@ -98,6 +98,15 @@ public class Sentence {
             words.add(getWord(i));
         }
         return words;
+    }
+
+    public Integer getTargetMatch(Pattern pattern) {
+        for (Frame frame: frames) {
+            if(frame.getFrameName().equals(pattern.getFrame())){
+                return frame.getTargetIndex();
+            }
+        }
+        return -1;
     }
 
     public static class Builder{
