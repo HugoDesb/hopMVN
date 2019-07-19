@@ -12,6 +12,7 @@ public class Rule {
 
     private Set<String> premisesString;
     private Set<String> conclusionsString;
+    private ArrayList<String> mwe;
 
     Rule(Sentence sentence, String topic){
         this.sentence = sentence;
@@ -19,6 +20,11 @@ public class Rule {
         this.conclusion = new HashSet<>();
         this.correspondingPatterns = new ArrayList<>();
         this.topic = topic;
+        this.mwe = new ArrayList<>();
+    }
+
+    public void addMWE(String m){
+        mwe.add(m);
     }
 
     public void addMatchPremise(List<Word> words){
@@ -134,7 +140,9 @@ public class Rule {
                 "\nSentence :" + sentence +
                 "\nIF :" + preparePremiseToString() +
                 "\nTHEN :" + prepareConclusionToString() +
-                "\nCorrespondingPatterns :" + correspondingPatterns;
+                "\nCorrespondingPatterns :" + correspondingPatterns +
+                "\nMWE : "+ mwe;
+
     }
 
     @Override
@@ -145,5 +153,9 @@ public class Rule {
                 "\n\t, THEN : " + conclusion +
                 "\n\t, correspondingPatterns= '" + correspondingPatterns + '\'' +
                 "\n}";
+    }
+
+    public Sentence getSentence() {
+        return sentence;
     }
 }

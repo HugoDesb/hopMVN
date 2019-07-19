@@ -3,9 +3,7 @@ package semantic;
 import MWExtraction.Wrapper.MultiColumnCSVSort;
 import common.Pair;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
+import java.io.*;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -240,86 +238,83 @@ public class RulesGenerator {
                         foundT3Start = true;
                     }
                 }
+            }
 
-                if (!foundT2End && !foundT3End && words.length >= 2) {
-                    query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                    ret = searchInCSV(t3grams, query, false, 0);
+            if (!foundT2End && !foundT3End && words.length >= 2) {
+                query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                ret = searchInCSV(t3grams, query, false, 0);
+                illegalCharacters = query.contains(")") || query.contains(")");
+                if (ret != null && !illegalCharacters) {
+                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                    foundT3End = true;
+                }else{
+                    query = words[words.length - 1].trim();
                     illegalCharacters = query.contains(")") || query.contains(")");
+                    ret = searchInCSV(t3grams, query, false, 0);
                     if (ret != null && !illegalCharacters) {
                         premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                        foundT3End = true;
-                    }else{
-                        query = words[words.length - 1].trim();
-                        illegalCharacters = query.contains(")") || query.contains(")");
-                        ret = searchInCSV(t3grams, query, false, 0);
-                        if (ret != null && !illegalCharacters) {
-                            premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                            foundT3Start = true;
-                        }
+                        foundT3Start = true;
                     }
                 }
+            }
 
 
 
 
-                // do the same for t4
-                // Check if t2 exists at the start and the end
-                // if YES then don't try to find other m-w
-                // if NOT then try to find a mw ending or starting with respectively first word and last word
+            // do the same for t4
+            // Check if t2 exists at the start and the end
+            // if YES then don't try to find other m-w
+            // if NOT then try to find a mw ending or starting with respectively first word and last word
 
-                if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
-                    query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
+            if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
+                query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
+                illegalCharacters = query.contains(")") || query.contains(")");
+                ret = searchInCSV(t4grams, query, true, 0);
+                if (ret != null && !illegalCharacters) {
+                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                    foundT4Start = true;
+                } else {
+                    query = words[0].trim() + " " + words[1].trim();
                     illegalCharacters = query.contains(")") || query.contains(")");
                     ret = searchInCSV(t4grams, query, true, 0);
                     if (ret != null && !illegalCharacters) {
                         premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                         foundT4Start = true;
                     } else {
-                        query = words[0].trim() + " " + words[1].trim();
+                        query = words[0].trim();
                         illegalCharacters = query.contains(")") || query.contains(")");
                         ret = searchInCSV(t4grams, query, true, 0);
                         if (ret != null && !illegalCharacters) {
                             premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
                             foundT4Start = true;
-                        }else{
-                            query = words[0].trim();
-                            illegalCharacters = query.contains(")") || query.contains(")");
-                            ret = searchInCSV(t4grams, query, true, 0);
-                            if (ret != null && !illegalCharacters) {
-                                premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                                foundT4Start = true;
-                            }
                         }
                     }
-
-                    if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
-                        query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                        ret = searchInCSV(t4grams, query, false, 0);
+                }
+            }
+            if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
+                query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                ret = searchInCSV(t4grams, query, false, 0);
+                illegalCharacters = query.contains(")") || query.contains(")");
+                if (ret != null && !illegalCharacters) {
+                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                    foundT4Start = true;
+                } else {
+                    query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
+                    illegalCharacters = query.contains(")") || query.contains(")");
+                    ret = searchInCSV(t4grams, query, false, 0);
+                    if (ret != null && !illegalCharacters) {
+                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
+                        foundT4End = true;
+                    }else{
+                        query = words[words.length - 1].trim();
                         illegalCharacters = query.contains(")") || query.contains(")");
+                        ret = searchInCSV(t4grams, query, false, 0);
                         if (ret != null && !illegalCharacters) {
                             premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                            foundT4Start = true;
-                        } else {
-                            query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                            illegalCharacters = query.contains(")") || query.contains(")");
-                            ret = searchInCSV(t4grams, query, false, 0);
-                            if (ret != null && !illegalCharacters) {
-                                premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                                foundT4End = true;
-                            }else{
-                                query = words[words.length - 1].trim();
-                                illegalCharacters = query.contains(")") || query.contains(")");
-                                ret = searchInCSV(t4grams, query, false, 0);
-                                if (ret != null && !illegalCharacters) {
-                                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                                    foundT4End = true;
-                                }
-                            }
+                            foundT4End = true;
                         }
                     }
-
                 }
-
             }
         }
         return premises;
@@ -349,6 +344,71 @@ public class RulesGenerator {
         return generatedRules;
     }
 
+    public void combineMultiWordsExpression(String mweFile) {
+
+        try {
+            BufferedReader bf = new BufferedReader(new FileReader(mweFile));
+            String line = bf.readLine();
+            boolean end = false;
+
+            String previous = "##########END##########";
+            Rule r = null;
+
+            while(line != null) {
+                if (previous.equals("##########END##########") && !line.isEmpty()) {
+                    r = getRuleByNumber(Integer.parseInt(line));
+                    bf.readLine(); // line = sentence
+                    bf.readLine(); // line = 'T4'
+                    previous = "T4";
+                    if(r == null){
+                        while(line != null && line != "##########END##########"){
+                            line = bf.readLine();
+                            previous = "##########END##########";
+                        }
+                    }
+                } else if (previous.matches("^T[1-4]$")) {
+                    if (line.matches("^T[1-4]$") || line.equals("##########END##########")) {
+                        previous = line;
+                    } else {
+                        r.addMWE(line.split("\\t")[0]);
+
+                        /*
+                        for (String p : r.getPremisesToStrings()) {
+                            if (p.contains(line.split("\\t")[0])) {
+                                System.out.println(line.split("\\t")[0]);
+                                r.addMWE(line.split("\\t")[0]);
+                            }
+                        }
+                        for (String p : r.getConclusionsToStrings()) {
+                            if (p.contains(line.split("\\t")[0])) {
+                                System.out.println(line.split("\\t")[0]);
+                                r.addMWE(line.split("\\t")[0]);
+                            }
+                        }
+                        */
+
+                        if(line.equals("##########END##########")){
+                            previous = line;
+                        }
+                    }
+                }
+                line = bf.readLine();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Rule getRuleByNumber(int i){
+        for (Rule r : getGeneratedRules()) {
+            if(r.getSentence().getSentenceNumber() == i){
+                return r;
+            }
+        }
+        return null;
+    }
 
     /**
      * MAIN -----> read and analyse results from Open-Sesame to create rules.txt.backup

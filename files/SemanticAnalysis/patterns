@@ -19,7 +19,7 @@ Medical_intervention[Medical_condition];
 ##### 10.
 Cure[Affliction+Healer+Patient+Reciprocation];
 ##### 11.
-Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]
+Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];
 ##### 9.
 ;Inclusion[Total],Purpose[Goal]
 ##### 7
@@ -75,7 +75,7 @@ Suitability[Evaluee];
 #####
 Causation[Cause];Causation[Effect]
 #####
-Predicament[Domain+Situation]
+;Predicament[Domain+Situation]
 #####
 Damaging[Patient];
 #####
@@ -111,3 +111,4 @@ Sign[Indicator];
 #####
 Response[Trigger];
 ;Response[Response]
+;Usefulness[Entity]

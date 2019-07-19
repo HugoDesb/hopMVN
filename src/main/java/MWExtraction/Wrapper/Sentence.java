@@ -8,9 +8,11 @@ public class Sentence {
 
     private String text;
     private Map<Integer, ArrayList<MWE>> allMWE;
+    private int number;
 
-    public Sentence(String text) {
+    public Sentence(String text, int number) {
         this.text = text;
+        this.number = number;
         allMWE = new HashMap<>();
     }
 
@@ -24,7 +26,8 @@ public class Sentence {
 
     @Override
     public String toString() {
-        String ret = text+"\n";
+        String ret = number+"\n"+text+"\n";
+
 
         for (int i = 4; i > 0 ; i--) {
             if(!allMWE.containsKey(i)){

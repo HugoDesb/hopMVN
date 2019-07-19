@@ -91,7 +91,7 @@ public class MainSemantic {
     public void runAnalysis(){
 
         String outputFolder = config.getProp("os_analysis.output_folder")+configSet.get("name")+File.separator;
-        String mweFolder = config.getProp("mwe.output_folder")+configSet.get("name")+File.separator;
+        String mweFile = config.getProp("mwe.output_folder")+configSet.get("name")+File.separator+"outSentences.txt";
         String annotated_file_local = outputFolder + "annotatedSentences.csv";
 
         String output = outputFolder + "rules.txt";
@@ -102,7 +102,7 @@ public class MainSemantic {
         RulesGenerator rg = new RulesGenerator(sost, fnp, configSet.get("topic"));
 
         rg.generateRules();
-        //rg.combineWithMWE(mweFolder);
+        rg.combineMultiWordsExpression(mweFile);
 
         rg.writeResults(rg.getGeneratedRules(), output);
     }

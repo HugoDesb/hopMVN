@@ -1,102 +1,31 @@
-education
-recommendation
-mol
-antiplatelet
-loss
-review
-guide
-non-insulin
-human insulin
-treatment(s)
-standards
-dose
-mhra
-adult
-cotransporter
-care
-blood glucose
-damage
-blocker
+independent assessors
+eye screening
+contributory sympathetic nervous system
 insulin
-activity
 kidney disease
-products
-healthcare
-plasma glucose
-glance
-first-line
-glargine
-autonomic neuropathy
-programme
-foot
-cardiovascular disease
-glucose
-side
-agency
-drugs
-hypoglycaemia
-metformin
-people
-nice
-drug treatment
-analogues
-mhra guidance
-calcium-channel
-plasma
-surgery
-inhibitors
-glp-1 mimetic
-section
-ii-receptor
-body
-antagonist
-drug
-kidney
-inhibitor
+mol
+men
 members
-sglt-2
-combination
-group
-heart failure
-therapies
-level
+first-line
+visual impairment
+initial body weight loss target
+insulin secretagogue
+family members
+blood pressure
+side
+preventive lifestyle advice
+initial body weight
+insulin delivery
 hba1c target
-weight loss
+programmes
+products regulatory agency
 weight
-pressure
-standard-release
-heart
-effects
-group education
-failure
-nph insulin
-angiotensin
-neuropathy
-dpp-4
-detemir
-sodium–glucose cotransporter
-advice
-regulatory
-origin
-life
-glp-1
-diet
-recent-onset
-hba1c
-dipeptidyl
-delivery
-disease
-initial drug
-titration
-therapy
-peptidase-4
-nph
-incombination
-control
-target
+metformin
+diuretic
 lifestyle
-guidance
-response
-risk
-antihypertensive
-family
+eye
+caribbean family origin
+dose titration
+thiazide
+bladder
+review treatment

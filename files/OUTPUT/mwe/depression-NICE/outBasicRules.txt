@@ -1,38 +1,56 @@
-group-based
-treatment
-functional impairment
-advice
-mental
-drug
-sleep
-offer
-depressivesymptoms
-act
-hygiene
-risk–benefit ratio
+secondary care
+risk assessment
+relevant treatment manual(s)
+complex intervention
+high-priority routine activity
+mental health
+nice technology appraisal guidance
+nice guidelines
+ect
+follow-up appointments
+short-term psychodynamic psychotherapy
+guidelines
+high-intensity psychological intervention
+plan
 combination
-addition
-therapy
-antidepressant
-health
-medication
-light therapy
-severe depression
-symptoms
-anxiety
-psychiatrist
-disorder
-physical health
-form
-cbt
-consultant
-impairment
-subthreshold
-cognitive impairment
-subthreshold depressive
+period
+comprehensive written information
+suicidal ideation
+relative advantage
+iv
+cognitive behavioural therapy
+agitation
+chronic physical health problem
+guideline
+adverse effects
+account toxicity
 intervention
-support
-risk–benefit
-ratio
-problems
+overdose tricyclic antidepressants
 care
+update
+behavioural couples
+previous treatment
+side-effect burden
+short half-life
+discontinuation symptoms
+advise
+competent practitioner
+outcome
+st
+overdose
+psychological intervention
+groups
+antidepressants
+behavioural activation
+subthreshold depressive symptoms
+suspected depression
+sufficient severity
+specialist mental health services
+intensity
+form
+guidance
+treatment options
+uk marketing authorisation
+cognitive impairment
+classificatory systems
+treatment plan

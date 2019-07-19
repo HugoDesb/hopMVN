@@ -99,14 +99,14 @@ public class PdfToSentences {
                                 // We can consider it's a new sentence
                                 // add previous line
                                 //System.out.println("Sentence : "+toAdd+".");
-                                sentencesToReturn.add(new Sentence(toAdd.toString().trim()+"."));
+                                sentencesToReturn.add(new Sentence(toAdd.toString().trim()));
                                 //System.out.println(toAdd.toString().trim()+".");
                                 //init new line
                                 toAdd = new StringBuilder(sentence);
                             } else {
                                 // first character is NOT an UPPERCASE
                                 // continue new line
-                                toAdd.append(sentence+" ");
+                                toAdd.append(" "+sentence);
                             }
                         }
                     }

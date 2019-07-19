@@ -9,7 +9,7 @@ import java.util.Set;
 // TODO rename
 public class OutputHandler {
 
-    private static final Double THRESHOLD = 0.0;
+    private static final Double THRESHOLD = 0.5;
     private static final int COUNT_THRESHOLD = 2;
 
     private ArrayList<Sentence> allSentences;
@@ -49,24 +49,25 @@ public class OutputHandler {
                                      String t1gramsCSVFile) {
 
         ArrayList<Sentence> allSentences = new ArrayList<>();
-
+        int i = 0;
         try {
             for (String s: getSentences(sourceFile)) {
                 s = s.toLowerCase();
-                Sentence sentence = new Sentence(s);
+                Sentence sentence = new Sentence(s, i);
 
-                recognizeMWE(t4gramsCSVFile, 4, s, sentence);
+                s = recognizeMWE(t4gramsCSVFile, 4, s, sentence);
 
                 // 3-mots
-                recognizeMWE(t3gramsCSVFile, 3, s, sentence);
+                s = recognizeMWE(t3gramsCSVFile, 3, s, sentence);
 
                 // 2-mots
-                recognizeMWE(t2gramsCSVFile, 2, s, sentence);
+                s = recognizeMWE(t2gramsCSVFile, 2, s, sentence);
 
                 // 1-mots
                 recognizeMWE(t1gramsCSVFile, 1, s, sentence);
 
                 allSentences.add(sentence);
+                i++;
             }
         } catch (Exception e) {
             e.printStackTrace();

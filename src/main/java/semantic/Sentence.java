@@ -109,6 +109,10 @@ public class Sentence {
         return -1;
     }
 
+    public int getSentenceNumber() {
+        return sentenceNumber;
+    }
+
     public static class Builder{
         private int sentenceNumber;
         private ArrayList<Frame> frames; //same for all frames

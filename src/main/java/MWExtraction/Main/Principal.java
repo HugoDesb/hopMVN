@@ -61,7 +61,7 @@ public class Principal {
              * tool_Tagger: TreeTagger by default
              */
             String type_of_terms = "all"; // all    multi
-            int frequency_min_of_terms = 2; // frequency minimal to extract the terms  (for big corpus is better to use more than 10.
+            int frequency_min_of_terms = 1; // frequency minimal to extract the terms  (for big corpus is better to use more than 10.
 
             list_candidat_terms_validated = Execution.main_execution(
                     language, //english french

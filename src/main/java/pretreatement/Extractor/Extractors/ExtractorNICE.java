@@ -49,6 +49,9 @@ public class ExtractorNICE extends Extractor {
             String text = textStripper.getText(contentDocument);
 
             text = text.replaceAll("\\[(([Nn]ew\\s[0-9]*)|([0-9]*))\\]", " ");
+            text = text.replaceAll("([0-9]\\.)+[0-9]", "\n");
+            text = text.replaceAll("(\\n.*©.*\\n)", "\n");
+            text = text.replaceAll("(Page\\s[0-9]+\\sof\\s[0-9]+)", " ");
 
             String [] lineByLine = text.split("\\n");
 
