@@ -26,6 +26,14 @@ public class Word {
         this.pos_tag = line.get(5);
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setLemma(String lemma) {
+        this.lemma = lemma;
+    }
+
     public String getText() {
         return text;
     }

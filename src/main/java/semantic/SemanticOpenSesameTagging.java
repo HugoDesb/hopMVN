@@ -1,9 +1,10 @@
 package semantic;
 
 import MWExtraction.Wrapper.MultiColumnCSVSort;
+import tagging.RNNTagger.RNNTag;
+import tagging.RNNTagger.RNNTagger;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -25,6 +26,30 @@ public class SemanticOpenSesameTagging {
 
     public ArrayList<Sentence> getSentences() {
         return sentences;
+    }
+
+    public void correctSentences(String originalTextFile){
+        File f = new File(originalTextFile);
+
+        ArrayList<String> lines = new ArrayList<>();
+        try {
+            BufferedReader bf = new BufferedReader(new FileReader(f));
+            String line = bf.readLine();
+            while(line!= null){
+                lines.add(line);
+                line = bf.readLine();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < sentences.size(); i++) {
+            RNNTagger tagger = new RNNTagger();
+            ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(i)));
+            sentences.get(i).correctWords(hop);
+        }
     }
 
     /**

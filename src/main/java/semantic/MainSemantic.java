@@ -1,7 +1,6 @@
 package semantic;
 
 import common.config.Config;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,7 +36,7 @@ public class MainSemantic {
 
 
 
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     public void runOpenSesame() {
@@ -89,7 +88,7 @@ public class MainSemantic {
     }
 
     public void runAnalysis(){
-
+        String file_to_annotate = config.getProp("pretreatment.output_folder")+configSet.get("name")+ File.separator+configSet.get("name")+".txt";
         String outputFolder = config.getProp("os_analysis.output_folder")+configSet.get("name")+File.separator;
         String mweFile = config.getProp("mwe.output_folder")+configSet.get("name")+File.separator+"outSentences.txt";
         String annotated_file_local = outputFolder + "annotatedSentences.csv";
@@ -98,6 +97,7 @@ public class MainSemantic {
         String patterns = config.getProp("open-sesame.patterns");
 
         SemanticOpenSesameTagging sost = new SemanticOpenSesameTagging(new File(annotated_file_local));
+        sost.correctSentences(file_to_annotate);
         FrameNetPatterns fnp = new FrameNetPatterns(new File(patterns));
         RulesGenerator rg = new RulesGenerator(sost, fnp, configSet.get("topic"));
 

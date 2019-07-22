@@ -1,5 +1,7 @@
 package semantic;
 
+import tagging.RNNTagger.RNNTag;
+
 import java.util.*;
 
 //ALL FRAMES, ONE SENTENCE
@@ -8,14 +10,26 @@ public class Sentence {
     //private String sentence;
     private int sentenceNumber;
     private ArrayList<Frame> frames; //same for all frames
-    private Map<Word, Set<String>> deconstructedFramesAndRolesPerToken;
-
     private ArrayList<Word> words;
 
     public Sentence(int sentenceNumber, ArrayList<Frame> frames, ArrayList<Word> words) {
         this.sentenceNumber = sentenceNumber;
         this.frames = frames;
         this.words = words;
+    }
+
+    public void correctWords(ArrayList<RNNTag> tokens){
+        if(words.size() != tokens.size()){
+            try {
+                throw new Exception("HHHHHOOOOOOPPPPP");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        for (int i = 0; i < words.size(); i++) {
+            words.get(i).setText(tokens.get(i).getWord());
+            words.get(i).setLemma(tokens.get(i).getLemma());
+        }
     }
 
     /**
