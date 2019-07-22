@@ -19,17 +19,60 @@ public class Sentence {
     }
 
     public void correctWords(ArrayList<RNNTag> tokens){
-        if(words.size() != tokens.size()){
-            try {
-                throw new Exception("HHHHHOOOOOOPPPPP");
-            } catch (Exception e) {
-                e.printStackTrace();
+        int j = 0;
+        int i = 0;
+        String tmp = "";
+        while(i<words.size() && j<tokens.size()){
+            if(words.get(i).getText().equals("unk")){
+                tmp += tokens.get(j).getWord();
+
+                boolean search = true;
+                while(search){
+                    if(i == words.size()-1){
+                        //unk dernier token de open sesame
+                        j++;
+                        while(j<tokens.size()){
+                            tmp+= " "+tokens.get(j).getWord();
+                        }
+                        words.get(i).setText(tmp);
+                        words.get(i).setLemma(tokens.get(j-1).getLemma());
+                        search = false;
+                        tmp = "";
+                        //si dernier de tokens : set normal
+                        // sinon ajouter tout le reste de tokens
+                    }else if (j == tokens.size()-1 ){
+                        System.out.println("hop");
+                        // Cas particulier
+                        // dernier mot
+                        //set normal as usual
+                        //search = false
+                    }else{
+                        if(words.get(i+1).getText().equals(tokens.get(j+1).getWord().toLowerCase())){
+                            words.get(i).setText(tmp);
+                            words.get(i).setLemma(tokens.get(j).getLemma());
+                            search = false;
+                            tmp = "";
+                        }else{
+                            if(words.get(i+1).getText().equals("unk")){
+                                words.get(i).setText(tmp);
+                                words.get(i).setLemma(tokens.get(j).getLemma());
+                                search = false;
+                                tmp = "";
+                            }else{
+                                tmp += " "+tokens.get(j+1).getWord();
+                                j++;
+                            }
+                        }
+                    }
+                }
+            }else{
+                words.get(i).setText(tokens.get(j).getWord());
+                words.get(i).setLemma(tokens.get(j).getLemma());
             }
+            j++;
+            i++;
         }
-        for (int i = 0; i < words.size(); i++) {
-            words.get(i).setText(tokens.get(i).getWord());
-            words.get(i).setLemma(tokens.get(i).getLemma());
-        }
+
     }
 
     /**

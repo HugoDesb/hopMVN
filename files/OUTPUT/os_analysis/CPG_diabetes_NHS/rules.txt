@@ -1,641 +1,635 @@
 ##############################################################################
-Sentence :be aware that , if metformin is contraindicated or not tolerated , unk is both clinically effective and cost effective in adults with type 2 diabetes
+Sentence :Be aware that , if metformin is contraindicated or not tolerated , repaglinide is both clinically effective and cost effective in adults with type 2 diabetes
 IF :['type 2 diabetes', 'adults']
-THEN :['unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Usefulness[Entity])]
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [metformin, repaglinide, adult, cost]
 ##############################################################################
-Sentence :however , discuss with any person for whom unk is being considered , that there is no licensed unk combination containing unk that can be offered at first intensification .
-IF :['type 2 diabetes', 'person', 'licensed unk combination containing unk that can be offered at first intensification']
-THEN :[]
-CorrespondingPatterns :[(Locative_relation[Ground];), (People[Origin+Person];)]
+Sentence :However , discuss with any person for whom repaglinide is being considered , that there is no licensed non-metformin-based combination containing repaglinide that can be offered at first intensification .
+IF :['type 2 diabetes', 'person', 'licensed non-metformin-based combination containing repaglinide that can be offered at first intensification']
+THEN :['with any person for whom repaglinide is being considered']
+CorrespondingPatterns :[(;Discussion[Topic]), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : [metformin, side, repaglinide]
 ##############################################################################
-Sentence :known risk factors for these conditions , including increased age , should be carefully evaluated before treatment : see the manufacturers ' summaries of product characteristics for details
+Sentence :Known risk factors for these conditions , including increased age , should be carefully evaluated before treatment : see the manufacturers ' summaries of product characteristics for details
 IF :['type 2 diabetes']
-THEN :['these conditions', 'age']
-CorrespondingPatterns :[(;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Inclusion[Total+Part])]
+THEN :['Known risk factors for these conditions', 'age']
+CorrespondingPatterns :[(;Inclusion[Total+Part])]
 MWE : [product characteristics, risk factors, age, details, manufacturers, summaries, men]
 ##############################################################################
-Sentence :medicines and healthcare products regulatory agency ( mhra ) guidance ( 2011 ) advises that unk should review the safety and efficacy of pioglitazone in individuals after unk months of treatment to ensure that only patients who are deriving benefit continue to be treated ' .
+Sentence :Medicines and Healthcare products Regulatory Agency ( MHRA ) guidance ( 2011 ) advises that ' prescribers should review the safety and efficacy of pioglitazone in individuals after 3–6 months of treatment to ensure that only patients who are deriving benefit continue to be treated ' .
 IF :['type 2 diabetes', 'individuals']
 THEN :[]
-CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];)]
+CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [products regulatory agency, 3–6 months, safety, efficacy, individuals, patients, men, advise, medicines, prescribers, benefit, mhra]
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [age, men, adult]
 ##############################################################################
-Sentence :last updated may 2017 1 recommendations
+Sentence :The wording used in the recommendations in this guideline ( for example , words such as ' offer ' and ' consider ' ) denotes the certainty with which the recommendation is made ( the strength of the recommendation )
 IF :['type 2 diabetes']
 THEN :[]
 CorrespondingPatterns :[]
-MWE : [men]
+MWE : []
 ##############################################################################
-Sentence :the wording used in the recommendations in this guideline ( for example , words such as unk ' and unk ' ) denotes the certainty with which the recommendation is made ( the strength of the recommendation )
-IF :['type 2 diabetes']
-THEN :['the wording used']
-CorrespondingPatterns :[(;Using[Instrument])]
-MWE : [side, men]
-##############################################################################
-Sentence :adopt an individualised approach to diabetes care that is tailored to the needs and circumstances of adults with type 2 diabetes , taking into account their personal preferences , comorbidities , risks from polypharmacy , and their ability to benefit from long-term interventions because of reduced life expectancy .
+Sentence :Adopt an individualised approach to diabetes care that is tailored to the needs and circumstances of adults with type 2 diabetes , taking into account their personal preferences , comorbidities , risks from polypharmacy , and their ability to benefit from long-term interventions because of reduced life expectancy .
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [diabetes care, long-term interventions, personal preferences, needs, risks, individualise, benefit, adult]
+MWE : []
 ##############################################################################
-Sentence :reassess the person 's needs and circumstances at each review and think about whether to stop any medicines that are not effective .
+Sentence :Reassess the person 's needs and circumstances at each review and think about whether to stop any medicines that are not effective .
 IF :['type 2 diabetes', 'person']
-THEN :['any medicines that']
+THEN :['that']
 CorrespondingPatterns :[(People[Origin+Person];), (;Usefulness[Entity])]
-MWE : [needs, reassess, medicines]
+MWE : []
 ##############################################################################
-Sentence :take into account any disabilities , including visual impairment , when planning and delivering care for adults with type 2 diabetes .
+Sentence :Take into account any disabilities , including visual impairment , when planning and delivering care for adults with type 2 diabetes .
 IF :['type 2 diabetes', 'adults']
 THEN :['any disabilities', 'impairment']
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Delivery[Theme+Deliverer+Manner]), (;Inclusion[Total+Part])]
-MWE : [visual impairment, disabilities, plan, adult]
+MWE : []
 ##############################################################################
-Sentence :offer structured education to adults with type 2 diabetes and/or their family members or carers ( as appropriate ) at and around the time of diagnosis , with
-IF :['type 2 diabetes', 'family']
-THEN :[]
-CorrespondingPatterns :[(Kinship[Relatives];)]
-MWE : [family members, education, carers, adult]
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [age, men, adult]
-##############################################################################
-Sentence :last updated may 2017 annual reinforcement and review
-IF :['type 2 diabetes']
-THEN :['annual reinforcement']
-CorrespondingPatterns :[(;Frequency[Interval+Event]), (;Frequency[Interval+Event])]
-MWE : [men]
-##############################################################################
-Sentence :ensure that any structured education programme for adults with type 2 diabetes includes the following components :
-IF :['type 2 diabetes', 'adults']
-THEN :['any structured education programme for adults with type 2 diabetes includes the following components']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total+Part])]
-MWE : [education, adult]
-##############################################################################
-Sentence :it has specific aims and learning objectives , and supports the person and their family members and carers in developing attitudes , beliefs , knowledge and skills to unk diabetes .
-IF :['type 2 diabetes', 'person']
-THEN :['aims']
-CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];), (Kinship[Relatives];)]
-MWE : [family members, age, support, carers, aim]
-##############################################################################
-Sentence :it is quality assured , and reviewed by trained , competent , independent assessors who measure it against criteria that ensure consistency .
-IF :['type 2 diabetes']
-THEN :['independent assessors who measure it']
-CorrespondingPatterns :[(;Placing[Theme],Dimension[Object+Dimension])]
-MWE : [independent assessors, quality, criteria, measure]
-##############################################################################
-Sentence :ensure the unk programme provides the necessary resources to support the educators , and that educators are properly trained and given time to develop and maintain their skills .
-IF :['type 2 diabetes']
-THEN :['the necessary resources to support the educators']
-CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme])]
-MWE : [education, educators, support]
-##############################################################################
-Sentence :ensure that all members of the diabetes healthcare team are familiar with the unk programmes available locally , that these programmes are integrated with the rest of the care pathway , and that adults with type 2 diabetes and their family members or carers ( as appropriate ) have the opportunity to contribute to the design and provision of local programmes .
+Sentence :Offer structured education to adults with type 2 diabetes and/or their family members or carers ( as appropriate ) at and around the time of diagnosis , with
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Kinship[Relatives];)]
-MWE : [diabetes healthcare team, family members, care pathway, local programmes, members, education, carers, programmes, adult]
+MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [age, men, adult]
+MWE : []
 ##############################################################################
-Sentence :emphasise advice on healthy balanced eating that is applicable to the general population when providing advice to adults with type 2 diabetes
+Sentence :Last updated May 2017 annual reinforcement and review
+IF :['type 2 diabetes']
+THEN :['annual reinforcement']
+CorrespondingPatterns :[(;Frequency[Interval+Event]), (;Frequency[Interval+Event])]
+MWE : []
+##############################################################################
+Sentence :Ensure that any structured education programme for adults with type 2 diabetes includes the following components :
 IF :['type 2 diabetes', 'adults']
-THEN :['advice']
-CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [healthy balanced eating, general population, emphasise advice, adult]
+THEN :['any structured education programme for adults with type 2 diabetes includes the following components']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total+Part])]
+MWE : []
 ##############################################################################
-Sentence :for adults with type 2 diabetes who are overweight , set an initial body weight loss target of unk %
-IF :['type 2 diabetes', 'adults']
-THEN :['body weight']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Placing[Theme],Dimension[Object+Dimension])]
-MWE : [initial body weight loss target, adult, weight]
+Sentence :It has specific aims and learning objectives , and supports the person and their family members and carers in developing attitudes , beliefs , knowledge and skills to self-manage diabetes .
+IF :['type 2 diabetes', 'person']
+THEN :['objectives']
+CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];), (Kinship[Relatives];)]
+MWE : []
 ##############################################################################
-Sentence :unk recommendations for carbohydrate and alcohol intake , and meal patterns
+Sentence :It is quality assured , and reviewed by trained , competent , independent assessors who measure it against criteria that ensure consistency .
 IF :['type 2 diabetes']
 THEN :[]
 CorrespondingPatterns :[]
-MWE : [alcohol intake, individualise recommendations, meal patterns, carbohydrate]
+MWE : []
 ##############################################################################
-Sentence :reducing the risk of unk should be a particular aim for a person using insulin or an insulin unk .
-IF :['type 2 diabetes', 'person']
-THEN :['for a person using insulin or an insulin unk']
-CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (;Using[Instrument]), (People[Origin+Person];)]
-MWE : [insulin secretagogue, aim, insulin]
+Sentence :Ensure the patient-education programme provides the necessary resources to support the educators , and that educators are properly trained and given time to develop and maintain their skills .
+IF :['type 2 diabetes']
+THEN :['the necessary resources to support the educators']
+CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme])]
+MWE : []
 ##############################################################################
-Sentence :advise adults with type 2 diabetes that limited substitution of unk foods for other carbohydrate in the meal plan is allowable , but that they should take care to avoid excess energy intake .
+Sentence :Ensure that all members of the diabetes healthcare team are familiar with the patient-education programmes available locally , that these programmes are integrated with the rest of the care pathway , and that adults with type 2 diabetes and their family members or carers ( as appropriate ) have the opportunity to contribute to the design and provision of local programmes .
 IF :['type 2 diabetes', 'adults']
-THEN :['foods', 'should take care to avoid excess energy intake', 'plan']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Food[Food]), (;Inclusion[Total],Purpose[Goal]), (;Inclusion[Part],Increment[Class]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Purpose[Goal]), (;Increment[Class])]
-MWE : [excess energy intake, advise adults, limited substitution, meal plan, sucrose-containing foods, carbohydrate]
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Kinship[Relatives];)]
+MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [age, men, adult]
+MWE : []
 ##############################################################################
-Sentence :when adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting , implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks . 0 for recommendations on lifestyle advice , see the nice guidelines on : preventing excess weight gain , weight management , obesity , physical activity , smoking : brief interventions and referrals , stop smoking services , smoking : harm reduction , and smoking : acute , maternity and mental health services . 1 for recommendations on bariatric surgery for people with unk type 2 diabetes , see the section on bariatric surgery for people with unk type 2 diabetes in the nice guideline on obesity .
-IF :['type 2 diabetes', 'adults', 'health']
-THEN :['system', 'in the carbohydrate content of meals and snacks', 'care']
-CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (;Inclusion[Part],Increment[Class]), (;Execute_plan[Plan],System[Function+Complex+Component_utilities]), (;Increment[Class]), (People[Origin+Person];)]
-MWE : [meal plan, bariatric surgery, recent-onset type, smoking, people, carbohydrate, age, patients, men, services, lifestyle, adult, weight, referral]
+Sentence :Emphasise advice on healthy balanced eating that is applicable to the general population when providing advice to adults with type 2 diabetes
+IF :['type 2 diabetes', 'adults']
+THEN :['advice']
+CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
 ##############################################################################
-Sentence :measure blood pressure at least annually in an adult with type 2 diabetes without previously diagnosed hypertension or renal disease
-IF :['type 2 diabetes', 'adult']
-THEN :['measure blood pressure']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (;Attempt_suasion[Manner+Content+Speaker])]
-MWE : [measure blood pressure, renal disease, adult, hypertension]
+Sentence :For adults with type 2 diabetes who are overweight , set an initial body weight loss target of 5–10 %
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
 ##############################################################################
-Sentence :offer and reinforce preventive lifestyle advice .
+Sentence :Individualise recommendations for carbohydrate and alcohol intake , and meal patterns
 IF :['type 2 diabetes']
-THEN :['preventive lifestyle advice']
-CorrespondingPatterns :[(;Cause_change_of_strength[Patient])]
-MWE : [preventive lifestyle advice]
+THEN :[]
+CorrespondingPatterns :[]
+MWE : []
 ##############################################################################
-Sentence :for an adult with type 2 diabetes on antihypertensive drug treatment when diabetes is diagnosed , review blood pressure control and medications used .
+Sentence :Reducing the risk of hypoglycaemia should be a particular aim for a person using insulin or an insulin secretagogue .
+IF :['type 2 diabetes', 'person']
+THEN :['for a person using insulin or an insulin secretagogue']
+CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];)]
+MWE : []
+##############################################################################
+Sentence :Advise adults with type 2 diabetes that limited substitution of sucrose-containing foods for other carbohydrate in the meal plan is allowable , but that they should take care to avoid excess energy intake .
+IF :['type 2 diabetes', 'adults with type 2 diabetes that limited substitution of sucrose-containing foods for other carbohydrate in the meal plan is allowable ,']
+THEN :['allowable', 'foods', 'should take care to avoid excess energy intake']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Food[Food]), (;Inclusion[Total],Purpose[Goal]), (;Inclusion[Part],Increment[Class]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Purpose[Goal]), (;Increment[Class])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :When adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting , implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks . 0 for recommendations on lifestyle advice , see the nice guidelines on : preventing excess weight gain , weight management , obesity , physical activity , smoking : brief interventions and referrals , stop smoking services , smoking : harm reduction , and smoking : acute , maternity and mental health services . 1 for recommendations on bariatric surgery for people with unk type 2 diabetes , see the section on bariatric surgery for people with unk type 2 diabetes in the nice guideline on obesity .
+IF :['type 2 diabetes', 'activity', 'adults']
+THEN :['care setting', 'system', 'management', 'in the carbohydrate content of meals and snacks', 'gain']
+CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Part],Increment[Class]), (;Placing[Theme],Dimension[Object+Dimension]), (;Execute_plan[Plan],System[Function+Complex+Component_utilities]), (Intentionally_act[Agent];), (;Increment[Class]), (People[Origin+Person];)]
+MWE : []
+##############################################################################
+Sentence :Measure blood pressure at least annually in an adult with type 2 diabetes without previously diagnosed hypertension or renal disease
 IF :['type 2 diabetes', 'adult']
-THEN :['blood pressure control and medications used']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Attempt_suasion[Manner+Content+Speaker]), (;Using[Instrument])]
-MWE : [blood pressure control, antihypertensive drug treatment, medications, adult]
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
+MWE : []
 ##############################################################################
-Sentence :repeat blood pressure measurements within : 1 month if blood pressure is higher than unk mmhg 2 months if blood pressure is higher than unk mmhg 2 months if blood pressure is higher than unk mmhg and there is kidney , eye or cerebrovascular damage .
+Sentence :For an adult with type 2 diabetes on antihypertensive drug treatment when diabetes is diagnosed , review blood pressure control and medications used .
+IF :['type 2 diabetes', 'adult']
+THEN :['control and medications used']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Attempt_suasion[Manner+Content+Speaker])]
+MWE : []
+##############################################################################
+Sentence :Repeat blood pressure measurements within : 1 month if blood pressure is higher than 150/90 mmHg 2 months if blood pressure is higher than 140/80 mmHg 2 months if blood pressure is higher than 130/80 mmHg and there is kidney , eye or cerebrovascular damage .
 IF :['type 2 diabetes', 'is kidney , eye or cerebrovascular damage']
 THEN :['blood pressure', 'pressure']
 CorrespondingPatterns :[(;Attempt_suasion[Manner+Content+Speaker]), (Damaging[Patient];), (Locative_relation[Ground];)]
-MWE : [blood pressure, eye, mmhg, age, men, months, measure]
+MWE : []
 ##############################################################################
-Sentence :provide lifestyle advice ( see section in this guideline and the lifestyle interventions section in hypertension in adults [ nice guideline unk ] ) if blood
+Sentence :Provide lifestyle advice ( see section in this guideline and the lifestyle interventions section in hypertension in adults [ NICE guideline CG127 ] ) if blood
 IF :['type 2 diabetes', 'adults']
 THEN :['lifestyle advice']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [lifestyle interventions section, guideline cg127, lifestyle, adult, hypertension]
+MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : [age, men, adult]
-##############################################################################
-Sentence :african or caribbean family origin , or women for whom there is a possibility of becoming pregnant .
-IF :['type 2 diabetes', 'african or caribbean family origin']
-THEN :['of becoming pregnant']
-CorrespondingPatterns :[(Locative_relation[Ground];), (People[Origin+Person];), (Kinship[Relatives];), (Origin[Origin+Entity];), (;Becoming[Final_category]), (;Alternatives[Salient_entity])]
 MWE : []
 ##############################################################################
-Sentence :caribbean family origin should be an ace inhibitor plus either a diuretic or a generic unk blocker .
-IF :['caribbean family origin', 'type 2 diabetes']
+Sentence :African or Caribbean family origin , or women for whom there is a possibility of becoming pregnant .
+IF :['type 2 diabetes', 'is a possibility of becoming pregnant', 'family origin']
+THEN :['of becoming pregnant']
+CorrespondingPatterns :[(Locative_relation[Ground];), (People[Origin+Person];), (Kinship[Relatives];), (Origin[Origin+Entity];), (;Alternatives[Salient_entity])]
+MWE : []
+##############################################################################
+Sentence :Caribbean family origin should be an ACE inhibitor plus either a diuretic or a generic calcium-channel blocker .
+IF :['type 2 diabetes', 'Caribbean family origin']
 THEN :[]
 CorrespondingPatterns :[(Origin[Origin+Entity];)]
 MWE : []
 ##############################################################################
-Sentence :a unk blocker should be the first-line antihypertensive drug treatment for a woman for whom , after an informed discussion , it is agreed there is a possibility of her becoming pregnant . 0 for a person with continuing intolerance to an ace inhibitor ( other than renal deterioration or unk ) , substitute an angiotensin unk antagonist for the ace inhibitor . 1 do not combine an ace inhibitor with an angiotensin unk antagonist to treat hypertension . 2 if the person 's blood pressure is not reduced to the individually agreed target with first-line therapy , add a unk blocker or a diuretic ( usually a thiazide or unk diuretic )
-IF :['type 2 diabetes', 'drug treatment']
-THEN :[''s blood pressure', 'a unk blocker should be the first-line antihypertensive drug treatment for a woman for whom , after an informed discussion', 'renal deterioration or unk', 'with first-line therapy , add a unk blocker or a diuretic ( usually a thiazide or unk diuretic', 'inhibitor . 1 do not combine an ace inhibitor with an angiotensin unk antagonist to treat hypertension . 2', 'is a possibility of her becoming pregnant . 0 for a person with continuing intolerance to an ace inhibitor']
-CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Inclusion[Part],Increment[Class]), (;Attempt_suasion[Manner+Content+Speaker]), (;Increment[Class]), (Locative_relation[Ground];), (People[Origin+Person];), (;Make_agreement_on_action[Obligation]), (;Statement[Message])]
+Sentence :A calcium-channel blocker should be the first-line antihypertensive drug treatment for a woman for whom , after an informed discussion , it is agreed there is a possibility of her becoming pregnant . 0 for a person with continuing intolerance to an ace inhibitor ( other than renal deterioration or unk ) , substitute an angiotensin unk antagonist for the ace inhibitor . 1 do not combine an ace inhibitor with an angiotensin unk antagonist to treat hypertension . 2 if the person 's blood pressure is not reduced to the individually agreed target with first-line therapy , add a unk blocker or a diuretic ( usually a thiazide or unk diuretic )
+IF :['woman', 'type 2 diabetes']
+THEN :['there is a possibility of her becoming pregnant . 0 for a person with continuing intolerance to an ace inhibitor', 'with first-line therapy , add a unk blocker or a diuretic ( usually a thiazide or unk diuretic', ''s']
+CorrespondingPatterns :[(;Attempt_suasion[Manner+Content+Speaker]), (People[Origin+Person];), (;Make_agreement_on_action[Obligation])]
 MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :do not offer antiplatelet therapy ( aspirin or clopidogrel ) for adults with type 2 diabetes without cardiovascular disease .
+Sentence :Do not offer antiplatelet therapy ( aspirin or clopidogrel ) for adults with type 2 diabetes without cardiovascular disease .
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
 MWE : []
 ##############################################################################
-Sentence :for guidance on the primary and secondary prevention of cardiovascular disease in adults with type 2 diabetes , see the nice guidelines on cardiovascular disease and myocardial infarction .
+Sentence :For guidance on the primary and secondary prevention of cardiovascular disease in adults with type 2 diabetes , see the NICE guidelines on cardiovascular disease and myocardial infarction .
 IF :['cardiovascular disease', 'disease', 'type 2 diabetes']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
 MWE : []
 ##############################################################################
-Sentence :in adults with type 2 diabetes , measure hba1c levels at : unk intervals ( tailored to individual needs ) , until the hba1c is stable on unchanging therapy unk intervals once the hba1c level and blood glucose lowering therapy are stable .
-IF :['type 2 diabetes', 'adults']
-THEN :['intervals']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Frequency[Interval+Event]), (;Frequency[Interval+Event]), (People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :use methods to measure hba1c that have been calibrated according to
-IF :['type 2 diabetes']
-THEN :['methods', 'hba1c']
-CorrespondingPatterns :[(;Placing[Theme],Dimension[Object+Dimension]), (;Means[Means]+Means[Descriptor]+Means[Purpose])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :In adults with type 2 diabetes , measure HbA1c levels at : 3–6-monthly intervals ( tailored to individual needs ) , until the HbA1c is stable on unchanging therapy 6-monthly intervals once the HbA1c level and blood glucose lowering therapy are stable .
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :investigate unexplained discrepancies between hba1c and other glucose measurements
+Sentence :Use methods to measure HbA1c that have been calibrated according to
+IF :['type 2 diabetes']
+THEN :['methods']
+CorrespondingPatterns :[(;Means[Means]+Means[Descriptor]+Means[Purpose])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Investigate unexplained discrepancies between HbA1c and other glucose measurements
 IF :['type 2 diabetes']
 THEN :['glucose measurements']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class])]
 MWE : []
 ##############################################################################
-Sentence :involve adults with type 2 diabetes in decisions about their individual hba1c target
-IF :['type 2 diabetes', 'hba1c target', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :offer lifestyle advice and drug treatment to support adults with type 2 diabetes to achieve and maintain their hba1c target ( see section )
-IF :['type 2 diabetes', 'drug treatment']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];)]
-MWE : []
-##############################################################################
-Sentence :for adults with type 2 diabetes managed either by lifestyle and diet , or by lifestyle and diet combined with a single drug not associated with unk , support the person to aim for an hba1c level of 48 unk ( % )
+Sentence :Involve adults with type 2 diabetes in decisions about their individual HbA1c target
 IF :['type 2 diabetes', 'adults']
-THEN :['for an hba1c level of 48 unk']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Offer lifestyle advice and drug treatment to support adults with type 2 diabetes to achieve and maintain their HbA1c target ( see section )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :For adults with type 2 diabetes managed either by lifestyle and diet , or by lifestyle and diet combined with a single drug not associated with hypoglycaemia , support the person to aim for an HbA1c level of 48 mmol/mol ( % )
+IF :['type 2 diabetes', 'person']
+THEN :['for an HbA1c level of 48 mmol/mol']
+CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];)]
+MWE : []
+##############################################################################
+Sentence :For adults on a drug associated with hypoglycaemia , support the person to aim for an HbA1c level of 53 mmol/mol ( % ) .
+IF :['type 2 diabetes', 'adults']
+THEN :['for an HbA1c level of 53 mmol/mol']
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :for adults on a drug associated with unk , support the person to aim for an hba1c level of 53 unk ( % ) .
-IF :['type 2 diabetes', 'adults']
-THEN :['for an hba1c level of 53 unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :in adults with type 2 diabetes , if hba1c levels are not adequately controlled by a single drug and rise to 58 unk ( % ) or higher : reinforce advice about diet , lifestyle and adherence to drug treatment and support the person to aim for an hba1c level of 53 unk ( % ) and intensify drug treatment .
+Sentence :In adults with type 2 diabetes , if HbA1c levels are not adequately controlled by a single drug and rise to 58 mmol/mol ( % ) or higher : reinforce advice about diet , lifestyle and adherence to drug treatment and support the person to aim for an HbA1c level of 53 mmol/mol ( % ) and intensify drug treatment .
 IF :['treatment', 'type 2 diabetes', 'adults']
-THEN :['an hba1c level of 53 unk ( % ) and intensify drug treatment', 'to 58 unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Cause_change_of_strength[Patient]), (People[Origin+Person];)]
+THEN :['to 58 mmol/mol', 'an HbA1c level of 53 mmol/mol ( % ) and intensify drug treatment']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :last updated may 2017 on a case-by-case basis , with particular consideration for people who are older or frail , for adults with type 2 diabetes : who are unlikely to achieve longer-term unk benefits , for example , people with a reduced life expectancy for whom tight blood glucose control poses a high risk of the consequences of unk , for example , people who are at risk of falling , people who have impaired awareness of unk , and people who drive or operate machinery as part of their job for whom intensive management would not be appropriate , for example , people with significant comorbidities . 0 if adults with type 2 diabetes achieve an hba1c level that is lower than their target and they are not experiencing unk , encourage them to maintain it
-IF :['type 2 diabetes', 'management', 'of falling', 'with significant comorbidities', 'people']
-THEN :['that', 'their target']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (Suitability[Evaluee];), (Locative_relation[Ground];), (People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :be aware that there are other possible reasons for a low hba1c level , for example , deteriorating renal function or sudden weight loss . 1 for guidance on hba1c targets for women with type 2 diabetes who are pregnant or planning to become pregnant , see the nice guideline on diabetes in pregnancy .
-IF :['type 2 diabetes', 'there']
-THEN :['possible reasons']
-CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Placing[Theme],Dimension[Object+Dimension]), (;Increment[Class]), (Locative_relation[Ground];), (People[Origin+Person];), (;Becoming[Final_category])]
-MWE : []
-##############################################################################
-Sentence :self-monitoring of blood glucose 2 take the driver and vehicle licensing agency ( dvla ) at a glance guide to the current medical standards of fitness to drive into account when offering self-monitoring of blood glucose levels for adults with type 2 diabetes . 3 do not routinely offer self-monitoring of blood glucose levels for adults with type 2 diabetes unless : the person is on insulin or there is evidence of unk episodes or the person is on oral medication that may increase their risk of unk while driving or operating machinery or
-IF :['type 2 diabetes', 'a glance guide']
-THEN :['their risk of unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (Locative_relation[Ground];), (People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :last updated may 2017 the person is pregnant , or is planning to become pregnant
-IF :['type 2 diabetes', 'person']
-THEN :[]
-CorrespondingPatterns :[(People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :for more information , see the nice guideline on diabetes in pregnancy . 4 consider short-term self-monitoring of blood glucose levels in adults with type 2 diabetes ( and review treatment as necessary ) : when starting treatment with oral or intravenous corticosteroids or to confirm suspected unk . 5 be aware that adults with type 2 diabetes who have acute unk illness are at risk of worsening unk
-IF :['type 2 diabetes', 'adults', 'illness']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
-MWE : []
-##############################################################################
-Sentence :review treatment as necessary . 6 if adults with type 2 diabetes are self-monitoring their blood glucose levels , carry out a structured assessment at least annually
-IF :['type 2 diabetes', 'review treatment']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];)]
-MWE : []
-##############################################################################
-Sentence :the assessment should include : the person 's self-monitoring skills the quality and frequency of testing checking that the person knows how to interpret the blood glucose results and what action to take the impact on the person 's quality of life the continued benefit to the person the equipment used .
-IF :['type 2 diabetes', 'person']
-THEN :['person 's self-monitoring skills the quality and frequency of testing checking that the person knows how to interpret the blood glucose results and what action to take the impact on the person 's quality of life the continued benefit to the person the equipment used', 'the assessment']
-CorrespondingPatterns :[(;Frequency[Interval+Event]), (;Intentionally_act[Act+Domain]), (;Inclusion[Total+Part]), (;Frequency[Interval+Event]), (;Using[Instrument]), (People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
-MWE : []
-##############################################################################
-Sentence :recommendations in this section that cover dipeptidyl unk ( dpp-4 ) inhibitors , unk unk ( glp-1 ) unk and sulfonylureas refer to each of these groups of drugs at a class level . 7 for adults with type 2 diabetes , discuss the benefits and risks of drug treatment , and the options available
-IF :['treatment', 'type 2 diabetes', 'adults']
-THEN :['the benefits and risks of drug treatment']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Discussion[Topic])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :last updated may 2017 safety ( see medicines and healthcare products regulatory agency [ mhra ] guidance ) and tolerability of the drug treatment ( s ) the person 's individual clinical circumstances , for example , comorbidities , risks from polypharmacy the person 's individual preferences and needs the licensed indications or combinations available cost ( if 2 drugs in the same class are appropriate , choose the option with the lowest acquisition cost ) .
-IF :['type 2 diabetes', 'clinical circumstances', 'same class', 'drug treatment']
-THEN :[]
-CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (Suitability[Evaluee];), (People[Origin+Person];), (Sign[Indicator];)]
-MWE : []
-##############################################################################
-Sentence :rescue therapy at any phase of treatment 8 if an adult with type 2 diabetes is symptomatically unk , consider insulin ( see recommendations unk 4 ) or a sulfonylurea , and review treatment when blood glucose control has been achieved .
-IF :['treatment', 'type 2 diabetes']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];)]
-MWE : []
-##############################################################################
-Sentence :initial drug treatment 9 offer unk metformin as the initial drug treatment for adults with type 2 diabetes . 0 gradually increase the dose of unk metformin over several weeks to minimise the risk of gastrointestinal side effects in adults with type 2 diabetes . 1 if an adult with type 2 diabetes experiences gastrointestinal side effects with unk metformin , consider a trial of unk metformin .
-IF :['treatment', 'type 2 diabetes', 'drug treatment']
-THEN :['side effects with unk metformin', 'gastrointestinal side effects']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
-MWE : []
-##############################################################################
-Sentence :algorithm for blood glucose lowering therapy in adults with type 2 diabetes
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :last updated may 2017 2 in adults with type 2 diabetes , review the dose of metformin if the estimated glomerular filtration rate ( egfr ) is below 45 unk unk :
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :prescribe metformin with caution for those at risk of a sudden deterioration in kidney function and those at risk of egfr falling below 45 unk unk . 3 in adults with type 2 diabetes , if metformin is contraindicated or not tolerated , consider initial drug treatment with : a dipeptidyl unk ( dpp-4 ) inhibitor or pioglitazone or a sulfonylurea . 4 in adults with type 2 diabetes , do not offer or continue pioglitazone if they have any of the following : heart failure or history of heart failure
-IF :['treatment', 'type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];)]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :treatment with unk cotransporter 2 ( unk ) inhibitors , may be appropriate for some adults with type 2 diabetes if metformin is contraindicated or not tolerated ( see nice 's guidance on unk , unk and unk as unk for treating type 2 diabetes ) .
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :first intensification of drug treatment 5 in adults with type 2 diabetes , if initial drug treatment with metformin has not continued to control hba1c to below the person 's individually agreed threshold for intensification , consider dual therapy with : metformin and a dpp-4 inhibitor or metformin and pioglitazone or metformin and a sulfonylurea . 6 in adults with type 2 diabetes , if metformin is contraindicated or not tolerated and initial drug treatment has not continued to control hba1c to below the person 's individually agreed threshold for intensification , consider dual therapy with : a dpp-4 inhibitor and pioglitazone or a dpp-4 inhibitor and a sulfonylurea or pioglitazone and a sulfonylurea .
-IF :['treatment', 'type 2 diabetes', 'adults']
-THEN :['for intensification', 'threshold for intensification']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];), (;Make_agreement_on_action[Obligation])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :second intensification of drug treatment 7 in adults with type 2 diabetes , if dual therapy with metformin and another oral drug ( see recommendation 5 ) has not continued to control hba1c to below the person 's individually agreed threshold for intensification , consider either : triple therapy with : metformin , a dpp-4 inhibitor and a sulfonylurea or metformin , pioglitazone and a sulfonylurea or starting unk treatment ( see recommendations unk 4 ) . 8 if triple therapy with metformin and 2 other oral drugs ( see recommendation 7 ) is not effective , not tolerated or contraindicated , consider combination therapy with metformin , a sulfonylurea and a unk unk ( glp-1 ) mimetic for adults with type 2 diabetes who : have a bmi of 35 kg/m2 or higher ( adjust accordingly for people from black , asian and other minority ethnic groups ) and specific psychological or other medical problems associated with obesity or have a bmi lower than 35 unk : for whom insulin therapy would have significant occupational implications or weight loss would benefit other significant unk comorbidities . 9 only continue glp-1 mimetic therapy if the person with type 2 diabetes has had a beneficial metabolic response ( a reduction of at least 11 unk [ % ] in
-IF :['type 2 diabetes', 'response', 'drug treatment']
-THEN :['for intensification', '7 )', 'unk comorbidities', 'drugs', 'ethnic groups', 'oral drug', 'problems']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Inclusion[Part],Increment[Class]), (;Placing[Theme],Dimension[Object+Dimension]), (;Increment[Class]), (People[Origin+Person];), (;Make_agreement_on_action[Obligation]), (Response[Trigger];), (;Usefulness[Entity])]
-MWE : []
-##############################################################################
-Sentence :hba1c and a weight loss of at least 3 % of initial body weight in 6 months ) . 0 in adults with type 2 diabetes , if metformin is contraindicated or not tolerated , and if dual therapy with 2 oral drugs ( see recommendation 6 ) has not continued to control hba1c to below the person 's individually agreed threshold for intensification , consider unk treatment ( see recommendations unk 4 ) .
-IF :['type 2 diabetes', 'adults']
-THEN :['for intensification', 'weight']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Placing[Theme],Dimension[Object+Dimension]), (People[Origin+Person];), (;Make_agreement_on_action[Obligation])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :last updated may 2017 1 in adults with type 2 diabetes , only offer a glp-1 mimetic in combination with insulin with specialist care advice and ongoing support from a unk multidisciplinary team .
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :unk treatments 2 when starting insulin therapy in adults with type 2 diabetes , use a structured programme employing active insulin dose titration that encompasses : injection technique , including rotating injection sites and avoiding repeated injections at the same point within sites continuing telephone support self-monitoring dose titration to target levels dietary understanding
-IF :['type 2 diabetes', 'adults']
-THEN :['a structured programme employing active insulin dose titration that encompasses : injection technique , including rotating injection sites and avoiding']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total+Part]), (;Using[Instrument])]
-MWE : []
-##############################################################################
-Sentence :dvla guidance ( at a glance guide to the current medical standards of fitness to drive ) management of unk management of acute changes in plasma glucose control support from an appropriately trained and experienced healthcare professional . 3 when starting insulin therapy in adults with type 2 diabetes , continue to offer metformin for people without contraindications or intolerance
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (People[Origin+Person];)]
-MWE : []
-##############################################################################
-Sentence :review the continued need for other blood glucose lowering therapies . 4 start insulin therapy for adults with type 2 diabetes from a choice of a number of insulin types and regimens :
-IF :['type 2 diabetes', 'adults']
-THEN :['blood glucose lowering therapies']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Part],Increment[Class]), (;Increment[Class])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :consider pre-mixed ( biphasic ) preparations that include short-acting insulin analogues , rather than pre-mixed ( biphasic ) preparations that include short-acting human insulin preparations , if : a person prefers injecting insulin immediately before a meal or unk is a problem or blood glucose levels rise markedly after meals . 5 consider switching to insulin unk or insulin unk from nph insulin in adults with type 2 diabetes : who do not reach their target hba1c because of significant unk or who experience significant unk on nph insulin irrespective of the level of
-IF :['type 2 diabetes', 'person', 'do not reach their target hba1c because']
-THEN :['significant unk', 'pre-mixed ( biphasic ) preparations that include short-acting insulin analogues , rather than pre-mixed ( biphasic ) preparations that include short-acting human insulin preparations , if : a person prefers injecting insulin immediately before a meal or unk is a problem or blood glucose levels rise markedly after meals . 5 consider switching to insulin unk or insulin unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Inclusion[Total+Part]), (Causation[Cause];Causation[Effect]), (People[Origin+Person];), (Arriving[Theme+Goal];)]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :last updated may 2017 who need help from a carer or healthcare professional to administer insulin injections and for whom switching to one of the long-acting insulin analogues would reduce the number of daily injections . 6 monitor adults with type 2 diabetes who are on a basal insulin regimen ( nph insulin , insulin unk or insulin unk ) for the need for short-acting insulin before meals ( or a pre-mixed [ biphasic ] insulin preparation ) . 7 monitor adults with type 2 diabetes who are on pre-mixed ( biphasic ) insulin for the need for a further injection of short-acting insulin before meals or for a change to a basal bolus regimen with nph insulin or insulin unk or insulin unk , if blood glucose control remains inadequate .
-IF :['type 2 diabetes', 'adults']
-THEN :['of short-acting insulin', 'to one of the long-acting insulin analogues would reduce the number of daily injections . 6 monitor adults with type']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Part],Increment[Class]), (;Increment[Class]), (State_continue[State];), (;Change_tool[New_tool])]
-MWE : []
-##############################################################################
-Sentence :insulin delivery 8 for guidance on insulin delivery for adults with type 2 diabetes , see the insulin delivery section in the nice guideline on type 1 diabetes .
-IF :['type 2 diabetes', 'adults']
-THEN :['insulin delivery']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Delivery[Theme+Deliverer+Manner])]
-MWE : []
-##############################################################################
-Sentence :think about a diagnosis of gastroparesis in adults with type 2 diabetes with erratic blood glucose control or unexplained gastric bloating or vomiting , taking into account possible alternative diagnoses [ 2009 , amended 2015 ]
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :for adults with type 2 diabetes who have vomiting caused by gastroparesis , explain that : there is not strong evidence that any available antiemetic therapy is effective some people have had benefit with unk , erythromycin or metoclopramide . the strongest evidence for effectiveness is for unk , but prescribers must
-IF :['type 2 diabetes', 'adults']
-THEN :['available antiemetic therapy', 'by gastroparesis', 'people']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Causation[Cause];Causation[Effect]), (Locative_relation[Ground];), (People[Origin+Person];), (;Usefulness[Entity])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
-IF :['type 2 diabetes', 'adults']
-THEN :[]
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
-MWE : []
-##############################################################################
-Sentence :for treating vomiting caused by gastroparesis in adults with type 2 diabetes : consider alternating use of unk and metoclopramide consider unk only in exceptional circumstances ( if unk is the only effective treatment ) and in accordance with mhra guidance .
-IF :['by gastroparesis in adults with type 2 diabetes', 'type 2 diabetes']
-THEN :['of unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_intervention[Medical_condition];), (;Using[Instrument]), (;Usefulness[Entity])]
-MWE : []
-##############################################################################
-Sentence :if gastroparesis is suspected , consider referral to specialist services if : the differential diagnosis is in doubt or persistent or severe vomiting occurs .
+Sentence :Consider relaxing the target HbA1c level ( see recommendations and )
 IF :['type 2 diabetes']
 THEN :[]
 CorrespondingPatterns :[]
 MWE : []
 ##############################################################################
-Sentence :for guidance on managing painful diabetic peripheral neuropathy in adults with type 2 diabetes , see the nice guideline on neuropathic pain in adults .
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :think about the possibility of contributory sympathetic nervous system damage for adults with type 2 diabetes who lose the warning signs of unk . [ 2009 , amended 2015 ]
-IF :['type 2 diabetes', 'system damage']
-THEN :['system']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Execute_plan[Plan],System[Function+Complex+Component_utilities]), (Damaging[Patient];), (Sign[Indicator];)]
+Sentence :Last updated May 2017 on a case-by-case basis , with particular consideration for people who are older or frail , for adults with type 2 diabetes : who are unlikely to achieve longer-term risk-reduction benefits , for example , people with a reduced life expectancy for whom tight blood glucose control poses a high risk of the consequences of hypoglycaemia , for example , people who are at risk of falling , people who have impaired awareness of hypoglycaemia , and people who drive or operate machinery as part of their job for whom intensive management would not be appropriate , for example , people with significant comorbidities . 0 if adults with type 2 diabetes achieve an hba1c level that is lower than their target and they are not experiencing unk , encourage them to maintain it
+IF :['type 2 diabetes', 'management', 'of falling', 'with significant comorbidities', 'people']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Suitability[Evaluee];), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :think about the possibility of autonomic neuropathy affecting the gut in adults with type 2 diabetes who have unexplained diarrhoea that happens particularly at night [ 2009 , amended 2015 ]
+Sentence :Be aware that there are other possible reasons for a low HbA1c level , for example , deteriorating renal function or sudden weight loss . 1 for guidance on hba1c targets for women with type 2 diabetes who are pregnant or planning to become pregnant , see the nice guideline on diabetes in pregnancy .
+IF :['type 2 diabetes', 'there']
+THEN :['possible']
+CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Placing[Theme],Dimension[Object+Dimension]), (;Increment[Class]), (Locative_relation[Ground];), (People[Origin+Person];), (;Becoming[Final_category])]
+MWE : []
+##############################################################################
+Sentence :Self-monitoring of blood glucose 2 Take the Driver and Vehicle Licensing Agency ( DVLA ) At a glance guide to the current medical standards of fitness to drive into account when offering self-monitoring of blood glucose levels for adults with type 2 diabetes . 3 do not routinely offer self-monitoring of blood glucose levels for adults with type 2 diabetes unless : the person is on insulin or there is evidence of unk episodes or the person is on oral medication that may increase their risk of unk while driving or operating machinery or
 IF :['type 2 diabetes', 'adults']
-THEN :['autonomic neuropathy']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
+THEN :['their risk of unk while driving or operating machinery']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :when using tricyclic drugs and antihypertensive drug treatments in adults with type 2 diabetes who have autonomic neuropathy , be aware of the increased likelihood of side effects such as orthostatic hypotension .
-IF :['type 2 diabetes', 'adults']
-THEN :['side effects such as orthostatic hypotension', 'tricyclic drugs and antihypertensive drug treatments']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Using[Instrument])]
-MWE : []
-##############################################################################
-Sentence :investigate the possibility of autonomic neuropathy affecting the bladder in adults with type 2 diabetes who have unexplained unk problems .
-IF :['type 2 diabetes', 'adults']
-THEN :['autonomic neuropathy affecting the bladder in adults with type 2 diabetes who have unexplained unk problems']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Predicament[Domain+Situation]), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
-MWE : []
-##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :last updated may 2017 0 in managing autonomic neuropathy symptoms , include specific interventions indicated by the manifestations ( for example , for abnormal sweating or nocturnal diarrhoea ) .
-IF :['type 2 diabetes']
-THEN :['last updated may 2017 0 in managing autonomic neuropathy symptoms , include specific interventions indicated by the manifestations ( for example , for abnormal sweating or nocturnal diarrhoea )']
-CorrespondingPatterns :[(;Inclusion[Total+Part])]
+Sentence :Last updated May 2017 the person is pregnant , or is planning to become pregnant
+IF :['type 2 diabetes', 'person']
+THEN :[]
+CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :diabetic foot problems 1 for guidance on preventing and managing foot problems in adults with type 2 diabetes , see the nice guideline on diabetic foot problems .
+Sentence :For more information , see the NICE guideline on diabetes in pregnancy . 4 consider short-term self-monitoring of blood glucose levels in adults with type 2 diabetes ( and review treatment as necessary ) : when starting treatment with oral or intravenous corticosteroids or to confirm suspected unk . 5 be aware that adults with type 2 diabetes who have acute unk illness are at risk of worsening unk
 IF :['type 2 diabetes', 'adults']
-THEN :['foot problems']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Predicament[Domain+Situation])]
-MWE : []
-##############################################################################
-Sentence :diabetic kidney disease 2 for guidance on managing kidney disease in adults with type 2 diabetes , see the
-IF :['diabetic kidney disease', 'disease', 'type 2 diabetes']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
 MWE : []
 ##############################################################################
-Sentence :nice guideline on chronic kidney disease in adults .
+Sentence :Review treatment as necessary . 6 if adults with type 2 diabetes are self-monitoring their blood glucose levels , carry out a structured assessment at least annually
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :The assessment should include : the person 's self-monitoring skills the quality and frequency of testing checking that the person knows how to interpret the blood glucose results and what action to take the impact on the person 's quality of life the continued benefit to the person the equipment used .
+IF :['the equipment used', 'type 2 diabetes', 'person', 'action']
+THEN :['The assessment', 'person 's self-monitoring skills the quality and frequency of testing checking that the person knows how to interpret the blood glucose results and what action to take the impact on the person 's quality of life the continued benefit to the person the equipment used']
+CorrespondingPatterns :[(;Frequency[Interval+Event]), (;Intentionally_act[Act+Domain]), (Intentionally_act[Agent];), (;Inclusion[Total+Part]), (;Frequency[Interval+Event]), (;Using[Instrument]), (People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
+MWE : []
+##############################################################################
+Sentence :Recommendations in this section that cover dipeptidyl peptidase-4 ( DPP-4 ) inhibitors , glucagon-like peptide-1 ( GLP-1 ) mimetics and sulfonylureas refer to each of these groups of drugs at a class level . 7 for adults with type 2 diabetes , discuss the benefits and risks of drug treatment , and the options available
+IF :['treatment', 'type 2 diabetes', 'adults']
+THEN :['the benefits and risks of drug treatment']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Discussion[Topic])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Last updated May 2017 safety ( see Medicines and Healthcare products Regulatory Agency [ MHRA ] guidance ) and tolerability of the drug treatment(s) the person 's individual clinical circumstances , for example , comorbidities , risks from polypharmacy the person 's individual preferences and needs the licensed indications or combinations available cost ( if 2 drugs in the same class are appropriate , choose the option with the lowest acquisition cost ) .
+IF :['type 2 diabetes', 'person']
+THEN :[]
+CorrespondingPatterns :[(People[Origin+Person];), (Sign[Indicator];)]
+MWE : []
+##############################################################################
+Sentence :Rescue therapy at any phase of treatment 8 If an adult with type 2 diabetes is symptomatically hyperglycaemic , consider insulin ( see recommendations 2 – 4 ) or a sulfonylurea , and review treatment when blood glucose control has been achieved .
+IF :['type 2 diabetes', 'adult']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Initial drug treatment 9 Offer standard-release metformin as the initial drug treatment for adults with type 2 diabetes . 0 gradually increase the dose of unk metformin over several weeks to minimise the risk of gastrointestinal side effects in adults with type 2 diabetes . 1 if an adult with type 2 diabetes experiences gastrointestinal side effects with unk metformin , consider a trial of unk metformin .
+IF :['type 2 diabetes', 'adults']
+THEN :['with unk metformin']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
+MWE : []
+##############################################################################
+Sentence :Algorithm for blood glucose lowering therapy in adults with type 2 diabetes
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Last updated May 2017 2 In adults with type 2 diabetes , review the dose of metformin if the estimated glomerular filtration rate ( eGFR ) is below 45 ml/minute/ 3m2 :
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Prescribe metformin with caution for those at risk of a sudden deterioration in kidney function and those at risk of eGFR falling below 45 ml/minute/ 3m2 . 3 in adults with type 2 diabetes , if metformin is contraindicated or not tolerated , consider initial drug treatment with : a dipeptidyl unk ( dpp-4 ) inhibitor or pioglitazone or a sulfonylurea . 4 in adults with type 2 diabetes , do not offer or continue pioglitazone if they have any of the following : heart failure or history of heart failure
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Treatment with sodium–glucose cotransporter 2 ( SGLT-2 ) inhibitors , may be appropriate for some adults with type 2 diabetes if metformin is contraindicated or not tolerated ( see NICE 's guidance on canagliflozin , dapagliflozin and empagliflozin as monotherapies for treating type 2 diabetes ) .
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :First intensification of drug treatment 5 In adults with type 2 diabetes , if initial drug treatment with metformin has not continued to control HbA1c to below the person 's individually agreed threshold for intensification , consider dual therapy with : metformin and a DPP-4 inhibitor or metformin and pioglitazone or metformin and a sulfonylurea . 6 in adults with type 2 diabetes , if metformin is contraindicated or not tolerated and initial drug treatment has not continued to control hba1c to below the person 's individually agreed threshold for intensification , consider dual therapy with : a dpp-4 inhibitor and pioglitazone or a dpp-4 inhibitor and a sulfonylurea or pioglitazone and a sulfonylurea .
+IF :['type 2 diabetes', 'adults']
+THEN :['for intensification', 'threshold for intensification']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (People[Origin+Person];), (;Make_agreement_on_action[Obligation])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Second intensification of drug treatment 7 In adults with type 2 diabetes , if dual therapy with metformin and another oral drug ( see recommendation 5 ) has not continued to control HbA1c to below the person 's individually agreed threshold for intensification , consider either : triple therapy with : metformin , a DPP-4 inhibitor and a sulfonylurea or metformin , pioglitazone and a sulfonylurea or starting insulin-based treatment ( see recommendations 2 – 4 ) . 8 if triple therapy with metformin and 2 other oral drugs ( see recommendation 7 ) is not effective , not tolerated or contraindicated , consider combination therapy with metformin , a sulfonylurea and a unk unk ( glp-1 ) mimetic for adults with type 2 diabetes who : have a bmi of 35 kg/m2 or higher ( adjust accordingly for people from black , asian and other minority ethnic groups ) and specific psychological or other medical problems associated with obesity or have a bmi lower than 35 unk : for whom insulin therapy would have significant occupational implications or weight loss would benefit other significant unk comorbidities . 9 only continue glp-1 mimetic therapy if the person with type 2 diabetes has had a beneficial metabolic response ( a reduction of at least 11 unk [ % ] in
+IF :['type 2 diabetes', 'response', 'adults', 'with type']
+THEN :['for intensification', 'unk comorbidities', 'therapy with metformin and 2 other oral drugs ( see recommendation 7 )', 'ethnic groups', 'oral drug', 'problems']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Part],Increment[Class]), (;Increment[Class]), (People[Origin+Person];), (;Make_agreement_on_action[Obligation]), (Response[Trigger];), (;Usefulness[Entity])]
+MWE : []
+##############################################################################
+Sentence :HbA1c and a weight loss of at least 3 % of initial body weight in 6 months ) . 0 in adults with type 2 diabetes , if metformin is contraindicated or not tolerated , and if dual therapy with 2 oral drugs ( see recommendation 6 ) has not continued to control hba1c to below the person 's individually agreed threshold for intensification , consider unk treatment ( see recommendations 2 unk 4 ) .
+IF :['type 2 diabetes', 'adults']
+THEN :['for intensification', 'weight']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Placing[Theme],Dimension[Object+Dimension]), (People[Origin+Person];), (;Make_agreement_on_action[Obligation])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Last updated May 2017 1 In adults with type 2 diabetes , only offer a GLP-1 mimetic in combination with insulin with specialist care advice and ongoing support from a consultant-led multidisciplinary team .
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Insulin-based treatments 2 When starting insulin therapy in adults with type 2 diabetes , use a structured programme employing active insulin dose titration that encompasses : injection technique , including rotating injection sites and avoiding repeated injections at the same point within sites continuing telephone support self-monitoring dose titration to target levels dietary understanding
+IF :['type 2 diabetes', 'adults']
+THEN :['a structured programme employing active insulin dose titration that encompasses', 'technique', 'injection sites']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total+Part]), (;Using[Instrument])]
+MWE : []
+##############################################################################
+Sentence :DVLA guidance ( At a glance guide to the current medical standards of fitness to drive ) management of hypoglycaemia management of acute changes in plasma glucose control support from an appropriately trained and experienced healthcare professional . 3 when starting insulin therapy in adults with type 2 diabetes , continue to offer metformin for people without contraindications or intolerance
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (People[Origin+Person];)]
+MWE : []
+##############################################################################
+Sentence :Review the continued need for other blood glucose lowering therapies . 4 start insulin therapy for adults with type 2 diabetes from a choice of a number of insulin types and regimens :
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Consider pre-mixed ( biphasic ) preparations that include short-acting insulin analogues , rather than pre-mixed ( biphasic ) preparations that include short-acting human insulin preparations , if : a person prefers injecting insulin immediately before a meal or hypoglycaemia is a problem or blood glucose levels rise markedly after meals . 5 consider switching to insulin unk or insulin unk from nph insulin in adults with type 2 diabetes : who do not reach their target hba1c because of significant unk or who experience significant unk on nph insulin irrespective of the level of
+IF :['type 2 diabetes', 'person']
+THEN :['Consider pre-mixed ( biphasic ) preparations that include short-acting insulin analogues , rather than pre-mixed ( biphasic ) preparations that include short-acting human insulin preparations , if']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Total+Part]), (People[Origin+Person];)]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Last updated May 2017 who need help from a carer or healthcare professional to administer insulin injections and for whom switching to one of the long-acting insulin analogues would reduce the number of daily injections . 6 monitor adults with type 2 diabetes who are on a basal insulin regimen ( nph insulin , insulin unk or insulin unk ) for the need for short-acting insulin before meals ( or a pre-mixed [ biphasic ] insulin preparation ) . 7 monitor adults with type 2 diabetes who are on pre-mixed ( biphasic ) insulin for the need for a further injection of short-acting insulin before meals or for a change to a basal bolus regimen with nph insulin or insulin unk or insulin unk , if blood glucose control remains inadequate .
+IF :['type 2 diabetes', 'adults']
+THEN :['daily injections']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Frequency[Interval+Event]), (;Frequency[Interval+Event]), (State_continue[State];)]
+MWE : []
+##############################################################################
+Sentence :Insulin delivery 8 For guidance on insulin delivery for adults with type 2 diabetes , see the insulin delivery section in the NICE guideline on type 1 diabetes .
+IF :['type 2 diabetes', 'adults']
+THEN :['insulin delivery']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Delivery[Theme+Deliverer+Manner])]
+MWE : []
+##############################################################################
+Sentence :Think about a diagnosis of gastroparesis in adults with type 2 diabetes with erratic blood glucose control or unexplained gastric bloating or vomiting , taking into account possible alternative diagnoses [ 2009 , amended 2015 ]
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :For adults with type 2 diabetes who have vomiting caused by gastroparesis , explain that : there is not strong evidence that any available antiemetic therapy is effective some people have had benefit with domperidone , erythromycin or metoclopramide . the strongest evidence for effectiveness is for unk , but prescribers must
+IF :['type 2 diabetes', 'adults']
+THEN :['by gastroparesis', 'people']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Causation[Cause];Causation[Effect]), (Locative_relation[Ground];), (People[Origin+Person];), (;Usefulness[Entity])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :For treating vomiting caused by gastroparesis in adults with type 2 diabetes : consider alternating use of erythomycin and metoclopramide consider domperidone only in exceptional circumstances ( if domperidone is the only effective treatment ) and in accordance with MHRA guidance .
+IF :['type 2 diabetes', 'adults']
+THEN :['of erythomycin']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Using[Instrument]), (;Usefulness[Entity])]
+MWE : []
+##############################################################################
+Sentence :If gastroparesis is suspected , consider referral to specialist services if : the differential diagnosis is in doubt or persistent or severe vomiting occurs .
+IF :['type 2 diabetes']
+THEN :[]
+CorrespondingPatterns :[]
+MWE : []
+##############################################################################
+Sentence :For guidance on managing painful diabetic peripheral neuropathy in adults with type 2 diabetes , see the NICE guideline on neuropathic pain in adults .
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Think about the possibility of contributory sympathetic nervous system damage for adults with type 2 diabetes who lose the warning signs of hypoglycaemia . [ 2009 , amended 2015 ]
+IF :['type 2 diabetes', 'adults']
+THEN :['system']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Execute_plan[Plan],System[Function+Complex+Component_utilities]), (Sign[Indicator];)]
+MWE : []
+##############################################################################
+Sentence :Think about the possibility of autonomic neuropathy affecting the gut in adults with type 2 diabetes who have unexplained diarrhoea that happens particularly at night [ 2009 , amended 2015 ]
+IF :['type 2 diabetes', 'adults']
+THEN :['autonomic neuropathy affecting']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
+MWE : []
+##############################################################################
+Sentence :When using tricyclic drugs and antihypertensive drug treatments in adults with type 2 diabetes who have autonomic neuropathy , be aware of the increased likelihood of side effects such as orthostatic hypotension .
+IF :['type 2 diabetes', 'adults']
+THEN :['tricyclic drugs']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Using[Instrument])]
+MWE : []
+##############################################################################
+Sentence :Investigate the possibility of autonomic neuropathy affecting the bladder in adults with type 2 diabetes who have unexplained bladder-emptying problems .
+IF :['type 2 diabetes', 'adults']
+THEN :['autonomic neuropathy affecting the bladder in adults with type 2 diabetes who have unexplained bladder-emptying problems']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Predicament[Domain+Situation]), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
+MWE : []
+##############################################################################
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
+IF :['type 2 diabetes', 'adults']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
+MWE : []
+##############################################################################
+Sentence :Last updated May 2017 0 In managing autonomic neuropathy symptoms , include specific interventions indicated by the manifestations ( for example , for abnormal sweating or nocturnal diarrhoea ) .
+IF :['type 2 diabetes']
+THEN :['Last updated May 2017 0 In managing autonomic neuropathy symptoms', 'interventions indicated by the manifestations ( for example , for abnormal sweating or nocturnal diarrhoea )']
+CorrespondingPatterns :[(;Inclusion[Total+Part])]
+MWE : []
+##############################################################################
+Sentence :Diabetic foot problems 1 For guidance on preventing and managing foot problems in adults with type 2 diabetes , see the NICE guideline on diabetic foot problems .
+IF :['type 2 diabetes', 'adults']
+THEN :['problems']
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Predicament[Domain+Situation])]
+MWE : []
+##############################################################################
+Sentence :Diabetic kidney disease 2 For guidance on managing kidney disease in adults with type 2 diabetes , see the
+IF :['disease', 'type 2 diabetes', 'Diabetic kidney disease']
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
+MWE : []
+##############################################################################
+Sentence :NICE guideline on chronic kidney disease in adults .
 IF :['type 2 diabetes', 'kidney disease']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
 MWE : []
 ##############################################################################
-Sentence :erectile dysfunction 3 offer men with type 2 diabetes the opportunity to discuss erectile dysfunction as part of their annual review . 4 assess , educate and support men with type 2 diabetes who have problematic erectile dysfunction , addressing contributory factors such as cardiovascular disease as well as possible treatment options . 5 consider a unk inhibitor to treat problematic erectile dysfunction in men with type 2 diabetes , initially choosing the drug with the lowest acquisition cost and taking into account any contraindications . 6 following discussion , refer men with type 2 diabetes to a service offering other medical , surgical or psychological management of erectile dysfunction if treatment ( including a unk inhibitor , as appropriate ) has been unsuccessful .
-IF :['cardiovascular disease', 'type 2 diabetes', 'erectile dysfunction in men with type 2 diabetes']
-THEN :['unk inhibitor', 'erectile dysfunction']
-CorrespondingPatterns :[(Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (Medical_intervention[Medical_condition];), (;Frequency[Interval+Event]), (;Increment[Class]), (;Inclusion[Total+Part]), (;Frequency[Interval+Event]), (;Discussion[Topic])]
+Sentence :Erectile dysfunction 3 Offer men with type 2 diabetes the opportunity to discuss erectile dysfunction as part of their annual review . 4 assess , educate and support men with type 2 diabetes who have problematic erectile dysfunction , addressing contributory factors such as cardiovascular disease as well as possible treatment options . 5 consider a unk inhibitor to treat problematic erectile dysfunction in men with type 2 diabetes , initially choosing the drug with the lowest acquisition cost and taking into account any contraindications . 6 following discussion , refer men with type 2 diabetes to a service offering other medical , surgical or psychological management of erectile dysfunction if treatment ( including a unk inhibitor , as appropriate ) has been unsuccessful .
+IF :['cardiovascular disease', 'type 2 diabetes', 'men with type', 'erectile dysfunction in men with type 2 diabetes', 'with type']
+THEN :['unk inhibitor', 'erectile dysfunction as part of their annual review']
+CorrespondingPatterns :[(Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (Medical_intervention[Medical_condition];), (;Frequency[Interval+Event]), (;Increment[Class]), (;Inclusion[Total+Part]), (;Frequency[Interval+Event]), (;Discussion[Topic]), (People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :eye disease 7 on diagnosis , gps should immediately refer adults with type 2 diabetes to the local eye screening service
-IF :['type 2 diabetes', 'eye disease']
+Sentence :Eye disease 7 On diagnosis , GPs should immediately refer adults with type 2 diabetes to the local eye screening service
+IF :['Eye disease', 'type 2 diabetes']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];)]
 MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :last updated may 2017 8 explain the reasons for , and success of , eye screening systems to adults with type 2 diabetes , so that attendance is not reduced by lack of knowledge or fear of outcome . 9 use mydriasis with unk when photographing the retina , after prior informed agreement following discussion of the advantages and disadvantages .
+Sentence :Last updated May 2017 8 Explain the reasons for , and success of , eye screening systems to adults with type 2 diabetes , so that attendance is not reduced by lack of knowledge or fear of outcome . 9 use mydriasis with unk when photographing the retina , after prior informed agreement following discussion of the advantages and disadvantages .
 IF :['type 2 diabetes', 'adults']
-THEN :['of the advantages and disadvantages']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Discussion[Topic])]
+THEN :[]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :discussions should include precautions for driving . 0 use a unk digital retinal photography programme using appropriately trained staff . 1 perform visual acuity testing as a routine part of eye screening programmes . 2 depending on the findings , follow structured eye screening by : routine review in 1 year or earlier review or referral to an ophthalmologist . 3 arrange emergency review by an ophthalmologist for : sudden loss of vision unk unk unk or vitreous haemorrhage retinal detachment . 4 arrange rapid review by an ophthalmologist for new vessel formation . 5 refer to an ophthalmologist in accordance with the national screening
+Sentence :Discussions should include precautions for driving . 0 use a unk digital retinal photography programme using appropriately trained staff . 1 perform visual acuity testing as a routine part of eye screening programmes . 2 depending on the findings , follow structured eye screening by : routine review in 1 year or earlier review or referral to an ophthalmologist . 3 arrange emergency review by an ophthalmologist for : sudden loss of vision unk unk unk or vitreous haemorrhage retinal detachment . 4 arrange rapid review by an ophthalmologist for new vessel formation . 5 refer to an ophthalmologist in accordance with the national screening
 IF :['type 2 diabetes']
-THEN :['trained staff', 'discussions', 'for driving', 'routine part of eye screening programmes . 2 depending on the findings , follow structured eye screening by']
+THEN :['for driving . 0 use a unk digital retinal photography programme using appropriately trained staff . 1 perform visual acuity testing as a routine part of eye screening programmes . 2 depending on the findings , follow structured eye screening by : routine review in 1 year or earlier review or referral to an ophthalmologist . 3 arrange emergency', 'Discussions']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (;Using[Instrument])]
 MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :be aware that , if metformin is contraindicated or not tolerated , unk is both clinically effective and cost effective in adults with type 2 diabetes
+Sentence :Be aware that , if metformin is contraindicated or not tolerated , repaglinide is both clinically effective and cost effective in adults with type 2 diabetes
 IF :['type 2 diabetes', 'adults']
-THEN :['unk']
-CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Usefulness[Entity])]
-MWE : []
-##############################################################################
-Sentence :however , discuss with any person for whom unk is being considered , that there is no licensed unk combination containing unk that can be offered at first intensification .
-IF :['type 2 diabetes', 'person', 'licensed unk combination containing unk that can be offered at first intensification']
 THEN :[]
-CorrespondingPatterns :[(Locative_relation[Ground];), (People[Origin+Person];)]
+CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : []
 ##############################################################################
-Sentence :known risk factors for these conditions , including increased age , should be carefully evaluated before treatment : see the manufacturers ' summaries of product characteristics for details
+Sentence :However , discuss with any person for whom repaglinide is being considered , that there is no licensed non-metformin-based combination containing repaglinide that can be offered at first intensification .
+IF :['type 2 diabetes', 'person', 'licensed non-metformin-based combination containing repaglinide that can be offered at first intensification']
+THEN :['with any person for whom repaglinide is being considered']
+CorrespondingPatterns :[(;Discussion[Topic]), (Locative_relation[Ground];), (People[Origin+Person];)]
+MWE : []
+##############################################################################
+Sentence :Known risk factors for these conditions , including increased age , should be carefully evaluated before treatment : see the manufacturers ' summaries of product characteristics for details
 IF :['type 2 diabetes']
-THEN :['these conditions', 'age']
-CorrespondingPatterns :[(;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Inclusion[Total+Part])]
+THEN :['Known risk factors for these conditions', 'age']
+CorrespondingPatterns :[(;Inclusion[Total+Part])]
 MWE : []
 ##############################################################################
-Sentence :medicines and healthcare products regulatory agency ( mhra ) guidance ( 2011 ) advises that unk should review the safety and efficacy of pioglitazone in individuals after unk months of treatment to ensure that only patients who are deriving benefit continue to be treated ' .
+Sentence :Medicines and Healthcare products Regulatory Agency ( MHRA ) guidance ( 2011 ) advises that ' prescribers should review the safety and efficacy of pioglitazone in individuals after 3–6 months of treatment to ensure that only patients who are deriving benefit continue to be treated ' .
 IF :['type 2 diabetes', 'individuals']
 THEN :[]
-CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];)]
+CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : []
 ##############################################################################
-Sentence :type 2 diabetes in adults : management ( unk ) conditions # unk )
+Sentence :Type 2 diabetes in adults : management ( NG28 ) conditions#notice-of-rights )
 IF :['type 2 diabetes', 'adults']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]

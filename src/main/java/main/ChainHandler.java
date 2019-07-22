@@ -124,8 +124,9 @@ public class ChainHandler {
 
         List<Map<String, String>> xml = processXml(xmlFile);
 
-        for (Map<String, String> set: xml) {
 
+        for (Map<String, String> set: xml) {
+            System.out.println("[ LOG ]: ChainHandler :: Filename :'"+set.get("name")+".pdf'");
             if(doPretreatment){
                 TextDocument td = pretreatmentModule(set, true);
             }

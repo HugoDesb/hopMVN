@@ -35,7 +35,7 @@ public class RNNTagger implements Tagger {
             fw.close();
 
             // RUN COMMAND TO TAG
-            launch = "/bin/sh ./files/scripts/tag.sh "+Config.getInstance().getProp("pretreatment.rnntagger_path");
+            launch = "/bin/sh ./files/scripts/tag-english.sh "+Config.getInstance().getProp("pretreatment.rnntagger_path");
             CommandLine cmdLine = CommandLine.parse(launch);
             DefaultExecutor executor = new DefaultExecutor();
             executor.execute(cmdLine);

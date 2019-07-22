@@ -45,11 +45,14 @@ public class SemanticOpenSesameTagging {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < sentences.size(); i++) {
-            RNNTagger tagger = new RNNTagger();
-            ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(i)));
-            sentences.get(i).correctWords(hop);
+        for (Sentence s : sentences) {
+            if(s.getSentenceNumber() < lines.size()){
+                RNNTagger tagger = new RNNTagger();
+                ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(s.getSentenceNumber())));
+                s.correctWords(hop);
+            }
         }
+
     }
 
     /**
