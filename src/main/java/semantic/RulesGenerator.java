@@ -140,7 +140,9 @@ public class RulesGenerator {
             PrintStream ps = new PrintStream(new File(file));
             //PrintWriter pw = new PrintWriter(new File("./files/tmp.txt"));
             for (Rule r : rules) {
-                ps.println(r.toStringOutput());
+                if(r.getConclusionsToStrings().size()>0){
+                    ps.println(r.toStringOutput());
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -345,16 +347,137 @@ public class RulesGenerator {
     }
 
     public void combineMultiWordsExpression(String mweFile) {
+        findMWE(mweFile);
+
+        // Foreach rule found
+        for (Rule r : getGeneratedRules()) {
+            // foreach found mwe in this sentence
+            for (String mwe : r.getMwe()) {
+
+
+                Set<String> new_set_premises = getCombinedWithMWE(r.getPremisesToStrings(), mwe);
+                r.setPremisesString(new_set_premises);
+
+                Set<String> new_set_conclusions = getCombinedWithMWE(r.getConclusionsToStrings(), mwe);
+                r.setConclusionsString(new_set_conclusions);
+            }
+        }
+    }
+
+    private Set<String> getCombinedWithMWE(Set<String> old , String mwe){
+
+        Set<String> new_set = new HashSet<>();
+
+        for (String p: old) {
+
+            boolean found = false;
+
+            // check if the mwe contains the premise
+            if(mwe.contains(p)){
+
+                new_set.add(mwe);
+                found = true;
+
+            }else if(!found){
+
+                // check if the mwe partially overlap the premise
+                String [] splittedMWE = mwe.split("\\s");
+
+                // The max length of the overlap window is mwe.length-1 or 3 (max ngram is 4)
+                int max = (splittedMWE.length >= 4)? 3 : splittedMWE.length-1;
+
+                for(int i = max; i>=1; i--){
+
+                    // find whether its in the head
+                    String head = extractHead(p, i);
+                    if(mwe.contains(head)){
+                        p = p.replaceAll(head, mwe);
+                        new_set.add(p);
+                        found = true;
+                    }
+
+                    //find whether its in the tail
+                    String tail = extractTail(p, i);
+                    if(mwe.contains(tail)){
+                        p = p.replaceAll(tail, mwe);
+                        new_set.add(p);
+                        found = true;
+                    }
+                }
+            }else{
+
+                // none have been found, let it as it is
+                if(!found){
+                    new_set.add(p);
+                }
+            }
+        }
+        return new_set;
+    }
+
+    private String extractHead(String s, int length){
+        s = s.trim().toLowerCase();
+        String [] hop = s.split("\\s");
+
+        if(length > hop.length){
+            return s;
+        }else{
+
+            String ret = "";
+            for (int i = 0; i < length; i++) {
+                ret += hop[i];
+            }
+            return ret.trim();
+        }
+    }
+
+    private String extractTail(String s, int length){
+        s = s.trim().toLowerCase();
+        String [] hop = s.split("\\s");
+        if(length > hop.length){
+            return s;
+        }else{
+            String ret = "";
+            for (int i = 0; i < length; i++) {
+                ret += hop[hop.length-(i+1)];
+            }
+            return ret.trim();
+        }
+    }
+
+    private void findMWE(String mweFile) {
 
         try {
             BufferedReader bf = new BufferedReader(new FileReader(mweFile));
             String line = bf.readLine();
             boolean end = false;
+            int currentSentence = 0;
 
             String previous = "##########END##########";
             Rule r = null;
 
-            while(line != null) {
+            while (line != null) {
+                System.out.println("Sentence n°"+Integer.parseInt(line.trim()));
+                int a = getRuleByNumber(Integer.parseInt(line.trim()));
+                if(a>=0){
+                    bf.readLine();
+                    line = bf.readLine();
+                    while (line != null && !line.equals("##########END##########")) {
+                        if (!line.matches("^T[1-4]$")) {
+                            getGeneratedRules().get(a).addMWE(line.split("\\t")[0]);
+                        }
+                        line = bf.readLine();
+                    }
+                }else{
+                    while (line != null && !line.equals("##########END##########")) {
+                        line = bf.readLine();
+                    }
+                }
+                line = bf.readLine();
+
+            }
+
+                /*
                 if (previous.equals("##########END##########") && !line.isEmpty()) {
                     r = getRuleByNumber(Integer.parseInt(line));
                     bf.readLine(); // line = sentence
@@ -385,7 +508,7 @@ public class RulesGenerator {
                                 r.addMWE(line.split("\\t")[0]);
                             }
                         }
-                        */
+
 
                         if(line.equals("##########END##########")){
                             previous = line;
@@ -393,22 +516,25 @@ public class RulesGenerator {
                     }
                 }
                 line = bf.readLine();
-            }
-        } catch (FileNotFoundException e) {
+                */
+        }catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
-    public Rule getRuleByNumber(int i){
+    public int getRuleByNumber(int i){
         for (Rule r : getGeneratedRules()) {
             if(r.getSentence().getSentenceNumber() == i){
-                return r;
+                return getGeneratedRules().indexOf(r);
             }
         }
-        return null;
+        return -1;
     }
+
+
 
     /**
      * MAIN -----> read and analyse results from Open-Sesame to create rules.txt.backup

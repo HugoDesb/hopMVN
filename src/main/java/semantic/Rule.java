@@ -125,6 +125,10 @@ public class Rule {
         }
     }
 
+    public ArrayList<String> getMwe() {
+        return mwe;
+    }
+
     private String preparePremiseToString(){
         Set<String> out = getPremisesToStrings();
         out.add(topic);
@@ -157,5 +161,23 @@ public class Rule {
 
     public Sentence getSentence() {
         return sentence;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rule rule = (Rule) o;
+        return Objects.equals(sentence, rule.sentence) &&
+                Objects.equals(premise, rule.premise) &&
+                Objects.equals(conclusion, rule.conclusion) &&
+                Objects.equals(correspondingPatterns, rule.correspondingPatterns) &&
+                Objects.equals(topic, rule.topic) &&
+                Objects.equals(mwe, rule.mwe);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(sentence, premise, conclusion, correspondingPatterns, topic, mwe);
     }
 }

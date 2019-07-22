@@ -97,7 +97,7 @@ public class MainSemantic {
         String patterns = config.getProp("open-sesame.patterns");
 
         SemanticOpenSesameTagging sost = new SemanticOpenSesameTagging(new File(annotated_file_local));
-        sost.correctSentences(file_to_annotate);
+        //sost.correctSentences(file_to_annotate);
         FrameNetPatterns fnp = new FrameNetPatterns(new File(patterns));
         RulesGenerator rg = new RulesGenerator(sost, fnp, configSet.get("topic"));
 
