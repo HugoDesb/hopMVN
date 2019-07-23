@@ -47,9 +47,71 @@ public class SemanticOpenSesameTagging {
 
         for (Sentence s : sentences) {
             if(s.getSentenceNumber() < lines.size()){
+
                 RNNTagger tagger = new RNNTagger();
                 ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(s.getSentenceNumber())));
-                s.correctWords(hop);
+
+                String sentence = lines.get(s.getSentenceNumber());
+                //sentence = sentence.replaceAll("#", " ");
+                sentence = sentence.replaceAll("'", " ");
+                sentence = sentence.replaceAll("[^a-zA-Z0-9\\s-]","");
+                sentence = sentence.replaceAll("\\s+", " ");
+                sentence = sentence.trim();
+                String ret = "";
+                for (Word w: s.getWords()) {
+                    ret += " "+w.getText();
+                }
+
+                //ret = ret.replaceAll("#", " ");
+                ret = ret.replaceAll("'", " ");
+                ret = ret.replaceAll("[^a-zA-Z0-9\\s-]", "");
+                ret = ret.replaceAll("\\s+", " ");
+                ret = ret.trim();
+
+                String [] sentenceFromOS = sentence.toLowerCase().split("\\s");
+                String [] sentenceOriginal = ret.toLowerCase().split("\\s");
+
+
+                if(sentenceFromOS.length == sentenceOriginal.length){
+                    int i=0, j=0;
+                    while(i<sentenceFromOS.length && j<sentenceOriginal.length){
+                        if(sentenceFromOS[i].equals("unk")){
+                            String replacement = sentenceOriginal[j];
+                            ArrayList<Word> wordsToReplace = new ArrayList<>();
+                            for (Word w: s.getWords()) {
+                                if()
+                            }
+                        }
+                    }
+                }
+
+
+                System.out.println(sentence.split("\\s").length);
+                System.out.println(sentence.trim());
+                System.out.println(ret.split("\\s").length);
+                System.out.println(ret.trim());
+
+
+
+                /*
+                sentence = sentence.replaceAll("'", " ");
+                sentence = sentence.replaceAll("\"", " ");
+                sentence = sentence.replaceAll(":", " ");
+                sentence = sentence.replaceAll("\\.", " ");
+                sentence = sentence.replaceAll("\\?", " ");
+                sentence = sentence.replaceAll("!", " ");
+                sentence = sentence.replaceAll(",", " ");
+                sentence = sentence.replaceAll(";", " ");
+                sentence = sentence.replaceAll("", " ");
+                sentence = sentence.replaceAll("?", " ");
+                sentence = sentence.replaceAll("?", " ");
+                sentence = sentence.replaceAll("?", " ");
+                */
+
+                sentence = sentence.trim().replaceAll("\\s+", " ");
+
+                ArrayList<RNNTag> cleaned = new ArrayList<>();
+                s.correctWords(cleaned);
             }
         }
 

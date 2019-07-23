@@ -170,6 +170,14 @@ public class Sentence {
         return sentenceNumber;
     }
 
+    public ArrayList<Word> getWords() {
+        return words;
+    }
+
+    public void setWords(ArrayList<Word> words) {
+        this.words = words;
+    }
+
     public static class Builder{
         private int sentenceNumber;
         private ArrayList<Frame> frames; //same for all frames
