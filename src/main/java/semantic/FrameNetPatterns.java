@@ -33,7 +33,7 @@ public class FrameNetPatterns {
                         hop.add(new FrameNetPattern(line));
                     }
 
-                    System.out.println(line);
+                    //System.out.println(line);
                 }
             }
         } catch (IOException e) {

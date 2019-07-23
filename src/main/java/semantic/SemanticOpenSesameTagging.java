@@ -1,8 +1,6 @@
 package semantic;
 
 import MWExtraction.Wrapper.MultiColumnCSVSort;
-import tagging.RNNTagger.RNNTag;
-import tagging.RNNTagger.RNNTagger;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -48,73 +46,75 @@ public class SemanticOpenSesameTagging {
         for (Sentence s : sentences) {
             if(s.getSentenceNumber() < lines.size()){
 
-                RNNTagger tagger = new RNNTagger();
-                ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(s.getSentenceNumber())));
+                //RNNTagger tagger = new RNNTagger();
+                //ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(s.getSentenceNumber())));
 
-                String sentence = lines.get(s.getSentenceNumber());
-                //sentence = sentence.replaceAll("#", " ");
-                sentence = sentence.replaceAll("'", " ");
-                sentence = sentence.replaceAll("[^a-zA-Z0-9\\s-]","");
-                sentence = sentence.replaceAll("\\s+", " ");
-                sentence = sentence.trim();
-                String ret = "";
+                String cleanSentence = lines.get(s.getSentenceNumber());
+                cleanSentence = clean(cleanSentence);
+
+                String unkSentence = "";
                 for (Word w: s.getWords()) {
-                    ret += " "+w.getText();
+                    unkSentence += " "+w.getText();
                 }
+                unkSentence = clean(unkSentence);
 
-                //ret = ret.replaceAll("#", " ");
-                ret = ret.replaceAll("'", " ");
-                ret = ret.replaceAll("[^a-zA-Z0-9\\s-]", "");
-                ret = ret.replaceAll("\\s+", " ");
-                ret = ret.trim();
-
-                String [] sentenceFromOS = sentence.toLowerCase().split("\\s");
-                String [] sentenceOriginal = ret.toLowerCase().split("\\s");
+                String [] sentenceFromOS = unkSentence.toLowerCase().split("\\s");
+                String [] sentenceOriginal = cleanSentence.toLowerCase().split("\\s");
 
 
                 if(sentenceFromOS.length == sentenceOriginal.length){
-                    int i=0, j=0;
-                    while(i<sentenceFromOS.length && j<sentenceOriginal.length){
+
+                    //Store temporarily words to replace in the order of apparition
+                    ArrayList<String> replacements = new ArrayList<>();
+                    for (int i = 0; i<sentenceFromOS.length; i++) {
                         if(sentenceFromOS[i].equals("unk")){
-                            String replacement = sentenceOriginal[j];
-                            ArrayList<Word> wordsToReplace = new ArrayList<>();
-                            for (Word w: s.getWords()) {
-                                if()
-                            }
+                            replacements.add(sentenceOriginal[i]);
                         }
                     }
+
+                    //Replace by order of apparition
+                    ArrayList<Word> newWords = new ArrayList<>();
+                    int i = 0;
+                    for (Word w : s.getWords()) {
+                        if(w.getText().toLowerCase().equals("unk")){
+                            w.setText(replacements.get(i));
+                            i++;
+                        }
+                        newWords.add(w);
+                    }
+                    //set new Word list
+                    s.setWords(newWords);
+                }else{
+                    System.out.println(lines.get(s.getSentenceNumber()));
+                    System.out.println(cleanSentence.split("\\s").length);
+                    System.out.println(cleanSentence.trim());
+                    System.out.println(unkSentence.split("\\s").length);
+                    System.out.println(unkSentence.trim());
                 }
 
 
-                System.out.println(sentence.split("\\s").length);
-                System.out.println(sentence.trim());
-                System.out.println(ret.split("\\s").length);
-                System.out.println(ret.trim());
 
 
+                cleanSentence = cleanSentence.trim().replaceAll("\\s+", " ");
 
-                /*
-                sentence = sentence.replaceAll("'", " ");
-                sentence = sentence.replaceAll("\"", " ");
-                sentence = sentence.replaceAll(":", " ");
-                sentence = sentence.replaceAll("\\.", " ");
-                sentence = sentence.replaceAll("\\?", " ");
-                sentence = sentence.replaceAll("!", " ");
-                sentence = sentence.replaceAll(",", " ");
-                sentence = sentence.replaceAll(";", " ");
-                sentence = sentence.replaceAll("", " ");
-                sentence = sentence.replaceAll("?", " ");
-                sentence = sentence.replaceAll("?", " ");
-                sentence = sentence.replaceAll("?", " ");
-                */
-
-                sentence = sentence.trim().replaceAll("\\s+", " ");
-
-                ArrayList<RNNTag> cleaned = new ArrayList<>();
-                s.correctWords(cleaned);
+                //ArrayList<RNNTag> cleaned = new ArrayList<>();
+                //s.correctWords(cleaned);
             }
         }
 
+    }
+
+    private String clean(String s){
+        s = s.replaceAll("'", " ");
+        s = s.replaceAll("#", " ");
+        s = s.replaceAll("%", " % ");
+        s = s.replaceAll("\\(|\\)"," ");
+        s = s.replaceAll("\\[|\\]"," ");
+        //s = s.replaceAll("([0-9a-zA-Z])\\s*–\\s([0-9a-zA-Z])", "$0 – $1");
+        s = s.replaceAll("[^a-zA-Z0-9\\s-%–]","");
+        s = s.replaceAll("\\s+", " ");
+        s = s.trim();
+        return s;
     }
 
     /**

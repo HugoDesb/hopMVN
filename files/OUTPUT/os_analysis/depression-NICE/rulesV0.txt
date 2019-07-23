@@ -1,20 +1,20 @@
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :for people with recurrent severe depression or depression with psychotic symptoms and for those who have been treated under the mental health act , consider developing advance decisions and advance statements collaboratively with the person
-IF :['effectiveness', 'cognitive behavioural therapy mental health act', 'st', 'relapse', 'ect', 'the mental health act', 'depression', 'people', 'cognitive behavioural therapy']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(Medical_intervention[Medical_condition];), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [cognitive behavioural therapy, st, relapse, effectiveness, ect]
 
 ##############################################################################
 Sentence :when families or carers are involved in supporting a person with severe or chronic depression , consider : providing written and verbal information on depression and its management , including how families or carers can support the person offering a carer 's assessment of their caring , physical and mental health needs if necessary providing information about local family or carer support groups and voluntary organisations , and helping families or carers to access these negotiating between the person and their family or carer about confidentiality and the sharing of information .
-IF :['depression', 'families', 'age']
+IF :['depression', 'age']
 THEN :['providing written and verbal information on depression and its management', 'about local family or carer support groups and voluntary organisations', 'the person and their family or carer about confidentiality and the sharing of information', 'families or carers can support the person offering a carer 's assessment of their caring , physical and mental']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Inclusion[Total+Part]), (;Discussion[Topic]), (People[Origin+Person];), (Kinship[Relatives];)]
 MWE : [age]
@@ -28,63 +28,63 @@ MWE : [secondary care, guideline, age]
 
 ##############################################################################
 Sentence :when assessing a person who may have depression , conduct a comprehensive assessment that does not rely simply on a symptom count
-IF :['count', 'depression', 'person who']
+IF :['depression']
 THEN :['a comprehensive assessment']
 CorrespondingPatterns :[(;Intentionally_act[Act+Domain]), (Intentionally_act[Agent];), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [pregnancy, valproate, st, plan, place, iv]
 
 ##############################################################################
 Sentence :in addition to assessing symptoms and associated functional impairment , consider how the following factors may have affected the development , course and severity of a person 's depression : any history of depression and comorbid mental health or physical disorders any past history of mood elevation ( to determine if the depression may be part of bipolar disorder )
-IF :['functional impairment', 'depression']
+IF :['depression']
 THEN :['the development']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];)]
 MWE : [chronic physical health problem, guideline]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :be respectful of , and sensitive to , diverse cultural , ethnic and religious backgrounds when working with people with depression , and be aware of the possible variations in the presentation of depression
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [update information section, original guideline, st, update, recommendation, evidence]
 
 ##############################################################################
 Sentence :ensure competence in : culturally sensitive assessment using different explanatory models of depression addressing cultural and ethnic differences when developing and implementing treatment plans working with families from diverse ethnic and cultural backgrounds .
-IF :['depression', 'families']
+IF :['depression']
 THEN :['different explanatory models of depression addressing cultural', 'plans working with families from diverse ethnic and cultural backgrounds']
 CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (;Using[Instrument]), (Kinship[Relatives];)]
 MWE : [chronic physical health problem, nice clinical guideline, identification treatment, recommendation, guideline, age]
 
 ##############################################################################
 Sentence :when assessing a person with suspected depression , be aware of any learning disabilities or acquired cognitive impairments , and if necessary consider consulting with a relevant specialist when developing treatment plans and strategies .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['treatment plans']
 CorrespondingPatterns :[(;Inclusion[Total],Purpose[Goal]), (;Purpose[Goal]), (People[Origin+Person];)]
 MWE : [secondary care, recommendation, identification, guideline, age]
 
 ##############################################################################
 Sentence :when providing interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression : where possible , provide the same interventions as for other people with depression if necessary , adjust the method of delivery or duration of the intervention to take account of the disability or impairment .
-IF :['depression', 'people']
-THEN :['primary diagnosis', 'relevant nice guidelines', 'guideline', 'interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression : where possible', 'other disorders', 'context', 'same interventions', 'topic page']
+IF :['depression']
+THEN :['interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression : where possible', 'same interventions']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Inclusion[Part],Increment[Class]), (;Means[Means]+Means[Descriptor]+Means[Purpose]), (;Increment[Class]), (People[Origin+Person];)]
 MWE : [relevant nice guidelines, other disorders, primary diagnosis, topic page, context, guideline]
 
 ##############################################################################
 Sentence :if there is a risk of self-harm or suicide : assess whether the person has adequate social support and is aware of sources of help arrange help appropriate to the level of risk ( see section ) advise the person to seek further help if the situation deteriorates .
-IF :['st', 'there', 'the level of risk', 'depression', 'risk of self-harm or suicide', 'day', 'sufficient severity']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(Suitability[Evaluee];), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : [sufficient severity, day, st]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [considerable time, low-intensity intervention, active monitoring, st, diagnosis, months]
@@ -105,7 +105,7 @@ MWE : [careful review, diagnostic criteria, evidence]
 
 ##############################################################################
 Sentence :practitioners should consider using competence frameworks developed from the relevant treatment manual ( s ) and for all interventions should : receive regular high-quality supervision use routine outcome measures and ensure that the person with depression is involved in reviewing the efficacy of the treatment engage in monitoring and evaluation of treatment adherence and practitioner competence – for example , by using video and audio tapes , and external audit and scrutiny where appropriate .
-IF :['appropriate', 'person with depression', 'efficacy of the treatment engage', 'depression']
+IF :['depression']
 THEN :['monitoring and evaluation of treatment adherence and practitioner competence – for example', 'practitioners should consider using competence frameworks developed from the relevant treatment manual ( s ) and for all interventions should : receive', 'and audio tapes']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Intentionally_act[Act+Domain]), (Intentionally_act[Agent];), (;Using[Instrument]), (Suitability[Evaluee];), (People[Origin+Person];)]
 MWE : [age]
@@ -113,13 +113,13 @@ MWE : [age]
 ##############################################################################
 Sentence :the stepped-care model provides a framework in which to organise the provision of services , and supports patients , carers and practitioners in identifying and accessing the most effective interventions ( see figure 1 )
 IF :['depression']
-THEN :['a framework in which to organise the provision of services , and supports patients , carers and practitioners in identifying', 'atypical symptoms fratypical symptomsmework in which to orgatypical symptomsnise the provision of services , atypical symptomsnd supports patypical symptomstients , catypical symptomsrers atypical symptomsnd pratypical symptomsctitioners in identifying', 'seasonal depression frseasonal depressionmework in which to orgseasonal depressionnise the provision of services , seasonal depressionnd supports pseasonal depressiontients , cseasonal depressionrers seasonal depressionnd prseasonal depressionctitioners in identifying']
+THEN :['a framework in which to organise the provision of services , and supports patients , carers and practitioners in identifying']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Usefulness[Entity])]
 MWE : [atypical symptoms, seasonal depression, review, evidence, definitions, iv]
 
 ##############################################################################
 Sentence :in stepped care the least intrusive , most effective intervention is provided first ; if a person does not benefit from the intervention initially offered , or declines an intervention , they should be offered an appropriate intervention from the next step .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['care the least intrusive , most effective intervention is provided first', 'should be offered an appropriate intervention from the next step', 'intervention']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Intentionally_act[Act+Domain]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (People[Origin+Person];), (;Usefulness[Entity])]
 MWE : [mild depression, practical terms, dsm-iv, icd-10, st, diagnosis, degree, ect, clinicians, iv, threshold]
@@ -133,7 +133,7 @@ MWE : [personal past history, diagnostic assessment, family history, appendix, d
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [complete relief, key goal, functioning, likelihood, relapse, intervention]
@@ -154,7 +154,7 @@ MWE : [uk marketing authorisation, drug, indication, publication, evidence, guid
 
 ##############################################################################
 Sentence :assessment , support , psychoeducation , active monitoring and referral for further assessment and interventions [ a ] complex depression includes depression that shows an inadequate response to multiple treatments , is complicated by psychotic symptoms , and/or is associated with significant psychiatric comorbidity or psychosocial factors . [ b ] only for depression where the person also has a chronic physical health problem and associated functional impairment ( see depression in adults with a chronic physical health problem : recognition and management [ nice clinical guideline 91 ] ) .
-IF :['physical health problem', 'st', 'publication', 'to multiple treatments', 'uk marketing authorisation', 'indication', 'time', 'depression']
+IF :['depression']
 THEN :['assessment and interventions', '] complex depression includes depression that shows an inadequate response to multiple treatments , is complicated by psychotic symptoms , and/or is associated with']
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Increment[Class]), (;Inclusion[Total+Part]), (People[Origin+Person];), (Response[Trigger];), (Predicament[Situation+Domain+Place];)]
 MWE : [uk marketing authorisation, indication, publication, st, time]
@@ -168,42 +168,42 @@ MWE : [nice technology appraisal guidance, update, recommendation, guidance, ect
 
 ##############################################################################
 Sentence :be alert to possible depression ( particularly in people with a past history of depression or a chronic physical health problem with associated functional impairment ) and consider asking people who may have depression two questions , specifically :
-IF :['computerised cognitive behaviour therapy', 'anxiety', 'nice technology appraisal guidance', 'guideline', 'update', 'recommendation', 'depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Predicament[Situation+Domain+Place];)]
 MWE : [nice technology appraisal guidance, computerised cognitive behaviour therapy, anxiety, update, recommendation, guideline]
 
 ##############################################################################
 Sentence :if a person answers yes ' to either of the depression identification questions ( see recommendation ) but the practitioner is not competent to perform a mental health assessment , they should refer the person to an appropriate professional
-IF :['practitioner', 'person', 'depression']
+IF :['depression']
 THEN :['a mental health assessment', 'should refer the person to an appropriate professional']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Intentionally_act[Act+Domain]), (Intentionally_act[Agent];), (People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :if a person answers yes ' to either of the depression identification questions ( see recommendation ) , a practitioner who is competent to perform a mental health assessment should review the person 's mental state and associated functional , interpersonal and social difficulties .
-IF :['assessment', 'person', 'depression']
+IF :['assessment', 'depression']
 THEN :['a mental health assessment']
 CorrespondingPatterns :[(;Intentionally_act[Act+Domain]), (Intentionally_act[Agent];), (People[Origin+Person];)]
 MWE : [assessment]
 
 ##############################################################################
 Sentence :when assessing a person with suspected depression , consider using a validated measure ( for example , for symptoms , functions and/or disability ) to inform and evaluate treatment .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['a validated measure']
 CorrespondingPatterns :[(;Using[Instrument]), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [assessment, iv]
 
 ##############################################################################
 Sentence :for people with significant language or communication difficulties , for example people with sensory impairments or a learning disability , consider using the
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [competent practitioner, intervention, iv]
@@ -217,35 +217,35 @@ MWE : [relevant treatment manual(s), st, intervention]
 
 ##############################################################################
 Sentence :if a person with depression presents considerable immediate risk to themselves or others , refer them urgently to specialist mental health services .
-IF :['person', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [relevant treatment manual(s), outcome measure, review, work, competence, intervention, ensure, practitioners, iv, age]
 
 ##############################################################################
 Sentence :advise people with depression of the potential for increased agitation , anxiety and suicidal ideation in the initial stages of treatment ; actively seek out these symptoms and : ensure that the person knows how to seek help promptly review the person 's treatment if they develop marked and/or prolonged agitation .
-IF :['st', 'person 's treatment', 'chronic physical health problem', 'part', 'depression', 'people']
+IF :['depression']
 THEN :['the person 's treatment']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];), (Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [chronic physical health problem, st, part]
 
 ##############################################################################
 Sentence :advise a person with depression and their family or carer to be vigilant for mood changes , negativity and hopelessness , and suicidal ideation , and to contact their practitioner if concerned
-IF :['person', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :if a person with depression is assessed to be at risk of suicide : take into account toxicity in overdose if an antidepressant is prescribed or the person is taking other medication ; if necessary , limit the amount of drug ( s ) available
-IF :['person', 'depression', 'of suicide']
+IF :['depression']
 THEN :['medication']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : [group physical activity programme, cognitive behavioural therapy, st, refer, update, self-help, intervention, iv]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [subthreshold depressive symptoms, mild depression, st, antidepressants, period, intervention]
@@ -266,56 +266,56 @@ MWE : [psychological intervention, relapse]
 
 ##############################################################################
 Sentence :when the person has an anxiety disorder and comorbid depression or depressive symptoms , consult the nice guideline for the relevant anxiety disorder ( see find guidance ) and consider treating the anxiety disorder first ( since effective treatment of the anxiety disorder will often improve the depression or the depressive symptoms ) .
-IF :['person', 'depression']
-THEN :['treatment of the anxiety disorder', 'antidepressant treatment of the anxiety disorder']
+IF :['depression']
+THEN :['treatment of the anxiety disorder']
 CorrespondingPatterns :[(People[Origin+Person];), (Sign[Indicator];), (;Usefulness[Entity])]
 MWE : [antidepressant treatment, significant risk, relapse]
 
 ##############################################################################
 Sentence :offer people with depression advice on sleep hygiene if needed , including : establishing regular sleep and wake times avoiding excess eating , smoking or drinking alcohol before sleep creating a proper environment for sleep taking regular physical exercise .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['excess eating , smoking or drinking alcohol before sleep creating a proper environment for sleep taking regular physical exercise']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [residual symptoms, antidepressant treatment, psychological intervention, antidepressant medication, st, episode, update, relapse, iv]
 
 ##############################################################################
 Sentence :last updated april 2018 provide information about the nature and course of depression arrange a further assessment , normally within 2 weeks make contact if the person does not attend follow-up appointments .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['information']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Inclusion[Part],Increment[Class]), (;Increment[Class]), (People[Origin+Person];)]
 MWE : [nice technology appraisal guidance, computerised cognitive behaviour therapy, anxiety, update, recommendation]
 
 ##############################################################################
 Sentence :for people with persistent subthreshold depressive symptoms or mild to moderate depression , consider offering one or more of the following interventions , guided by the person 's preference : individual guided self-help based on the principles of cognitive behavioural therapy ( cbt ) computerised cognitive behavioural therapy ( ccbt ) a structured group physical activity programme .
-IF :['depression', 'people', 'age']
+IF :['depression', 'age']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :individual guided self-help programmes based on the principles of cbt ( and including behavioural activation and problem-solving techniques ) for people with persistent subthreshold depressive symptoms or mild to moderate depression should : include the provision of written materials of an appropriate reading age ( or alternative media to support access ) be supported by a trained practitioner , who typically facilitates the self-help programme and reviews progress and outcome consist of up to six to eight sessions ( face-to-face and via telephone ) normally taking place over 9 to 12 weeks , including follow-up .
-IF :['depression', 'people with persistent subthreshold depressive symptoms']
-THEN :['provision of written materials of an appropriate reading age', 'note', 'assessment', 'individual guided self-help programmes based on the principles of cbt ( and including behavioural activation and problem-solving techniques ) for people with persistent subthreshold depressive symptoms or mild to moderate depression', 'disability', 'ect', 'degree', 'iv', 'account', '9 to 12 weeks', 'and reviews progress and outcome consist of up to six to eight sessions ( face-to-face and via telephone )']
+IF :['depression']
+THEN :['provision of written materials of an appropriate reading age', 'individual guided self-help programmes based on the principles of cbt ( and including behavioural activation and problem-solving techniques ) for people with persistent subthreshold depressive symptoms or mild to moderate depression', '9 to 12 weeks', 'and reviews progress and outcome consist of up to six to eight sessions ( face-to-face and via telephone )']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];), (;Alternatives[Salient_entity]), (Sign[Indicator];)]
 MWE : [account, disability, note, degree, ect, assessment, iv]
 
 ##############################################################################
 Sentence :ccbt for people with persistent subthreshold depressive symptoms or mild to moderate depression should : be provided via a stand-alone computer-based or web-based programme include an explanation of the cbt model , encourage tasks between sessions , and use thought-challenging and active monitoring of behaviour , thought patterns and
-IF :['depression', 'people']
+IF :['depression']
 THEN :['via a stand-alone computer-based or web-based programme include an explanation of the cbt model , encourage tasks between sessions , and use thought-challenging and active monitoring of behaviour']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Inclusion[Total+Part]), (;Using[Instrument]), (People[Origin+Person];)]
 MWE : [chronic physical health problem, nice clinical guideline, recommendation, identification, guideline, age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [nice guidelines, st, guidelines, explain, form, recommendation, consent]
@@ -329,91 +329,91 @@ MWE : [age]
 
 ##############################################################################
 Sentence :physical activity programmes for people with persistent subthreshold depressive symptoms or mild to moderate depression should : be delivered in groups with support from a competent practitioner consist typically of three sessions per week of moderate duration ( 45 minutes to 1 hour ) over 10 to 14 weeks ( average 12 weeks ) .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['physical activity programmes for people with persistent subthreshold depressive symptoms or mild to moderate depression', 'groups']
 CorrespondingPatterns :[(;Delivery[Theme+Deliverer+Manner]), (People[Origin+Person];)]
 MWE : [treatment options, atmosphere, discrimination, discussions, hope, optimism, recovery, stigma, st, settings, diagnosis, courses, dignity, explain, privacy, update, ect, ensure, place, confidentiality]
 
 ##############################################################################
 Sentence :consider group-based cbt for people with persistent subthreshold depressive symptoms or mild to moderate depression who decline low-intensity psychosocial interventions ( see recommendation ) .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['who decline low-intensity psychosocial interventions']
 CorrespondingPatterns :[(;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [comprehensive written information, language, st, form, work, carer, plan, families, ensure]
 
 ##############################################################################
 Sentence :group-based cbt for people with persistent subthreshold depressive symptoms or mild to moderate depression should : be based on a structured model such as coping with depression ' be delivered by two trained and competent practitioners consist of 10 to 12 meetings of eight to ten participants normally take place over 12 to 16 weeks , including follow-up .
-IF :['inform people', 'depression', 'people']
+IF :['depression']
 THEN :['structured model such as coping with depression '', '12 to 16 weeks']
 CorrespondingPatterns :[(;Delivery[Theme+Deliverer+Manner]), (;Inclusion[Total+Part]), (People[Origin+Person];)]
 MWE : [national resources, inform people, self-help groups, groups]
 
 ##############################################################################
 Sentence :do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor , but consider them for people with : a past history of moderate or severe depression or initial presentation of subthreshold depressive symptoms that have been present for a long period ( typically at least 2 years ) or
-IF :['persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor , but consider them for people with : a past history of moderate or severe', 'depression']
-THEN :['antidepressants', 'written form initial presentation of subthreshold depressive symptoms that have been present fwritten form a long period ( typically at least', 'clear information initial presentation of subthreshold depressive symptoms that have been present fclear information a long period ( typically at least', 'or initial presentation of subthreshold depressive symptoms that have been present for a long period ( typically at least']
+IF :['depression']
+THEN :['antidepressants', 'or initial presentation of subthreshold depressive symptoms that have been present for a long period ( typically at least']
 CorrespondingPatterns :[(;Using[Instrument]), (Causation[Cause];Causation[Effect]), (People[Origin+Person];)]
 MWE : [clear information, written form, outcomes, consent, intervention, ect, ensure, provision]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :although there is evidence that st john 's wort may be of benefit in mild or moderate depression , practitioners should : not prescribe or advise its use by people with depression because of uncertainty about appropriate doses , persistence of effect , variation in the nature of preparations and potential serious interactions with other drugs ( including oral contraceptives , anticoagulants and anticonvulsants ) advise people with depression of the different potencies of the preparations available and of the potential serious interactions of st john 's wort with other drugs .
-IF :['st', 'mental health', 'there', 'depression', 'iv', 'advance']
+IF :['depression']
 THEN :['depression of the different potencies of the preparations available and of the potential serious interactions of st john 's', 'drugs', 'prescribe or advise its use by people with depression', 'practitioners should', 'contraceptives , anticoagulants and anticonvulsants ) advise']
 CorrespondingPatterns :[(Attempt_suasion[Addressee];), (;Attempt_suasion[Manner+Content+Speaker]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Increment[Class]), (;Inclusion[Total+Part]), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : [mental health, st, advance, iv]
 
 ##############################################################################
 Sentence :for people with persistent subthreshold depressive symptoms or mild to moderate depression who have not benefited from a low-intensity psychosocial intervention , discuss the relative merits of different interventions with the person and provide : an antidepressant ( normally a selective serotonin reuptake inhibitor [ ssri ] ) or a high-intensity psychological intervention , normally one of the following options :
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the relative merits of different interventions', 'antidepressant']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Discussion[Topic]), (People[Origin+Person];)]
 MWE : [mental health, groups, family, form, carer, families, assessment, confidentiality, access, age]
 
 ##############################################################################
 Sentence :ipt ) behavioural couples therapy for people who have a regular partner and where the relationship may contribute to the development or maintenance of depression , or where involving the partner is considered to be of potential therapeutic benefit .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['therapy']
 CorrespondingPatterns :[(People[Origin+Person];), (;Medical_specialties[Specialty+Type])]
 MWE : [assessment, care]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [assessment, iv]
 
 ##############################################################################
 Sentence :for people with moderate or severe depression , provide a combination of antidepressant medication and a high-intensity psychological intervention ( cbt or ipt ) .
-IF :['depression', 'people']
-THEN :['a combination of antidepressant medication and a high-intensity psychological intervention ( cbt or ipt )', 'mental health combinmental healthtion of mental healthntidepressmental healthnt medicmental healthtion mental healthnd mental health high-intensity psychologicmental healthl intervention ( cbt or ipt )']
+IF :['depression']
+THEN :['a combination of antidepressant medication and a high-intensity psychological intervention ( cbt or ipt )']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];)]
 MWE : [mental health, disorder, severity, st, term, ect, mood, part]
 
 ##############################################################################
 Sentence :the choice of intervention should be influenced by the : duration of the episode of depression and the trajectory of symptoms previous course of depression and response to treatment likelihood of adherence to treatment and any potential adverse effects person 's treatment preference and priorities .
-IF :['symptoms', 'treatment likelihood of adherence to treatment and any potential adverse effects person 's treatment preference and priorities', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :for people with depression who decline an antidepressant , cbt , ipt , behavioural activation and behavioural couples therapy , consider : counselling for people with persistent subthreshold depressive symptoms or mild to moderate depression short-term psychodynamic psychotherapy for people with mild to moderate depression .
-IF :['work', 'backgrounds', 'ect', 'depression', 'people', 'iv']
+IF :['depression']
 THEN :['people with depression who decline an antidepressant , cbt , ipt , behavioural activation and behavioural couples therapy']
 CorrespondingPatterns :[(;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [backgrounds, work, ect, iv]
 
 ##############################################################################
 Sentence :discuss antidepressant treatment options with the person with depression , covering : the choice of antidepressant , including any anticipated adverse events , for example side effects and discontinuation symptoms ( see recommendation ) , and potential interactions with concomitant medication or physical health problems their perception of the efficacy and tolerability of any antidepressants they have previously taken .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['anticipated adverse events , for example side effects and discontinuation symptoms ( see recommendation ) , and potential interactions', 'the choice of antidepressant']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
 MWE : [treatment plan, backgrounds, work, competence, plan, families, assessment, ensure, model, iv]
@@ -421,20 +421,20 @@ MWE : [treatment plan, backgrounds, work, competence, plan, families, assessment
 ##############################################################################
 Sentence :when an antidepressant is to be prescribed , it should normally be an ssri in a
 IF :['depression']
-THEN :['cognitive impairment should normally be an ssri', 'it should normally be an ssri']
+THEN :['it should normally be an ssri']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree])]
 MWE : [cognitive impairment, suspected depression, relevant specialist, treatment plan, st, consulting, disabilities]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [cognitive impairment, account, delivery, st, disability, diagnosis, intervention, method]
 
 ##############################################################################
 Sentence :in particular , consider prescribing a gastroprotective drug in older people who are taking non-steroidal anti-inflammatory drugs ( nsaids ) or aspirin .
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [suicide, advise, self-harm, ect]
@@ -448,14 +448,14 @@ MWE : [age]
 
 ##############################################################################
 Sentence :for example : the potential for higher doses of venlafaxine to exacerbate cardiac arrhythmias and the need to monitor the person 's blood pressure the possible exacerbation of hypertension with venlafaxine and duloxetine the potential for postural hypotension and arrhythmias with tcas the need for haematological monitoring with mianserin in elderly people .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['person 's blood pressure']
 CorrespondingPatterns :[(;Attempt_suasion[Manner+Content+Speaker]), (People[Origin+Person];)]
 MWE : [competent practitioner, intervention, iv]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [relevant treatment manual(s), st, intervention]
@@ -476,49 +476,49 @@ MWE : [st, work, carer, services, patients, intervention, ect, model, provision,
 
 ##############################################################################
 Sentence :when prescribing antidepressants , explore any concerns the person with depression has about taking medication , explain fully the reasons for prescribing , and provide information about taking antidepressants , including : the gradual development of the full antidepressant effect the importance of taking medication as prescribed and the need to continue treatment after remission potential side effects the potential for interactions with other medications the risk and nature of discontinuation symptoms with all antidepressants , particularly with drugs with a shorter half-life ( such as paroxetine and venlafaxine ) , and how these symptoms can be minimised the fact that addiction does not occur with antidepressants .
-IF :['st', 'person', 'ect', 'depression', 'intervention', 'iv', 'care']
+IF :['depression']
 THEN :['effects', 'effect', 'provide information about taking antidepressants']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Inclusion[Total+Part]), (People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (Sign[Indicator];)]
 MWE : [st, intervention, ect, care, iv]
 
 ##############################################################################
 Sentence :for people started on antidepressants who are not considered to be at increased risk of suicide , normally see them after 2 weeks
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [st, self-neglect]
 
 ##############################################################################
 Sentence :a person with depression started on antidepressants who is considered to present an increased suicide risk or is younger than 30 years ( because of the potential increased prevalence of suicidal thoughts in the early stages of antidepressant treatment for this group ) should normally be seen after 1 week and frequently thereafter as appropriate until the risk is no longer considered clinically important .
-IF :['person', 'depression', 'the potential increased prevalence of suicidal thoughts in the early stages of antidepressant treatment for this group ) should']
+IF :['depression']
 THEN :['suicidal thoughts', 'suicide risk', 'group ) should normally be seen after 1 week and frequently thereafter as appropriate until the risk is no longer considered clinically important']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (Causation[Cause];Causation[Effect]), (People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [high-intensity psychological intervention, collaborative care, referral, intervention, assessment]
 
 ##############################################################################
 Sentence :last updated april 2018 treatment , provide appropriate information and consider one of the following strategies : monitor symptoms closely where side effects are mild and acceptable to the person or stop the antidepressant or change to a different antidepressant if the person prefers or in discussion with the person , consider short-term concomitant treatment with a benzodiazepine if anxiety , agitation and/or insomnia are problematic ( except in people with chronic symptoms of anxiety ) ; this should usually be for no longer than 2 weeks in order to prevent the development of dependence .
-IF :['treatment', 'assessment', 'referral', 'psychological intervention', 'person', 'low-intensity psychosocial interventions', 'depression', 'intervention']
+IF :['depression']
 THEN :['appropriate information and consider one of the following strategies', 'should', 'for no longer than 2 weeks in order to prevent the development of dependence']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [low-intensity psychosocial interventions, psychological intervention, referral, intervention, assessment]
 
 ##############################################################################
 Sentence :people who start on low-dose tcas and who have a clear clinical response can be maintained on that dose with careful monitoring . 0 if the person 's depression shows no improvement after 2 to 4 weeks with the first antidepressant , check that the drug has been taken regularly and in the prescribed dose . 1 if response is absent or minimal after 3 to 4 weeks of treatment with a therapeutic dose of an antidepressant , increase the level of support ( for example , by weekly face-to-face or telephone contact ) and consider : increasing the dose in line with the spc if there are no significant side effects or switching to another antidepressant as described in section if there are side effects or if the person prefers . 2 if the person 's depression shows some improvement by 4 weeks , continue treatment for another 2 to 4 weeks
-IF :['assessment', 'effects', 'referral', 'response', 'chronic physical health problem', 'depression', 'intervention', 'people', 'active monitoring', 'age', 'nice clinical guideline']
-THEN :['assessment', 'referral', 'another antidepressant', 'the drug has been taken regularly', 'chronic physical health problem', 'side effects', 'intervention', 'active monitoring', 'age', 'nice clinical guideline']
+IF :['depression']
+THEN :['another antidepressant', 'the drug has been taken regularly', 'side effects']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Frequency[Interval+Event]), (;Increment[Class]), (;Frequency[Interval+Event]), (Locative_relation[Ground];), (People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity]), (;Change_tool[New_tool]), (Response[Trigger];)]
 MWE : [chronic physical health problem, nice clinical guideline, active monitoring, referral, intervention, assessment, age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [st, assessment, age]
@@ -532,49 +532,49 @@ MWE : [chronic physical health problem, st, part]
 
 ##############################################################################
 Sentence :for all people with depression having individual cbt , the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the duration of treatment should']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [depression identification questions, mental health assessment, person answers, form, refer, recommendation]
 
 ##############################################################################
 Sentence :also consider providing : two sessions per week for the first 2 to 3 weeks of treatment for people with moderate or severe depression follow-up sessions typically consisting of three to four sessions over the following 3 to 6 months for all people with depression .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['two sessions']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :for all people with depression having ipt , the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the duration of treatment should']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [depression identification questions, mental health assessment, person answers, review, st, form, recommendation, difficulties]
 
 ##############################################################################
 Sentence :for people with severe depression , consider providing two sessions per week for the first 2 to 3 weeks of treatment .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['two sessions']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];)]
 MWE : [suspected depression, disability, form, functions, measure]
 
 ##############################################################################
 Sentence :for all people with depression having behavioural activation , the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the duration of treatment should']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [communication difficulties, sensory impairments, significant language, disability]
 
 ##############################################################################
 Sentence :also consider providing : two sessions per week for the first 3 to 4 weeks of treatment for people with moderate or severe depression follow-up sessions typically consisting of three to four sessions over the following 3 to 6 months for all people with depression .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['two sessions']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];)]
 MWE : [risk assessment]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [specialist mental health services, refer, media]
@@ -588,49 +588,49 @@ MWE : [suicidal ideation, advise people, initial stages, prolonged agitation, ag
 
 ##############################################################################
 Sentence :for all people with persistent subthreshold depressive symptoms or mild to moderate depression having counselling , the duration of treatment should typically be in the range of six to ten sessions over 8 to 12 weeks .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the duration of treatment should typically be in the range of six to ten sessions over 8 to 12 weeks']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [suicidal ideation, hope, changes, family, negativity, carer, advise, contact, mood]
 
 ##############################################################################
 Sentence :for all people with mild to moderate depression having short-term psychodynamic psychotherapy , the duration of treatment should typically be in the range of 16 to 20 sessions over 4 to 6 months .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the duration of treatment should typically be in the range of 16 to 20 sessions over 4 to 6 months']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [account toxicity, overdose, suicide, drug, amount]
 
 ##############################################################################
 Sentence :refer to depression in adults with a chronic physical health problem : recognition and management ' ( nice clinical guideline 91 ) for further information .
-IF :['health problem', 'adults', 'depression']
+IF :['depression']
 THEN :['information']
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];), (;Inclusion[Part],Increment[Class]), (;Increment[Class]), (Predicament[Situation+Domain+Place];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :when prescribing antidepressants for older people : prescribe at an age-appropriate dose taking into account the effect of general physical health and concomitant medication on pharmacokinetics and pharmacodynamics
-IF :['depression', 'people']
-THEN :['of general physical health', 'of general physical specialist mental health services']
+IF :['depression']
+THEN :['of general physical health']
 CorrespondingPatterns :[(People[Origin+Person];), (;Likelihood[Hypothetical_event],Objective_influence[Dependent_entity])]
 MWE : [specialist mental health services, frequent direct, telephone contacts, referral, st, update]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [measure]
 
 ##############################################################################
 Sentence :for people with long-standing moderate or severe depression who would benefit from additional social or vocational support , consider : befriending as an adjunct to pharmacological or psychological treatments ; befriending should be by trained volunteers providing , typically , at least weekly contact for between 2 and 6 months a rehabilitation programme if a person 's depression has resulted in loss of work or disengagement from other social activities over a longer term .
-IF :['depression', 'person 's depression', 'people']
-THEN :['anxiety', 'st', 'should be by trained volunteers providing , typically', 'social or vocational support', 'loss of work or disengagement from other social activities over a longer term']
+IF :['depression']
+THEN :['should be by trained volunteers providing , typically', 'social or vocational support', 'loss of work or disengagement from other social activities over a longer term']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Inclusion[Part],Change_position_on_a_scale[Value+Item],Intentionally_act[Domain]), (;Frequency[Interval+Event]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Intentionally_act[Act+Domain]), (;Increment[Class]), (;Frequency[Interval+Event]), (Causation[Cause];Causation[Effect]), (People[Origin+Person];)]
 MWE : [anxiety, st]
 
 ##############################################################################
 Sentence :medication management as a separate intervention for people with depression should not be provided routinely by services
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [anxiety disorder, depressive symptoms, st, guidance, ect, guideline, iv]
@@ -644,21 +644,21 @@ MWE : [sleep, st, time]
 
 ##############################################################################
 Sentence :for people with severe depression and those with moderate depression and complex problems , consider : referring to specialist mental health services for a programme of coordinated multiprofessional care providing collaborative care if the depression is in the context of a chronic physical health problem with associated functional impairment .
-IF :['chronic physical health problem', 'depression', 'people']
+IF :['depression']
 THEN :['collaborative care']
 CorrespondingPatterns :[(;Process_continue[Event],Supply[Theme]), (People[Origin+Person];), (Predicament[Situation+Domain+Place];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :when reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions : check adherence to , and side effects from , initial treatment increase the frequency of appointments using outcome monitoring with a validated
-IF :['symptoms', 'person', 'depression', 'initial pharmacological interventions']
-THEN :['appointments', 'follow-up appointments', 'monitoring', 'initial treatment increase']
+IF :['depression']
+THEN :['appointments', 'monitoring', 'initial treatment increase']
 CorrespondingPatterns :[(;Frequency[Interval+Event]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Frequency[Interval+Event]), (;Using[Instrument]), (People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 MWE : [follow-up appointments, st, form, update, contact, assessment]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [group physical activity programme, cognitive behavioural therapy, subthreshold depressive symptoms, st, refer, self-help, intervention, iv]
@@ -666,27 +666,27 @@ MWE : [group physical activity programme, cognitive behavioural therapy, subthre
 ##############################################################################
 Sentence :last updated april 2018 outcome measure be aware that using a single antidepressant rather than combination medication or augmentation ( see recommendations to ) is usually associated with a lower side-effect burden consider reintroducing previous treatments that have been inadequately delivered or adhered to , including increasing the dose consider switching to an alternative antidepressant .
 IF :['depression']
-THEN :['previous treatments that', 'trained practitioner single trained practitionerntidepresstrained practitionernt rtrained practitionerther thtrained practitionern combintrained practitionertion medictrained practitionertion or trained practitionerugmenttrained practitionertion', 'reading age single reading agentidepressreading agent rreading agether threading agen combinreading agetion medicreading agetion or reading ageugmentreading agetion', 'self-help programme single self-help programmentidepressself-help programment rself-help programmether thself-help programmen combinself-help programmetion medicself-help programmetion or self-help programmeugmentself-help programmetion', 'a single antidepressant rather than combination medication or augmentation', 'delivered', 'behavioural activation single behavioural activationntidepressbehavioural activationnt rbehavioural activationther thbehavioural activationn combinbehavioural activationtion medicbehavioural activationtion or behavioural activationugmentbehavioural activationtion', 'the dose consider switching to an alternative antidepressant', 'written materials single written materialsntidepresswritten materialsnt rwritten materialsther thwritten materialsn combinwritten materialstion medicwritten materialstion or written materialsugmentwritten materialstion', 'alternative media single alternative mediantidepressalternative mediant ralternative mediather thalternative median combinalternative mediation medicalternative mediation or alternative mediaugmentalternative mediation']
+THEN :['previous treatments that', 'a single antidepressant rather than combination medication or augmentation', 'delivered', 'the dose consider switching to an alternative antidepressant']
 CorrespondingPatterns :[(;Delivery[Theme+Deliverer+Manner]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (;Inclusion[Total+Part]), (;Using[Instrument]), (;Change_tool[New_tool])]
 MWE : [subthreshold depressive symptoms, reviews progress, trained practitioner, alternative media, reading age, self-help programme, written materials, behavioural activation, st, sessions, problem, provision, place, outcome, iv, access, techniques]
 
 ##############################################################################
 Sentence :when switching to another antidepressant , be aware that the evidence for the relative advantage of switching either within or between classes is weak .
 IF :['depression']
-THEN :['active monitoring another antidepressant', 'within or between classes', 'to another antidepressant', 'subthreshold depressive symptoms another antidepressant']
+THEN :['within or between classes', 'to another antidepressant']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Change_tool[New_tool])]
 MWE : [subthreshold depressive symptoms, cbt model, stand-alone computer-based, web-based programme, active monitoring, st, sessions, plan, patterns, tasks, thought-challenging, age]
 
 ##############################################################################
 Sentence :when switching to another antidepressant , which can normally be achieved within 1 week when switching from drugs with a short half-life , consider the potential for interactions in determining the choice of new drug and the nature and duration of the transition
-IF :['depression', 'half-life']
+IF :['depression']
 THEN :['to another antidepressant']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (Measurable_attributes[Entity];), (;Change_tool[New_tool])]
 MWE : [age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [limited facilitation, reviews progress, trained practitioner, outcomes, st, update, programme, place, outcome]
@@ -694,14 +694,14 @@ MWE : [limited facilitation, reviews progress, trained practitioner, outcomes, s
 ##############################################################################
 Sentence :last updated april 2018 from a non-reversible maoi : a 2-week washout period is required ( other antidepressants should not be prescribed routinely during this period ) .
 IF :['depression']
-THEN :['st', 'average', 'period', 'sessions', 'physical activity programmes', 'hour', 'minutes', 'groups', 'competent practitioner', 'subthreshold depressive symptoms', 'iv', 'moderate duration']
+THEN :['period']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Frequency[Interval+Event]), (;Increment[Class]), (;Frequency[Interval+Event])]
 MWE : [physical activity programmes, subthreshold depressive symptoms, competent practitioner, moderate duration, groups, st, sessions, average, hour, minutes, iv]
 
 ##############################################################################
 Sentence :when using combinations of medications ( which should only normally be started in primary care in consultation with a consultant psychiatrist ) : select medications that are known to be safe when used together be aware of the increased side-effect burden this usually causes discuss the rationale for any combination with the person with depression , follow
-IF :['person', 'depression']
-THEN :['st', 'group-based cbt', 'combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )', 'recommendation', 'low-intensity psychosocial interventions', 'subthreshold depressive symptoms', 'rationale']
+IF :['depression']
+THEN :['combinations of medications', 'should only normally be started in primary care in consultation with a consultant psychiatrist )', 'rationale']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Discussion[Topic]), (;Using[Instrument]), (People[Origin+Person];)]
 MWE : [low-intensity psychosocial interventions, subthreshold depressive symptoms, group-based cbt, st, recommendation]
 
@@ -714,42 +714,42 @@ MWE : [subthreshold depressive symptoms, group-based cbt, competent practitioner
 
 ##############################################################################
 Sentence :if a person with depression is informed about , and prepared to tolerate , the increased side-effect burden , consider combining or augmenting an antidepressant with : lithium or an antipsychotic such as aripiprazole , olanzapine , quetiapine or risperidone or another antidepressant such as mirtazapine or mianserin .
-IF :['person', 'depression']
+IF :['depression']
 THEN :['side-effect burden', 'such as mirtazapine or mianserin']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Increment[Class]), (;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]), (People[Origin+Person];)]
 MWE : [subthreshold depressive symptoms, mild depression, st, antidepressants, period]
 
 ##############################################################################
 Sentence :when prescribing lithium : monitor renal and thyroid function before treatment and every 6 months during treatment ( more often if there is evidence of renal impairment ) consider ecg monitoring in people with depression who are at high risk of cardiovascular disease
-IF :['there', 'depression', 'age']
+IF :['depression', 'age']
 THEN :[]
 CorrespondingPatterns :[(Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (Locative_relation[Ground];), (People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [john's wort, advise people, preparations, drug, st, dose, evidence, advise, ect, interactions, practitioners, iv]
 
 ##############################################################################
 Sentence :the following strategies should not be used routinely : augmentation of an antidepressant with a benzodiazepine for more than 2 weeks as there is a risk of dependence augmentation of an antidepressant with buspirone , carbamazepine , lamotrigine or valproate * as there is insufficient evidence for their use augmentation of an antidepressant with pindolol or thyroid hormones as there is inconsistent evidence of effectiveness .
-IF :['intensity', 'evidence of effectiveness', 'ssri', 'st', 'there', 'ect', 'options', 'subthreshold depressive symptoms', 'depression', 'intervention', 'high-intensity psychological intervention', 'iv']
+IF :['depression']
 THEN :['the following strategies']
 CorrespondingPatterns :[(;Using[Instrument]), (Locative_relation[Ground];)]
 MWE : [high-intensity psychological intervention, subthreshold depressive symptoms, ssri, st, intensity, options, intervention, ect, iv]
 
 ##############################################################################
 Sentence :combined psychological and drug treatment 0 for a person whose depression has not responded to either pharmacological or psychological interventions , consider combining antidepressant medication with cbt .
-IF :['either pharmacological or psychological interventions', 'partner', 'behavioural couples', 'depression', 'ipt', 'drug treatment']
-THEN :['a person whose depression', 'behavioural couples person whose depression']
+IF :['depression']
+THEN :['a person whose depression']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (People[Origin+Person];), (Response[Trigger];), (;Response[Response])]
 MWE : [behavioural couples, partner, ipt]
 
 ##############################################################################
 Sentence :referral 1 for a person whose depression has failed to respond to various strategies for augmentation and combination treatments , consider referral to a practitioner with a specialist interest in treating depression , or to a specialist service .
-IF :['person', 'various strategies for augmentation and combination treatments', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Response[Trigger];)]
 MWE : [age]
@@ -763,14 +763,14 @@ MWE : [high-intensity psychological intervention, antidepressant medication, ipt
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [potential adverse effects, symptoms previous, treatment likelihood, treatment preference, choice, episode, priorities, trajectory, intervention]
 
 ##############################################################################
 Sentence :treatment choice should be influenced by : previous treatment history , including the consequences of a relapse , residual symptoms , response to previous treatment and any discontinuation symptoms the person 's preference .
-IF :['symptoms', 'previous treatment and any discontinuation symptoms the person 's preference', 'subthreshold depressive symptoms', 'depression']
+IF :['depression']
 THEN :['previous treatment history', 'consequences of a relapse , residual symptoms , response to previous treatment and any discontinuation symptoms the person 's']
 CorrespondingPatterns :[(;Inclusion[Total+Part]), (People[Origin+Person];), (Sign[Indicator];), (Response[Trigger];)]
 MWE : [short-term psychodynamic psychotherapy, subthreshold depressive symptoms, behavioural couples, behavioural activation, st, ipt]
@@ -784,21 +784,21 @@ MWE : [anticipated adverse events, antidepressant treatment options, physical he
 
 ##############################################################################
 Sentence :people with depression on long-term maintenance treatment should be
-IF :['treatment', 'depression', 'people']
+IF :['depression']
 THEN :['people with depression on long-term maintenance treatment should']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [ssri]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :people who have had multiple episodes of depression , and who have had a good response to treatment with an antidepressant and an augmenting agent , should remain on this combination after remission if they find the side effects tolerable and acceptable
-IF :['treatment with an antidepressant and an augmenting agent', 'part', 'this combination', 'aspirin', 'non-steroidal anti-inflammatory drugs', 'nsaids', 'depression', 'people', 'gastroprotective drug']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];), (People[Origin+Person];), (State_continue[State];), (Response[Trigger];)]
 MWE : [non-steroidal anti-inflammatory drugs, gastroprotective drug, aspirin, nsaids, part]
@@ -826,7 +826,7 @@ MWE : [age]
 
 ##############################################################################
 Sentence :people with depression who are considered to be at significant risk of relapse ( including those who have relapsed despite antidepressant treatment or who are unable or choose not to continue antidepressant treatment ) or who have residual symptoms , should be offered one of the following psychological interventions : individual cbt for people who have relapsed despite antidepressant medication and for people with a significant history of depression and residual symptoms despite treatment mindfulness-based cognitive therapy for people who are currently well but have experienced three or more previous episodes of depression .
-IF :['non-reversible monoamine oxidase inhibitors', 'specialist mental health professionals', 'treatment', 'risk of relapse', 'maois', 'phenelzine', 'depression', 'people']
+IF :['depression']
 THEN :['who have relapsed despite antidepressant treatment or who are unable or choose not to continue antidepressant treatment ) or who have residual symptoms , should be offered one of the following psychological interventions : individual cbt for people who have relapsed despite antidepressant medication and', 'people with depression who are considered to be at significant risk of relapse']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Inclusion[Total+Part]), (Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]), (Locative_relation[Ground];), (People[Origin+Person];), (Sign[Indicator];), (;Medical_specialties[Specialty+Type])]
 MWE : [non-reversible monoamine oxidase inhibitors, specialist mental health professionals, phenelzine, maois]
@@ -840,28 +840,28 @@ MWE : [dosulepin]
 
 ##############################################################################
 Sentence :for all people with depression who are having individual cbt for relapse prevention , the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-IF :['explain', 'venlafaxine', 'form', 'discontinuation symptoms', 'medications', 'ect', 'part', 'antidepressants', 'depression', 'people', 'drug', 'interactions']
+IF :['depression']
 THEN :['the duration of treatment should']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [discontinuation symptoms, venlafaxine, drug, explain, form, antidepressants, medications, ect, interactions, part]
 
 ##############################################################################
 Sentence :if the duration of treatment needs to be extended to achieve remission it should : consist of two sessions per week for the first 2 to 3 weeks of treatment include additional follow-up sessions , typically consisting of four to six sessions over
-IF :['treatment', 'depression']
+IF :['depression']
 THEN :['it should', 'for the first 2 to 3 weeks of treatment include additional follow-up sessions']
 CorrespondingPatterns :[(Cure[Affliction+Healer+Patient+Reciprocation];), (;Inclusion[Part],Increment[Class]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Increment[Class]), (;Inclusion[Total+Part])]
 MWE : [suicide, st, antidepressants]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [antidepressant treatment, early stages, suicidal thoughts, suicide risk, st, antidepressants, prevalence]
 
 ##############################################################################
 Sentence :last updated april 2018 the following 6 months . 0 mindfulness-based cognitive therapy should normally be delivered in groups of 8 to 15 participants and consist of weekly 2-hour meetings over 8 weeks and four follow-up sessions in the 12 months after the end of treatment .
-IF :['treatment', 'depression']
+IF :['depression']
 THEN :['0 mindfulness-based cognitive therapy', 'groups of 8 to 15 participants and consist of weekly 2-hour meetings over 8 weeks and four follow-up sessions']
 CorrespondingPatterns :[(;Delivery[Theme+Deliverer+Manner]), (Cure[Affliction+Healer+Patient+Reciprocation];), (;Frequency[Interval+Event]), (;Frequency[Interval+Event]), (;Medical_specialties[Specialty+Type])]
 MWE : [age]
@@ -875,35 +875,35 @@ MWE : [short-term concomitant treatment, chronic symptoms, agitation, anxiety, i
 
 ##############################################################################
 Sentence :inform the person that they should seek advice from their practitioner if they experience significant discontinuation symptoms
-IF :['person', 'depression']
+IF :['depression']
 THEN :['they should seek advice from their practitioner']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (People[Origin+Person];)]
 MWE : [check, spc, drug, st, dose, refer, contact, ect, care]
 
 ##############################################################################
 Sentence :if discontinuation symptoms occur : monitor symptoms and reassure the person if symptoms are mild consider reintroducing the original antidepressant at the dose that was effective ( or another antidepressant with a longer half-life from the same class ) if symptoms are severe , and reduce the dose gradually while monitoring symptoms . 0 step 4 : complex and severe depression
-IF :['symptoms', 'depression', 'age']
-THEN :['the dose that', 'age']
+IF :['depression', 'age']
+THEN :['the dose that']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Execute_plan[Plan],System[Function+Complex+Component_utilities]), (;Increment[Class]), (People[Origin+Person];), (Sign[Indicator];), (;Usefulness[Entity])]
 MWE : [age]
 
 ##############################################################################
 Sentence :referral to specialist mental health services should normally be for people with depression who are at significant risk of self-harm , have psychotic symptoms , require complex multiprofessional care , or where an expert opinion on treatment and management is needed .
-IF :['guideline', 'depression', 'specialist mental health', 'high-intensity psychological intervention', 'risk of self-harm']
+IF :['depression']
 THEN :['referral to specialist mental health services should normally be for people with depression who are at significant risk of self-harm , have psychotic symptoms']
 CorrespondingPatterns :[(Medical_conditions[Place+Patient+Ailment+Body_part+Cause+Name+Symptom+Place];), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (Locative_relation[Ground];), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [high-intensity psychological intervention, guideline]
 
 ##############################################################################
 Sentence :the assessment of a person with depression referred to specialist mental health services should include : their symptom profile , suicide risk and , where appropriate , previous treatment history
-IF :['person', 'depression']
+IF :['depression']
 THEN :['the assessment of a person with depression referred to specialist mental health services should', 'symptom profile , suicide risk and , where appropriate']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Inclusion[Total+Part]), (People[Origin+Person];), (Sign[Indicator];)]
 MWE : [sessions, months, iv]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [st, sessions, months]
@@ -917,7 +917,7 @@ MWE : [sessions, ipt, months]
 
 ##############################################################################
 Sentence :the teams should monitor risk as a high-priority routine activity in a way that allows people to continue their lives without disruption .
-IF :['depression', 'people']
+IF :['depression']
 THEN :['the teams should monitor risk as a high-priority routine activity in a way that allows people to continue their lives without disruption']
 CorrespondingPatterns :[(;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Means[Means]+Means[Descriptor]+Means[Purpose]), (People[Origin+Person];)]
 MWE : [st, sessions]
@@ -931,21 +931,21 @@ MWE : [behavioural activation, sessions, months]
 
 ##############################################################################
 Sentence :teams working with people with complex and severe depression should develop comprehensive multidisciplinary care plans in collaboration with the person with depression ( and their family or carer , if agreed with the person )
-IF :['st', 'sessions', 'months', 'depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Kinship[Relatives];)]
 MWE : [st, sessions, months]
 
 ##############################################################################
 Sentence :the care plan should : identify clearly the roles and responsibilities of all health and social care professionals involved develop a crisis plan that identifies potential triggers that could lead to a crisis and strategies to manage such triggers be shared with the gp and the person with depression and other relevant people involved in the person 's care .
-IF :['person', 'depression', 'age']
+IF :['depression', 'age']
 THEN :['the care plan should', 'clearly the roles and responsibilities of all health and social care professionals involved develop a crisis plan that identifies', 'people']
 CorrespondingPatterns :[(;Inclusion[Part],Increment[Class]), (;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]), (;Increment[Class]), (People[Origin+Person];)]
 MWE : [age]
 
 ##############################################################################
 Sentence :consider inpatient treatment for people with depression who are at significant risk of suicide , self-harm or self-neglect .
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];)]
 MWE : [behavioural principles, behavioural couples, sessions, months]
@@ -966,14 +966,14 @@ MWE : [short-term psychodynamic psychotherapy, sessions, months]
 
 ##############################################################################
 Sentence :depression in adults : recognition and management ( cg90 ) conditions # notice-of-rights )
-IF :['adults', 'depression']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People_by_age[Ethnicity+Person+Age+Persistent_characteristic];)]
 MWE : [chronic physical health problem, nice clinical guideline, form, refer, age]
 
 ##############################################################################
 Sentence :for people who have depression with psychotic symptoms , consider augmenting the current treatment plan with antipsychotic medication ( although the optimum dose and duration of treatment are unknown ) .
-IF :['depression', 'people']
+IF :['depression']
 THEN :[]
 CorrespondingPatterns :[(People[Origin+Person];), (Sign[Indicator];)]
 MWE : [general physical health, concomitant medication, age-appropriate dose, account, pharmacodynamics, pharmacokinetics, antidepressants, ect]
@@ -987,7 +987,7 @@ MWE : [age]
 
 ##############################################################################
 Sentence :do not use ect routinely for people with moderate depression but consider it if their depression has not responded to multiple drug treatments and psychological treatment .
-IF :['multiple drug treatments and psychological treatment', 'multiple drug psychological treatments and psychological psychological treatment', 'depression', 'people']
+IF :['depression']
 THEN :['ect']
 CorrespondingPatterns :[(;Using[Instrument]), (People[Origin+Person];), (Response[Trigger];)]
 MWE : [additional social, long-standing moderate, psychological treatment, rehabilitation programme, social activities, trained volunteers, vocational support, weekly contact, loss, st, adjunct, disengagement, term, work, months]

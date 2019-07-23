@@ -104,6 +104,6 @@ public class MainSemantic {
         rg.generateRules();
         rg.combineMultiWordsExpression(mweFile);
 
-        rg.writeResults(rg.getGeneratedRules(), output);
+        rg.writeResults(rg.getGeneratedRules(), output, Rule.DEV_FORMAT);
     }
 }

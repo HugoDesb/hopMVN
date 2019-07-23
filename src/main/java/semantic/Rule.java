@@ -4,6 +4,11 @@ import java.util.*;
 
 public class Rule {
 
+    public static final String HUMAN_VALIDATION_FORMAT = "human_validation_format";
+    public static final String DEV_FORMAT = "dev_format";
+    public static final String DEV_PRETTY_FORMAT = "dev_pretty_format";
+
+
     private Sentence sentence;
     private Set<Word> premise;
     private Set<Word> conclusion;
@@ -65,7 +70,7 @@ public class Rule {
         if(conclusionsString == null){
             conclusionsString = simplifyFrameNetTagList(this.conclusion);
         }
-        return simplifyFrameNetTagList(this.conclusion);
+        return conclusionsString;
     }
 
     private Set<String> simplifyFrameNetTagList(Set<Word> tokens){
@@ -145,7 +150,8 @@ public class Rule {
                 "\nIF :" + preparePremiseToString() +
                 "\nTHEN :" + prepareConclusionToString() +
                 "\nCorrespondingPatterns :" + correspondingPatterns +
-                "\nMWE : "+ mwe;
+                "\nMWE : "+ mwe+"" +
+                "\n";
 
     }
 
@@ -153,10 +159,8 @@ public class Rule {
     public String toString() {
         return "Rule{\n" +
                 "\tSentence : "+sentence+
-                "\n\tIF : " + premise +
-                "\n\t, THEN : " + conclusion +
-                "\n\t, correspondingPatterns= '" + correspondingPatterns + '\'' +
-                "\n}";
+                "\n\tIF : " + preparePremiseToString() +
+                "\n\t, THEN : " + prepareConclusionToString()+"}";
     }
 
     public Sentence getSentence() {
@@ -179,5 +183,18 @@ public class Rule {
     @Override
     public int hashCode() {
         return Objects.hash(sentence, premise, conclusion, correspondingPatterns, topic, mwe);
+    }
+
+    public String toValidationOutput() {
+        String ret = sentence.toString()+"\n";
+        ret += "IF\tPremise\tYes\tNo\tNeutral\tmHealth\n";
+        for (String s : getPremisesToStrings()) {
+            ret += "\t"+s+"\n";
+        }
+        ret += "THEN\tConclusion\tYes\tNo\tNeutral\tmHealth\n";
+        for (String s : getConclusionsToStrings()) {
+            ret += "\t"+s+"\n";
+        }
+        return ret;
     }
 }

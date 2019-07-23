@@ -132,17 +132,31 @@ public class RulesGenerator {
         return ret;
     }
 
-    void writeResults(ArrayList<Rule> rules, String file) {
+    void writeResults(ArrayList<Rule> rules, String file, String format) {
         //File f = new File(file);
         (new File(Paths.get(file).getParent().toString())).mkdirs();
         //f.mkdirs();
         try {
+            String toPrint;
             PrintStream ps = new PrintStream(new File(file));
             //PrintWriter pw = new PrintWriter(new File("./files/tmp.txt"));
             for (Rule r : rules) {
-                if(r.getConclusionsToStrings().size()>0){
-                    ps.println(r.toStringOutput());
-                }
+                //if(r.getConclusionsToStrings().size()>0){
+                    switch(format){
+                        case Rule.HUMAN_VALIDATION_FORMAT:
+                            toPrint = r.toValidationOutput();
+                            break;
+                        case Rule.DEV_FORMAT:
+                            toPrint = r.toStringOutput();
+                            break;
+                        case Rule.DEV_PRETTY_FORMAT:
+                            toPrint = r.toString();
+                            break;
+                        default:
+                            toPrint = r.toString();
+                    }
+                    ps.println(toPrint);
+                //}
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -325,9 +339,6 @@ public class RulesGenerator {
     private String searchInCSV(List<List<String>> csvFile, String queryWords ,boolean atTheStart, int column){
         for (List<String> line: csvFile) {
             if(atTheStart){
-                System.out.println(line.get(column));
-                System.out.println(queryWords);
-                System.out.println(line.get(column).toLowerCase().indexOf(queryWords));
                 if(line.get(column).toLowerCase().indexOf(queryWords)!=-1){
                     return line.get(column).toLowerCase();
                 }
@@ -352,15 +363,17 @@ public class RulesGenerator {
         // Foreach rule found
         for (Rule r : getGeneratedRules()) {
             // foreach found mwe in this sentence
+            Set<String> new_set_premises = new HashSet<>();
+            Set<String> new_set_conclusions = new HashSet<>();
             for (String mwe : r.getMwe()) {
 
 
-                Set<String> new_set_premises = getCombinedWithMWE(r.getPremisesToStrings(), mwe);
-                r.setPremisesString(new_set_premises);
+                new_set_premises.addAll(getCombinedWithMWE(r.getPremisesToStrings(), mwe));
+                new_set_conclusions.addAll(getCombinedWithMWE(r.getConclusionsToStrings(), mwe));
 
-                Set<String> new_set_conclusions = getCombinedWithMWE(r.getConclusionsToStrings(), mwe);
-                r.setConclusionsString(new_set_conclusions);
             }
+            r.setPremisesString(new_set_premises);
+            r.setConclusionsString(new_set_conclusions);
         }
     }
 
@@ -404,13 +417,13 @@ public class RulesGenerator {
                         found = true;
                     }
                 }
-            }else{
-
-                // none have been found, let it as it is
-                if(!found){
-                    new_set.add(p);
-                }
             }
+
+            // none have been found, let it as it is
+            if(!found){
+                new_set.add(p);
+            }
+
         }
         return new_set;
     }
@@ -457,7 +470,6 @@ public class RulesGenerator {
             Rule r = null;
 
             while (line != null) {
-                System.out.println("Sentence n°"+Integer.parseInt(line.trim()));
                 int a = getRuleByNumber(Integer.parseInt(line.trim()));
                 if(a>=0){
                     bf.readLine();
@@ -537,7 +549,7 @@ public class RulesGenerator {
 
 
     /**
-     * MAIN -----> read and analyse results from Open-Sesame to create rules.txt.backup
+     * MAIN -----> read and analyse results from Open-Sesame to create rules.txt
      * @param args
      */
     /*

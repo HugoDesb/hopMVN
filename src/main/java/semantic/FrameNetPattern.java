@@ -40,7 +40,7 @@ public class FrameNetPattern {
 
         if(tmp1.length > 1){
             for (String conclusion: tmp1[1].split("\\,")) {
-                System.out.println(conclusion);
+                //System.out.println(conclusion);
                 conclusions.add(createPatternForOneframe(conclusion));
             }
         }
@@ -50,8 +50,8 @@ public class FrameNetPattern {
         //gets frame name
         String name = partPattern.split("\\[")[0];
         //get list of frameElements
-        System.out.println("++"+partPattern.substring(0, partPattern.length() - 1));
-        System.out.println(partPattern);
+        //System.out.println("++"+partPattern.substring(0, partPattern.length() - 1));
+        //System.out.println(partPattern);
         List<String> fes = Arrays.asList(partPattern.substring(0, partPattern.length() - 1).split("\\[")[1].split("\\+"));
         return new Pattern(name, new ArrayList<>(fes));
     }

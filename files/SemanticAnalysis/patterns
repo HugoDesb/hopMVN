@@ -62,7 +62,7 @@ Intentionally_act[Agent];
 ;Inclusion[Total+Part]
 #####
 ;Frequency[Interval+Event]
-##### ???
+##### ??? ADD PURPOSE ???
 ;Discussion[Topic]
 ##### FRAME : CURE
 Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose]
@@ -74,8 +74,6 @@ Cure[Affliction+Healer+Patient+Reciprocation];Cure[Body_part+Treatment+Medicatio
 Suitability[Evaluee];
 #####
 Causation[Cause];Causation[Effect]
-#####
-;Predicament[Domain+Situation]
 #####
 Damaging[Patient];
 #####
@@ -110,5 +108,13 @@ Measurable_attributes[Entity];
 Sign[Indicator];
 #####
 Response[Trigger];
+#####
 ;Response[Response]
+#####
 ;Usefulness[Entity]
+##### bad situation the experiencer is in : NOTE : added place ??? Experiencer
+Predicament[Situation+Domain+Place];
+#####
+;Medical_specialties[Specialty+Type]
+#####
+Medical_specialties[Body_system+System];
