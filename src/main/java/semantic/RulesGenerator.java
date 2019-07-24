@@ -76,15 +76,15 @@ public class RulesGenerator {
                             Word w = sentence.getWord(targetIndex);
                             if(index.equals(targetIndex-1)){
                                 if(w.getPos_tag().equals("JJ") ||
+                                    w.getPos_tag().equals("NN") ||
+                                    w.getPos_tag().equals("RB") ||
+                                    w.getPos_tag().equals("RP") ||
                                     w.getPos_tag().equals("JJR") ||
                                     w.getPos_tag().equals("JJS") ||
-                                    w.getPos_tag().equals("NN") ||
                                     w.getPos_tag().equals("NNS") ||
                                     w.getPos_tag().equals("POS") ||
-                                    w.getPos_tag().equals("RB") ||
                                     w.getPos_tag().equals("RBR") ||
-                                    w.getPos_tag().equals("RBS") ||
-                                    w.getPos_tag().equals("RP"))
+                                    w.getPos_tag().equals("RBS"))
                                 {
                                     toAdd.add(targetIndex);
                                 }
@@ -363,13 +363,13 @@ public class RulesGenerator {
         // Foreach rule found
         for (Rule r : getGeneratedRules()) {
             // foreach found mwe in this sentence
-            Set<String> new_set_premises = new HashSet<>();
-            Set<String> new_set_conclusions = new HashSet<>();
+            Set<String> new_set_premises = r.getPremisesToStrings();
+            Set<String> new_set_conclusions = r.getConclusionsToStrings();
             for (String mwe : r.getMwe()) {
 
 
-                new_set_premises.addAll(getCombinedWithMWE(r.getPremisesToStrings(), mwe));
-                new_set_conclusions.addAll(getCombinedWithMWE(r.getConclusionsToStrings(), mwe));
+                new_set_premises = getCombinedWithMWE(new_set_premises, mwe);
+                new_set_conclusions = getCombinedWithMWE(new_set_conclusions, mwe);
 
             }
             r.setPremisesString(new_set_premises);

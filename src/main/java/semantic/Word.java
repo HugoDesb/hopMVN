@@ -79,9 +79,21 @@ public class Word {
         indexComparator = new Comparator<Word>() {
             @Override
             public int compare(Word t1, Word t2) {
+                int ret;
 
-                return (t2.getIndex() < t1.getIndex() ? 1 :
-                        (t2.getIndex() == t1.getIndex() ? 0 : -1));
+                System.out.println(t1.getIndex());
+                System.out.println(t2.getIndex());
+                if(t2.getIndex() < t1.getIndex()){
+                    ret = 1;
+                }else if (t2.getIndex() == t1.getIndex()){
+                    ret = 0;
+                }else{
+                    ret = -1;
+                }
+
+                return ret;
+
+                //return (t2.getIndex() < t1.getIndex() ? 1 : (t2.getIndex() == t1.getIndex() ? 0 : -1));
             }
         };
     }

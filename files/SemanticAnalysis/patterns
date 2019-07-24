@@ -4,6 +4,8 @@ Addiction[Addictant+Degree],Mental_Activity[Topic+Expression+Content];
 ;Process_continue[Event],Supply[Theme]
 ##### 3. OK
 ;Supply[Theme]--
+#####
+;Supply[Supplier]
 ##### 4. OK
 People_by_age[Ethnicity+Person+Age+Persistent_characteristic];
 ##### 5. OK
@@ -13,7 +15,7 @@ Medical_intervention[Medical_condition];
 ##### 7. OK
 ;Medical_intervention[Intervention+Result]
 ##### 8. OK
-;Food[Food]
+;Food[Food+Type]
 ##### 9. OK
 ;Delivery[Theme+Deliverer+Manner]
 ##### 10.
@@ -26,9 +28,11 @@ Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];
 ;Inclusion[Part],Increment[Class]
 ##### 7
 ;Inclusion[Part],Change_position_on_a_scale[Value+Item],Intentionally_act[Domain]
+#####
 ;Inclusion[Part],Change_position_on_a_scale[Value+Item],Earnings_and_losses[Earnings]
 ##### 9
-;Placing[Theme],Dimension[Object+Dimension]
+;Placing[Theme]
+;Dimension[Object+Dimension]
 ##### 10
 ;Execute_plan[Plan],System[Function+Complex+Component_utilities]
 #####
@@ -37,13 +41,15 @@ Cure[Body_part+Treatment+Medication+Manner+Degree+Purpose];
 Attempt_suasion[Addressee];
 #####
 ;Attempt_suasion[Manner+Content+Speaker]
+#####
 ;Attempt_suasion[Frequency]+Desirable_event[State_of_affairs]
 #####
 ;Desirable_event[Purpose+Circumstances+State_of_affairs+Degree]
 #####
 Means[Agent];
-;Means[Means]+Means[Descriptor]+Means[Purpose]
-Means[Agent];Means[Means]+Means[Descriptor]+Means[Purpose]
+;Means[Means+Descriptor+Purpose]
+#####
+Means[Agent];Means[Means+Descriptor+Purpose]
 #####
 ;Risk[Action]
 #####
@@ -56,6 +62,8 @@ Intentionally_act[Agent];
 ;Increment[Class]
 #####
 ;Change_position_on_a_scale[Item+Attribute+Difference+Final_Value]
+#####
+;Cause_change_position_on_a_scale[Item]
 #####
 ;Earnings_and_losses[Earner+Earnings]
 #####
@@ -77,7 +85,7 @@ Causation[Cause];Causation[Effect]
 #####
 Damaging[Patient];
 #####
-Locative_relation[Ground];
+;Locative_relation[Ground]
 #####
 People[Origin+Person];
 #####
@@ -118,3 +126,43 @@ Predicament[Situation+Domain+Place];
 ;Medical_specialties[Specialty+Type]
 #####
 Medical_specialties[Body_system+System];
+#####
+;Aggregate[Aggregate+Aggregate_property]
+#####
+;Containing[Contents]
+#####
+;Ordinal_numbers[Type]
+#####
+;Run_Risk[Action+Protagonist+Asset]
+#####
+Calendric_unit[Unit+Relative_time];
+#####
+;Telling[Message]
+#####
+;Preventing_or_letting[Event]
+#####
+;Text[Text]
+#####
+Membership[Member+Group];
+#####
+;Becomming_aware[Phenomenon]
+#####
+;Cause_to_make_progress[Project]
+#####
+;Being_necessary[Requirement]
+#####
+Expertise[Protagonist];Expertise[Knowledge]
+#####
+;Part_whole[whole]
+#####
+;Becoming[Final_quantity]
+#####
+;Intoxicants[Intoxicants]
+#####
+;Pattern[Entities]
+#####
+;Process_stop[Process]
+#####
+;Importance[Factor]
+#####
+Importance[Factor];
