@@ -1,392 +1,192 @@
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Be aware that, if metformin is contraindicated or not tolerated, repaglinide is both clinically effective and cost effective in adults with type 2 diabetes
 ##########END##########
-The efficacy and cost effectiveness of cognitive behavioural therapy, interpersonal therapy and 0 The effectiveness of maintenance ECT for relapse prevention in people with severe and recurring
+However, discuss with any person for whom repaglinide is being considered, that there is no licensed non-metformin-based combination containing repaglinide that can be offered at first intensification.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Known risk factors for these conditions, including increased age, should be carefully evaluated before treatment: see the manufacturers' summaries of product characteristics for details
 ##########END##########
-This guideline covers identifying and managing depression in adults aged 18 years and older, in primary and secondary care
+Medicines and Healthcare products Regulatory Agency (MHRA) guidance (2011) advises that 'prescribers should review the safety and efficacy of pioglitazone in individuals after 3–6 months of treatment to ensure that only patients who are deriving benefit continue to be treated'.
 ##########END##########
-MHRA advice on valproate: In April 2018, we added warnings that valproate must not be used in pregnancy, and only used in girls and women when there is no alternative and a pregnancy prevention plan is in place
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-NICE has also produced a guideline on depression in adults with a chronic physical health problem (NICE guideline CG91).
+Last updated May 2017 1 Recommendations
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+The wording used in the recommendations in this guideline (for example, words such as 'offer' and 'consider') denotes the certainty with which the recommendation is made (the strength of the recommendation)
 ##########END##########
-The update information section has a list of recommendations for which the evidence has not been updated since the original guideline.
+Adopt an individualised approach to diabetes care that is tailored to the needs and circumstances of adults with type 2 diabetes, taking into account their personal preferences, comorbidities, risks from polypharmacy, and their ability to benefit from long-term interventions because of reduced life expectancy.
 ##########END##########
-This guideline is published alongside 'Depression in adults with a chronic physical health problem: recognition and management' (NICE clinical guideline 91) which makes recommendations on the identification treatment and management of depression in adults aged 18 years and older who also have a chronic physical health problem.
+Reassess the person's needs and circumstances at each review and think about whether to stop any medicines that are not effective.
 ##########END##########
-This guideline makes recommendations on the identification, treatment and management of depression in adults aged 18 years and older, in primary and secondary care
+Take into account any disabilities, including visual impairment, when planning and delivering care for adults with type 2 diabetes.
 ##########END##########
-This guideline covers people whose depression occurs as the primary diagnosis; the relevant NICE guidelines should be consulted for depression occurring in the context of other disorders (see our topic page on depression).
+Offer structured education to adults with type 2 diabetes and/or their family members or carers (as appropriate) at and around the time of diagnosis, with
 ##########END##########
-Symptoms should be present for at least 2 weeks and each symptom should be present at sufficient severity for most of every day
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Symptoms are considered persistent if they continue despite active monitoring and/or low-intensity intervention, or have been present for a considerable time, typically several months (For a diagnosis of dysthymia, symptoms should be present for at least 2 years .)
+Last updated May 2017 annual reinforcement and review
 ##########END##########
-It should be noted that classificatory systems are agreed conventions that seek to define different severities of depression in order to guide diagnosis and treatment, and their value is determined by how useful they are in practice
+Ensure that any structured education programme for adults with type 2 diabetes includes the following components:
 ##########END##########
-After careful review of the diagnostic criteria and the evidence, the
+It has specific aims and learning objectives, and supports the person and their family members and carers in developing attitudes, beliefs, knowledge and skills to self-manage diabetes.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+It is quality assured, and reviewed by trained, competent, independent assessors who measure it against criteria that ensure consistency.
 ##########END##########
-IV is used in nearly all the evidence reviewed and it provides definitions for atypical symptoms and seasonal depression
+Ensure the patient-education programme provides the necessary resources to support the educators, and that educators are properly trained and given time to develop and maintain their skills.
 ##########END##########
-In practical terms, clinicians are not expected to switch to DSM-IV but should be aware that the threshold for mild depression is higher than ICD-10 (five symptoms instead of four) and that degree of functional impairment should be routinely assessed before making a diagnosis
+Ensure that all members of the diabetes healthcare team are familiar with the patient-education programmes available locally, that these programmes are integrated with the rest of the care pathway, and that adults with type 2 diabetes and their family members or carers (as appropriate) have the opportunity to contribute to the design and provision of local programmes.
 ##########END##########
-Therefore it is also important to consider both personal past history and family history of depression when undertaking a diagnostic assessment (see appendix for further details).
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Where possible, the key goal of an intervention should be complete relief of symptoms (remission), which is associated with better functioning and a lower likelihood of relapse.
+Emphasise advice on healthy balanced eating that is applicable to the general population when providing advice to adults with type 2 diabetes
 ##########END##########
-The guideline assumes that prescribers will use a drug's summary of product characteristics (SPC) and the 'British national formulary' (BNF) to inform their decisions made with individual patients.
+For adults with type 2 diabetes who are overweight, set an initial body weight loss target of 5–10%
 ##########END##########
-This guideline recommends some drugs for indications for which they do not have a UK marketing authorisation at the date of publication, if they are already in use in the NHS for that indication, and there is good evidence to support that use
+Individualise recommendations for carbohydrate and alcohol intake, and meal patterns
 ##########END##########
-UK marketing authorisation for depression or the indication stated at the time of publication.
+Reducing the risk of hypoglycaemia should be a particular aim for a person using insulin or an insulin secretagogue.
 ##########END##########
-Section of this guideline updates recommendations made in 'Guidance on the use of electroconvulsive therapy' (NICE technology appraisal guidance 59) for the treatment of depression only
+Advise adults with type 2 diabetes that limited substitution of sucrose-containing foods for other carbohydrate in the meal plan is allowable, but that they should take care to avoid excess energy intake.
 ##########END##########
-Recommendation of this guideline updates recommendations made in 'Computerised cognitive behaviour therapy for depression and anxiety' (NICE technology appraisal guidance 97) for the treatment of depression only
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+When adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting, implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+For recommendations on lifestyle advice, see the NICE guidelines on: preventing excess weight gain, weight management, obesity, physical activity, smoking: brief interventions and referrals, stop smoking services, smoking: harm reduction, and smoking: acute, maternity and mental health services.
 ##########END##########
-Principles for assessment
+For recommendations on bariatric surgery for people with recent-onset type 2 diabetes, see the section on bariatric surgery for people with recent-onset type 2 diabetes in the NICE guideline on obesity.
 ##########END##########
-When assessing a person who may have depression, conduct a comprehensive assessment that does not rely simply on a symptom count
+Measure blood pressure at least annually in an adult with type 2 diabetes without previously diagnosed hypertension or renal disease
 ##########END##########
-All interventions for depression should be delivered by competent practitioners
+Offer and reinforce preventive lifestyle advice.
 ##########END##########
-Psychological and psychosocial interventions should be based on the relevant treatment manual(s), which should guide the structure and duration of the intervention
+For an adult with type 2 diabetes on antihypertensive drug treatment when diabetes is diagnosed, review blood pressure control and medications used.
 ##########END##########
-Practitioners should consider using competence frameworks developed from the relevant treatment manual(s) and for all interventions should: receive regular high-quality supervision use routine outcome measures and ensure that the person with depression is involved in reviewing the efficacy of the treatment engage in monitoring and evaluation of treatment adherence and practitioner competence – for example, by using video and audio tapes, and external audit and scrutiny where appropriate.
+Repeat blood pressure measurements within: 1 month if blood pressure is higher than 150/90 mmHg 2 months if blood pressure is higher than 140/80 mmHg 2 months if blood pressure is higher than 130/80 mmHg and there is kidney, eye or cerebrovascular damage.
 ##########END##########
-Be alert to possible depression (particularly in people with a past history of depression or a chronic physical health problem with associated functional impairment) and consider asking people who may have depression two questions, specifically:
+Provide lifestyle advice (see section in this guideline and the lifestyle interventions section in hypertension in adults [NICE guideline CG127]) if blood
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Last updated April 2018 consider offering one or more of the following interventions, guided by the person's preference: individual guided self-help based on the principles of cognitive behavioural therapy (CBT) computerised cognitive behavioural therapy (CCBT) a structured group physical activity programme.
+First-line antihypertensive drug treatment should be a once-daily, generic angiotensin-converting enzyme (ACE) inhibitor
 ##########END##########
-Do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor, but consider them for people with: a past history of moderate or severe depression or initial presentation of subthreshold depressive symptoms that have been present for a long period (typically at least 2 years) or subthreshold depressive symptoms or mild depression that persist(s) after other interventions.
+African or Caribbean family origin, or women for whom there is a possibility of becoming pregnant.
 ##########END##########
-For people with moderate or severe depression, provide a combination of antidepressant medication and a high-intensity psychological intervention (CBT or IPT).
+Caribbean family origin should be an ACE inhibitor plus either a diuretic or a generic calcium-channel blocker.
 ##########END##########
-Continuation and relapse prevention
+A calcium-channel blocker should be the first-line antihypertensive drug treatment for a woman for whom, after an informed discussion, it is agreed there is a possibility of her becoming pregnant.
 ##########END##########
-Psychological interventions for relapse prevention
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-People with depression who are considered to be at significant risk of relapse (including those who have relapsed despite antidepressant treatment or who are unable or choose not to
+Do not offer antiplatelet therapy (aspirin or clopidogrel) for adults with type 2 diabetes without cardiovascular disease.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+For guidance on the primary and secondary prevention of cardiovascular disease in adults with type 2 diabetes, see the NICE guidelines on cardiovascular disease and myocardial infarction.
 ##########END##########
-Last updated April 2018 continue antidepressant treatment) or who have residual symptoms, should be offered one of the following psychological interventions: individual CBT for people who have relapsed despite antidepressant medication and for people with a significant history of depression and residual symptoms despite treatment mindfulness-based cognitive therapy for people who are currently well but have experienced three or more previous episodes of depression.
+HbA1c measurement and targets
 ##########END##########
-This recommendation (and recommendation in CG91) updates the recommendations on depression only in 'Computerised cognitive behaviour therapy for depression and anxiety' (NICE technology appraisal guidance 97).
+In adults with type 2 diabetes, measure HbA1c levels at: 3–6-monthly intervals (tailored to individual needs), until the HbA1c is stable on unchanging therapy 6-monthly intervals once the HbA1c level and blood glucose lowering therapy are stable.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Use methods to measure HbA1c that have been calibrated according to
 ##########END##########
-Note that a comprehensive assessment of depression should not rely simply on a symptom count, but should take into account the degree of functional impairment and/or disability (see section ).
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-This guideline is published alongside 'Depression in adults with a chronic physical health problem: recognition and management' (NICE clinical guideline 91), which makes recommendations on the identification, treatment and management of depression in adults aged 18 years and older who also have a chronic physical health problem.
+Investigate unexplained discrepancies between HbA1c and other glucose measurements
 ##########END##########
-Making decisions using NICE guidelines explains how we use words to show the strength (or certainty) of our recommendations, and has information about prescribing medicines (including off-label use), professional guidelines, standards and laws (including on consent and mental capacity), and safeguarding.
+Involve adults with type 2 diabetes in decisions about their individual HbA1c target
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Offer lifestyle advice and drug treatment to support adults with type 2 diabetes to achieve and maintain their HbA1c target (see section )
 ##########END##########
-Last updated April 2018 explore treatment options in an atmosphere of hope and optimism, explaining the different courses of depression and that recovery is possible be aware that stigma and discrimination can be associated with a diagnosis of depression ensure that discussions take place in settings in which confidentiality, privacy and dignity are respected.
+For adults with type 2 diabetes managed either by lifestyle and diet, or by lifestyle and diet combined with a single drug not associated with hypoglycaemia, support the person to aim for an HbA1c level of 48 mmol/mol ( %)
 ##########END##########
-When working with people with depression and their families or carers: provide information appropriate to their level of understanding about the nature of depression and the range of treatments available avoid clinical language without adequate explanation ensure that comprehensive written information is available in the appropriate language and in audio format if possible provide and work proficiently with independent interpreters (that is, someone who is not known to the person with depression) if needed.
+For adults on a drug associated with hypoglycaemia, support the person to aim for an HbA1c level of 53 mmol/mol ( %).
 ##########END##########
-Inform people with depression about self-help groups, support groups and other local and national resources.
+In adults with type 2 diabetes, if HbA1c levels are not adequately controlled by a single drug and rise to 58 mmol/mol ( %) or higher: reinforce advice about diet, lifestyle and adherence to drug treatment and support the person to aim for an HbA1c level of 53 mmol/mol ( %) and intensify drug treatment.
 ##########END##########
-Ensure that consent to treatment is based on the provision of clear information (which should also be available in written form) about the intervention, covering: what it comprises what is expected of the person while having it likely outcomes (including any side effects).
+Consider relaxing the target HbA1c level (see recommendations and )
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-For people with recurrent severe depression or depression with psychotic symptoms and for those who have been treated under the Mental Health Act, consider developing advance decisions and advance statements collaboratively with the person
+Last updated May 2017 on a case-by-case basis, with particular consideration for people who are older or frail, for adults with type 2 diabetes: who are unlikely to achieve longer-term risk-reduction benefits, for example, people with a reduced life expectancy for whom tight blood glucose control poses a high risk of the consequences of hypoglycaemia, for example, people who are at risk of falling, people who have impaired awareness of hypoglycaemia, and people who drive or operate machinery as part of their job for whom intensive management would not be appropriate, for example, people with significant comorbidities.
 ##########END##########
-When families or carers are involved in supporting a person with severe or chronic  depression, consider: providing written and verbal information on depression and its management, including how families or carers can support the person offering a carer's assessment of their caring, physical and mental health needs if necessary providing information about local family or carer support groups and voluntary organisations, and helping families or carers to access these negotiating between the person and their family or carer about confidentiality and the sharing of information.
+If adults with type 2 diabetes achieve an HbA1c level that is lower than their target and they are not experiencing hypoglycaemia, encourage them to maintain it
 ##########END##########
-Principles for assessment, coordination of care and choosing treatments
+Be aware that there are other possible reasons for a low HbA1c level, for example, deteriorating renal function or sudden weight loss.
 ##########END##########
-When assessing a person who may have depression, conduct a comprehensive assessment that does not rely simply on a symptom count
+For guidance on HbA1c targets for women with type 2 diabetes who are pregnant or planning to become pregnant, see the NICE guideline on diabetes in pregnancy.
 ##########END##########
-In addition to assessing symptoms and associated functional impairment, consider how the following factors may have affected the development, course and severity of a person's depression: any history of depression and comorbid mental health or physical disorders any past history of mood elevation (to determine if the depression may be part of bipolar disorder )
+Take the Driver and Vehicle Licensing Agency (DVLA) At a glance guide to the current medical standards of fitness to drive into account when offering self-monitoring of blood glucose levels for adults with type 2 diabetes.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Do not routinely offer self-monitoring of blood glucose levels for adults with type 2 diabetes unless: the person is on insulin or there is evidence of hypoglycaemic episodes or the person is on oral medication that may increase their risk of hypoglycaemia while driving or operating machinery or
 ##########END##########
-Be respectful of, and sensitive to, diverse cultural, ethnic and religious backgrounds when working with people with depression, and be aware of the possible variations in the presentation of depression
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Ensure competence in: culturally sensitive assessment using different explanatory models of depression addressing cultural and ethnic differences when developing and implementing treatment plans working with families from diverse ethnic and cultural backgrounds.
+Last updated May 2017 the person is pregnant, or is planning to become pregnant
 ##########END##########
-When assessing a person with suspected depression, be aware of any learning disabilities or acquired cognitive impairments, and if necessary consider consulting with a relevant specialist when developing treatment plans and strategies.
+For more information, see the NICE guideline on diabetes in pregnancy.
 ##########END##########
-When providing interventions for people with a learning disability or acquired cognitive impairment who have a diagnosis of depression: where possible, provide the same interventions as for other people with depression if necessary, adjust the method of delivery or duration of the intervention to take account of the disability or impairment.
+Consider short-term self-monitoring of blood glucose levels in adults with type 2 diabetes (and review treatment as necessary): when starting treatment with oral or intravenous corticosteroids or to confirm suspected hypoglycaemia.
 ##########END##########
-If there is a risk of self-harm or suicide: assess whether the person has adequate social support and is aware of sources of help arrange help appropriate to the level of risk (see section ) advise the person to seek further help if the situation deteriorates.
+Be aware that adults with type 2 diabetes who have acute intercurrent illness are at risk of worsening hyperglycaemia
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+If adults with type 2 diabetes are self-monitoring their blood glucose levels, carry out a structured assessment at least annually
 ##########END##########
-All interventions for depression should be delivered by competent practitioners.
+The assessment should include: the person's self-monitoring skills the quality and frequency of testing checking that the person knows how to interpret the blood glucose results and what action to take the impact on the person's quality of life the continued benefit to the person the equipment used.
 ##########END##########
-Psychological and psychosocial interventions should be based on the relevant treatment manual(s), which should guide the structure and duration of the intervention
+For adults with type 2 diabetes, discuss the benefits and risks of drug treatment, and the options available
 ##########END##########
-Practitioners should consider using competence frameworks developed from the relevant treatment manual(s) and for all interventions should: receive regular high-quality supervision use routine outcome measures and ensure that the person with depression is involved in reviewing the efficacy of the treatment engage in monitoring and evaluation of treatment adherence and practitioner competence – for example, by using video and audio tapes, and external audit and scrutiny where appropriate.
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-The stepped-care model provides a framework in which to organise the provision of services, and supports patients, carers and practitioners in identifying and accessing the most effective interventions (see figure 1)
+Last updated May 2017 safety (see Medicines and Healthcare products Regulatory Agency [MHRA] guidance) and tolerability of the drug treatment(s) the person's individual clinical circumstances, for example, comorbidities, risks from polypharmacy the person's individual preferences and needs the licensed indications or combinations available cost (if 2 drugs in the same class are appropriate, choose the option with the lowest acquisition cost).
 ##########END##########
-In stepped care the least intrusive, most effective intervention is provided first; if a person does not benefit from the intervention initially offered, or declines an intervention, they should be offered an appropriate intervention from the next step.
+If an adult with type 2 diabetes is symptomatically hyperglycaemic, consider insulin (see recommendations – ) or a sulfonylurea, and review treatment when blood glucose control has been achieved.
 ##########END##########
-STEP 4: Severe and complex[a] depression; risk to life; severe self-neglect
+Offer standard-release metformin as the initial drug treatment for adults with type 2 diabetes.
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Gradually increase the dose of standard-release metformin over several weeks to minimise the risk of gastrointestinal side effects in adults with type 2 diabetes.
 ##########END##########
-Medication, high-intensity psychological interventions, combined treatments, collaborative care[b] and referral for further assessment and interventions
+If an adult with type 2 diabetes experiences gastrointestinal side effects with standard-release metformin, consider a trial of modified-release metformin.
 ##########END##########
-Low-intensity psychosocial interventions, psychological interventions, medication and referral for further assessment and interventions
+Algorithm for blood glucose lowering therapy in adults with type 2 diabetes
 ##########END##########
-Assessment, support, psychoeducation, active monitoring and referral for further assessment and interventions [a] Complex depression includes depression that shows an inadequate response to multiple treatments, is complicated by psychotic symptoms, and/or is associated with significant psychiatric comorbidity or psychosocial factors. [b] Only for depression where the person also has a chronic physical health problem and associated functional impairment (see depression in adults with a chronic physical health problem: recognition and management [NICE clinical guideline 91]).
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Step 1: recognition, assessment and initial management
+In adults with type 2 diabetes, review the dose of metformin if the estimated glomerular filtration rate (eGFR) is below 45 ml/minute/ m2:
 ##########END##########
-Be alert to possible depression (particularly in people with a past history of depression or a chronic physical health problem with associated functional impairment) and consider asking people who may have depression two questions, specifically:
+In adults with type 2 diabetes, if metformin is contraindicated or not tolerated, consider initial drug treatment  with: a dipeptidyl peptidase-4 (DPP-4) inhibitor or pioglitazone or a sulfonylurea.
 ##########END##########
-If a person answers 'yes' to either of the depression identification questions (see recommendation ) but the practitioner is not competent to perform a mental health assessment, they should refer the person to an appropriate professional
+In adults with type 2 diabetes, do not offer or continue pioglitazone  if they have any of the following: heart failure or history of heart failure
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-If a person answers 'yes' to either of the depression identification questions (see recommendation ), a practitioner who is competent to perform a mental health assessment should review the person's mental state and associated functional, interpersonal and social difficulties.
+Treatment with sodium–glucose cotransporter 2 (SGLT-2) inhibitors ,  may be appropriate for some adults with type 2 diabetes if metformin is contraindicated or not tolerated (see NICE's guidance on canagliflozin, dapagliflozin and empagliflozin as monotherapies for treating type 2 diabetes).
 ##########END##########
-When assessing a person with suspected depression, consider using a validated measure (for example, for symptoms, functions and/or disability) to inform and evaluate treatment.
+In adults with type 2 diabetes, if initial drug treatment with metformin has not continued to control HbA1c to below the person's individually agreed threshold for intensification, consider dual therapy with: metformin and a DPP-4 inhibitor or metformin and pioglitazone or metformin and a sulfonylurea.
 ##########END##########
-For people with significant language or communication difficulties, for example people with sensory impairments or a learning disability, consider using the
+In adults with type 2 diabetes, if metformin is contraindicated or not tolerated and initial drug treatment has not continued to control HbA1c to below the person's individually agreed threshold for intensification, consider dual therapy  with: a DPP-4 inhibitor and pioglitazone or a DPP-4 inhibitor and a sulfonylurea or pioglitazone and a sulfonylurea.
 ##########END##########
-Risk assessment and monitoring
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-If a person with depression presents considerable immediate risk to themselves or others, refer them urgently to specialist mental health services.
+In adults with type 2 diabetes, if dual therapy with metformin and another oral drug (see recommendation ) has not continued to control HbA1c to below the person's individually agreed threshold for intensification, consider either: triple therapy with: metformin, a DPP-4 inhibitor and a sulfonylurea or metformin, pioglitazone and a sulfonylurea or starting insulin-based treatment (see recommendations – ).
 ##########END##########
-Advise people with depression of the potential for increased agitation, anxiety and suicidal ideation in the initial stages of treatment; actively seek out these symptoms and: ensure that the person knows how to seek help promptly review the person's treatment if they develop marked and/or prolonged agitation.
+If triple therapy with metformin and 2 other oral drugs (see recommendation ) is not effective, not tolerated or contraindicated, consider combination therapy with metformin, a sulfonylurea and a glucagon-like peptide-1 (GLP-1) mimetic for adults with type 2 diabetes who: have a BMI of 35 kg/m2 or higher (adjust accordingly for people from black, Asian and other minority ethnic groups) and specific psychological or other medical problems associated with obesity or have a BMI lower than 35 kg/m2and: for whom insulin therapy would have significant occupational implications or weight loss would benefit other significant obesity-related comorbidities.
 ##########END##########
-Advise a person with depression and their family or carer to be vigilant for mood changes, negativity and hopelessness, and suicidal ideation, and to contact their practitioner if concerned
+In adults with type 2 diabetes, if metformin is contraindicated or not tolerated, and if dual therapy with 2 oral drugs (see recommendation ) has not continued to control HbA1c to below the person's individually agreed threshold for intensification, consider insulin-based treatment (see recommendations – ).
 ##########END##########
-If a person with depression is assessed to be at risk of suicide: take into account toxicity in overdose if an antidepressant is prescribed or the person is taking other medication; if necessary, limit the amount of drug(s) available
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+In adults with type 2 diabetes, only offer a GLP-1 mimetic in combination with insulin with specialist care advice and ongoing support from a consultant-led multidisciplinary team .
 ##########END##########
-Last updated April 2018 consider increasing the level of support, such as more frequent direct or telephone contacts consider referral to specialist mental health services.
+When starting insulin therapy in adults with type 2 diabetes, use a structured programme employing active insulin dose titration that encompasses: injection technique, including rotating injection sites and avoiding repeated injections at the same point within sites continuing telephone support self-monitoring dose titration to target levels dietary understanding
 ##########END##########
-General measures
+When starting insulin therapy in adults with type 2 diabetes, continue to offer metformin for people without contraindications or intolerance
 ##########END##########
-When depression is accompanied by symptoms of anxiety, the first priority should usually be to treat the depression
+Start insulin therapy for adults with type 2 diabetes from a choice of a number of insulin types and regimens:
 ##########END##########
-When the person has an anxiety disorder and comorbid depression or depressive symptoms, consult the NICE guideline for the relevant anxiety disorder (see find guidance) and consider treating the anxiety disorder first (since effective treatment of the anxiety disorder will often improve the depression or the depressive symptoms).
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Offer people with depression advice on sleep hygiene if needed, including: establishing regular sleep and wake times avoiding excess eating, smoking or drinking alcohol before sleep creating a proper environment for sleep taking regular physical exercise.
+Consider switching to insulin detemir or insulin glargine  from NPH insulin in adults with type 2 diabetes: who do not reach their target HbA1c because of significant hypoglycaemia or who experience significant hypoglycaemia on NPH insulin irrespective of the level of
 ##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
+Type 2 diabetes in adults: management (NG28) conditions#notice-of-rights)
 ##########END##########
-Last updated April 2018 provide information about the nature and course of depression arrange a further assessment, normally within 2 weeks make contact if the person does not attend follow-up appointments.
+Monitor adults with type 2 diabetes who are on a basal insulin regimen (NPH insulin, insulin detemir or insulin glargine ) for the need for short-acting insulin before meals (or a pre-mixed [biphasic] insulin preparation).
 ##########END##########
-For people with persistent subthreshold depressive symptoms or mild to moderate depression, consider offering one or more of the following interventions, guided by the person's preference: individual guided self-help based on the principles of cognitive behavioural therapy (CBT) computerised cognitive behavioural therapy (CCBT) a structured group physical activity programme.
-##########END##########
-Individual guided self-help programmes based on the principles of CBT (and including behavioural activation and problem-solving techniques) for people with persistent subthreshold depressive symptoms or mild to moderate depression should: include the provision of written materials of an appropriate reading age (or alternative media to support access) be supported by a trained practitioner, who typically facilitates the self-help programme and reviews progress and outcome consist of up to six to eight sessions (face-to-face and via telephone) normally taking place over 9 to 12 weeks, including follow-up.
-##########END##########
-CCBT for people with persistent subthreshold depressive symptoms or mild to moderate depression should: be provided via a stand-alone computer-based or web-based programme include an explanation of the CBT model, encourage tasks between sessions, and use thought-challenging and active monitoring of behaviour, thought patterns and
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Last updated April 2018 outcomes be supported by a trained practitioner, who typically provides limited facilitation of the programme and reviews progress and outcome typically take place over 9 to 12 weeks, including follow-up.
-##########END##########
-Physical activity programmes for people with persistent subthreshold depressive symptoms or mild to moderate depression should: be delivered in groups with support from a competent practitioner consist typically of three sessions per week of moderate duration (45 minutes to 1 hour) over 10 to 14 weeks (average 12 weeks).
-##########END##########
-Consider group-based CBT for people with persistent subthreshold depressive symptoms or mild to moderate depression who decline low-intensity psychosocial interventions (see recommendation ).
-##########END##########
-Group-based CBT for people with persistent subthreshold depressive symptoms or mild to moderate depression should: be based on a structured model such as 'Coping with Depression' be delivered by two trained and competent practitioners consist of 10 to 12 meetings of eight to ten participants normally take place over 12 to 16 weeks, including follow-up.
-##########END##########
-Do not use antidepressants routinely to treat persistent subthreshold depressive symptoms or mild depression because the risk–benefit ratio is poor, but consider them for people with: a past history of moderate or severe depression or initial presentation of subthreshold depressive symptoms that have been present for a long period (typically at least 2 years) or
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Although there is evidence that St John's wort may be of benefit in mild or moderate depression, practitioners should: not prescribe or advise its use by people with depression because of uncertainty about appropriate doses, persistence of effect, variation in the nature of preparations and potential serious interactions with other drugs (including oral contraceptives, anticoagulants and anticonvulsants) advise people with depression of the different potencies of the preparations available and of the potential serious interactions of St John's wort with other drugs.
-##########END##########
-For people with persistent subthreshold depressive symptoms or mild to moderate depression who have not benefited from a low-intensity psychosocial intervention, discuss the relative merits of different interventions with the person and provide: an antidepressant (normally a selective serotonin reuptake inhibitor [SSRI]) or a high-intensity psychological intervention, normally one of the following options:
-##########END##########
-IPT) behavioural couples therapy for people who have a regular partner and where the relationship may contribute to the development or maintenance of depression, or where involving the partner is considered to be of potential therapeutic benefit.
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-For people with moderate or severe depression, provide a combination of antidepressant medication and a high-intensity psychological intervention (CBT or IPT).
-##########END##########
-The choice of intervention should be influenced by the: duration of the episode of depression and the trajectory of symptoms previous course of depression and response to treatment likelihood of adherence to treatment and any potential adverse effects person's treatment preference and priorities.
-##########END##########
-For people with depression who decline an antidepressant, CBT, IPT, behavioural activation and behavioural couples therapy, consider: counselling for people with persistent subthreshold depressive symptoms or mild to moderate depression short-term psychodynamic psychotherapy for people with mild to moderate depression.
-##########END##########
-Discuss antidepressant treatment options with the person with depression, covering: the choice of antidepressant, including any anticipated adverse events, for example side effects and discontinuation symptoms (see recommendation ), and potential interactions with concomitant medication or physical health problems their perception of the efficacy and tolerability of any antidepressants they have previously taken.
-##########END##########
-When an antidepressant is to be prescribed, it should normally be an SSRI in a
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-In particular, consider prescribing a gastroprotective drug in older people who are taking non-steroidal anti-inflammatory drugs (NSAIDs) or aspirin.
-##########END##########
-Be aware that: compared with other equally effective antidepressants recommended for routine use in primary care, venlafaxine is associated with a greater risk of death from overdose tricyclic antidepressants (TCAs), except for lofepramine, are associated with the greatest risk in overdose.
-##########END##########
-For example: the potential for higher doses of venlafaxine to exacerbate cardiac arrhythmias and the need to monitor the person's blood pressure the possible exacerbation of hypertension with venlafaxine and duloxetine the potential for postural hypotension and arrhythmias with TCAs the need for haematological monitoring with mianserin in elderly people.
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Non-reversible monoamine oxidase inhibitors (MAOIs), such as phenelzine, should normally be prescribed only by specialist mental health professionals.
-##########END##########
-Dosulepin should not be prescribed.
-##########END##########
-When prescribing antidepressants, explore any concerns the person with depression has about taking medication, explain fully the reasons for prescribing, and provide information about taking antidepressants, including: the gradual development of the full antidepressant effect the importance of taking medication as prescribed and the need to continue treatment after remission potential side effects the potential for interactions with other medications the risk and nature of discontinuation symptoms with all antidepressants, particularly with drugs with a shorter half-life (such as paroxetine and venlafaxine), and how these symptoms can be minimised the fact that addiction does not occur with antidepressants.
-##########END##########
-For people started on antidepressants who are not considered to be at increased risk of suicide, normally see them after 2 weeks
-##########END##########
-A person with depression started on antidepressants who is considered to present an increased suicide risk or is younger than 30 years (because of the potential increased prevalence of suicidal thoughts in the early stages of antidepressant treatment for this group) should normally be seen after 1 week and frequently thereafter as appropriate until the risk is no longer considered clinically important.
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Last updated April 2018 treatment, provide appropriate information and consider one of the following strategies: monitor symptoms closely where side effects are mild and acceptable to the person or stop the antidepressant or change to a different antidepressant if the person prefers or in discussion with the person, consider short-term concomitant treatment with a benzodiazepine if anxiety, agitation and/or insomnia are problematic (except in people with chronic symptoms of anxiety); this should usually be for no longer than 2 weeks in order to prevent the development of dependence.
-##########END##########
-People who start on low-dose TCAs and who have a clear clinical response can be maintained on that dose with careful monitoring. 0 If the person's depression shows no improvement after 2 to 4 weeks with the first antidepressant, check that the drug has been taken regularly and in the prescribed dose. 1 If response is absent or minimal after 3 to 4 weeks of treatment with a therapeutic dose of an antidepressant, increase the level of support (for example, by weekly face-to-face or telephone contact) and consider: increasing the dose in line with the SPC if there are no significant side effects or switching to another antidepressant as described in section if there are side effects or if the person prefers. 2 If the person's depression shows some improvement by 4 weeks, continue treatment for another 2 to 4 weeks
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-For all high-intensity psychological interventions, the duration of treatment should normally be within the limits indicated in this guideline
-##########END##########
-For all people with depression having individual CBT, the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-##########END##########
-Also consider providing: two sessions per week for the first 2 to 3 weeks of treatment for people with moderate or severe depression follow-up sessions typically consisting of three to four sessions over the following 3 to 6 months for all people with depression.
-##########END##########
-For all people with depression having IPT, the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-##########END##########
-For people with severe depression, consider providing two sessions per week for the first 2 to 3 weeks of treatment.
-##########END##########
-For all people with depression having behavioural activation, the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-##########END##########
-Also consider providing: two sessions per week for the first 3 to 4 weeks of treatment for people with moderate or severe depression follow-up sessions typically consisting of three to four sessions over the following 3 to 6 months for all people with depression.
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Behavioural couples therapy for depression should normally be based on behavioural principles, and an adequate course of therapy should be 15 to 20 sessions over 5 to 6 months.
-##########END##########
-For all people with persistent subthreshold depressive symptoms or mild to moderate depression having counselling, the duration of treatment should typically be in the range of six to ten sessions over 8 to 12 weeks.
-##########END##########
-For all people with mild to moderate depression having short-term psychodynamic psychotherapy, the duration of treatment should typically be in the range of 16 to 20 sessions over 4 to 6 months.
-##########END##########
-Refer to 'Depression in adults with a chronic physical health problem: recognition and management' (NICE clinical guideline 91) for further information.
-##########END##########
-When prescribing antidepressants for older people: prescribe at an age-appropriate dose taking into account the effect of general physical health and concomitant medication on pharmacokinetics and pharmacodynamics
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-For people with long-standing moderate or severe depression who would benefit from additional social or vocational support, consider: befriending as an adjunct to pharmacological or psychological treatments; befriending should be by trained volunteers providing, typically, at least weekly contact for between 2 and 6 months a rehabilitation programme if a person's depression has resulted in loss of work or disengagement from other social activities over a longer term.
-##########END##########
-Medication management as a separate intervention for people with depression should not be provided routinely by services
-##########END##########
-It is likely to be effective only when provided as part of a more complex intervention.
-##########END##########
-For people with severe depression and those with moderate depression and complex problems, consider: referring to specialist mental health services for a programme of coordinated multiprofessional care providing collaborative care if the depression is in the context of a chronic physical health problem with associated functional impairment .
-##########END##########
-When reviewing drug treatment for a person with depression whose symptoms have not adequately responded to initial pharmacological interventions: check adherence to, and side effects from, initial treatment increase the frequency of appointments using outcome monitoring with a validated
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Last updated April 2018 outcome measure be aware that using a single antidepressant rather than combination medication or augmentation (see recommendations to ) is usually associated with a lower side-effect burden consider reintroducing previous treatments that have been inadequately delivered or adhered to, including increasing the dose consider switching to an alternative antidepressant.
-##########END##########
-When switching to another antidepressant, be aware that the evidence for the relative advantage of switching either within or between classes is weak.
-##########END##########
-When switching to another antidepressant, which can normally be achieved within 1 week when switching from drugs with a short half-life, consider the potential for interactions in determining the choice of new drug and the nature and duration of the transition
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Last updated April 2018 from a non-reversible MAOI: a 2-week washout period is required (other antidepressants should not be prescribed routinely during this period).
-##########END##########
-When using combinations of medications (which should only normally be started in primary care in consultation with a consultant psychiatrist): select medications that are known to be safe when used together be aware of the increased side-effect burden this usually causes discuss the rationale for any combination with the person with depression, follow
-##########END##########
-GMC guidance if off-label medication is prescribed, and monitor carefully for adverse effects be familiar with primary evidence and consider obtaining a second opinion when using unusual combinations, the evidence for the efficacy of a chosen strategy is limited or the risk–benefit ratio is unclear document the rationale for the chosen combination.
-##########END##########
-If a person with depression is informed about, and prepared to tolerate, the increased side-effect burden, consider combining or augmenting an antidepressant with: lithium or an antipsychotic such as aripiprazole*, olanzapine*, quetiapine* or risperidone* or another antidepressant such as mirtazapine or mianserin.
-##########END##########
-When prescribing lithium: monitor renal and thyroid function before treatment and every 6 months during treatment (more often if there is evidence of renal impairment) consider ECG monitoring in people with depression who are at high risk of cardiovascular disease
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-The following strategies should not be used routinely: augmentation of an antidepressant with a benzodiazepine for more than 2 weeks as there is a risk of dependence augmentation of an antidepressant with buspirone*, carbamazepine*, lamotrigine* or valproate * as there is insufficient evidence for their use augmentation of an antidepressant with pindolol* or thyroid hormones* as there is inconsistent evidence of effectiveness .
-##########END##########
-Combined psychological and drug treatment 0 For a person whose depression has not responded to either pharmacological or psychological interventions, consider combining antidepressant medication with CBT.
-##########END##########
-Referral 1 For a person whose depression has failed to respond to various strategies for augmentation and combination treatments, consider referral to a practitioner with a specialist interest in treating depression, or to a specialist service.
-##########END##########
-Continuation and relapse prevention
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Treatment choice should be influenced by: previous treatment history, including the consequences of a relapse, residual symptoms, response to previous treatment and any discontinuation symptoms the person's preference.
-##########END##########
-Using medication for relapse prevention
-##########END##########
-People with depression on long-term maintenance treatment should be
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-People who have had multiple episodes of depression, and who have had a good response to treatment with an antidepressant and an augmenting agent, should remain on this combination after remission if they find the side effects tolerable and acceptable
-##########END##########
-If one medication is stopped, it should usually be the augmenting agent
-##########END##########
-Lithium should not be used as a sole agent to prevent recurrence.
-##########END##########
-Psychological interventions for relapse prevention
-##########END##########
-People with depression who are considered to be at significant risk of relapse (including those who have relapsed despite antidepressant treatment or who are unable or choose not to continue antidepressant treatment) or who have residual symptoms, should be offered one of the following psychological interventions: individual CBT for people who have relapsed despite antidepressant medication and for people with a significant history of depression and residual symptoms despite treatment mindfulness-based cognitive therapy for people who are currently well but have experienced three or more previous episodes of depression.
-##########END##########
-Delivering psychological interventions for relapse prevention
-##########END##########
-For all people with depression who are having individual CBT for relapse prevention, the duration of treatment should typically be in the range of 16 to 20 sessions over 3 to 4 months
-##########END##########
-If the duration of treatment needs to be extended to achieve remission it should: consist of two sessions per week for the first 2 to 3 weeks of treatment include additional follow-up sessions, typically consisting of four to six sessions over
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-Last updated April 2018 the following 6 months. 0 Mindfulness-based cognitive therapy should normally be delivered in groups of 8 to 15 participants and consist of weekly 2-hour meetings over 8 weeks and four follow-up sessions in the 12 months after the end of treatment.
-##########END##########
-Explain that symptoms are usually mild and self-limiting over about 1 week, but can be severe, particularly if the drug is stopped abruptly.
-##########END##########
-Inform the person that they should seek advice from their practitioner if they experience significant discontinuation symptoms
-##########END##########
-If discontinuation symptoms occur: monitor symptoms and reassure the person if symptoms are mild consider reintroducing the original antidepressant at the dose that was effective (or another antidepressant with a longer half-life from the same class) if symptoms are severe, and reduce the dose gradually while monitoring symptoms. 0 Step 4: complex and severe depression
-##########END##########
-Referral to specialist mental health services should normally be for people with depression who are at significant risk of self-harm, have psychotic symptoms, require complex multiprofessional care, or where an expert opinion on treatment and management is needed.
-##########END##########
-The assessment of a person with depression referred to specialist mental health services should include: their symptom profile, suicide risk and, where appropriate, previous treatment history
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-In specialist mental health services, after thoroughly reviewing previous treatments for depression, consider reintroducing previous treatments that have been inadequately delivered or adhered to.
-##########END##########
-The teams should monitor risk as a high-priority routine activity in a way that allows people to continue their lives without disruption.
-##########END##########
-Medication in secondary care mental health services should be started under the supervision of a consultant psychiatrist.
-##########END##########
-Teams working with people with complex and severe depression should develop comprehensive multidisciplinary care plans in collaboration with the person with depression (and their family or carer, if agreed with the person)
-##########END##########
-The care plan should: identify clearly the roles and responsibilities of all health and social care professionals involved develop a crisis plan that identifies potential triggers that could lead to a crisis and strategies to manage such triggers be shared with the GP and the person with depression and other relevant people involved in the person's care.
-##########END##########
-Consider inpatient treatment for people with depression who are at significant risk of suicide, self-harm or self-neglect.
-##########END##########
-The full range of high-intensity psychological interventions should normally be offered in inpatient settings
-##########END##########
-However, consider increasing the intensity and duration of the interventions and ensure that they can be provided effectively
-##########END##########
-Depression in adults: recognition and management (CG90) conditions#notice-of-rights)
-##########END##########
-For people who have depression with psychotic symptoms, consider augmenting the current treatment plan with antipsychotic medication (although the optimum dose and duration of treatment are unknown).
-##########END##########
-The recommendations in this section update the depression aspects only of 'Guidance on the use of electroconvulsive therapy' (NICE technology appraisal guidance 59).
-##########END##########
-Do not use ECT routinely for people with moderate depression but consider it if their depression has not responded to multiple drug treatments and psychological treatment.
-##########END##########
-ECT, consider a repeat trial of ECT only after: reviewing the adequacy of the previous treatment course and considering all other options and discussing the risks and benefits with the person and/or, where appropriate, their advoc
+Monitor adults with type 2 diabetes who are on pre-mixed (biphasic) insulin for the need for a further injection of short-acting insulin befor
