@@ -19,7 +19,7 @@ public class Rule {
     private Set<String> conclusionsString;
     private ArrayList<String> mwe;
 
-    private Map<FrameNetPattern, List<Word>> patternsAndWords;
+    private Map<String, List<Word>> patternsAndWords;
 
     Rule(Sentence sentence, String topic){
         this.sentence = sentence;
@@ -28,7 +28,9 @@ public class Rule {
         this.correspondingPatterns = new ArrayList<>();
         this.topic = topic;
         this.mwe = new ArrayList<>();
-        patternsAndWords = new HashMap<>();
+        this.premisesString = new HashSet<>();
+        this.conclusionsString = new HashSet<>();
+        this.patternsAndWords = new HashMap<>();
     }
 
     public void addMWE(String m){
@@ -48,7 +50,7 @@ public class Rule {
     }
 
     public void addMatchPattern(FrameNetPattern fnp, List<Word> words){
-        patternsAndWords.put(fnp, words);
+        patternsAndWords.put(fnp.toString(), words);
     }
 
     public boolean isEmpty(){
@@ -69,14 +71,14 @@ public class Rule {
     }
 
     public Set<String> getPremisesToStrings(){
-        if(premisesString == null){
+        if(premisesString.size()==0){
             premisesString = simplifyFrameNetTagList(this.premise);
         }
         return premisesString;
     }
 
     public Set<String> getConclusionsToStrings(){
-        if(conclusionsString == null){
+        if(conclusionsString.size()==0){
             conclusionsString = simplifyFrameNetTagList(this.conclusion);
         }
         return conclusionsString;
@@ -88,22 +90,37 @@ public class Rule {
         Collections.sort(sorted, Word.indexComparator);
         StringBuilder builder = new StringBuilder();
         int last = -2;
+        boolean first = true;
         for (int i = 0; i < sorted.size(); i++) {
-            if(last == -2){
-                last = sorted.get(i).getIndex()-1;
+            if(first){
+                builder.append(sorted.get(i).getText());
+                last = sorted.get(i).getIndex();
+                first = false;
+            }else{
+                if(last == sorted.get(i).getIndex()-1){
+                    builder.append(" "+sorted.get(i).getText());
+                    last = sorted.get(i).getIndex();
+                }else{
+                    out.add(builder.toString());
+                    builder = new StringBuilder();
+                    builder.append(sorted.get(i).getText());
+                    last = sorted.get(i).getIndex();
+                }
             }
-            if(last == sorted.get(i).getIndex()-1){
+            /*
+            if(last == sorted.get(i).getIndex()){
                 if(builder.length() == 0){
                     builder.append(sorted.get(i).getText());
                 }else{
                     builder.append(" "+sorted.get(i).getText());
                 }
-                last++;
+
             }else{
                 out.add(builder.toString());
                 builder = new StringBuilder();
                 last = sorted.get(i).getIndex();
             }
+            */
         }
         if(builder.length() != 0){
             out.add(builder.toString());
@@ -177,13 +194,13 @@ public class Rule {
 
     public String patternsAndWordsToString(){
         String ret = "\n";
-        for (FrameNetPattern fnp : patternsAndWords.keySet()) {
+        for (String fnp : patternsAndWords.keySet()) {
             Set<String> words = simplifyFrameNetTagList(new HashSet(patternsAndWords.get(fnp)));
             String strings = "";
             for (String s : words) {
                 strings+= "["+s+"] ";
             }
-            ret += "\t"+fnp.toString()+" :: "+strings+"\n";
+            ret += "\t"+fnp+" :: "+strings+"\n";
         }
         return ret;
     }
@@ -193,8 +210,8 @@ public class Rule {
                 "\nSentence :" + sentence +
                 "\nIF :" + preparePremiseToString() +
                 "\nTHEN :" + prepareConclusionToString() +
-                "\nCorrespondingPatterns :" + correspondingPatterns +
-                "\nMWE : "+ patternsAndWordsToString() +"" +
+                "\nCorrespondingPatterns :" + patternsAndWordsToString() +
+                "\nMWE : "+ mwe +
                 "\n";
     }
 
@@ -217,5 +234,14 @@ public class Rule {
             ret += "\t"+s+"\n";
         }
         return ret;
+    }
+
+    public void computeStrings() {
+        premisesString = new HashSet<>();
+        premisesString = simplifyFrameNetTagList(this.premise);
+        premisesString.add(topic);
+
+        conclusionsString = new HashSet<>();
+        conclusionsString = simplifyFrameNetTagList(this.conclusion);
     }
 }
