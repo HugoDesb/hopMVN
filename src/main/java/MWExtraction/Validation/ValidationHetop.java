@@ -7,7 +7,9 @@ import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.w3c.dom.Document;
@@ -30,21 +32,13 @@ public class ValidationHetop {
         ArrayList<CandidatTerm> list_candidat_terms_validated = new ArrayList<CandidatTerm>();
 
 
-        CredentialsProvider provider = new BasicCredentialsProvider();
-        UsernamePasswordCredentials credentials
-                = new UsernamePasswordCredentials("hugo.desbiolles@etu.univ-amu.fr", "AconerIMumPk");
-        provider.setCredentials(AuthScope.ANY, credentials);
 
-
-        HttpClient client = HttpClientBuilder.create()
-                //.setDefaultCredentialsProvider(provider)
-                .build();
 
         int count = 0;
         String source = "HeTOP";
 
         while(count<list_candidat_terms.size()){
-            if(existsInHeTOP(list_candidat_terms.get(count).getTerm().trim(), client, tempFile)){
+            if(existsInHeTOP(list_candidat_terms.get(count).getTerm().trim(), tempFile)){
                 list_candidat_terms.get(count).setIsTrueTerm(1);
                 list_candidat_terms.get(count).setSourceDictionary(source);
             }
@@ -56,7 +50,7 @@ public class ValidationHetop {
         return list_candidat_terms_validated;
     }
 
-    private static boolean existsInHeTOP(String term, HttpClient client, File tempFile){
+    private static boolean existsInHeTOP(String term, File tempFile){
 
         if(term.toLowerCase().contains("##########end##########")){
             return false;
@@ -65,6 +59,21 @@ public class ValidationHetop {
         int statusCode;
 
         try {
+
+            CredentialsProvider provider = new BasicCredentialsProvider();
+            UsernamePasswordCredentials credentials
+                    = new UsernamePasswordCredentials("hugo.desbiolles@etu.univ-amu.fr", "AconerIMumPk");
+            provider.setCredentials(AuthScope.ANY, credentials);
+
+            RequestConfig config = RequestConfig.custom()
+                    .setConnectTimeout(10 * 1000)
+                    .setConnectionRequestTimeout(10 * 1000)
+                    .build();
+
+            HttpClient client = HttpClientBuilder.create()
+                    //.setDefaultCredentialsProvider(provider)
+                    .setDefaultRequestConfig(config)
+                    .build();
 
             //Send request
             HttpGet b = new HttpGet("http://www.hetop.fr/CISMeFhetopservice/REST/search/"+termURL+"/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR");
@@ -77,8 +86,6 @@ public class ValidationHetop {
             HttpResponse response = client.execute(b);
             //http://www.hetop.eu/CISMeFhetopservice/REST/search/avant bras/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR
             statusCode = response.getStatusLine().getStatusCode();
-
-
 
 
             //Getting the response body
@@ -119,6 +126,9 @@ public class ValidationHetop {
 
 
 
+        } catch (ConnectTimeoutException e){
+            System.out.println("[ MWE ] retry");
+            return existsInHeTOP(term, tempFile);
         } catch (IOException | ParserConfigurationException | SAXException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
