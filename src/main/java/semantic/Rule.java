@@ -19,6 +19,8 @@ public class Rule {
     private Set<String> conclusionsString;
     private ArrayList<String> mwe;
 
+    private Map<FrameNetPattern, List<Word>> patternsAndWords;
+
     Rule(Sentence sentence, String topic){
         this.sentence = sentence;
         this.premise = new HashSet<>();
@@ -26,6 +28,7 @@ public class Rule {
         this.correspondingPatterns = new ArrayList<>();
         this.topic = topic;
         this.mwe = new ArrayList<>();
+        patternsAndWords = new HashMap<>();
     }
 
     public void addMWE(String m){
@@ -35,11 +38,17 @@ public class Rule {
     public void addMatchPremise(List<Word> words){
         premise.addAll(words);
     }
+
     public void addMatchConclusion(List<Word> words){
         conclusion.addAll(words);
     }
+
     public void addMatchPattern(FrameNetPattern fnp){
         correspondingPatterns.add(fnp);
+    }
+
+    public void addMatchPattern(FrameNetPattern fnp, List<Word> words){
+        patternsAndWords.put(fnp, words);
     }
 
     public boolean isEmpty(){
@@ -144,25 +153,6 @@ public class Rule {
         return setToString(getConclusionsToStrings());
     }
 
-    public String toStringOutput(){
-        return "##############################################################################" +
-                "\nSentence :" + sentence +
-                "\nIF :" + preparePremiseToString() +
-                "\nTHEN :" + prepareConclusionToString() +
-                "\nCorrespondingPatterns :" + correspondingPatterns +
-                "\nMWE : "+ mwe+"" +
-                "\n";
-
-    }
-
-    @Override
-    public String toString() {
-        return "Rule{\n" +
-                "\tSentence : "+sentence+
-                "\n\tIF : " + preparePremiseToString() +
-                "\n\t, THEN : " + prepareConclusionToString()+"}";
-    }
-
     public Sentence getSentence() {
         return sentence;
     }
@@ -183,6 +173,37 @@ public class Rule {
     @Override
     public int hashCode() {
         return Objects.hash(sentence, premise, conclusion, correspondingPatterns, topic, mwe);
+    }
+
+    public String patternsAndWordsToString(){
+        String ret = "\n";
+        for (FrameNetPattern fnp : patternsAndWords.keySet()) {
+            Set<String> words = simplifyFrameNetTagList(new HashSet(patternsAndWords.get(fnp)));
+            String strings = "";
+            for (String s : words) {
+                strings+= "["+s+"] ";
+            }
+            ret += "\t"+fnp.toString()+" :: "+strings+"\n";
+        }
+        return ret;
+    }
+
+    public String toStringOutput(){
+        return "##############################################################################" +
+                "\nSentence :" + sentence +
+                "\nIF :" + preparePremiseToString() +
+                "\nTHEN :" + prepareConclusionToString() +
+                "\nCorrespondingPatterns :" + correspondingPatterns +
+                "\nMWE : "+ patternsAndWordsToString() +"" +
+                "\n";
+    }
+
+    @Override
+    public String toString() {
+        return "Rule{\n" +
+                "\tSentence : "+sentence+
+                "\n\tIF : " + preparePremiseToString() +
+                "\n\t, THEN : " + prepareConclusionToString()+"}";
     }
 
     public String toValidationOutput() {

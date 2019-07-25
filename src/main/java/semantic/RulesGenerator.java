@@ -37,8 +37,18 @@ public class RulesGenerator {
                 ArrayList<Integer> matchedConclusion = findMatchingWordsIndexes(pattern.getConclusions(), sentence);
 
                 if((matchedPremise.size()!=0 || pattern.getPremises().size()==0) && (matchedConclusion.size()!=0|| pattern.getConclusions().size()==0)){
-                    r.addMatchPremise(sentence.getSentence(matchedPremise));
-                    r.addMatchConclusion(sentence.getSentence(matchedConclusion));
+                    List<Word> addToPremises = sentence.getSentence(matchedPremise);
+                    List<Word> addToConclusions = sentence.getSentence(matchedConclusion);
+                    r.addMatchPremise(addToPremises);
+                    r.addMatchConclusion(addToConclusions);
+
+                    if(addToPremises.size()!=0){
+                        r.addMatchPattern(pattern, addToPremises);
+                    }
+                    if(addToConclusions.size()!=0){
+                        r.addMatchPattern(pattern, addToConclusions);
+                    }
+
                     r.addMatchPattern(pattern);
                 }
             }
@@ -163,8 +173,6 @@ public class RulesGenerator {
         }
 
     }
-
-
 
     public void combineWithMWE(String mweFolder) {
 
