@@ -102,7 +102,7 @@ public class Principal {
                 outputForFile+"t2gram.csv",
                 outputForFile+"t1gram.csv");
         handler.write(outputForFile+"/outSentences.txt", outputForFile+"/outBasicRules.txt");
-        System.out.println("Fin de l'exécution");
+        System.out.println("[ MWE ] END");
     }
 
     public static void combine(String config_file, String name) {

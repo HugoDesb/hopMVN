@@ -1,7 +1,6 @@
 package MWExtraction.Validation;
 
 import MWExtraction.Object.CandidatTerm;
-import org.apache.http.Header;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
@@ -52,7 +51,6 @@ public class ValidationHetop {
             list_candidat_terms_validated.add(list_candidat_terms.get(count));
             count++;
         }
-
         tempFile.delete();
 
         return list_candidat_terms_validated;
@@ -74,10 +72,8 @@ public class ValidationHetop {
             String encoding = Base64.getEncoder().encodeToString("hugo.desbiolles@etu.univ-amu.fr:AconerIMumPk".getBytes());
             b.setHeader(HttpHeaders.AUTHORIZATION, "Basic " + encoding);
 
-            System.out.println("executing request " + b.getRequestLine());
-            for (Header h: b.getAllHeaders()) {
-                System.out.println(h.toString());
-            }
+            System.out.println("[ MWE ] Search hétop for :: " + term);
+
             HttpResponse response = client.execute(b);
             //http://www.hetop.eu/CISMeFhetopservice/REST/search/avant bras/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR
             statusCode = response.getStatusLine().getStatusCode();
@@ -103,7 +99,6 @@ public class ValidationHetop {
             //choose utf-8 as charset
             //buildOutput xml to temp file
             String outText = result.toString("UTF-8");
-            System.out.println(outText);
             FileWriter fw = new FileWriter(tempFile);
             fw.write(outText);
             fw.close();
