@@ -2,10 +2,7 @@ package semantic;
 
 import common.config.Config;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -29,6 +26,46 @@ public class MainSemantic {
         if(ruleGenerator){
             runAnalysis();
         }
+    }
+
+    private void writeOutput(ArrayList<Rule> rules, String ruleFormat) throws FileNotFoundException {
+
+        String outputFolder = config.getProp("os_analysis.output_folder")+configSet.get("name")+File.separator;
+        String output = outputFolder;
+
+        String toPrint;
+        PrintStream ps;
+
+        switch(ruleFormat){
+            case Rule.HUMAN_VALIDATION_FORMAT:
+                output += "rulesForValidation.xls";
+                ExcelWriter ew = new ExcelWriter(rules);
+                ew.write(output);
+                break;
+            case Rule.DEV_FORMAT:
+                output += "rules.txt";
+                ps = new PrintStream(new File(output));
+                for (Rule r : rules) {
+                    if(r.getConclusionsToStrings().size()>0) {
+                        toPrint = r.toStringOutput();
+                        ps.println(toPrint);
+                    }
+                }
+                ps.close();
+                break;
+            case Rule.DEV_PRETTY_FORMAT:
+            default:
+                output += "rules.txt";
+                ps = new PrintStream(new File(output));
+                for (Rule r : rules) {
+                    if(r.getConclusionsToStrings().size()>0) {
+                        toPrint = r.toString();
+                        ps.println(toPrint);
+                    }
+                }
+                ps.close();
+        }
+
     }
 
     private void runCombinator(ArrayList<Rule> rules) {
@@ -104,6 +141,11 @@ public class MainSemantic {
         rg.generateRules();
         rg.combineMultiWordsExpression(mweFile);
 
-        rg.writeResults(rg.getGeneratedRules(), output, Rule.DEV_FORMAT);
+        try {
+            writeOutput(rg.getGeneratedRules(), Rule.HUMAN_VALIDATION_FORMAT);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        //rg.writeResults(rg.getGeneratedRules(), output, Rule.HUMAN_VALIDATION_FORMAT);
     }
 }
