@@ -98,33 +98,35 @@ public class ExcelWriter {
         // Create Other rows and cells with employees data
         int rowNum = 0;
         for (Rule r : rules) {
-            Row row = sheet.createRow(rowNum++);
+            if(r.getConclusionsToStrings().size()!=0) {
+                Row row = sheet.createRow(rowNum++);
 
-            // Write Sentence
-            //row.setRowStyle(sentenceCellStyle);
-            Cell c = row.createCell(0);
-            c.setCellValue(r.getSentence().toString());
-            c.setCellStyle(sentenceCellStyle);
+                // Write Sentence
+                //row.setRowStyle(sentenceCellStyle);
+                Cell c = row.createCell(0);
+                c.setCellValue(r.getSentence().toString());
+                c.setCellStyle(sentenceCellStyle);
 
 
-            // IF line
-            row = sheet.createRow(rowNum++);
-            writeIfOrElseLine(row, IF_LINE_TITLE);
-
-            //Write all premises
-            for (String p : r.getPremisesToStrings()) {
+                // IF line
                 row = sheet.createRow(rowNum++);
-                writeRuleLine(row, rowNum, p);
-            }
+                writeIfOrElseLine(row, IF_LINE_TITLE);
 
-            // ELSE line
-            row = sheet.createRow(rowNum++);
-            writeIfOrElseLine(row, ELSE_LINE_TITLE);
+                //Write all premises
+                for (String p : r.getPremisesToStrings()) {
+                    row = sheet.createRow(rowNum++);
+                    writeRuleLine(row, rowNum, p);
+                }
 
-            // Write all conclusions
-            for (String concl : r.getConclusionsToStrings()) {
+                // ELSE line
                 row = sheet.createRow(rowNum++);
-                writeRuleLine(row, rowNum, concl);
+                writeIfOrElseLine(row, ELSE_LINE_TITLE);
+
+                // Write all conclusions
+                for (String concl : r.getConclusionsToStrings()) {
+                    row = sheet.createRow(rowNum++);
+                    writeRuleLine(row, rowNum, concl);
+                }
             }
         }
 

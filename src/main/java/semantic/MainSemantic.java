@@ -133,7 +133,7 @@ public class MainSemantic {
         rg.combineMultiWordsExpression(mweFile);
 
         try {
-            writeOutput(rg.getGeneratedRules(), Rule.DEV_FORMAT);
+            writeOutput(rg.getGeneratedRules(), Rule.HUMAN_VALIDATION_FORMAT);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

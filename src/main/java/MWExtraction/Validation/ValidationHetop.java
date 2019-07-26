@@ -38,6 +38,7 @@ public class ValidationHetop {
         String source = "HeTOP";
 
         while(count<list_candidat_terms.size()){
+            System.out.println("[ MWE] Search in Hétop("+count+"/"+list_candidat_terms.size()+") :: "+list_candidat_terms.get(count).getTerm().trim());
             if(existsInHeTOP(list_candidat_terms.get(count).getTerm().trim(), tempFile)){
                 list_candidat_terms.get(count).setIsTrueTerm(1);
                 list_candidat_terms.get(count).setSourceDictionary(source);
@@ -80,8 +81,6 @@ public class ValidationHetop {
 
             String encoding = Base64.getEncoder().encodeToString("hugo.desbiolles@etu.univ-amu.fr:AconerIMumPk".getBytes());
             b.setHeader(HttpHeaders.AUTHORIZATION, "Basic " + encoding);
-
-            System.out.println("[ MWE ] Search hétop for :: " + term);
 
             HttpResponse response = client.execute(b);
             //http://www.hetop.eu/CISMeFhetopservice/REST/search/avant bras/fr/def=false&f=T_DESC_MESH_DESCRIPTEUR
