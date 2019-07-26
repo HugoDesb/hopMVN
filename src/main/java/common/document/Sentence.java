@@ -4,6 +4,7 @@ import MWExtraction.dope.NGram;
 import tagging.RNNTagger.RNNTag;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.UUID;
 
 public class Sentence {
@@ -70,5 +71,19 @@ public class Sentence {
      */
     public ArrayList<NGram> getNgrams() {
         return ngrams;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sentence sentence = (Sentence) o;
+        return Objects.equals(text, sentence.text);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(text);
     }
 }

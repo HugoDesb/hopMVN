@@ -71,8 +71,13 @@ public class TextDocument {
             e.printStackTrace();
         }
         for (Sentence sentence : sentences) {
+
+            if(sentence.getText().equals("Be aware that the drugs in dual therapy should be introduced in a stepwise manner, checking for tolerability and effectiveness of each drug.")){
+                System.out.println("STOOOOOOOOP");
+            }
             pw.println(sentence.getText());
         }
+        pw.close();
     }
 
     public static class Builder{

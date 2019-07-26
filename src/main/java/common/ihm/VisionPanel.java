@@ -1,12 +1,10 @@
 package common.ihm;
 
-import semantic.Chunk;
 import semantic.SemanticOpenSesameTagging;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
-import java.util.ArrayList;
 
 public class VisionPanel extends JPanel {
 
@@ -23,7 +21,7 @@ public class VisionPanel extends JPanel {
         this.sost = new SemanticOpenSesameTagging(conllFile);
 
         for(int i = 0; i<sost.getSentences().size(); i++){
-            ArrayList<ArrayList<Chunk>> chunkedSentenceFrames = sost.getChunksForSentence(i);
+            //ArrayList<ArrayList<Chunk>> chunkedSentenceFrames = sost.getChunksForSentence(i);
         }
     }
 
