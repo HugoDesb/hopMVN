@@ -27,10 +27,10 @@ public class Filter {
             String regexSelect = "";
             while(line != null){
                 line.replaceAll(" ", "\\s");
-                regexSelect += "(.*\\s+"+line+".*)|";
+                regexSelect += "(^"+line+".*)|(.*\\s+"+line+".*)|";
                 line = br.readLine();
             }
-            this.regexSelect = regexSelect.substring(0,regexSelect.length());
+            this.regexSelect = regexSelect.substring(0,regexSelect.length()-1);
             this.regexDelete = "";
         } catch (FileNotFoundException e) {
             e.printStackTrace();
