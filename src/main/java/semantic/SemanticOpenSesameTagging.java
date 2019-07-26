@@ -44,7 +44,7 @@ public class SemanticOpenSesameTagging {
         }
 
         for (Sentence s : sentences) {
-            if(s.getSentenceNumber() < lines.size()){
+            if(s.getSentenceNumber() < lines.size() && s.toString().contains("unk ")){
 
                 //RNNTagger tagger = new RNNTagger();
                 //ArrayList<RNNTag> hop = tagger.tag(new common.document.Sentence(lines.get(s.getSentenceNumber())));
@@ -99,6 +99,8 @@ public class SemanticOpenSesameTagging {
 
                 //ArrayList<RNNTag> cleaned = new ArrayList<>();
                 //s.correctWords(cleaned);
+            }else{
+
             }
         }
 
@@ -160,26 +162,4 @@ public class SemanticOpenSesameTagging {
 
         return sentences;
     }
-
-    /**
-     * Gets the Chunks for each frames of the sentence
-     * @param index sentence number
-     * @return list of list of Chunk
-     */
-    public ArrayList<ArrayList<Chunk>> getChunksForSentence(int index){
-        if(index<0 || index>=sentences.size()){
-            throw new IndexOutOfBoundsException(""+index);
-        }
-
-        ArrayList<ArrayList<Chunk>> hop = new ArrayList<>();
-
-        for (Frame frame : sentences.get(index).getFrames()) {
-            //hop.add(frame.getChunks());
-        }
-        return hop;
-    }
-
-
-
-
 }

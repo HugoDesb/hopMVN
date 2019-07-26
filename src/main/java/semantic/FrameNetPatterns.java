@@ -55,17 +55,4 @@ public class FrameNetPatterns {
     public ArrayList<FrameNetPattern> getFrameNetPatterns() {
         return frameNetPatterns;
     }
-
-    /**
-     * Compare a Chunk to this pattern to see if it matches
-     * @param chunk a chunk
-     * @return whether the chunk matches the pattern
-     */
-    public FrameNetPattern matches(Chunk chunk) {
-        for (FrameNetPattern fnp : frameNetPatterns) {
-            if(fnp.matches(chunk))
-                return fnp;
-        }
-        return null;
-    }
 }

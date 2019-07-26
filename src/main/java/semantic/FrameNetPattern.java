@@ -17,7 +17,7 @@ public class FrameNetPattern {
 
     private String destination;
 
-    FrameNetPattern(String line){
+    FrameNetPattern(String line) {
         this.line = line;
         this.frameAndRoles = new ArrayList<>();
         this.premises = new ArrayList<>();
@@ -27,26 +27,27 @@ public class FrameNetPattern {
 
     /**
      * From a line from the patterns file, build a pattern
+     *
      * @param line
      */
-    private void deserialize(String line){
-        this.line = "("+line+")";
-        String [] tmp1 = line.split(";");
-        if(!tmp1[0].isEmpty()){
-            for (String premise: tmp1[0].split("\\,")) {
+    private void deserialize(String line) {
+        this.line = "(" + line + ")";
+        String[] tmp1 = line.split(";");
+        if (!tmp1[0].isEmpty()) {
+            for (String premise : tmp1[0].split("\\,")) {
                 premises.add(createPatternForOneframe(premise));
             }
         }
 
-        if(tmp1.length > 1){
-            for (String conclusion: tmp1[1].split("\\,")) {
+        if (tmp1.length > 1) {
+            for (String conclusion : tmp1[1].split("\\,")) {
                 //System.out.println(conclusion);
                 conclusions.add(createPatternForOneframe(conclusion));
             }
         }
     }
 
-    public static Pattern createPatternForOneframe(String partPattern){
+    public static Pattern createPatternForOneframe(String partPattern) {
         //gets frame name
         String name = partPattern.split("\\[")[0];
         //get list of frameElements
@@ -93,11 +94,5 @@ public class FrameNetPattern {
     @Override
     public int hashCode() {
         return Objects.hash(frameAndRoles, destination);
-    }
-
-    public boolean matches(Chunk chunk) {
-        String leftLine = line.split("-->")[0];
-        String createdLine = chunk.getSentenceFrame()+"["+chunk.getSubText()+"]";
-        return createdLine.equals(leftLine);
     }
 }

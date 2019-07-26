@@ -1,8 +1,13 @@
 package semantic;
 
 import common.config.Config;
+import org.apache.commons.exec.CommandLine;
+import org.apache.commons.exec.DefaultExecutor;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -77,50 +82,36 @@ public class MainSemantic {
     }
 
     public void runOpenSesame() {
-        String file_to_annotate = config.getProp("pretreatment.output_folder")+configSet.get("name")+ File.separator+configSet.get("name")+".txt";
         String opensesameFolder = config.getProp("open-sesame.absolute_path");
 
-        try{
+        String file_to_annotate_local = config.getProp("pretreatment.output_folder")+configSet.get("name")+ File.separator+configSet.get("name")+".txt";
+        String file_to_annotate_distant = opensesameFolder+"sentences.txt";
 
-            //Local Machine :
-            String cmd = "cd "+opensesameFolder + " && " +
-                    "python2.7 -m sesame.targetid --mode=predict --model "+config.getProp("open-sesame.model-target_id")+" --raw_input="+file_to_annotate+" && " +
-                    "python2.7 -m sesame.frameid --mode predict --model "+config.getProp("open-sesame.model-frame_id")+" --raw_input=logs/"+config.getProp("open-sesame.model-target_id")+"/predicted-targets.conll && " +
-                    "python2.7 -m sesame.argid --mode predict --model "+config.getProp("open-sesame.model-arg_id")+" --raw_input=logs/"+config.getProp("open-sesame.model-frame_id")+"/predicted-frames.conll";
+        String outputFolder = config.getProp("os_analysis.output_folder")+configSet.get("name")+File.separator;
+        (new File(outputFolder)).mkdirs();
+        String annotated_file_local = outputFolder + "annotatedSentences.csv";
+        String annotated_file_distant = config.getProp("open-sesame.absolute_path")+"logs/"+config.getProp("open-sesame.model-arg_id")+"/predicted-args.conll";
 
 
-            /////////////////////////////////////////////////////////
-            ///////////////////// C A M B I O S /////////////////////
-            /////////////////////////////////////////////////////////
-            //PARA UNIX
-            Runtime runtime = Runtime.getRuntime();
-            final Process process = runtime.exec(cmd);
+        try {
+            // WRITE INPUT
+            Files.copy(Paths.get(file_to_annotate_local), Paths.get(file_to_annotate_distant), StandardCopyOption.REPLACE_EXISTING);
 
-            //POUR WINDOWS
-        	/*Runtime runtime = Runtime.getRuntime();
-        	final Process process = runtime.exec(cmd + " " + file);
-        	*/
+            // RUN COMMAND TO TAG
+            String launch = "/bin/sh ./files/scripts/open-sesame-"+configSet.get("language")+".sh "
+                    +Config.getInstance().getProp("open-sesame.absolute_path")+" "
+                    +config.getProp("open-sesame.model-target_id")+" "
+                    +config.getProp("open-sesame.model-frame_id")+" "
+                    +config.getProp("open-sesame.model-arg_id")+" ";
+            CommandLine cmdLine = CommandLine.parse(launch);
+            DefaultExecutor executor = new DefaultExecutor();
+            executor.execute(cmdLine);
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            try{
-                while((line = reader.readLine()) != null) {
-                    System.out.println(line);
-                }
-            }finally {
-                reader.close();
-            }
-        }catch (Exception e){
-            System.err.println(e.toString());
-        }finally {
-            String annotated_file = config.getProp("open-sesame.absolute_path")+"logs/"+config.getProp("open-sesame.model-arg_id")+"/predicted-args.conll";
-            String outputFolder = config.getProp("os_analysis.output_folder")+configSet.get("name")+File.separator;
-            String annotated_file_local = outputFolder + "annotatedSentences.csv";
-            try {
-                Files.copy(Paths.get(annotated_file), Paths.get(annotated_file_local), StandardCopyOption.REPLACE_EXISTING);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            // COPY DISTANT RESULT TO LOCAL
+            Files.copy(Paths.get(annotated_file_distant), Paths.get(annotated_file_local), StandardCopyOption.REPLACE_EXISTING);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -142,7 +133,7 @@ public class MainSemantic {
         rg.combineMultiWordsExpression(mweFile);
 
         try {
-            writeOutput(rg.getGeneratedRules(), Rule.HUMAN_VALIDATION_FORMAT);
+            writeOutput(rg.getGeneratedRules(), Rule.DEV_FORMAT);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

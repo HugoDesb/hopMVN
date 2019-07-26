@@ -2,8 +2,10 @@ package semantic;
 
 import common.Pair;
 
-import java.io.*;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 public class RulesGenerator {
@@ -94,39 +96,21 @@ public class RulesGenerator {
             for (Pattern pattern: partialPattern) {
                 Integer targetIndex = sentence.getTargetMatch(pattern);
                 Set<Integer> tmp3 = new HashSet<>(sentence.matches(pattern));
+                tmp3 = includePartOfSentence(tmp3, sentence);
+                tmp3 = filterResults(tmp3, pattern, sentence);
                 if(toAdd.size()==0){
                     toAdd = tmp3;
                 }else{
-                    if(targetIndex!=-1){
-                        for (Integer index : toAdd) {
-                            // target is after
-                            Word w = sentence.getWord(targetIndex);
-                            if(index.equals(targetIndex-1)){
-                                toAdd.add(targetIndex);
-                            }
-                            // target is before
-                            else if(index.equals(targetIndex+1)){
-                                if(w.getPos_tag().equals("VB") ||
-                                    w.getPos_tag().equals("JJ") ||
-                                    w.getPos_tag().equals("VBD") ||
-                                    w.getPos_tag().equals("VBG") ||
-                                    w.getPos_tag().equals("VBP") ||
-                                    w.getPos_tag().equals("VBZ") ||
-                                    w.getPos_tag().equals("VBN")
-                                )
-
-                                {
-                                    toAdd.add(targetIndex);
-                                }
-                            }
-                        }
+                    if(includeTarget(tmp3, targetIndex, sentence, pattern)){
+                        toAdd.add(targetIndex);
                     }
-
                     toAdd.retainAll(tmp3);
                 }
             }
             hop.add(toAdd);
         }
+
+
 
         for (int j = hop.size()-1; i>=0; i--) {
             if(hop.get(j).size()!=0){
@@ -137,209 +121,120 @@ public class RulesGenerator {
         return new ArrayList<>();
     }
 
-    private ArrayList<Integer> reduce(ArrayList<ArrayList<Integer>> hop) {
-        ArrayList<Integer> ret = new ArrayList<>();
-        for (ArrayList<Integer> subhop: hop) {
-            for (Integer i: subhop) {
-                if(!ret.contains(i)){
-                    ret.add(i);
+    private Set<Integer> includePartOfSentence(Set<Integer> tmp3, Sentence sentence) {
+        ArrayList<ArrayList<Integer>> hop = separateChunks(tmp3);
+
+        Set<Integer> ret = new HashSet<>();
+        for (ArrayList<Integer> integers : hop) {
+            int firstIndex = integers.get(0);
+            if(sentence.getWord(firstIndex).getLemma().equals("of")){
+                if(firstIndex>=2 && sentence.getWord(firstIndex-1).getPos_tag().equals("NN")){
+                    ret.add(firstIndex-1);
+
                 }
+                ret.addAll(integers);
+            }else{
+                if(integers.get(0)>=3
+                        && sentence.getWord(firstIndex-2).getPos_tag().equals("NN")
+                        && sentence.getWord(firstIndex-1).getLemma().equals("of")){
+                    ret.add(firstIndex-2);
+                    ret.add(firstIndex-1);
+                }
+                ret.addAll(integers);
             }
         }
-        Collections.sort(ret);
         return ret;
     }
 
-    void writeResults(ArrayList<Rule> rules, String file, String format) {
-        //File f = new File(file);
-        (new File(Paths.get(file).getParent().toString())).mkdirs();
-        //f.mkdirs();
-        try {
-            String toPrint;
-            PrintStream ps = new PrintStream(new File(file));
-            //PrintWriter pw = new PrintWriter(new File("./files/tmp.txt"));
-            for (Rule r : rules) {
-                //if(r.getConclusionsToStrings().size()>0){
-                    switch(format){
-                        case Rule.HUMAN_VALIDATION_FORMAT:
-                            toPrint = r.toValidationOutput();
-                            break;
-                        case Rule.DEV_FORMAT:
-                            toPrint = r.toStringOutput();
-                            break;
-                        case Rule.DEV_PRETTY_FORMAT:
-                            toPrint = r.toString();
-                            break;
-                        default:
-                            toPrint = r.toString();
-                    }
-                    ps.println(toPrint);
-                //}
+    private boolean includeTarget(Set<Integer> indexes, Integer targetIndex, Sentence sentence, Pattern pattern){
+        boolean targetIsAfter = false;
+        boolean targetIsBefore = false;
+
+        for (Integer index : indexes) {
+            if(index == targetIndex-1){
+                targetIsAfter = true;
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            if(index == targetIndex+1){
+                targetIsBefore = true;
+            }
+        }
+        boolean ret = false;
+        if(targetIsAfter){
+            ret = ret || includeTargetBasedOnFrame(pattern);
+        }
+        if(targetIsBefore){
+            ret = ret || includeTargetBasedOnFrame(pattern);
+            ret = sentence.getWord(targetIndex).getPos_tag().equals("VB") ||
+                    sentence.getWord(targetIndex).getPos_tag().equals("JJ") ||
+                    sentence.getWord(targetIndex).getPos_tag().equals("VBD") ||
+                    sentence.getWord(targetIndex).getPos_tag().equals("VBG") ||
+                    sentence.getWord(targetIndex).getPos_tag().equals("VBP") ||
+                    sentence.getWord(targetIndex).getPos_tag().equals("VBZ") ||
+                    sentence.getWord(targetIndex).getPos_tag().equals("VBN");
         }
 
+        return ret;
     }
 
-    private ArrayList<String> extendRules(ArrayList<String> premises, List<List<String>> t2grams, List<List<String>> t3grams, List<List<String>> t4grams) {
-        for (int i = 0; i < premises.size(); i++) {
-            boolean foundT2Start = false;
-            boolean foundT2End = false;
+    private boolean includeTargetBasedOnFrame(Pattern pattern) {
+        if(pattern.getFrame().equals("Preventing_or_letting")){
+            return true;
+        }
+        return false;
+    }
 
-            boolean foundT3Start = false;
-            boolean foundT3End = false;
+    private ArrayList<ArrayList<Integer>> separateChunks(Set<Integer> indexes){
+        ArrayList<Integer> hop = new ArrayList<>(indexes);
+        Collections.sort(hop);
+        ArrayList<ArrayList<Integer>> ret = new ArrayList<>();
 
-            boolean foundT4Start = false;
-            boolean foundT4End = false;
-
-            boolean illegalCharacters;
-
-            String[] words = premises.get(i).split(" ");
-            // Check if t2 exists at the start and/or at the end
-            // if YES then don't try to find other m-w COMBINE
-            String ret, query;
-            if (!foundT2Start && words.length>=1) {
-                query = words[0].trim();
-                ret = searchInCSV(t2grams, query, false, 0);
-                illegalCharacters = query.contains(")") || query.contains(")");
-                if (ret != null && !illegalCharacters) {
-                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                    foundT2Start = true;
-                }
-            }
-
-            if (!foundT2End && words.length>=1) {
-                query = words[words.length - 1];
-                ret = searchInCSV(t2grams, query, true, 0);
-                illegalCharacters = query.contains(")") || query.contains(")");
-                if (ret != null && !illegalCharacters) {
-                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                    foundT2End = true;
-                }
-            }
-
-
-
-            // Check if t3 exists at the start and the end
-            // if YES then don't try to find other m-w
-            // if NOT then try to find a mw ending or starting with respectively same first word and last word
-            //      IF NOTHING try to find a mw starting or ending with respectively two same first and last words
-            // both line above to be inverted
-            if (!foundT2Start && !foundT3Start && words.length >= 2) {
-                query = words[0].trim() + " " + words[1].trim();
-                ret = searchInCSV(t3grams, query, true, 0);
-                illegalCharacters = query.contains(")") || query.contains(")");
-                if (ret != null && !illegalCharacters) {
-                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                    foundT3Start = true;
-                } else {
-                    query = words[0].trim();
-                    ret = searchInCSV(t3grams, query, true, 0);
-                    illegalCharacters = query.contains(")") || query.contains(")");
-                    if (ret != null && !illegalCharacters) {
-                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                        foundT3Start = true;
-                    }
-                }
-            }
-
-            if (!foundT2End && !foundT3End && words.length >= 2) {
-                query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                ret = searchInCSV(t3grams, query, false, 0);
-                illegalCharacters = query.contains(")") || query.contains(")");
-                if (ret != null && !illegalCharacters) {
-                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                    foundT3End = true;
+        if(indexes.size()!=0){
+            int last = hop.get(0);
+            int j = 0;
+            ret.add(new ArrayList<>());
+            ret.get(j).add(last);
+            for (int i = 1; i < hop.size(); i++) {
+                if(last+1 == hop.get(i)){
+                    ret.get(j).add(hop.get(i));
+                    last = hop.get(i);
                 }else{
-                    query = words[words.length - 1].trim();
-                    illegalCharacters = query.contains(")") || query.contains(")");
-                    ret = searchInCSV(t3grams, query, false, 0);
-                    if (ret != null && !illegalCharacters) {
-                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                        foundT3Start = true;
-                    }
-                }
-            }
-
-
-
-
-            // do the same for t4
-            // Check if t2 exists at the start and the end
-            // if YES then don't try to find other m-w
-            // if NOT then try to find a mw ending or starting with respectively first word and last word
-
-            if (!foundT2Start && !foundT3Start && foundT4Start && words.length >= 3) {
-                query = words[0].trim() + " " + words[1].trim() + " " + words[2].trim();
-                illegalCharacters = query.contains(")") || query.contains(")");
-                ret = searchInCSV(t4grams, query, true, 0);
-                if (ret != null && !illegalCharacters) {
-                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                    foundT4Start = true;
-                } else {
-                    query = words[0].trim() + " " + words[1].trim();
-                    illegalCharacters = query.contains(")") || query.contains(")");
-                    ret = searchInCSV(t4grams, query, true, 0);
-                    if (ret != null && !illegalCharacters) {
-                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                        foundT4Start = true;
-                    } else {
-                        query = words[0].trim();
-                        illegalCharacters = query.contains(")") || query.contains(")");
-                        ret = searchInCSV(t4grams, query, true, 0);
-                        if (ret != null && !illegalCharacters) {
-                            premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                            foundT4Start = true;
-                        }
-                    }
-                }
-            }
-            if (!foundT2End && !foundT3End && foundT4End && words.length >= 3) {
-                query = words[words.length - 3].trim() + " " + words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                ret = searchInCSV(t4grams, query, false, 0);
-                illegalCharacters = query.contains(")") || query.contains(")");
-                if (ret != null && !illegalCharacters) {
-                    premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                    foundT4Start = true;
-                } else {
-                    query = words[words.length - 2].trim() + " " + words[words.length - 1].trim();
-                    illegalCharacters = query.contains(")") || query.contains(")");
-                    ret = searchInCSV(t4grams, query, false, 0);
-                    if (ret != null && !illegalCharacters) {
-                        premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                        foundT4End = true;
-                    }else{
-                        query = words[words.length - 1].trim();
-                        illegalCharacters = query.contains(")") || query.contains(")");
-                        ret = searchInCSV(t4grams, query, false, 0);
-                        if (ret != null && !illegalCharacters) {
-                            premises.set(premises.indexOf(premises.get(i)), premises.get(i).replaceAll(query, ret));
-                            foundT4End = true;
-                        }
-                    }
+                    ret.add(new ArrayList<>());
+                    j++;
+                    ret.get(j).add(hop.get(i));
+                    last = hop.get(i);
                 }
             }
         }
-        return premises;
+
+        return ret;
     }
 
-    private String searchInCSV(List<List<String>> csvFile, String queryWords ,boolean atTheStart, int column){
-        for (List<String> line: csvFile) {
-            if(atTheStart){
-                if(line.get(column).toLowerCase().indexOf(queryWords)!=-1){
-                    return line.get(column).toLowerCase();
+    private Set<Integer> filterResults(Set<Integer> tmp3, Pattern pattern, Sentence sentence) {
+        Set<Integer> ret = new HashSet<>();
+
+        if(tmp3.size()==0){
+            return ret;
+        }
+
+        ArrayList<ArrayList<Integer>> hop2 = separateChunks(tmp3);
+
+        for (ArrayList<Integer> chunk: hop2) {
+            if(chunk.size()==1){
+                Word w = sentence.getWord(chunk.get(0));
+                //Do not add when is a single EX pos_tag
+                if(w.getPos_tag().equals("EX")){
+                    //not adding to the new set
+                }else{
+                    ret.add(chunk.get(0));
                 }
             }else{
-                int lastIndex = line.get(column).toLowerCase().indexOf(queryWords);
-                lastIndex += queryWords.length();
-                if(lastIndex == queryWords.length()){
-                    return line.get(column).toLowerCase();
-                }
+                //Not yet any conditions
+                ret.addAll(chunk);
             }
         }
-        return null;
+        return ret;
     }
+
 
     public ArrayList<Rule> getGeneratedRules() {
         return generatedRules;
@@ -350,7 +245,7 @@ public class RulesGenerator {
 
         // Foreach rule found
         for (Rule r : getGeneratedRules()) {
-            if(getGeneratedRules().indexOf(r) == 28){
+            if(getGeneratedRules().indexOf(r) == 22){
                 System.out.println("STOOOOOOOOOOOP");
             }
             // foreach found mwe in this sentence
@@ -377,11 +272,12 @@ public class RulesGenerator {
 
             // check if the mwe contains the premise
             if(mwe.contains(p)){
-
                 new_set.add(mwe);
                 found = true;
-
-            }else if(!found){
+            } else if(p.contains(p)){
+                new_set.add(p);
+                found = true;
+            } else if(!found){
 
                 // check if the mwe partially overlap the premise
                 String [] splittedMWE = mwe.split("\\s");
