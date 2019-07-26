@@ -10,18 +10,26 @@
               isExpertFile="false"/>
         -->
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/CPG_diabetes_NHS.pdf"
+              name="CPG_diabetes_NHSNEG"
+              topic="type 2 diabetes"
+              language="english"
+              type="NICE"
+              isExpertFile="false"/>
+        <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/CPG_diabetes_NHS.pdf"
               name="CPG_diabetes_NHS"
               topic="type 2 diabetes"
               language="english"
               type="NICE"
               isExpertFile="false"/>
 
+        <!--
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/depression-NICE.pdf"
               name="depression-NICE"
               topic="depression"
               language="english"
               type="NICE"
               isExpertFile="false"/>
+        -->
 
         <!--
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/myocardial-infarction-cardiac-rehabilitation-and-prevention-of-further-cardiovascular-disease.pdf"
