@@ -101,5 +101,9 @@ buildNumber.properties
 # End of https://www.gitignore.io/api/maven,intellij+all
 
 
-# don't get RNNTagger
+# don't load RNNTagger
 tools/RNNTagger/*
+# don't load output
+files/OUTPUT/*
+#
+tmp/*
