@@ -39,9 +39,23 @@ public class PdfToSentences {
         sentences = breakPointsSentences(sentences);
         ret = new TextDocument(target.toFile(), sentences);
 
+        ArrayList<Sentence> selectedLines = new ArrayList<>();
+        Path negTarget = getDefaultTargetFile(config.getProp("pretreatment.output_folder"), name+"NEG");
+        ArrayList<Sentence> notselectedLines = new ArrayList<>();
         if(!isExpertFile){
-            ret.setLines((new Filter(language)).filter(ret.getLines()));
+            selectedLines = (new Filter(language)).filter(ret.getLines());
+            for (Sentence sentence : ret.getLines()) {
+                if(!selectedLines.contains(sentence)){
+                    notselectedLines.add(sentence);
+                    //System.out.println(selectedLines.get(selectedLines.indexOf()));
+                }
+            }
         }
+        TextDocument td = new TextDocument(negTarget.toFile(), notselectedLines);
+        td.writeFile();
+
+        ret.setLines(selectedLines);
+        StringBuilder sb;
         return ret;
     }
 

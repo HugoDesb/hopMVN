@@ -48,13 +48,11 @@ public class ExtractorNICE extends Extractor {
             //Strip text
             String text = textStripper.getText(contentDocument);
 
-            System.out.println(text);
             text = text.replaceAll("\\[(([Nn]ew\\s[0-9]*)|([0-9]*))\\]", " ");
             text = text.replaceAll("([0-9]+\\.)+[0-9]+", "\n");
             text = text.replaceAll("(\\n.*©.*\\n)", "\n");
             text = text.replaceAll("(Page\\s[0-9]+\\sof\\s[0-9]+)", " ");
             text = text.replaceAll("[0-9]\\s([A-Z])", "$0");
-            System.out.println(text);
 
 
             String [] lineByLine = text.split("\\n");
