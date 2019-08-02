@@ -62,7 +62,7 @@ public class PdfToSentences {
     private static ArrayList<Sentence> breakPointsSentences(ArrayList<Sentence> sentences) {
         ArrayList<Sentence> ret = new ArrayList<>();
         for (Sentence s: sentences) {
-            if(s.getText().matches(".*:.*(•)")){
+            if(s.getText().matches(".*:.*(•)*[a-z]+.*")){
                 String base = s.getText().split(":")[0];
                 String [] nexts = s.getText().replaceFirst(base, "").split("•");
                 for (String next : nexts) {
