@@ -48,7 +48,7 @@ public class MainSemantic {
                 ew.write(output);
                 break;
             case Rule.DEV_FORMAT:
-                output += "rules.txt";
+                output += "rules-dev.txt";
                 ps = new PrintStream(new File(output));
                 for (Rule r : rules) {
                     if(r.getConclusionsToStrings().size()>0) {
@@ -60,7 +60,7 @@ public class MainSemantic {
                 break;
             case Rule.DEV_PRETTY_FORMAT:
             default:
-                output += "rules.txt";
+                output += "rules-dev-pretty.txt";
                 ps = new PrintStream(new File(output));
                 for (Rule r : rules) {
                     if(r.getConclusionsToStrings().size()>0) {
@@ -134,6 +134,8 @@ public class MainSemantic {
 
         try {
             writeOutput(rg.getGeneratedRules(), Rule.HUMAN_VALIDATION_FORMAT);
+            writeOutput(rg.getGeneratedRules(), Rule.DEV_FORMAT);
+            writeOutput(rg.getGeneratedRules(), Rule.DEV_PRETTY_FORMAT);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

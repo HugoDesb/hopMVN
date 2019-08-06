@@ -4,10 +4,10 @@ T4
 T3
 T2
 T1
+cost	true	1.0581
+adult	true	1.0183
 form	true	1.0
 repaglinide	false	1.7143
-cost	false	1.0581
-adult	false	1.0183
 ##########END##########
 1
 however, discuss with any person for whom repaglinide is being considered, that there is no licensed non-metformin-based combination containing repaglinide that can be offered at first intensification.
@@ -63,7 +63,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 5
 last updated may 2017 1 recommendations
@@ -142,10 +142,10 @@ T4
 T3
 T2
 T1
+adult	true	1.0183
 individualise	true	0.9885
 risk	true	0.7275
 account	true	0.5106
-adult	false	1.0183
 benefit	false	0.7616
 ##########END##########
 14
@@ -154,8 +154,8 @@ T4
 T3
 T2
 T1
+assess	true	1.0
 review	true	0.6295
-assess	false	1.0
 ##########END##########
 15
 take into account any disabilities, including visual impairment, when planning and delivering care for adults with type 2 diabetes.
@@ -164,9 +164,9 @@ T3
 T2
 visual impairment	false	1.2263
 T1
+adult	true	1.0183
 plan	true	1.0
 account	true	0.5106
-adult	false	1.0183
 disabilities	false	1.0
 ##########END##########
 16
@@ -177,9 +177,9 @@ T2
 structured education	false	0.9031
 family members	false	0.6352
 T1
-adult	false	1.0183
+adult	true	1.0183
+time	true	0.5924
 carers	false	1.0059999999999998
-time	false	0.5924
 ##########END##########
 17
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -189,7 +189,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 18
 last updated may 2017 annual reinforcement and review
@@ -217,7 +217,7 @@ T3
 structured education programme	false	1.3333
 T2
 T1
-adult	false	1.0183
+adult	true	1.0183
 components	false	1.0
 ensure	false	0.5242
 ##########END##########
@@ -230,12 +230,12 @@ self-manage diabetes	false	1.2263
 specific aims	false	1.2263
 family members	false	0.6352
 T1
+attitudes	true	1.0
 knowledge	true	0.6682999999999999
+support	true	0.6634
 beliefs	false	1.0997
 carers	false	1.0059999999999998
-attitudes	false	1.0
 objectives	false	1.0
-support	false	0.6634
 skills	false	0.5108
 ##########END##########
 22
@@ -248,22 +248,22 @@ T1
 criteria	true	1.0
 quality	true	0.8374000000000001
 review	true	0.6295
+gain	true	0.5216000000000001
 consistency	false	1.0997
 measure	false	0.6596
 ensure	false	0.5242
-gain	false	0.5216000000000001
 ##########END##########
 23
 ensure the patient-education programme provides the necessary resources to support the educators, and that educators are properly trained and given time to develop and maintain their skills.
 T4
 T3
 T2
-education programme	false	1.2263
+education programme	true	1.2263
 T1
 sources	true	0.8679
+support	true	0.6634
+time	true	0.5924
 educators	false	1.3333
-support	false	0.6634
-time	false	0.5924
 ensure	false	0.5242
 skills	false	0.5108
 ##########END##########
@@ -282,13 +282,13 @@ ensure that all members of the diabetes healthcare team are familiar with the pa
 T4
 T3
 T2
-education programme	false	1.2263
+education programme	true	1.2263
 family members	false	0.6352
 T1
+programmes	true	1.3333
+adult	true	1.0183
 vision	true	1.0
 opportunity	true	0.6839999999999999
-programme	true	0.5083
-adult	false	1.0183
 carers	false	1.0059999999999998
 members	false	0.9191
 team	false	0.6839999999999999
@@ -302,7 +302,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 27
 provide individualised and ongoing nutritional advice from a healthcare professional with specific expertise and competencies in nutrition.
@@ -312,9 +312,9 @@ ongoing nutritional advice	false	1.3333
 T2
 specific expertise	false	1.2263
 T1
+nutrition	true	1.0
 individualise	true	0.9885
 competencies	false	1.0
-nutrition	false	1.0
 ##########END##########
 28
 provide dietary advice in a form sensitive to the person's needs, culture and beliefs, being sensitive to their willingness to change and the effects on their quality of life.
@@ -324,9 +324,9 @@ T2
 dietary advice	false	1.2263
 form sensitive	false	1.2263
 T1
+culture	true	1.0
 quality	true	0.8374000000000001
 beliefs	false	1.0997
-culture	false	1.0
 willingness	false	1.0
 effects	false	0.6625000000000001
 ##########END##########
@@ -339,7 +339,7 @@ T2
 general population	true	1.0789
 emphasise advice	false	1.0789
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 30
 encourage high-fibre, low-glycaemic-index sources of carbohydrate in the diet, such as fruit, vegetables, wholegrains and pulses; include low-fat dairy products and oily fish; and control the intake of foods containing saturated and trans fatty acids.
@@ -355,10 +355,10 @@ T1
 carbohydrate	true	0.9814
 diet	true	0.8715999999999999
 fruit	true	0.8679
+pulses	true	0.8679
+trans	true	0.8679
 foods	false	1.0299
 intake	false	1.0258
-pulses	false	0.8679
-trans	false	0.8679
 vegetables	false	0.8679
 wholegrains	false	0.8679
 ##########END##########
@@ -369,8 +369,8 @@ initial body weight loss target	false	1.4306
 T3
 T2
 T1
+adult	true	1.0183
 weight	true	0.5958
-adult	false	1.0183
 ##########END##########
 32
 individualise recommendations for carbohydrate and alcohol intake, and meal patterns
@@ -415,7 +415,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 36
 when adults with type 2 diabetes are admitted to hospital as inpatients or to any other care setting, implement a meal planning system that provides consistency in the carbohydrate content of meals and snacks.
@@ -427,9 +427,9 @@ carbohydrate content	false	1.2263
 T1
 patients	true	1.3333
 men	true	1.0792000000000002
+adult	true	1.0183
+hospital	true	1.0
 consistency	false	1.0997
-adult	false	1.0183
-hospital	false	1.0
 snacks	false	1.0
 meal	false	0.7287
 ##########END##########
@@ -443,9 +443,9 @@ T1
 smoking	true	1.5
 age	true	1.3333
 men	true	1.0792000000000002
+services	true	0.9408000000000001
 weight	true	0.5958
 referral	false	1.0559
-services	false	0.9408000000000001
 lifestyle	false	0.5627000000000001
 ##########END##########
 38
@@ -467,8 +467,8 @@ measure blood pressure	false	1.3333
 T2
 renal disease	false	1.2263
 T1
+adult	true	1.0183
 hypertension	true	0.8227999999999999
-adult	false	1.0183
 ##########END##########
 40
 offer and reinforce preventive lifestyle advice.
@@ -486,9 +486,9 @@ blood pressure control	false	1.3333
 antihypertensive drug treatment	false	0.8227999999999999
 T2
 T1
+adult	true	1.0183
 medications	true	1.0
 review	true	0.6295
-adult	false	1.0183
 ##########END##########
 42
 make changes only if there is poor control or if current drug treatment is not appropriate because of microvascular complications or metabolic problems.
@@ -522,9 +522,9 @@ T4
 T3
 T2
 T1
+exercise	true	1.0
 diet	true	0.8715999999999999
-exercise	false	1.0
-time	false	0.5924
+time	true	0.5924
 lifestyle	false	0.5627000000000001
 ##########END##########
 45
@@ -533,8 +533,8 @@ T4
 T3
 T2
 T1
+adult	true	1.0183
 hypertension	true	0.8227999999999999
-adult	false	1.0183
 lifestyle	false	0.5627000000000001
 section	false	0.5291
 ##########END##########
@@ -546,7 +546,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 47
 monitor blood pressure every 1–2 months, and intensify therapy if the person is already on antihypertensive drug treatment, until the blood pressure is consistently below 140/80 mmhg (below 130/80 mmhg if there is kidney, eye or cerebrovascular damage).
@@ -631,7 +631,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 55
 check for possible adverse effects of antihypertensive drug treatment – including the risks from unnecessarily low blood pressure.
@@ -652,9 +652,9 @@ T2
 cardiovascular disease	false	1.404
 antiplatelet therapy	false	1.2263
 T1
+adult	true	1.0183
 aspirin	true	1.0
 clopidogrel	true	1.0
-adult	false	1.0183
 ##########END##########
 57
 for guidance on the primary and secondary prevention of cardiovascular disease in adults with type 2 diabetes, see the nice guidelines on cardiovascular disease and myocardial infarction.
@@ -665,7 +665,7 @@ myocardial infarction	true	0.6234
 cardiovascular disease	false	1.404
 secondary prevention	false	0.6234
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 58
 hba1c measurement and targets
@@ -694,9 +694,9 @@ T3
 T2
 hba1c level	false	0.6216
 T1
+adult	true	1.0183
 hba1c	true	0.5815
 intervals	false	1.2927
-adult	false	1.0183
 measure	false	0.6596
 ##########END##########
 61
@@ -716,7 +716,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 63
 investigate unexplained discrepancies between hba1c and other glucose measurements
@@ -735,8 +735,8 @@ T4
 T3
 T2
 T1
+adult	true	1.0183
 hba1c	true	0.5815
-adult	false	1.0183
 ##########END##########
 65
 encourage them to achieve the target and maintain it unless any resulting adverse effects (including hypoglycaemia), or their efforts to achieve their target, impair their quality of life.
@@ -755,9 +755,9 @@ T3
 T2
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
+support	true	0.6634
 hba1c	true	0.5815
-adult	false	1.0183
-support	false	0.6634
 lifestyle	false	0.5627000000000001
 section	false	0.5291
 ##########END##########
@@ -770,10 +770,10 @@ hba1c level	false	0.6216
 T1
 mol	true	1.5444
 age	true	1.3333
+adult	true	1.0183
 aim	true	0.9885
 diet	true	0.8715999999999999
-adult	false	1.0183
-support	false	0.6634
+support	true	0.6634
 lifestyle	false	0.5627000000000001
 ##########END##########
 68
@@ -784,9 +784,9 @@ T2
 hba1c level	false	0.6216
 T1
 mol	true	1.5444
+adult	true	1.0183
 aim	true	0.9885
-adult	false	1.0183
-support	false	0.6634
+support	true	0.6634
 ##########END##########
 69
 in adults with type 2 diabetes, if hba1c levels are not adequately controlled by a single drug and rise to 58 mmol/mol ( %) or higher: reinforce advice about diet, lifestyle and adherence to drug treatment and support the person to aim for an hba1c level of 53 mmol/mol ( %) and intensify drug treatment.
@@ -797,10 +797,10 @@ hba1c level	false	0.6216
 T1
 mol	true	1.5444
 men	true	1.0792000000000002
+adult	true	1.0183
 aim	true	0.9885
 diet	true	0.8715999999999999
-adult	false	1.0183
-support	false	0.6634
+support	true	0.6634
 lifestyle	false	0.5627000000000001
 ##########END##########
 70
@@ -821,7 +821,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 72
 last updated may 2017 on a case-by-case basis, with particular consideration for people who are older or frail, for adults with type 2 diabetes: who are unlikely to achieve longer-term risk-reduction benefits, for example, people with a reduced life expectancy for whom tight blood glucose control poses a high risk of the consequences of hypoglycaemia, for example, people who are at risk of falling, people who have impaired awareness of hypoglycaemia, and people who drive or operate machinery as part of their job for whom intensive management would not be appropriate, for example, people with significant comorbidities.
@@ -831,9 +831,9 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
+adult	true	1.0183
 side	true	0.8999
 risk	true	0.7275
-adult	false	1.0183
 benefit	false	0.7616
 ##########END##########
 73
@@ -844,7 +844,7 @@ T2
 hba1c level	false	0.6216
 T1
 age	true	1.3333
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 74
 be aware that there are other possible reasons for a low hba1c level, for example, deteriorating renal function or sudden weight loss.
@@ -884,8 +884,8 @@ vehicle licensing agency	false	0.6485
 T2
 glance guide	false	0.5853999999999999
 T1
+adult	true	1.0183
 account	true	0.5106
-adult	false	1.0183
 self-monitoring	false	0.6509999999999999
 ##########END##########
 78
@@ -895,9 +895,9 @@ T3
 T2
 oral medication	false	0.9206
 T1
+adult	true	1.0183
 insulin	true	0.8739
 risk	true	0.7275
-adult	false	1.0183
 driving	false	1.0
 self-monitoring	false	0.6509999999999999
 ##########END##########
@@ -909,7 +909,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 80
 last updated may 2017 the person is pregnant, or is planning to become pregnant
@@ -939,8 +939,8 @@ suspected hypoglycaemia	false	1.2263
 review treatment	false	1.1866
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 side	true	0.8999
-adult	false	1.0183
 ##########END##########
 83
 be aware that adults with type 2 diabetes who have acute intercurrent illness are at risk of worsening hyperglycaemia
@@ -949,8 +949,8 @@ T3
 acute intercurrent illness	false	1.3333
 T2
 T1
+adult	true	1.0183
 risk	true	0.7275
-adult	false	1.0183
 hyperglycaemia	false	1.0
 ##########END##########
 84
@@ -967,9 +967,8 @@ T4
 T3
 T2
 T1
-men	true	1.0792000000000002
-adult	false	1.0183
-assess	false	1.0
+assessment	true	1.3333
+adult	true	1.0183
 self-monitoring	false	0.6509999999999999
 ##########END##########
 86
@@ -978,9 +977,9 @@ T4
 T3
 T2
 T1
+assessment	true	1.3333
 men	true	1.0792000000000002
 quality	true	0.8374000000000001
-assess	false	1.0
 benefit	false	0.7616
 self-monitoring	false	0.6509999999999999
 skills	false	0.5108
@@ -1018,8 +1017,8 @@ T3
 T2
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 risk	true	0.7275
-adult	false	1.0183
 benefit	false	0.7616
 options	false	0.5034
 ##########END##########
@@ -1039,7 +1038,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 92
 last updated may 2017 safety (see medicines and healthcare products regulatory agency [mhra] guidance) and tolerability of the drug treatment(s) the person's individual clinical circumstances, for example, comorbidities, risks from polypharmacy the person's individual preferences and needs the licensed indications or combinations available cost (if 2 drugs in the same class are appropriate, choose the option with the lowest acquisition cost).
@@ -1050,12 +1049,12 @@ T2
 drug treatment(s)	false	1.6525
 acquisition cost	false	0.7320999999999999
 T1
+cost	true	1.0581
 safety	true	0.8408
 risk	true	0.7275
-cost	false	1.0581
+class	true	0.5034
 indication	false	1.0
 mhra	false	0.6167999999999999
-class	false	0.5034
 tolerability	false	0.5034
 ##########END##########
 93
@@ -1066,7 +1065,7 @@ T2
 rescue therapy	false	1.2263
 T1
 men	true	1.0792000000000002
-phase	false	1.0
+phase	true	1.0
 ##########END##########
 94
 if an adult with type 2 diabetes is symptomatically hyperglycaemic, consider insulin (see recommendations – ) or a sulfonylurea, and review treatment when blood glucose control has been achieved.
@@ -1076,9 +1075,9 @@ T2
 review treatment	false	1.1866
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 side	true	0.8999
 insulin	true	0.8739
-adult	false	1.0183
 sulfonylurea	false	0.8658999999999999
 ##########END##########
 95
@@ -1097,7 +1096,7 @@ offer standard-release metformin	false	0.8542
 initial drug treatment	false	0.7003999999999999
 T2
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 97
 gradually increase the dose of standard-release metformin over several weeks to minimise the risk of gastrointestinal side effects in adults with type 2 diabetes.
@@ -1107,10 +1106,10 @@ gastrointestinal side effects	false	1.3245
 T2
 standard-release metformin	false	1.0287
 T1
+adult	true	1.0183
 weeks	true	1.0
+dose	true	0.8341
 risk	true	0.7275
-adult	false	1.0183
-dose	false	0.8341
 ##########END##########
 98
 if an adult with type 2 diabetes experiences gastrointestinal side effects with standard-release metformin, consider a trial of modified-release metformin.
@@ -1121,9 +1120,9 @@ T2
 modified-release metformin	false	1.2263
 standard-release metformin	false	1.0287
 T1
+adult	true	1.0183
 trial	true	1.0
 side	true	0.8999
-adult	false	1.0183
 ##########END##########
 99
 algorithm for blood glucose lowering therapy in adults with type 2 diabetes
@@ -1131,7 +1130,7 @@ T4
 T3
 T2
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 100
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -1141,7 +1140,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 101
 in adults with type 2 diabetes, review the dose of metformin if the estimated glomerular filtration rate (egfr) is below 45 ml/minute/ m2:
@@ -1152,11 +1151,11 @@ T1
 egfr	true	1.3333
 minute	true	1.3333
 ml	true	1.3333
+adult	true	1.0183
 form	true	1.0
+dose	true	0.8341
 m2	true	0.7570999999999999
 review	true	0.6295
-adult	false	1.0183
-dose	false	0.8341
 ##########END##########
 102
 prescribe metformin with caution for those at risk of a sudden deterioration in kidney function and those at risk of egfr falling below 45 ml/minute/ m2.
@@ -1170,7 +1169,7 @@ ml	true	1.3333
 form	true	1.0
 m2	true	0.7570999999999999
 risk	true	0.7275
-deterioration	false	0.6649
+deterioration	true	0.6649
 ##########END##########
 103
 in adults with type 2 diabetes, if metformin is contraindicated or not tolerated, consider initial drug treatment  with: a dipeptidyl peptidase-4 (dpp-4) inhibitor or pioglitazone or a sulfonylurea.
@@ -1180,12 +1179,12 @@ initial drug treatment	false	0.7003999999999999
 T2
 dipeptidyl peptidase-4	false	1.3901000000000001
 T1
+adult	true	1.0183
 form	true	1.0
 side	true	0.8999
 dpp-4	true	0.8498
 pioglitazone	true	0.6666
 inhibitor	true	0.6296
-adult	false	1.0183
 sulfonylurea	false	0.8658999999999999
 ##########END##########
 104
@@ -1195,8 +1194,8 @@ T3
 T2
 heart failure	false	1.5110000000000001
 T1
+adult	true	1.0183
 pioglitazone	true	0.6666
-adult	false	1.0183
 ##########END##########
 105
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -1206,7 +1205,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 106
 treatment with sodium–glucose cotransporter 2 (sglt-2) inhibitors ,  may be appropriate for some adults with type 2 diabetes if metformin is contraindicated or not tolerated (see nice's guidance on canagliflozin, dapagliflozin and empagliflozin as monotherapies for treating type 2 diabetes).
@@ -1215,11 +1214,11 @@ T3
 T2
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 form	true	1.0
+trans	true	0.8679
 inhibitor	true	0.6296
-adult	false	1.0183
 eating	false	0.8679
-trans	false	0.8679
 ##########END##########
 107
 first intensification of drug treatment
@@ -1238,12 +1237,12 @@ initial drug treatment	false	0.7003999999999999
 T2
 dpp-4 inhibitor	false	0.9014
 T1
+adult	true	1.0183
 form	true	1.0
 side	true	0.8999
 pioglitazone	true	0.6666
 hba1c	true	0.5815
 intensification	true	0.5509999999999999
-adult	false	1.0183
 sulfonylurea	false	0.8658999999999999
 threshold	false	0.5931000000000001
 ##########END##########
@@ -1255,12 +1254,12 @@ initial drug treatment	false	0.7003999999999999
 T2
 dpp-4 inhibitor	false	0.9014
 T1
+adult	true	1.0183
 form	true	1.0
 side	true	0.8999
 pioglitazone	true	0.6666
 hba1c	true	0.5815
 intensification	true	0.5509999999999999
-adult	false	1.0183
 sulfonylurea	false	0.8658999999999999
 threshold	false	0.5931000000000001
 ##########END##########
@@ -1272,9 +1271,9 @@ T2
 combination therapy	false	1.4554
 T1
 men	true	1.0792000000000002
+trans	true	0.8679
 inhibitor	true	0.6296
 eating	false	0.8679
-trans	false	0.8679
 ##########END##########
 111
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -1284,7 +1283,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 112
 second intensification of drug treatment
@@ -1305,12 +1304,12 @@ dpp-4 inhibitor	false	0.9014
 oral drug	false	0.6924
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 form	true	1.0
 side	true	0.8999
 pioglitazone	true	0.6666
 hba1c	true	0.5815
 intensification	true	0.5509999999999999
-adult	false	1.0183
 sulfonylurea	false	0.8658999999999999
 threshold	false	0.5931000000000001
 ##########END##########
@@ -1327,13 +1326,13 @@ T1
 bmi	true	1.3333
 kg	true	1.3333
 men	true	1.0792000000000002
+adult	true	1.0183
 form	true	1.0
 group	true	1.0
 side	true	0.8999
 insulin	true	0.8739
 m2	true	0.7570999999999999
 glp-1	true	0.6635
-adult	false	1.0183
 sulfonylurea	false	0.8658999999999999
 problems	false	0.8300000000000001
 benefit	false	0.7616
@@ -1347,11 +1346,11 @@ insulin-based treatment	false	1.1124999999999998
 oral drugs	false	0.9077000000000001
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 form	true	1.0
 side	true	0.8999
 hba1c	true	0.5815
 intensification	true	0.5509999999999999
-adult	false	1.0183
 threshold	false	0.5931000000000001
 ##########END##########
 116
@@ -1362,7 +1361,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 117
 in adults with type 2 diabetes, only offer a glp-1 mimetic in combination with insulin with specialist care advice and ongoing support from a consultant-led multidisciplinary team .
@@ -1374,8 +1373,8 @@ T2
 glp-1 mimetic	false	1.2263
 ongoing support	false	1.2263
 T1
+adult	true	1.0183
 insulin	true	0.8739
-adult	false	1.0183
 ##########END##########
 118
 treatment with combinations of medicines including sglt-2 inhibitors ,  may be appropriate for some people with type 2 diabetes; see the nice guidance on canagliflozin in combination therapy for treating type 2 diabetes, dapagliflozin in combination therapy for treating type 2 diabetes, dapagliflozin in triple therapy for treating type 2 diabetes and empagliflozin in combination therapy for treating type 2 diabetes.
@@ -1404,12 +1403,12 @@ T2
 dose titration	false	1.5204
 T1
 sites	true	1.3333
+adult	true	1.0183
 insulin	true	0.8739
 diet	true	0.8715999999999999
 injection	true	0.6715999999999999
+support	true	0.6634
 programme	true	0.5083
-adult	false	1.0183
-support	false	0.6634
 self-monitoring	false	0.6509999999999999
 ##########END##########
 121
@@ -1418,9 +1417,9 @@ T4
 T3
 T2
 T1
+adult	true	1.0183
 form	true	1.0
 insulin	true	0.8739
-adult	false	1.0183
 indication	false	1.0
 ##########END##########
 122
@@ -1438,8 +1437,8 @@ T3
 T2
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 insulin	true	0.8739
-adult	false	1.0183
 ##########END##########
 124
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -1449,7 +1448,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 125
 consider starting both nph and short-acting insulin (particularly if the person's
@@ -1488,10 +1487,10 @@ T4
 T3
 T2
 T1
+adult	true	1.0183
 side	true	0.8999
 insulin	true	0.8739
 hba1c	true	0.5815
-adult	false	1.0183
 ##########END##########
 129
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -1501,7 +1500,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 130
 monitor adults with type 2 diabetes who are on a basal insulin regimen (nph insulin, insulin detemir or insulin glargine ) for the need for short-acting insulin before meals (or a pre-mixed [biphasic] insulin preparation).
@@ -1510,8 +1509,8 @@ T3
 T2
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 insulin	true	0.8739
-adult	false	1.0183
 meal	false	0.7287
 ##########END##########
 131
@@ -1521,9 +1520,9 @@ T3
 T2
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 insulin	true	0.8739
 injection	true	0.6715999999999999
-adult	false	1.0183
 meal	false	0.7287
 ##########END##########
 132
@@ -1544,7 +1543,7 @@ T3
 T2
 insulin delivery	false	1.5204
 T1
-adult	false	1.0183
+adult	true	1.0183
 section	false	0.5291
 ##########END##########
 134
@@ -1557,8 +1556,8 @@ alternative diagnoses	false	0.5732999999999999
 unexplained gastric	false	0.5732999999999999
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 account	true	0.5106
-adult	false	1.0183
 gastroparesis	false	0.925
 ##########END##########
 135
@@ -1570,7 +1569,7 @@ antiemetic therapy	false	0.5732999999999999
 strong evidence	false	0.5732999999999999
 T1
 domperidone	true	1.1044
-adult	false	1.0183
+adult	true	1.0183
 gastroparesis	false	0.925
 prescribers	false	0.8840000000000001
 benefit	false	0.7616
@@ -1583,7 +1582,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 137
 for treating vomiting caused by gastroparesis in adults with type 2 diabetes: consider alternating use of erythomycin  and metoclopramide consider domperidone  only in exceptional circumstances (if domperidone is the only effective treatment) and in accordance with mhra guidance.
@@ -1593,8 +1592,8 @@ T2
 T1
 domperidone	true	1.1044
 men	true	1.0792000000000002
+adult	true	1.0183
 side	true	0.8999
-adult	false	1.0183
 gastroparesis	false	0.925
 eating	false	0.8679
 mhra	false	0.6167999999999999
@@ -1621,7 +1620,7 @@ T3
 T2
 neuropathic pain	false	1.2263
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 140
 autonomic neuropathy
@@ -1640,8 +1639,8 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
+adult	true	1.0183
 signs	false	1.0997
-adult	false	1.0183
 possibility	false	0.8488000000000001
 ##########END##########
 142
@@ -1653,8 +1652,8 @@ autonomic neuropathy	false	1.2930000000000001
 unexplained diarrhoea	false	0.6829999999999999
 T1
 men	true	1.0792000000000002
+adult	true	1.0183
 gut	true	0.5271
-adult	false	1.0183
 possibility	false	0.8488000000000001
 night	false	0.5271
 ##########END##########
@@ -1669,7 +1668,7 @@ side effects	false	0.9947
 orthostatic hypotension	false	0.6829999999999999
 tricyclic drugs	false	0.6829999999999999
 T1
-adult	false	1.0183
+adult	true	1.0183
 likelihood	false	0.5271
 ##########END##########
 144
@@ -1680,8 +1679,8 @@ unexplained bladder-emptying problems	false	1.3333
 T2
 autonomic neuropathy	false	1.2930000000000001
 T1
+adult	true	1.0183
 investigate	true	1.0
-adult	false	1.0183
 bladder	false	1.0
 possibility	false	0.8488000000000001
 ##########END##########
@@ -1693,7 +1692,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 146
 in managing autonomic neuropathy symptoms, include specific interventions indicated by the manifestations (for example, for abnormal sweating or nocturnal diarrhoea).
@@ -1714,7 +1713,7 @@ T3
 T2
 foot problems	false	1.5204
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 148
 for guidance on managing kidney disease in adults with type 2 diabetes, see the
@@ -1723,7 +1722,7 @@ T3
 T2
 kidney disease	true	1.5204
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 149
 nice guideline on chronic kidney disease in adults.
@@ -1732,7 +1731,7 @@ T3
 T2
 kidney disease	true	1.5204
 T1
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 150
 offer men with type 2 diabetes the opportunity to discuss erectile dysfunction as part of their annual review.
@@ -1756,8 +1755,8 @@ contributory factors	false	1.2263
 treatment options	false	1.2263
 T1
 men	true	1.0792000000000002
-assess	false	1.0
-support	false	0.6634
+assess	true	1.0
+support	true	0.6634
 ##########END##########
 152
 consider a phosphodiesterase-5 inhibitor to treat problematic erectile dysfunction in men with type 2 diabetes, initially choosing the drug with the lowest acquisition cost and taking into account any contraindications.
@@ -1783,8 +1782,8 @@ psychological management	false	1.2263
 erectile dysfunction	false	1.1646
 T1
 men	true	1.0792000000000002
+service	true	0.6682999999999999
 discussion	false	1.0997
-service	false	0.6682999999999999
 ##########END##########
 154
 on diagnosis, gps should immediately refer adults with type 2 diabetes to the local eye screening service
@@ -1793,8 +1792,8 @@ T3
 T2
 eye screening	false	1.5204
 T1
-adult	false	1.0183
-service	false	0.6682999999999999
+adult	true	1.0183
+service	true	0.6682999999999999
 ##########END##########
 155
 type 2 diabetes in adults: management (ng28) conditions#notice-of-rights)
@@ -1804,7 +1803,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 156
 explain the reasons for, and success of, eye screening systems to adults with type 2 diabetes, so that attendance is not reduced by lack of knowledge or fear of outcome.
@@ -1813,9 +1812,9 @@ T3
 T2
 eye screening	false	1.5204
 T1
+system	true	1.0997
+adult	true	1.0183
 knowledge	true	0.6682999999999999
-system	false	1.0997
-adult	false	1.0183
 ##########END##########
 157
 discussions should include precautions for driving.
@@ -1824,8 +1823,8 @@ T3
 T2
 T1
 discussions	true	1.0
+precautions	true	1.0
 driving	false	1.0
-precautions	false	1.0
 ##########END##########
 158
 depending on the findings, follow structured eye screening by: routine review in 1 year or earlier review or referral to an ophthalmologist.
@@ -1871,7 +1870,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 162
 be aware that, if metformin is contraindicated or not tolerated, repaglinide is both clinically effective and cost effective in adults with type 2 diabetes
@@ -1879,10 +1878,10 @@ T4
 T3
 T2
 T1
+cost	true	1.0581
+adult	true	1.0183
 form	true	1.0
 repaglinide	false	1.7143
-cost	false	1.0581
-adult	false	1.0183
 ##########END##########
 163
 however, discuss with any person for whom repaglinide is being considered, that there is no licensed non-metformin-based combination containing repaglinide that can be offered at first intensification.
@@ -1938,7 +1937,7 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
 167
 medicines and healthcare products regulatory agency (mhra) guidance (2016) warned that serious, life-threatening, and fatal cases of diabetic ketoacidosis have been reported rarely in people taking an sglt-2 inhibitor (a substantial proportion of the cases concerned off-label use in people with type 1 diabetes, which is not recommended)
@@ -1982,9 +1981,9 @@ T2
 heart failure	false	1.5110000000000001
 weight gain	false	0.6117
 T1
+oedema	true	1.0
 signs	false	1.0997
 advise	false	1.0
-oedema	false	1.0
 symptoms	false	0.779
 ##########END##########
 171
@@ -1995,7 +1994,7 @@ T2
 cardiac status	false	1.2263
 T1
 pioglitazone	true	0.6666
-deterioration	false	0.6649
+deterioration	true	0.6649
 ##########END##########
 172
 the recommendations in this guideline also apply to any current and future biosimilar product(s) of insulin glargine that have an appropriate marketing authorisation that allows the use of the biosimilar(s) in the same indication.
@@ -2018,11 +2017,11 @@ T2
 T1
 domperidone	true	1.1044
 safety	true	0.8408
+dose	true	0.8341
 risk	true	0.7275
 account	true	0.5106
 advise	false	1.0
 prescribers	false	0.8840000000000001
-dose	false	0.8341
 mhra	false	0.6167999999999999
 ##########END##########
 174
@@ -2049,5 +2048,5 @@ T2
 T1
 age	true	1.3333
 men	true	1.0792000000000002
-adult	false	1.0183
+adult	true	1.0183
 ##########END##########
