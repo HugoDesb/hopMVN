@@ -9,6 +9,7 @@
               type="HAS"
               isExpertFile="false"/>
         -->
+        <!--
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/CPG_diabetes_NHSNEG.pdf"
               name="CPG_diabetes_NHSNEG"
               topic="type 2 diabetes"
@@ -17,6 +18,23 @@
               isExpertFile="false"/>
         <file absolutePath="/home/sesstim/IdeaProjects/hopMVN/files/CPG_diabetes_NHS.pdf"
               name="CPG_diabetes_NHS"
+              topic="type 2 diabetes"
+              language="english"
+              type="NICE"
+              isExpertFile="false"/>
+              -->
+
+        <!--
+        <file absolutePath="/home/hugo/IdeaProjects/hopMVN/files/DEMO_DIABETES.pdf"
+              name="DEMO_DIABETES"
+              topic="type 2 diabetes"
+              language="english"
+              type="NICE"
+              isExpertFile="false"/>
+        -->
+
+        <file absolutePath="/home/hugo/IdeaProjects/hopMVN/files/DEMO_DIABETES2.pdf"
+              name="DEMO_DIABETES2"
               topic="type 2 diabetes"
               language="english"
               type="NICE"
